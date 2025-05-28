@@ -5,7 +5,7 @@ $sizesMap: (
     'm': 36px,
     's': 30px,
     'xs': 24px,
-  ),  
+  ),
   'text': (
     'xl': 20px,
     'l': 18px,
@@ -25,7 +25,7 @@ $lineHeightMap: (
   'text': (
     'xl': 30px,
     'l': 28px,
-    'm': 24px, 
+    'm': 24px,
     's': 20px,
   ),
 );
@@ -37,7 +37,11 @@ $weightMap: (
 );
 
 @mixin display($size, $weight: 'medium') {
-  font-size: map-get($sizesMap, 'display', $size);
+  font-size: if(
+    type-of($size) == 'string',
+    map-get($sizesMap, 'display', $size),
+    $size
+  );
   line-height: map-get($lineHeightMap, 'display', $size);
   font-weight: if(
     type-of($weight) == 'string',
@@ -47,7 +51,11 @@ $weightMap: (
 }
 
 @mixin text($size, $weight: 'regular') {
-  font-size: map-get($sizesMap, 'text', $size);
+  font-size: if(
+    type-of($size) == 'string',
+    map-get($sizesMap, 'text', $size),
+    $size
+  );
   line-height: map-get($lineHeightMap, 'text', $size);
   font-weight: if(
     type-of($weight) == 'string',
