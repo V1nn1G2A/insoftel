@@ -1,3 +1,5 @@
+// Изменить названия цветов на нормальные в root'ах
+
 $color-white: #fff;
 $color-white-secondary: #f7f7f7;
 $color-black: #151719;
@@ -12,7 +14,7 @@ $color-text-tertiary: #0b0a0f;
 $color-text-quaternary: #4e5256;
 
 :root {
-  --color-white: #{$color-white};
+  --color-white: #{$color-black};
   --color-white-secondary: #{$color-white-secondary};
   --color-black: #{$color-black};
   --color-black-secondary: #{$color-black-secondary};
@@ -24,4 +26,52 @@ $color-text-quaternary: #4e5256;
   --color-text-secondary: #{$color-text-secondary};
   --color-text-tertiary: #{$color-text-tertiary};
   --color-text-quaternary: #{$color-text-quaternary};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-white: #{$color-white};
+    --color-white-secondary: #{$color-white-secondary};
+    --color-black: #{$color-black};
+    --color-black-secondary: #{$color-black-secondary};
+    --color-dark-gray: #{$color-dark-gray};
+    --color-middle-gray: #{$color-middle-gray};
+    --color-gray: #{$color-gray};
+    --color-light-gray: #{$color-light-gray};
+    --color-light-dark: #{$color-light-dark};
+    --color-text-secondary: #{$color-text-secondary};
+    --color-text-tertiary: #{$color-text-tertiary};
+    --color-text-quaternary: #{$color-text-quaternary};
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
 }
