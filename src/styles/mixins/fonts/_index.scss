@@ -1,62 +1,32 @@
 $sizesMap: (
-  'body': (
-    'xl': 24px,
-    'l': 20px,
-    'm': 18px,
-    's': 16px,
-    'xs': 14px,
-    'xxs': 12px,
-  ),
-  'heading': (
-    'xl': 64px,
-    'l': 58px,
-    'm': 52px,
-    's': 44px,
-    'xs': 32px,
-    'xxs': 28px,
-    '3xs': 24px,
-  ),
-  'button': (
+  'display': (
+    'xl': 60px,
+    'l': 48px,
+    'm': 36px,
+    's': 30px,
+    'xs': 24px,
+  ),  
+  'text': (
+    'xl': 20px,
     'l': 18px,
     'm': 16px,
     's': 14px,
-    'xs': 12px,
-  ),
-  'caption': (
-    'c1': 14px,
-    'c2': 12px,
-    'c3': 10px,
   ),
 );
 
 $lineHeightMap: (
-  'body': (
-    'xl': 150%,
-    'l': 150%,
-    'm': 130%,
-    's': 120%,
-    'xs': 120%,
-    'xxs': 120%,
+  'display': (
+    'xl': 72px,
+    'l': 60px,
+    'm': 44px,
+    's': 38px,
+    'xs': 32px,
   ),
-  'heading': (
-    'xl': 100%,
-    'l': 100%,
-    'm': 100%,
-    's': 100%,
-    'xs': 110%,
-    'xxs': 120%,
-    '3xs': 120%,
-  ),
-  'button': (
-    'l': 120%,
-    'm': 120%,
-    's': 120%,
-    'xs': 110%,
-  ),
-  'caption': (
-    'c1': 130%,
-    'c2': 120%,
-    'c3': 110%,
+  'text': (
+    'xl': 30px,
+    'l': 28px,
+    'm': 24px, 
+    's': 20px,
   ),
 );
 
@@ -66,7 +36,7 @@ $weightMap: (
   'semi-bold': 600,
 );
 
-@mixin heading($size, $weight: 'medium') {
+@mixin display($size, $weight: 'medium') {
   font-size: map-get($sizesMap, 'heading', $size);
   line-height: map-get($lineHeightMap, 'heading', $size);
   font-weight: if(
@@ -76,29 +46,9 @@ $weightMap: (
   );
 }
 
-@mixin body($size, $weight: 'regular') {
+@mixin text($size, $weight: 'regular') {
   font-size: map-get($sizesMap, 'body', $size);
   line-height: map-get($lineHeightMap, 'body', $size);
-  font-weight: if(
-    type-of($weight) == 'string',
-    map-get($weightMap, $weight),
-    $weight
-  );
-}
-
-@mixin button($size, $weight: 'regular') {
-  font-size: map-get($sizesMap, 'button', $size);
-  line-height: map-get($lineHeightMap, 'button', $size);
-  font-weight: if(
-    type-of($weight) == 'string',
-    map-get($weightMap, $weight),
-    $weight
-  );
-}
-
-@mixin caption($size, $weight: 'regular') {
-  font-size: map-get($sizesMap, 'caption', $size);
-  line-height: map-get($lineHeightMap, 'caption', $size);
   font-weight: if(
     type-of($weight) == 'string',
     map-get($weightMap, $weight),
