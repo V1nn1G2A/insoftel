@@ -1,14 +1,5 @@
-import { PaginatedButton } from '@/ui/Buttons/PaginatedButton'
+import { Services } from './_components/_services'
 
 export default function Home() {
-  return (
-    <div>
-      <h1>Home</h1>
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-      <a>Products</a>
-
-      <PaginatedButton orientation="right" />
-    </div>
-  )
+  return <Services />
 }
