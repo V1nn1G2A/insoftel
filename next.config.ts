@@ -1,8 +1,13 @@
 import type { NextConfig } from 'next'
+import path from 'path'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import type { RuleSetRule } from 'webpack'
 
 const nextConfig: NextConfig = {
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'src/styles')],
+  },
+
   webpack(config) {
     const fileLoaderRule = config.module.rules.find(
       (rule: RuleSetRule) =>
