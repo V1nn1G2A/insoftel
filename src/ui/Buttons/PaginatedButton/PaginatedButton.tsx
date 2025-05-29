@@ -1,6 +1,6 @@
-import classNames from 'classnames/bind'
+import ArrowIcon from '@/app/assets/icons/arrow.svg'
 
-import ArrowIcon from '@/app/assets/icons/pagArrow.svg'
+import classNames from 'classnames/bind'
 
 import styles from './paginatedButton.module.scss'
 
