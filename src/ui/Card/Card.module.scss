@@ -1,4 +1,4 @@
-@use '../../styles/mixins/fonts/index' as *;
+@use 'mixins/fonts';
 
 .card__picture {
   transition: opacity 0.4s;
@@ -19,6 +19,7 @@
   background-color: var(--color-white);
   transition: transform 0.4s;
   height: calc(410px - 75px);
+  bottom: -260px;
 
   @media (width >= 1400px) {
     height: calc(530px - 95px);
@@ -26,7 +27,7 @@
 }
 
 .card__title {
-  @include text(18.48px, 500);
+  @include fonts.text(18.48px, 500);
 
   color: var(--color-text-tertiary);
   width: 100%;
@@ -50,7 +51,7 @@
   }
 
   @media (width >= 1400px) {
-    @include text(24px, 400);
+    @include fonts.text(24px, 400);
 
     height: 96px;
     padding: 20px 27px 20px 20px;
@@ -67,7 +68,7 @@
 }
 
 .card__text {
-  @include text('s', 400);
+  @include fonts.text('s', 400);
 
   color: var(--color-text-quaternary);
   background-color: var(--color-white);
@@ -82,7 +83,7 @@
   }
 
   @media (width >= 1400px) {
-    @include text('xl', 400);
+    @include fonts.text('xl', 400);
 
     line-height: 24px;
     padding: 10px 20px 30px;
