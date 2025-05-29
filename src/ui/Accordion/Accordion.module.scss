@@ -1,4 +1,4 @@
-@use '@styles/mixins/fonts/index' as *;
+@use 'mixins/fonts';
 
 .accordion {
   width: 100%;
@@ -15,7 +15,7 @@
   opacity: 0;
   transition: opacity 0.3s;
 
-  @include text(20px, 24px, 'regular');
+  @include fonts.text(20px, 24px, 'regular');
 }
 
 .accordion__content {
@@ -27,7 +27,7 @@
   letter-spacing: 2%;
   word-spacing: 2%;
 
-  @include text(18px, 22px, 'regular');
+  @include fonts.text(18px, 22px, 'regular');
 
   p {
     margin-top: 16px;
@@ -48,7 +48,7 @@
     color: rgb(255 255 255 / 50%);
     transition: color 0.3s;
 
-    @include text(24px, 28px, 'regular');
+    @include fonts.text(24px, 28px, 'regular');
   }
 
   svg {
