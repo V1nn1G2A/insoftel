@@ -1,44 +1,48 @@
-$sizesMap: (
-  'display': (
-    'xl': 60px,
-    'l': 48px,
-    'm': 36px,
-    's': 30px,
-    'xs': 24px,
-  ),  
-  'text': (
-    'xl': 20px,
-    'l': 18px,
-    'm': 16px,
-    's': 14px,
-  ),
-);
+@font-face {
+  font-family: 'Neue Haas';
+  src: url('/fonts/NeueHaasDisplay-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
-$lineHeightMap: (
-  'display': (
-    'xl': 72px,
-    'l': 60px,
-    'm': 44px,
-    's': 38px,
-    'xs': 32px,
-  ),
-  'text': (
-    'xl': 30px,
-    'l': 28px,
-    'm': 24px, 
-    's': 20px,
-  ),
-);
+@font-face {
+  font-family: 'Neue Haas';
+  src: url('/fonts/NeueHaasDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas';
+  src: url('/fonts/NeueHaasDisplay-Roman.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas';
+  src: url('/fonts/NeueHaasDisplay-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+$font-main: 'Neue Haas', sans-serif;
 
 $weightMap: (
+  'light': 300,
   'regular': 400,
   'medium': 500,
-  'semi-bold': 600,
+  'bold': 700,
 );
 
 @mixin display($size, $weight: 'medium') {
-  font-size: map-get($sizesMap, 'display', $size);
-  line-height: map-get($lineHeightMap, 'display', $size);
+  font-family: $font-main;
+  font-size: $size;
+  line-height: $line-heigth;
   font-weight: if(
     type-of($weight) == 'string',
     map-get($weightMap, $weight),
@@ -46,9 +50,10 @@ $weightMap: (
   );
 }
 
-@mixin text($size, $weight: 'regular') {
-  font-size: map-get($sizesMap, 'text', $size);
-  line-height: map-get($lineHeightMap, 'text', $size);
+@mixin text($size, $line-heigth, $weight: 'regular') {
+  font-family: $font-main;
+  font-size: $size;
+  line-height: $line-heigth;
   font-weight: if(
     type-of($weight) == 'string',
     map-get($weightMap, $weight),
