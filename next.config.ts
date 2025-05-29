@@ -1,32 +1,35 @@
 import type { NextConfig } from 'next'
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import type { RuleSetRule } from 'webpack'
 
 const nextConfig: NextConfig = {
   webpack(config) {
-    const rules = config.module.rules as RuleSetRule[]
-
-    const fileLoaderRule = rules.find(
-      rule =>
-        typeof rule === 'object' &&
-        rule !== null &&
-        rule.test instanceof RegExp &&
-        rule.test.test('.svg')
+    const fileLoaderRule = config.module.rules.find(
+      (rule: RuleSetRule) =>
+        rule.test instanceof RegExp && rule.test.test('.svg')
     )
 
-    if (!fileLoaderRule) {
-      throw new Error('SVG file loader rule not found')
+    if (!config.resolve.plugins) {
+      config.resolve.plugins = []
     }
 
-    rules.push(
+    config.resolve.plugins.push(
+      new TsconfigPathsPlugin({
+        configFile: './tsconfig.json',
+      })
+    )
+
+    config.module.rules.push(
       {
         ...fileLoaderRule,
         test: /\.svg$/i,
         resourceQuery: /url/,
       },
+
       {
         test: /\.svg$/i,
         issuer: fileLoaderRule.issuer,
-        resourceQuery: { not: [/url/] },
+        resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] },
         use: ['@svgr/webpack'],
       }
     )
