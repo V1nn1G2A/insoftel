@@ -1,0 +1,56 @@
+@use 'mixins/fonts';
+
+.header {
+  width: max-content;
+  position: relative;
+  letter-spacing: 2%;
+}
+
+.index {
+  @include fonts.text(16px, 20px, 500);
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  letter-spacing: 2%;
+
+  @media (width >= 1400px) {
+    top: -7px;
+    left: 0;
+
+    @include fonts.text(20px, 24px, 500);
+  }
+}
+
+.text {
+  margin: 0 68px 0 0;
+  order: 0;
+
+  @include fonts.text(48px, 52px, 500);
+
+  @media (width >= 1400px) {
+    margin: 0 0 0 81px;
+
+    @include fonts.text(90px, 94px, 500);
+  }
+}
+
+.header--light {
+  .text {
+    color: var(--color-text-tertiary);
+  }
+
+  .index {
+    color: var(--color-text-quaternary);
+  }
+}
+
+.header--dark {
+  .text {
+    color: var(--color-white);
+  }
+
+  .index {
+    color: var(--color-white);
+  }
+}
