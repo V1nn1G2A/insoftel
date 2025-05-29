@@ -1,0 +1,13 @@
+@use 'mixins/media';
+
+.footerInfo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+
+  @include media.screen('tablet') {
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+}

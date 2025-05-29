@@ -1,4 +1,5 @@
 import { Card } from '@/ui/Card'
+import Footer from '@/ui/Footer/Footer'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         text="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
         picture="/img/cards/1.png"
       />
+      <Footer />
     </div>
   )
 }
