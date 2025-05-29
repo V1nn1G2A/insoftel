@@ -1,0 +1,104 @@
+@use '@styles/mixins/fonts/index' as *;
+
+.accordion {
+  width: 100%;
+  background-color: transparent;
+  padding: 0 20px;
+}
+
+.toggle {
+  display: none;
+}
+
+.card__content-counter {
+  color: var(--color-white);
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  @include text(20px, 24px, 'regular');
+}
+
+.accordion__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.3s ease;
+  padding: 0 0 16px;
+  letter-spacing: 2%;
+  word-spacing: 2%;
+
+  @include text(18px, 22px, 'regular');
+
+  p {
+    margin-top: 16px;
+  }
+
+  > div {
+    overflow: hidden;
+  }
+}
+
+.accordion__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0 0;
+
+  p {
+    color: rgb(255 255 255 / 50%);
+    transition: color 0.3s;
+
+    @include text(24px, 28px, 'regular');
+  }
+
+  svg {
+    color: rgb(255 255 255 / 50%);
+    transition: transform 0.3s;
+  }
+
+  &:hover + .accordion__content {
+    grid-template-rows: 1fr;
+  }
+}
+
+.accordion__btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.toggle:checked ~ .accordion__content {
+  grid-template-rows: 1fr;
+}
+
+.accordion__title:hover,
+.toggle:checked ~ .accordion__title {
+  p {
+    color: var(--color-white);
+  }
+
+  svg {
+    transform: rotate(45deg);
+    color: var(--color-black);
+  }
+
+  .accordion__btn {
+    background-color: var(--color-white);
+  }
+
+  .card__content-counter {
+    opacity: 1;
+  }
+}
+
+.accordion__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255 255 255 / 20%);
+}
