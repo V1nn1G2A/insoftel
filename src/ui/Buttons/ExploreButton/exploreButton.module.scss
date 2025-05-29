@@ -1,4 +1,4 @@
-@use '../../../../styles/mixins/fonts/index' as *;
+@use 'mixins/fonts';
 
 .button {
   display: flex;
@@ -28,7 +28,7 @@
 
 .text {
   margin-right: 14px;
-  @include text(16px, 20px, 'regular');
+  @include fonts.text(16px, 20px, 'regular');
   letter-spacing: 1px;
 
   &.dark {
