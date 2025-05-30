@@ -1,13 +1,58 @@
 @use 'mixins/media';
 
 .footerInfo {
-  display: flex;
+  display: grid;
+  grid-template-columns: 342px 1fr 1fr;
   justify-content: space-between;
-  flex-wrap: wrap;
   padding-bottom: 40px;
+  grid-gap: 120px 0px;
 
   @include media.screen('tablet') {
-    flex-direction: column;
+    grid-template-columns: 130px 1fr 1fr;
+    grid-gap: 120px 24px;
     padding-bottom: 48px;
+  }
+
+  @include media.screen('mobile') {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding-bottom: 44px;
+  }
+
+  &__button {
+    grid-column-start: 3;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding-bottom: 10px;
+
+    @include media.screen('mobile') {
+      order: 2;
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    @include media.screen('mobile') {
+      order: 5;
+      width: 115px;
+      height: 115px;
+      align-self: end;
+    }
+  }
+}
+
+.button {
+  padding-left: 26px;
+
+  & p {
+    letter-spacing: 0;
+  }
+
+  @include media.screen('mobile') {
+    width: 100%;
+    max-width: 350px;
+    justify-content: space-between;
   }
 }

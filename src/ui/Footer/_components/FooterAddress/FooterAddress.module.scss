@@ -4,6 +4,14 @@
 .footerAddress {
   max-width: 274px;
 
+  @include media.screen('tablet') {
+    justify-self: center;
+  }
+
+  @include media.screen('mobile') {
+    order: 3;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;

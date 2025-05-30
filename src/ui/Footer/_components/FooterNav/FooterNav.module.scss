@@ -1,6 +1,11 @@
 @use 'mixins/fonts';
+@use 'mixins/media';
 
 .footerNav {
+  @include media.screen('mobile') {
+    order: 1;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;

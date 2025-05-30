@@ -4,12 +4,11 @@
 .copyright {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   padding-top: 30px;
   border-top: 1px solid #ffffff80;
 
-  @include media.screen('tablet') {
+  @include media.screen('mobile') {
     flex-direction: column;
     gap: 12px;
     padding-top: 48px;

@@ -1,6 +1,9 @@
-import '../styles/globals.scss'
+import Footer from '@/ui/Footer/Footer'
+
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+
+import '../styles/globals.scss'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -41,10 +44,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={neueHaas.variable}
-      >
+      <body className={neueHaas.variable}>
         {children}
+        <Footer />
       </body>
     </html>
   )

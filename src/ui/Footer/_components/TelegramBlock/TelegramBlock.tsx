@@ -1,4 +1,4 @@
-import ArrowIcon from '@/app/assets/icons/arrow.svg'
+import ArrowIcon from '@/assets/icons/bigArrow.svg'
 
 import styles from './TelegramBlock.module.scss'
 
@@ -15,7 +15,7 @@ const TelegramBlock = () => {
       </button>
       <p className={styles.text}>
         For direct communication, connect with us on Telegram. Clicking the link
-        will redirect you to our Telegram chat
+        will redirect you to&nbsp;our Telegram chat.
       </p>
     </div>
   )
