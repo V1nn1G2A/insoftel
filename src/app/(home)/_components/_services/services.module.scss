@@ -33,19 +33,20 @@
 
 .info-block {
   width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .text-top {
   @include fonts.text(36px, 40px, 300);
   color: var(--color-text-quaternary);
-  text-indent: 1em;
+  text-indent: 43px;
+  letter-spacing: 0.69px;
+  margin-bottom: 82px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 22px;
+  row-gap: 42px;
+  margin-bottom: 80px;
 }

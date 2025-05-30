@@ -9,11 +9,12 @@
 .title {
   @include fonts.text(36px, 40px, 400);
   color: var(--color-text-tertiary);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+  letter-spacing: 0.7px;
 }
 
 .text {
   @include fonts.text(20px, 24px, 300);
   color: var(--color-text-quaternary);
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
