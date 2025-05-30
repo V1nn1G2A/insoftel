@@ -1,6 +1,6 @@
-import { ExploreButton } from '@/ui/Buttons/ExploreButton'
-
 import Image from 'next/image'
+
+import { ExploreButton } from '@/ui/Buttons/ExploreButton'
 
 import FooterAddress from '../FooterAddress/FooterAddress'
 import FooterNav from '../FooterNav/FooterNav'
@@ -24,7 +24,7 @@ const FooterInfo = () => (
       <ExploreButton
         text="Download Presentation"
         colorVariant="light"
-        buttonClassName={styles.button}
+        className={styles.button}
       />
     </div>
   </div>
