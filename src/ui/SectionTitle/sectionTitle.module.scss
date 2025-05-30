@@ -32,11 +32,11 @@
   @media (width >= 1400px) {
     margin: 0 0 0 79px;
 
-    @include fonts.text(90px, 102px, 400);
+    @include fonts.text(90px, 94px, 400);
   }
 }
 
-.header--light {
+.header--dark {
   .text {
     color: var(--color-text-tertiary);
   }
@@ -46,7 +46,7 @@
   }
 }
 
-.header--dark {
+.header--light {
   .text {
     color: var(--color-white);
   }

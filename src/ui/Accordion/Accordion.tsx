@@ -1,6 +1,5 @@
-import type { FC } from 'react'
-
 import Arrow from '@assets/icons/arrow.svg'
+import type { FC } from 'react'
 
 import styles from './Accordion.module.scss'
 
@@ -20,15 +19,15 @@ const Accordion: FC<IAccordion> = ({
   <div className={`${styles.accordion} ${className}`}>
     <input
       type="checkbox"
-      id="accordion-toggle"
+      id={`${title}-toggle`}
       className={styles.toggle}
     />
     <label
-      htmlFor="accordion-toggle"
+      htmlFor={`${title}-toggle`}
       className={styles.accordion__title}
     >
       <p>
-        [ {title} ]{' '}
+        [ {title} ]
         <sup className={styles['card__content-counter']}>{content.length}</sup>
       </p>
       <span className={styles.accordion__btn}>

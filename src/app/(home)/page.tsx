@@ -1,5 +1,6 @@
-import { ServicesContent } from '../services/(services)/_components'
+import { Card } from '@/ui/Card'
+import Footer from '@/ui/Footer/Footer'
 
 export default function Home() {
-  return <ServicesContent />
+  return <Footer />
 }

@@ -1,29 +1,33 @@
 import cn from 'classnames'
 import type { FC } from 'react'
 
-import styles from './sectionTitle.module.scss'
+import styles from './SectionTitle.module.scss'
 
 interface ISectionTitle {
   className?: string
-  text: string
+  children: string
   index: string
-  theme?: 'light' | 'dark'
+  appereance?: 'light' | 'dark'
 }
 
 const cx = cn.bind(styles)
 
 const SectionTitle: FC<ISectionTitle> = ({
   className,
-  text,
+  children,
   index,
-  theme = 'light',
+  appereance = 'dark',
 }) => {
-  const classNames = cx(styles.header, styles[`header--${theme}`], className)
+  const classNames = cx(
+    styles.header,
+    styles[`header--${appereance}`],
+    className
+  )
 
   return (
     <div className={classNames}>
       <sup className={styles.index}>[ {index} ]</sup>
-      <h2 className={styles.text}>{text}</h2>
+      <h2 className={styles.text}>{children}</h2>
     </div>
   )
 }

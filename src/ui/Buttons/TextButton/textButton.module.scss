@@ -8,23 +8,23 @@
   cursor: pointer;
 
   &.long {
-    padding: 10px 0 20px 0;
+    padding: 10px 0 20px;
     justify-content: space-between;
     min-width: 100%;
 
     &.dark {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgb(0 0 0 / 20%);
 
       &:hover {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        border-bottom: 1px solid rgb(0 0 0 / 50%);
       }
     }
 
     &.light {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid rgb(255 255 255 / 20%);
 
       &:hover {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgb(255 255 255 / 50%);
       }
     }
   }
@@ -35,17 +35,17 @@
   align-items: center;
   justify-content: center;
   border-radius: 60px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(0 0 0 / 20%);
   background-color: transparent;
   width: 60px;
   height: 60px;
 
   &.dark {
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(0 0 0 / 20%);
   }
 
   &.light {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgb(255 255 255 / 20%);
   }
 
   &.long {
@@ -58,6 +58,8 @@
 
 .text {
   @include fonts.text(24px, 28px, 'medium');
+
+  letter-spacing: 1px;
   margin-right: 20px;
   letter-spacing: 0.3px;
 
@@ -82,6 +84,7 @@
 
 .arrow {
   transition: transform 0.2s ease;
+
   &.long {
     &.dark {
       color: var(--color-text-tertiary);
@@ -99,6 +102,7 @@
 
 .button:hover .arrow {
   transform: rotate(-45deg);
+
   &.long {
     &.dark {
       color: var(--color-text-tertiary);

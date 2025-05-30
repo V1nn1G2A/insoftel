@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind'
 
-import ArrowIcon from '@/app/assets/icons/arrow.svg'
+import ArrowIcon from '@/assets/icons/arrow.svg'
 
 import styles from './textButton.module.scss'
 
@@ -10,14 +10,15 @@ interface IExploreButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string
   variant: 'short' | 'long'
   colorVariant?: 'light' | 'dark'
+  className?: string
 }
 
 const TextButton: React.FC<IExploreButton> = ({
   text = 'More About Us',
   colorVariant = 'light',
-  variant = 'short'
+  variant = 'short',
 }) => (
-  <button className={cx('button', variant, colorVariant)}>
+  <button className={cx('button', variant, colorVariant, className)}>
     <p className={cx('text', variant, colorVariant)}>{text}</p>
     <div className={cx('round', variant, colorVariant)}>
       <ArrowIcon className={cx('arrow', variant, colorVariant)} />

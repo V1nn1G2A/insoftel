@@ -1,0 +1,85 @@
+@use 'mixins/media';
+@use 'mixins/fonts';
+
+.telegramBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 367px;
+
+  justify-self: end;
+
+  @include media.screen('mobile') {
+    gap: 18px;
+    order: 0;
+  }
+}
+
+.text {
+  @include fonts.text(16px, 20px, 400);
+  color: var(--color-gray);
+  padding-left: 4px;
+  max-width: 320px;
+
+  @include media.screen('mobile') {
+    padding-left: 0;
+  }
+}
+
+.button {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  text-align: start;
+
+  &__text {
+    @include fonts.text(36px, 40px, 400);
+    color: var(--color-white);
+    padding: 2px 0 0 4px;
+
+    @include media.screen('mobile') {
+      @include fonts.text(30px, 34px, 400);
+
+      padding: 4px 0 0;
+    }
+  }
+
+  &__wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-black);
+    cursor: pointer;
+  }
+
+  &__round {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.2s ease;
+  }
+
+  &__arrow {
+    color: var(--color-white);
+
+    transition: all 0.2s ease;
+  }
+
+  &__wrapper:hover &__round {
+    background-color: var(--color-white);
+    transform: scale(0.75) translateY(20px) translateX(-20px);
+  }
+
+  &__wrapper:hover &__arrow {
+    color: var(--color-black);
+    transform: rotate(-45deg);
+  }
+}
