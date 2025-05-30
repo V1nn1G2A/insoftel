@@ -1,0 +1,19 @@
+@use 'mixins/fonts';
+
+.paragraph {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+}
+
+.title {
+  @include fonts.text(36px, 40px, 400);
+  color: var(--color-text-tertiary);
+  margin-bottom: 16px;
+}
+
+.text {
+  @include fonts.text(20px, 24px, 300);
+  color: var(--color-text-quaternary);
+  letter-spacing: 1px;
+}
