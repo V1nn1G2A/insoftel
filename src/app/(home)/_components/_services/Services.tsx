@@ -5,7 +5,7 @@ import { SectionTitle } from '@/ui/SectionTitle'
 import classNames from 'classnames/bind'
 import Image from 'next/image'
 
-import { Paragraph } from '../_paragraph'
+import { Paragraph } from '../../../../ui/Paragraph'
 
 import styles from './services.module.scss'
 

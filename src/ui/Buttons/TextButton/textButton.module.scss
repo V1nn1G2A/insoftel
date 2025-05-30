@@ -59,6 +59,7 @@
 .text {
   @include fonts.text(24px, 28px, 'medium');
   margin-right: 20px;
+  letter-spacing: 0.3px;
 
   &.long {
     &.dark {

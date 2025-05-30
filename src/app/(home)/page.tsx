@@ -1,11 +1,5 @@
-
-import { Services } from './_components/_services'
+import { ServicesContent } from '../services/(services)/_components'
 
 export default function Home() {
-  return (
-    <>
-      <div className="header"></div>
-      <Services />
-    </>
-  )
+  return <ServicesContent />
 }
