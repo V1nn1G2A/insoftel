@@ -1,6 +1,6 @@
 import { TextButton } from '@/ui/Buttons/TextButton'
 import { Container } from '@/ui/Container'
-import { SectionTitle } from '@/ui/Header'
+import { SectionTitle } from '@/ui/SectionTitle'
 
 import classNames from 'classnames/bind'
 import Image from 'next/image'
