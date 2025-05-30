@@ -16,7 +16,7 @@ const SectionTitle: FC<ISectionTitle> = ({
   className,
   children,
   index,
-  appereance = 'light',
+  appereance = 'dark',
 }) => {
   const classNames = cx(
     styles.header,
