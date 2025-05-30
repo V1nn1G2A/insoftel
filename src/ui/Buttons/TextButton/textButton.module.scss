@@ -49,7 +49,7 @@
   }
 
   &.long {
-    margin-right: 16.7px;
+    margin-right: 15px;
     border: none;
     width: auto;
     height: auto;
@@ -58,7 +58,6 @@
 
 .text {
   @include fonts.text(24px, 28px, 'medium');
-  letter-spacing: 1px;
   margin-right: 20px;
 
   &.long {
