@@ -3,7 +3,6 @@
 .accordion {
   width: 100%;
   background-color: transparent;
-  padding: 0 20px;
 }
 
 .toggle {
@@ -11,6 +10,9 @@
 }
 
 .card__content-counter {
+  position: absolute;
+  top: -10px;
+  left: 103%;
   color: var(--color-white);
   opacity: 0;
   transition: opacity 0.3s;
@@ -42,11 +44,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0 0;
+  padding: 14px 0 0;
 
   p {
+    position: relative;
     color: rgb(255 255 255 / 50%);
     transition: color 0.3s;
+    letter-spacing: 2%;
 
     @include fonts.text(24px, 28px, 'regular');
   }

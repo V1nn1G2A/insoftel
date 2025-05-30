@@ -1,9 +1,9 @@
+import classNames from 'classnames/bind'
+import Image from 'next/image'
+
 import { TextButton } from '@/ui/Buttons/TextButton'
 import { Container } from '@/ui/Container'
 import { SectionTitle } from '@/ui/SectionTitle'
-
-import classNames from 'classnames/bind'
-import Image from 'next/image'
 
 import { Paragraph } from '../_paragraph'
 
@@ -16,10 +16,7 @@ const Services = () => {
     <Container>
       <section className={cx('services')}>
         <div className={cx('title-block')}>
-          <SectionTitle
-            index="01"
-            text="Services"
-          />
+          <SectionTitle index="01">Services</SectionTitle>
           <Image
             src="/img/services/1.png"
             alt="services-image"

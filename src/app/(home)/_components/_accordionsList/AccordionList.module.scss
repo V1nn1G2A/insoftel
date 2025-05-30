@@ -1,0 +1,7 @@
+.accordion {
+  width: 100%;
+
+  @media (width >= 1400px) {
+    max-width: 660px;
+  }
+}
