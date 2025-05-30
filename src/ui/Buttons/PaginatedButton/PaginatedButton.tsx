@@ -1,4 +1,4 @@
-import ArrowIcon from '@/app/assets/icons/arrow.svg'
+import ArrowIcon from '@/assets/icons/arrow.svg'
 
 import classNames from 'classnames/bind'
 

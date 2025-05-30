@@ -1,11 +1,6 @@
-
-import { Services } from './_components/_services'
+import { Card } from '@/ui/Card'
+import Footer from '@/ui/Footer/Footer'
 
 export default function Home() {
-  return (
-    <>
-      <div className="header"></div>
-      <Services />
-    </>
-  )
+  return <Footer />
 }
