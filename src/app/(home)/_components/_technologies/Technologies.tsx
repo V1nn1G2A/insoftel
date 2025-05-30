@@ -2,10 +2,10 @@ import type { FC } from 'react'
 
 import { TextButton } from '@/ui/Buttons/TextButton'
 import { Container } from '@/ui/Container'
-import { Header } from '@/ui/Header'
+import { SectionTitle } from '@/ui/SectionTitle'
 import { VideoBackground } from '@/ui/VideoBackground'
 
-import AccordionsList from './components/AccordionsList/AccordionsList'
+import AccordionsList from '../_accordionsList/AccordionsList'
 
 import styles from './Technologies.module.scss'
 
@@ -14,13 +14,13 @@ const Technologies: FC = ({}) => (
     <VideoBackground src={'/video/background.mp4'}>
       <Container>
         <div className={styles.technologies}>
-          <Header
+          <SectionTitle
             index="02"
             appereance="light"
             className={styles.technologies__title}
           >
             Technologies
-          </Header>
+          </SectionTitle>
           <div className={styles['technologies__text-container']}>
             <p className={styles.technologies__text}>
               We leverage the latest technological advancements to ensure our
