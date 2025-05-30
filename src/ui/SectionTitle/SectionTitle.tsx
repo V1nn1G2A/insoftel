@@ -1,9 +1,9 @@
 import cn from 'classnames'
 import type { FC } from 'react'
 
-import styles from './Header.module.scss'
+import styles from './sectionTitle.module.scss'
 
-interface IHeader {
+interface ISectionTitle {
   className?: string
   children: string
   index: string
@@ -12,7 +12,7 @@ interface IHeader {
 
 const cx = cn.bind(styles)
 
-const Header: FC<IHeader> = ({
+const SectionTitle: FC<ISectionTitle> = ({
   className,
   children,
   index,
@@ -32,4 +32,4 @@ const Header: FC<IHeader> = ({
   )
 }
 
-export default Header
+export default SectionTitle

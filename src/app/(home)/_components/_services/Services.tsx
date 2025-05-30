@@ -1,5 +1,6 @@
 import { TextButton } from '@/ui/Buttons/TextButton'
 import { Container } from '@/ui/Container'
+import { SectionTitle } from '@/ui/SectionTitle'
 
 import classNames from 'classnames/bind'
 import Image from 'next/image'
@@ -15,10 +16,10 @@ const Services = () => {
     <Container>
       <section className={cx('services')}>
         <div className={cx('title-block')}>
-          <div className={cx('title-top')}>
-            <span className={cx('number')}>[01]</span>
-            <h2 className={cx('title')}>Services</h2>
-          </div>
+          <SectionTitle
+            index="01"
+            text="Services"
+          />
           <Image
             src="/img/services/1.png"
             alt="services-image"
@@ -75,26 +76,6 @@ const Services = () => {
               title="Quality & Branding"
               lines={['QA Testing', 'Branding & Communication Strategy']}
             />
-            {/* <Paragraph
-            User-Centred UXProduct Design StrategyApp & Web DesignMotion & Communication DesignPrototyping and Testing
-            QA TestingBranding & Communication Strategy
-            Intelligent AutomationPredictive AnalyticsCustom AI SolutionsAI-Powered Personalisation
-            Web & Mobile App DevelopmentCross-Platform ApplicationsBackend & Frontend DevelopmentEnterprise Software SolutionsBlockchain Applications
-              title="Development"
-              text="Web & Mobile App DevelopmentCross-Platform ApplicationsBackend & Frontend Development Enterprise Software Solutions Blockchain Applications"
-            />
-            <Paragraph
-              title="UX/UI Design"
-              text="User-Centred UX Product Design Strategy App & Web Design Motion & Communication Design Prototyping and Testing"
-            />
-            <Paragraph
-              title="Artificial Intelligence"
-              text="Intelligent Automation Predictive Analytics Custom AI Solutions AI-Powered Personalisation"
-            />
-            <Paragraph
-              title="Quality & Branding"
-              text="QA Testing Branding & Communication Strategy"
-            /> */}
           </div>
           <TextButton
             text="Explore Our Services"
