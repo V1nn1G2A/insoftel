@@ -3,9 +3,8 @@ import Image from 'next/image'
 
 import { TextButton } from '@/ui/Buttons/TextButton'
 import { Container } from '@/ui/Container'
+import { Paragraph } from '@/ui/Paragraph'
 import { SectionTitle } from '@/ui/SectionTitle'
-
-import { Paragraph } from '../_paragraph'
 
 import styles from './services.module.scss'
 
