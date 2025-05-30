@@ -21,7 +21,10 @@ const FooterAddress = () => (
       </li>
       <li className={styles.footerAddress__item}>
         <span className={styles.footerAddress__subtitle}>[ Email ]</span>
-        <Link href="mailto:info@insofteltechnologies.com">
+        <Link
+          href="mailto:info@insofteltechnologies.com"
+          className={styles.link}
+        >
           info@insofteltechnologies.com
         </Link>
       </li>
