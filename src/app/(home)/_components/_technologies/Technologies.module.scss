@@ -1,0 +1,55 @@
+@use 'mixins/fonts';
+
+.technologies {
+  @media (width >= 1400px) {
+    display: flex;
+    margin-top: 80px;
+  }
+}
+
+.technologies__title {
+  margin: 40px 0 24px;
+
+  @media (width >= 1400px) {
+    margin-top: 5px;
+  }
+}
+
+.technologies__text-container {
+  @media (width >= 1400px) {
+    margin-left: 70px;
+  }
+}
+
+.technologies__text {
+  margin: 0 0 36px;
+  text-indent: 26px;
+  letter-spacing: -1%;
+  color: var(--color-white);
+
+  @include fonts.text(24px, 28px, 400);
+
+  @media (width >= 1400px) {
+    @include fonts.text(36px, 40px, 400);
+
+    letter-spacing: 0;
+    text-indent: 42px;
+    margin-bottom: 64px;
+  }
+}
+
+.technologies__accordion {
+  margin: 0 0 30px;
+
+  @media (width >= 1400px) {
+    margin: 0 0 85px;
+  }
+}
+
+.technologies__button {
+  margin-bottom: 40px;
+
+  p {
+    font-size: 22px;
+  }
+}

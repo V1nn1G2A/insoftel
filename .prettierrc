@@ -12,8 +12,8 @@
   "endOfLine": "lf",
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrder": [
-    "^[a-z]",
-    "^@assets/(.*)$",
+    "<THIRD_PARTY_MODULES>",
+    "^@/(.*)$",
     "^[.]{1,2}/(?!.*\\.scss$)",
     ".*\\.scss$"
   ],
