@@ -1,1 +1,87 @@
-//color options
+@use './mixins/fonts/index';
+
+// Изменить названия цветов на нормальные в root'ах
+
+$color-white: #fff;
+$color-white-secondary: #f7f7f7;
+$color-black: #151719;
+$color-black-secondary: #1c1b20;
+$color-dark-gray: #363636;
+$color-middle-gray: #e4e4e4;
+$color-gray: #878787;
+$color-light-gray: #dedede;
+$color-light-dark: #878d93;
+$color-text-secondary: #878787;
+$color-text-tertiary: #0b0a0f;
+$color-text-quaternary: #4e5256;
+
+:root {
+  --color-white: #{$color-white};
+  --color-white-secondary: #{$color-white-secondary};
+  --color-black: #{$color-black};
+  --color-black-secondary: #{$color-black-secondary};
+  --color-dark-gray: #{$color-dark-gray};
+  --color-middle-gray: #{$color-middle-gray};
+  --color-gray: #{$color-gray};
+  --color-light-gray: #{$color-light-gray};
+  --color-light-dark: #{$color-light-dark};
+  --color-text-secondary: #{$color-text-secondary};
+  --color-text-tertiary: #{$color-text-tertiary};
+  --color-text-quaternary: #{$color-text-quaternary};
+}
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --color-main: #{$color-white};
+//     --color-text: #{$color-white-secondary};
+//     --color-black: #{$color-black};
+//     --color-black-secondary: #{$color-black-secondary};
+//     --color-dark-gray: #{$color-dark-gray};
+//     --color-middle-gray: #{$color-middle-gray};
+//     --color-gray: #{$color-gray};
+//     --color-light-gray: #{$color-light-gray};
+//     --color-light-dark: #{$color-light-dark};
+//     --color-text-secondary: #{$color-text-secondary};
+//     --color-text-tertiary: #{$color-text-tertiary};
+//     --color-text-quaternary: #{$color-text-quaternary};
+//   }
+// }
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-neue-haas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.header {
+  height: 796px;
+  background-color: #0b0a0f;
+}
+
+// Это можно комментить, чтобы менять цвет body
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+// }
