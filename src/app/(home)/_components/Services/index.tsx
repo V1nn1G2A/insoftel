@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Container, SectionTitle, TextButton } from '@/ui'
 
 import Paragraph from '../../../../ui/Paragraph'
+import services from '../../_constants/SERVICE'
 
 import styles from './index.module.scss'
 
@@ -29,48 +30,14 @@ const Services = () => {
             efficiency, innovation, and growth
           </p>
           <div className={cx('grid')}>
-            <Paragraph
-              title="IT Consulting"
-              lines={[
-                'Technology Strategy & Roadmaps',
-                'Infrastructure Design',
-                'Cloud & DevOps Solutions',
-                'Digital Transformation Guidance',
-              ]}
-            />
-            <Paragraph
-              title="Development"
-              lines={[
-                'Web & Mobile App Development',
-                'Cross-Platform Applications',
-                'Backend & Frontend Development',
-                'Enterprise Software Solutions',
-                'Blockchain Applications',
-              ]}
-            />
-            <Paragraph
-              title="UX/UI Design"
-              lines={[
-                'User-Centred UX',
-                'Product Design Strategy',
-                'App & Web Design',
-                'Motion & Communication Design',
-                'Prototyping and Testing',
-              ]}
-            />
-            <Paragraph
-              title="Artificial Intelligence"
-              lines={[
-                'Intelligent Automation',
-                'Predictive Analytics',
-                'Custom AI Solutions',
-                'AI-Powered Personalisation',
-              ]}
-            />
-            <Paragraph
-              title="Quality & Branding"
-              lines={['QA Testing', 'Branding & Communication Strategy']}
-            />
+            {services.map(service => (
+              <Paragraph
+                key={service.title}
+                title={service.title}
+                lines={service.lines}
+                className={styles.paragraph}
+              />
+            ))}
           </div>
           <TextButton
             text="Explore Our Services"

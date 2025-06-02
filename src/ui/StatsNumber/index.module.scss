@@ -36,11 +36,11 @@
     color: var(--color-text-secondary);
 
     @include media.screen('desktop') {
-      @include fonts.text(24px, 34px, 'regular');
+      @include fonts.text(24px, 36px, 'regular');
     }
   }
 
   @include media.screen('desktop') {
-    padding-bottom: 16px;
+    padding-bottom: 14px;
   }
 }

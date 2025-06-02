@@ -1,6 +1,7 @@
 @use 'mixins/fonts';
 
 .accordion {
+  box-sizing: border-box;
   width: 100%;
   background-color: transparent;
 }
@@ -28,11 +29,11 @@
   padding: 0 0 16px;
   letter-spacing: 2%;
   word-spacing: 2%;
+  color: var(--color-white);
 
   @include fonts.text(18px, 22px, 'regular');
 
   p {
-    color: var(--color-white);
     margin-top: 16px;
   }
 
@@ -77,11 +78,12 @@
   transition: background-color 0.3s;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .accordion--active .accordion__content {
   grid-template-rows: 1fr;
 }
 
-.accordion__title:hover ~ .accordion__title,
+.accordion__title:hover,
 .accordion--active .accordion__title {
   p {
     color: var(--color-white);

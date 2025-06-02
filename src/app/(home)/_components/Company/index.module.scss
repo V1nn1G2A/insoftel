@@ -1,6 +1,14 @@
 @use 'mixins/media';
 
 .company {
+  h2 {
+    margin-right: 144px;
+
+    @include media.screen('desktop') {
+      margin-right: 0;
+    }
+  }
+
   .company__header {
     @include media.screen('desktop') {
       display: flex;
@@ -9,7 +17,7 @@
   }
 
   button:last-of-type {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
     width: 100%;
     justify-content: space-between;
     margin-top: 7px;
@@ -21,7 +29,7 @@
   }
 
   @include media.screen('desktop') {
-    padding-top: 55px;
+    padding: 55px 0 78px;
   }
 }
 
@@ -41,7 +49,7 @@
     display: none;
 
     @include media.screen('desktop') {
-      margin: 48px 0 96px;
+      margin: 48px 0 0;
       display: flex;
       justify-content: flex-start;
     }
@@ -63,6 +71,7 @@
       flex-direction: column;
       align-items: flex-end;
       width: 100%;
+      margin-top: 3px;
     }
   }
 
@@ -83,7 +92,7 @@
     margin-top: 0;
 
     & + & {
-      margin-top: 54px;
+      margin-top: 56px;
     }
   }
 }
