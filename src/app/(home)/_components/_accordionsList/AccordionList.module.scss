@@ -1,7 +1,14 @@
+@use "mixins/media";
+
+.accordion-wrapper {
+  height: 698px;
+}
+
 .accordion {
   width: 100%;
+  position: absolute;
 
-  @media (width >= 1400px) {
+  @include media.screen("desktop"){
     max-width: 660px;
   }
 }
