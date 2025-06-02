@@ -18,3 +18,20 @@
   color: var(--color-text-quaternary);
   letter-spacing: 0.8px;
 }
+
+// external styles
+
+.pagination-block {
+  max-width: 662px;
+  letter-spacing: 1px;
+}
+
+.pagination-block:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.paginated-title {
+  letter-spacing: 0.1px;
+  @include fonts.text(20px, 24px, 600);
+  margin-bottom: 6px;
+}
