@@ -1,13 +1,11 @@
 import classNames from 'classnames/bind'
 import Image from 'next/image'
 
-import { TextButton } from '@/ui/Buttons/TextButton'
-import { Container } from '@/ui/Container'
-import { SectionTitle } from '@/ui/SectionTitle'
+import { Container, SectionTitle, TextButton } from '@/ui'
 
-import { Paragraph } from '../_paragraph'
+import Paragraph from '../Paragraph'
 
-import styles from './services.module.scss'
+import styles from './index.module.scss'
 
 const cx = classNames.bind(styles)
 

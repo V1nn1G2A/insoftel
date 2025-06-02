@@ -1,7 +1,7 @@
 import cn from 'classnames'
 import type { FC } from 'react'
 
-import styles from './SectionTitle.module.scss'
+import styles from './index.module.scss'
 
 interface ISectionTitle {
   className?: string
