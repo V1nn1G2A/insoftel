@@ -1,5 +1,9 @@
-import Technologies from './_components/Technologies'
+import Contacts from '../contacts/page'
 
 export default function Home() {
-  return <Technologies />
+  return (
+    <>
+      <Contacts />
+    </>
+  )
 }
