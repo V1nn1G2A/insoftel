@@ -17,6 +17,7 @@ const TextButton: React.FC<IExploreButton> = ({
   text = 'More About Us',
   colorVariant = 'light',
   variant = 'short',
+  className,
 }) => (
   <button className={cx('button', variant, colorVariant, className)}>
     <p className={cx('text', variant, colorVariant)}>{text}</p>

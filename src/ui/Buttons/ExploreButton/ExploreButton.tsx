@@ -10,14 +10,19 @@ interface IExploreButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string
   colorVariant?: 'light' | 'dark'
   className?: string
+  onClick: () => void
 }
 
 const ExploreButton: React.FC<IExploreButton> = ({
   text = 'Explore',
   colorVariant = 'light',
   className,
+  onClick,
 }) => (
-  <button className={cx('button', colorVariant, className)}>
+  <button
+    className={cx('button', colorVariant, className)}
+    onClick={onClick}
+  >
     <p className={cx('text', colorVariant)}>{text}</p>
     <div className={cx('round', colorVariant)}>
       <ArrowIcon className={cx('arrow', colorVariant)} />
