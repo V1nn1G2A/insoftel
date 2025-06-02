@@ -5,7 +5,8 @@ import { Container } from '@/ui'
 
 import { BPage } from './_components'
 import { PaginatedBlock } from './_components'
-import { servicesPagination } from './_constants/SERVICES'
+
+// import { servicesPagination } from './_constants/SERVICES'
 
 // прописать логигу отобрпажения пагинации
 

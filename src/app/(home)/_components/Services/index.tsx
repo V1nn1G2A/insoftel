@@ -35,7 +35,7 @@ const Services = () => {
                 key={service.title}
                 title={service.title}
                 lines={service.lines}
-                className={styles.paragraph}
+                className={[styles.paragraph]}
               />
             ))}
           </div>
