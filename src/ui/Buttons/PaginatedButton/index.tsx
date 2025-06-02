@@ -8,10 +8,18 @@ const cx = classNames.bind(styles)
 
 interface IExploreButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   orientation: 'left' | 'right'
+  className?: string
 }
 
-const PaginatedButton: React.FC<IExploreButton> = ({ orientation }) => (
-  <button className={cx('button')}>
+const PaginatedButton: React.FC<IExploreButton> = ({
+  orientation,
+  className,
+  ...rest
+}) => (
+  <button
+    className={cx('button', className)}
+    {...rest}
+  >
     <ArrowIcon className={cx('arrow', orientation)} />
   </button>
 )

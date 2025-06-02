@@ -1,0 +1,48 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.office {
+  max-width: 548px;
+  margin-top: 36px;
+  letter-spacing: 2%;
+
+  p {
+    color: var(--color-text-quaternary);
+
+    @include fonts.text(16px, 20px, 400);
+
+    @include media.screen('desktop') {
+      @include fonts.text(20px, 24px, 400);
+    }
+  }
+
+  @include media.screen('desktop') {
+    margin-top: 23px;
+  }
+}
+
+.office__contacts {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    letter-spacing: -2%;
+    color: var(--color-text-tertiary);
+
+    @include fonts.text(20px, 24px, 400);
+  }
+
+  @include media.screen('desktop') {
+    margin-top: 112px;
+  }
+}
+
+.office p:first-of-type {
+  margin-bottom: 20px;
+  letter-spacing: 2%;
+}
+
+.office p:last-of-type {
+  letter-spacing: 1.7%;
+  margin-bottom: 40px;
+}

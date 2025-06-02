@@ -1,4 +1,5 @@
 @use 'mixins/fonts';
+@use 'mixins/media';
 
 .card img {
   display: block;
@@ -6,7 +7,8 @@
   height: 334px;
   transition: opacity 0.4s;
 
-  @media (width >= 1400px) {
+
+  @include media.screen("desktop"){
     width: 435px;
     height: 434px;
   }
@@ -15,8 +17,10 @@
 .card svg {
   transform: rotate(0);
   transition: transform 0.5s;
+  width: 20px;
 
-  @media (width >= 1400px) {
+
+  @include media.screen("desktop"){
     width: 24px;
     height: 24px;
   }
@@ -28,7 +32,7 @@
   transition: transform 0.4s;
   height: calc(410px - 75px);
 
-  @media (width >= 1400px) {
+  @include media.screen("desktop"){
     height: calc(530px - 95px);
   }
 }
@@ -53,11 +57,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
 
-  @media (width >= 1400px) {
+  @include media.screen("desktop"){
     @include fonts.text(24px, 28px, 'regular');
 
     height: 96px;
@@ -90,7 +94,7 @@
     letter-spacing: 2%;
   }
 
-  @media (width >= 1400px) {
+  @include media.screen("desktop"){
     @include fonts.text(20px, 24px, 400);
 
     line-height: 24px;
@@ -126,6 +130,7 @@
   width: 335px;
   height: 410px;
   overflow: hidden;
+  letter-spacing: 2%;
 
   button {
     border: none;
@@ -151,8 +156,8 @@
     transform: rotate(-45deg);
   }
 
-  @media (width >= 1400px) {
-    width: 435px;
+  @include media.screen("desktop"){
+        width: 435px;
     height: 530px;
   }
 }
