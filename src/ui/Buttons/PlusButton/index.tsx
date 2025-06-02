@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind'
 
-import PlusIcon from '@/app/assets/icons/plus.svg'
+import PlusIcon from '@/assets/icons/plus.svg'
 
 import styles from './index.module.scss'
 
