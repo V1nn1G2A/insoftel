@@ -1,4 +1,4 @@
-import { Container } from '@/ui/Container'
+import { Container } from '@/ui'
 
 import { technologiesContetnt } from './CONSTANTS'
 import TechSection from './_components/TechSection'

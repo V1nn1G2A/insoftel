@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from 'react'
 
-import styles from './VideoBackground.module.scss'
+import styles from './index.module.scss'
 
 interface Props {
   src: string
