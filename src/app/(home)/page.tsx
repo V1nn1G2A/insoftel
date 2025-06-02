@@ -1,5 +1,9 @@
-import Footer from '@/ui/Footer/Footer'
+import Contacts from '../contacts/page'
 
 export default function Home() {
-  return <Footer />
+  return (
+    <>
+      <Contacts />
+    </>
+  )
 }
