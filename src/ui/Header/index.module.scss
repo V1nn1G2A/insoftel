@@ -1,0 +1,17 @@
+@use 'mixins/media';
+@use 'mixins/fonts';
+
+.header {
+  padding: 20px 0;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logo {
+  @include fonts.text(24px, 28px, 500);
+  color: var(--color-white);
+  text-decoration: none;
+}

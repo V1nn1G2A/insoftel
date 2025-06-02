@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
-import Footer from '@/ui/Footer'
+import { Footer, Header } from '@/ui'
 
 import '../styles/globals.scss'
 
@@ -45,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={neueHaas.variable}>
+        <Header />
         {children}
         <Footer />
       </body>

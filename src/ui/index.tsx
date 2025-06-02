@@ -10,3 +10,4 @@ export {
   PlusButton,
 } from './Buttons'
 export { default as Accordion } from './Accordion'
+export { default as Header } from './Header'

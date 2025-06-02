@@ -1,0 +1,18 @@
+@use 'mixins/media';
+
+.search {
+  position: relative;
+
+  &__input {
+    width: 100%;
+    background-color: #ffffff1a;
+    border: none;
+    border-bottom: 1px solid var(--color-white);
+    color: var(--color-white);
+    outline: none;
+
+    &::placeholder {
+      color: var(--color-white);
+    }
+  }
+}
