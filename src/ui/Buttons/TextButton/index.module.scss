@@ -59,6 +59,7 @@
 .text {
   @include fonts.text(24px, 28px, '600');
 
+  letter-spacing: 2%;
   margin-right: 20px;
   letter-spacing: 0.3px;
 

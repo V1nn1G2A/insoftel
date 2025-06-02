@@ -1,7 +1,17 @@
+@use 'mixins/media';
+
+.accordion-wrapper {
+  height: 668px;
+
+  @include media.screen('desktop') {
+    margin-bottom: 20px;
+  }
+}
+
 .accordion {
   width: 100%;
 
-  @media (width >= 1400px) {
+  @include media.screen('desktop') {
     max-width: 660px;
   }
 }

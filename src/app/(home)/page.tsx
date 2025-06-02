@@ -1,9 +1,12 @@
-import Contacts from '../contacts/page'
+import { Company, Products, Services, Technologies } from './_components'
 
 export default function Home() {
   return (
     <>
-      <Contacts />
+      <Services />
+      <Technologies />
+      <Company />
+      <Products />
     </>
   )
 }

@@ -1,4 +1,5 @@
 @use 'mixins/fonts';
+@use 'mixins/media';
 
 .header {
   width: max-content;
@@ -14,8 +15,8 @@
   right: 0;
   letter-spacing: -0.5px;
 
-  @media (width >= 1400px) {
-    top: -1px;
+  @include media.screen("desktop"){
+    top: -4px;
     left: 0;
 
     @include fonts.text(20px, 24px, 500);
@@ -23,14 +24,14 @@
 }
 
 .text {
-  margin: 0 68px 0 0;
-  order: 0;
-  letter-spacing: 1.7px;
+  margin: 0 155px 0 0;
+  letter-spacing: 1px;
 
   @include fonts.text(48px, 52px, 400);
 
-  @media (width >= 1400px) {
+  @include media.screen("desktop"){
     margin: 0 0 0 79px;
+    letter-spacing: 2%;
 
     @include fonts.text(90px, 94px, 400);
   }

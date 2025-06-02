@@ -1,6 +1,6 @@
 @use './mixins/fonts/index';
 
-// Изменить названия цветов на нормальные в root'ах
+/* Изменить названия цветов на нормальные в root'ах */
 
 $color-white: #fff;
 $color-white-secondary: #f7f7f7;
@@ -77,6 +77,10 @@ a {
 .header {
   height: 84px;
   background-color: #0b0a0f;
+}
+
+.swiper-wrapper {
+  display: flex;
 }
 
 // Это можно комментить, чтобы менять цвет body

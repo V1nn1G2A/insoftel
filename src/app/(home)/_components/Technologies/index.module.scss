@@ -1,7 +1,18 @@
 @use 'mixins/fonts';
+@use 'mixins/media';
 
 .technologies {
-  @media (width >= 1400px) {
+  margin-bottom: 40px;
+
+  h2 {
+    margin-right: 66px;
+
+    @include media.screen('desktop') {
+      margin-right: 0;
+    }
+  }
+
+  @include media.screen('desktop') {
     display: flex;
     margin-top: 80px;
   }
@@ -10,46 +21,46 @@
 .technologies__title {
   margin: 40px 0 24px;
 
-  @media (width >= 1400px) {
+  @include media.screen('desktop') {
     margin-top: 5px;
   }
 }
 
 .technologies__text-container {
-  @media (width >= 1400px) {
+  @include media.screen('desktop') {
     margin-left: 70px;
   }
 }
 
 .technologies__text {
   margin: 0 0 36px;
-  text-indent: 26px;
-  letter-spacing: -1%;
+  text-indent: 28px;
+  letter-spacing: -0.7%;
   color: var(--color-white);
 
   @include fonts.text(24px, 28px, 400);
 
-  @media (width >= 1400px) {
+  @include media.screen('desktop') {
     @include fonts.text(36px, 40px, 400);
 
     letter-spacing: 0;
-    text-indent: 42px;
+    text-indent: 46px;
     margin-bottom: 64px;
   }
 }
 
 .technologies__accordion {
-  margin: 0 0 30px;
-
-  @media (width >= 1400px) {
+  @include media.screen('desktop') {
     margin: 0 0 85px;
   }
 }
 
 .technologies__button {
-  margin-bottom: 40px;
-
   p {
     font-size: 22px;
+  }
+
+  @include media.screen('desktop') {
+    margin-bottom: 82px;
   }
 }

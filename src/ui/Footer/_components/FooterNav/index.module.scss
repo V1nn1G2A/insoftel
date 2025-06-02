@@ -15,6 +15,7 @@
 
   &__item {
     @include fonts.text(16px, 20px, 400);
+
     color: var(--color-white);
 
     &:hover {
