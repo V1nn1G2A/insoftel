@@ -1,4 +1,4 @@
-import styles from './Copyright.module.scss'
+import styles from './index.module.scss'
 
 const Copyright = () => {
   return (

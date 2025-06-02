@@ -1,10 +1,10 @@
 import type { FC } from 'react'
 
-import { Accordion } from '@/ui/Accordion'
+import { Accordion } from '@/ui'
 
 import accordion from '../../_constants/ACCORDION'
 
-import styles from './AccordionList.module.scss'
+import styles from './index.module.scss'
 
 interface IAccordionList {
   className?: string

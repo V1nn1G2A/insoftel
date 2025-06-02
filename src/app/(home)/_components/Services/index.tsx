@@ -1,12 +1,20 @@
 import classNames from 'classnames/bind'
 import Image from 'next/image'
 
+<<<<<<< HEAD:src/app/(home)/_components/_services/Services.tsx
 import { TextButton } from '@/ui/Buttons/TextButton'
 import { Container } from '@/ui/Container'
 import { Paragraph } from '@/ui/Paragraph'
 import { SectionTitle } from '@/ui/SectionTitle'
 
 import styles from './services.module.scss'
+=======
+import { Container, SectionTitle, TextButton } from '@/ui'
+
+import Paragraph from '../Paragraph'
+
+import styles from './index.module.scss'
+>>>>>>> 4cdd326faf79d322f46e1046f7f6a5c5bb1c46e6:src/app/(home)/_components/Services/index.tsx
 
 const cx = classNames.bind(styles)
 
