@@ -2,7 +2,7 @@ import classNames from 'classnames/bind'
 
 import ArrowIcon from '@/assets/icons/arrow.svg'
 
-import styles from './paginatedButton.module.scss'
+import styles from './index.module.scss'
 
 const cx = classNames.bind(styles)
 
