@@ -32,6 +32,7 @@
   @include fonts.text(18px, 22px, 'regular');
 
   p {
+    color: var(--color-white);
     margin-top: 16px;
   }
 
@@ -76,12 +77,12 @@
   transition: background-color 0.3s;
 }
 
-.toggle:checked ~ .accordion__content {
+.accordion--active .accordion__content {
   grid-template-rows: 1fr;
 }
 
-.accordion__title:hover,
-.toggle:checked ~ .accordion__title {
+.accordion__title:hover ~ .accordion__title,
+.accordion--active .accordion__title {
   p {
     color: var(--color-white);
   }
