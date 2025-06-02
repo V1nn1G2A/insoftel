@@ -1,7 +1,7 @@
 import Arrow from '@assets/icons/arrow.svg'
 import type { FC } from 'react'
 
-import styles from './Accordion.module.scss'
+import styles from './index.module.scss'
 
 interface IAccordion {
   title: string

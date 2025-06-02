@@ -1,5 +1,5 @@
-import Footer from '@/ui/Footer/Footer'
+import Technologies from './_components/Technologies'
 
 export default function Home() {
-  return <Footer />
+  return <Technologies />
 }

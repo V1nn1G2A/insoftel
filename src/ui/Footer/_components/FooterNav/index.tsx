@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import styles from './FooterNav.module.scss'
+import styles from './index.module.scss'
 
 const FooterNav = () => (
   <nav className={styles.footerNav}>

@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
-import { ExploreButton } from '@/ui/Buttons/ExploreButton'
+import { ExploreButton } from '@/ui'
 
-import FooterAddress from '../FooterAddress/FooterAddress'
-import FooterNav from '../FooterNav/FooterNav'
-import TelegramBlock from '../TelegramBlock/TelegramBlock'
+import FooterAddress from '../FooterAddress'
+import FooterNav from '../FooterNav'
+import TelegramBlock from '../TelegramBlock'
 
-import styles from './FooterInfo.module.scss'
+import styles from './index.module.scss'
 
 const FooterInfo = () => (
   <div className={styles.footerInfo}>

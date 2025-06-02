@@ -1,13 +1,12 @@
 'use client'
 
+import PlusIcon from '@assets/icons/plus.svg'
 import cn from 'classnames'
 import Image from 'next/image'
 import type { FC } from 'react'
 import { useState } from 'react'
 
-import PlusIcon from '@assets/icons/plus.svg'
-
-import styles from './Card.module.scss'
+import styles from './index.module.scss'
 
 interface ICard {
   className?: string

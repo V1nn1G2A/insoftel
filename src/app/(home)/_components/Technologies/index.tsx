@@ -1,11 +1,8 @@
 import type { FC } from 'react'
 
-import { TextButton } from '@/ui/Buttons/TextButton'
-import { Container } from '@/ui/Container'
-import { SectionTitle } from '@/ui/SectionTitle'
-import { VideoBackground } from '@/ui/VideoBackground'
+import { Container, SectionTitle, TextButton, VideoBackground } from '@/ui'
 
-import AccordionsList from '../_accordionsList/AccordionsList'
+import AccordionsList from '../AccordionsList'
 
 import styles from './Technologies.module.scss'
 
