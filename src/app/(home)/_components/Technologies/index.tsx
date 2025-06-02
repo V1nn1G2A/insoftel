@@ -4,7 +4,7 @@ import { Container, SectionTitle, TextButton, VideoBackground } from '@/ui'
 
 import AccordionsList from '../AccordionsList'
 
-import styles from './Technologies.module.scss'
+import styles from './index.module.scss'
 
 const Technologies: FC = ({}) => (
   <section>
