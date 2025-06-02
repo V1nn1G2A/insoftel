@@ -1,0 +1,5 @@
+export { default as Heading } from './Heading'
+export { default as Enquiries } from './Enquiries'
+export { default as Addresses } from './Addresses'
+export { default as AddressItem } from './AddresItem'
+export { default as ContactsBlock } from './ContactsBlock'

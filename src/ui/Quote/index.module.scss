@@ -1,0 +1,47 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.quote {
+  @include fonts.text(16px, 20px, 400);
+
+  padding: 48px 0;
+  border-top: 1px solid rgba($color: #000, $alpha: 20%);
+  border-bottom: 1px solid rgba($color: #000, $alpha: 20%);
+
+  @include media.screen('desktop') {
+    padding: 92px 0;
+    margin: 114px 0;
+    letter-spacing : 2%;
+  }
+
+  div {
+    max-width: 851px;
+    margin: 0 auto;
+  }
+}
+
+.quote__content {
+  color: var(--color-text-quaternary);
+  text-indent: 18px;
+  letter-spacing: 2%;
+
+  @include media.screen('desktop') {
+    text-indent: 30px;
+    letter-spacing: 0;
+    word-spacing: -6%;
+
+    @include fonts.text(30px, 34px, 400);
+  }
+}
+
+.quote__author {
+  width: max-content;
+  font-weight: 600;
+  margin: 24px 0 0 auto;
+  letter-spacing: 1%;
+  color: var(--color-text-tertiary);
+
+  @include media.screen('desktop') {
+    @include fonts.text(20px, 20px, 600);
+  }
+}

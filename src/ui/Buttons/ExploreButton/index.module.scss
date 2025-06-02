@@ -9,26 +9,28 @@
 
   &.dark {
     background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(0 0 0 / 20%);
 
     &:hover {
-      border: 1px solid rgba(0, 0, 0, 0.5);
+      border: 1px solid rgb(0 0 0 / 50%);
     }
   }
 
   &.light {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgb(255 255 255 / 5%);
+    border: 1px solid rgb(255 255 255 / 20%);
 
     &:hover {
-      border: 1px solid rgba(255, 255, 255, 0.5);
+      border: 1px solid rgb(255 255 255 / 50%);
     }
   }
 }
 
 .text {
   margin-right: 14px;
+
   @include fonts.text(16px, 20px, 'regular');
+
   letter-spacing: 1px;
 
   &.dark {

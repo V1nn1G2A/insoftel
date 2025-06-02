@@ -1,10 +1,13 @@
 'use client'
 
-import PlusIcon from '@assets/icons/plus.svg'
 import cn from 'classnames'
 import Image from 'next/image'
 import type { FC } from 'react'
 import { useState } from 'react'
+
+import { useMediaQuery } from '@/hooks/useMediaQuery'
+
+import PlusIcon from '@assets/icons/plus.svg'
 
 import styles from './index.module.scss'
 
@@ -19,13 +22,14 @@ const cx = cn.bind(styles)
 
 const Card: FC<ICard> = ({ picture, title, text, className }) => {
   const [isActive, setIsActive] = useState(false)
+  const isTablet = useMediaQuery('(max-width: 1279px)')
 
   const classNames = cx(styles.card, className, {
     [styles['card--active']]: isActive,
   })
 
   const handleOpen = () => {
-    setIsActive(prev => !prev)
+    if (isTablet) setIsActive(prev => !prev)
   }
 
   return (

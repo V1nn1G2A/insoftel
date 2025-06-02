@@ -10,21 +10,25 @@ interface IExploreButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string
   variant: 'short' | 'long'
   colorVariant?: 'light' | 'dark'
-  className?: string
+  classNames?: string[]
 }
 
 const TextButton: React.FC<IExploreButton> = ({
   text = 'More About Us',
   colorVariant = 'light',
   variant = 'short',
-  className,
-}) => (
-  <button className={cx('button', variant, colorVariant, className)}>
-    <p className={cx('text', variant, colorVariant)}>{text}</p>
-    <div className={cx('round', variant, colorVariant)}>
-      <ArrowIcon className={cx('arrow', variant, colorVariant)} />
-    </div>
-  </button>
-)
-
+  classNames,
+}) => {
+  const [contactsButton, contactsText, size] = classNames ?? []
+  return (
+    <button
+      className={cx('button', variant, colorVariant, contactsButton, size)}
+    >
+      <p className={cx('text', variant, colorVariant, contactsText)}>{text}</p>
+      <div className={cx('round', variant, colorVariant)}>
+        <ArrowIcon className={cx('arrow', variant, colorVariant)} />
+      </div>
+    </button>
+  )
+}
 export default TextButton

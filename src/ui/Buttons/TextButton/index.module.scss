@@ -57,9 +57,9 @@
 }
 
 .text {
-  @include fonts.text(24px, 28px, 'medium');
+  @include fonts.text(24px, 28px, '600');
 
-  letter-spacing: 1px;
+  letter-spacing: 2%;
   margin-right: 20px;
   letter-spacing: 0.3px;
 
@@ -145,5 +145,35 @@
       background-color: var(--color-white);
       border: none;
     }
+  }
+}
+
+// external styles
+
+.button-contacts {
+  margin-top: 78px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.text-contacts {
+  letter-spacing: -0.7px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .mobile {
+    display: flex;
+  }
+
+  .desctop {
+    display: none;
+  }
+
+  .button-contacts {
+    margin-top: 48px;
   }
 }
