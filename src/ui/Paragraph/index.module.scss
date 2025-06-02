@@ -1,0 +1,41 @@
+@use 'mixins/fonts';
+
+.paragraph {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+}
+
+.title {
+  @include fonts.text(36px, 40px, 400);
+
+  color: var(--color-text-tertiary);
+  margin-bottom: 14px;
+  letter-spacing: 0.7px;
+}
+
+.text {
+  @include fonts.text(20px, 24px, 300);
+
+  color: var(--color-text-quaternary);
+  letter-spacing: 0.8px;
+}
+
+// external styles
+
+.pagination-block {
+  max-width: 662px;
+  letter-spacing: 1px;
+}
+
+.pagination-block:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.paginated-title {
+  letter-spacing: 0.1px;
+
+  @include fonts.text(20px, 24px, 600);
+
+  margin-bottom: 6px;
+}
