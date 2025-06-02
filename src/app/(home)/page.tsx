@@ -1,5 +1,12 @@
-import Technologies from './_components/Technologies'
+import { Company, Products, Services, Technologies } from './_components'
 
 export default function Home() {
-  return <Technologies />
+  return (
+    <>
+      <Services />
+      <Technologies />
+      <Company />
+      <Products />
+    </>
+  )
 }

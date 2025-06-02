@@ -1,52 +1,123 @@
 @use 'mixins/fonts';
+@use 'mixins/media';
 
 .services {
-  padding: 80px 0;
-  display: flex;
-  justify-content: space-between;
-  min-height: 1074px;
+  padding: 40px 0;
+
+  img {
+    display: none;
+  }
+
+  h2 {
+    margin-right: 166px;
+
+    @include media.screen('desktop') {
+      margin-right: 0;
+    }
+  }
+
+  @include media.screen('desktop') {
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-between;
+    min-height: 1074px;
+
+    img {
+      display: block;
+    }
+  }
 }
 
 .title-block {
-  width: 51.5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include media.screen('desktop') {
+    width: 51.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .title-top {
-  display: flex;
+  @include media.screen('desktop') {
+    display: flex;
+  }
 }
 
 .title {
-  @include fonts.text(90px, 94px, 400);
+  @include fonts.text(48px, 52px, 400);
+
   color: var(--color-text-tertiary);
-  letter-spacing: 1px;
+
+  @include media.screen('desktop') {
+    @include fonts.text(90px, 94px, 400);
+
+    letter-spacing: 1px;
+  }
 }
 
 .number {
-  @include fonts.text(20px, 24px, 400);
   color: var(--color-text-tertiary);
-  letter-spacing: 1px;
-  margin-right: 32px;
+
+  @include media.screen('desktop') {
+    @include fonts.text(20px, 24px, 400);
+
+    letter-spacing: 1px;
+    margin-right: 32px;
+  }
 }
 
 .info-block {
-  width: 50%;
+  @include media.screen('desktop') {
+    width: 50%;
+  }
 }
 
 .text-top {
-  @include fonts.text(36px, 40px, 300);
+  @include fonts.text(24px, 28px, 400);
+
+  text-indent: 26px;
+  margin: 24px 0 48px;
   color: var(--color-text-quaternary);
-  text-indent: 43px;
-  letter-spacing: 0.69px;
-  margin-bottom: 82px;
+
+  @include media.screen('desktop') {
+    text-indent: 0;
+
+    @include fonts.text(36px, 40px, 300);
+
+    text-indent: 43px;
+    letter-spacing: 0.69px;
+    margin: 0 0 82px;
+  }
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-  row-gap: 42px;
-  margin-bottom: 80px;
+  @include media.screen('desktop') {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    row-gap: 42px;
+    margin-bottom: 80px;
+  }
+}
+
+.paragraph:not(:last-child) {
+  margin-bottom: 24px;
+
+  @include media.screen('desktop') {
+    margin-bottom: 0;
+  }
+}
+
+.paragraph:last-child {
+  span:first-of-type {
+    margin-top: 6px;
+  }
+}
+
+.services button {
+  margin-top: 48px;
+
+  @include media.screen('desktop') {
+    margin-top: 0;
+  }
 }

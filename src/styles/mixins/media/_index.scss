@@ -11,13 +11,18 @@ $mobile-max-screen: $max-mobile-width;
 @function get-screen-width($screen) {
   @if $screen == desktop {
     @return $desktop-max-screen;
-  } @else if $screen == tablet {
+  }
+
+ @else if $screen == tablet {
     @return $tablet-max-screen;
-  } @else if $screen == mobile {
+  }
+
+ @else if $screen == mobile {
     @return $mobile-max-screen;
   }
 
   @warn "Unknown screen size `#{$screen}` passed to get-screen-width.";
+
   @return null;
 }
 
@@ -27,23 +32,33 @@ $mobile-max-screen: $max-mobile-width;
     @media screen and (min-width: $max-desktop-width) {
       @content;
     }
-  } @else if $screen == desktop {
+  }
+
+ @else if $screen == desktop {
     @media screen and (min-width: $max-tablet-width) {
       @content;
     }
-  } @else if $screen == tablet {
+  }
+
+ @else if $screen == tablet {
     @media screen and (min-width: $max-mobile-width) and (max-width: $max-tablet-width) {
       @content;
     }
-  } @else if $screen == tablet-mobile {
+  }
+
+ @else if $screen == tablet-mobile {
     @media screen and (max-width: $max-tablet-width) {
       @content;
     }
-  } @else if $screen == mobile {
+  }
+
+ @else if $screen == mobile {
     @media screen and (max-width: $max-mobile-width) {
       @content;
     }
-  } @else {
+  }
+
+ @else {
     @warn "Unknown screen size `#{$screen}` passed to screen mixin.";
   }
 }

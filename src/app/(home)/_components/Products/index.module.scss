@@ -1,0 +1,18 @@
+@use 'mixins/media';
+
+.products {
+  padding-top: 38px;
+  background-color: var(--color-middle-gray);
+
+  h2 {
+    margin-right: 156px;
+
+    @include media.screen('desktop') {
+      margin-right: 0;
+    }
+  }
+
+  @include media.screen('desktop') {
+    padding-top: 84px;
+  }
+}

@@ -7,10 +7,11 @@ const cx = classNames.bind(styles)
 interface IParagraph {
   title: string
   lines: string[]
+  className?: string
 }
 
-const Paragraph: React.FC<IParagraph> = ({ title, lines }) => (
-  <div className={cx('paragraph')}>
+const Paragraph: React.FC<IParagraph> = ({ title, lines, className }) => (
+  <div className={cx('paragraph', className)}>
     <h3 className={cx('title')}>{title}</h3>
     {lines.map(line => (
       <span

@@ -24,6 +24,7 @@
     gap: 8px;
     flex-direction: column;
     @include fonts.text(16px, 20px, 400);
+
     color: var(--color-white);
   }
 
@@ -34,6 +35,7 @@
 
 .link {
   @include fonts.text(16px, 20px, 400);
+
   color: var(--color-white);
 
   &:hover {
