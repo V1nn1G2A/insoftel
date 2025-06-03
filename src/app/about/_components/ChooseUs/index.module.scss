@@ -1,0 +1,41 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.choose {
+  padding: 40px 0;
+  background-color: var(--color-middle-gray);
+
+  @include media.screen('desktop') {
+    padding: 120px 0;
+  }
+}
+
+.choose__title {
+  h2 {
+    margin-right: 77px;
+
+    @include fonts.text(36px, 40px, 400);
+
+    @include media.screen('desktop') {
+      @include fonts.text(90px, 94px, 400);
+    }
+  }
+}
+
+.cards {
+  margin-top: 48px;
+
+  @include media.screen('desktop') {
+    margin-top: 80px;
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.card + .card {
+  margin-top: 20px;
+
+  @include media.screen('desktop') {
+    margin-top: 0;
+  }
+}
