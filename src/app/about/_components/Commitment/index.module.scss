@@ -1,0 +1,44 @@
+@use 'mixins/media';
+@use 'mixins/fonts';
+
+.commitment {
+  display: none;
+  padding: 98px 0 108px;
+
+  h2 {
+    @include fonts.text(48px, 52px, 400);
+  }
+
+  @include media.screen('desktop') {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.content {
+  width: 776px;
+
+  p {
+    @include fonts.text(30px, 34px, 400);
+
+    letter-spacing: -0.23%;
+    margin-bottom: 90px;
+    color: var(--color-text-tertiary);
+  }
+
+  a {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 20px;
+    letter-spacing: 2%;
+
+    @include fonts.text(24px, 28px, 500);
+
+    border-bottom: 1px solid rgba($color: #000, $alpha: 20%);
+  }
+
+  svg {
+    margin: 2px 15px 0 0;
+  }
+}

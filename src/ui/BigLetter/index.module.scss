@@ -1,0 +1,10 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.letter {
+  @include fonts.text(113px, 100%, 600);
+
+  text-transform: uppercase;
+  color: var(--color-light-gray);
+  user-select: none;
+}
