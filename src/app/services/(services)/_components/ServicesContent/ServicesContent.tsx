@@ -1,7 +1,7 @@
-import { Container } from '@/ui/Container'
-
 import classNames from 'classnames/bind'
 import Image from 'next/image'
+
+import { Container } from '@/ui'
 
 import BPage from '../BPage/BPage'
 import PaginatedBlock from '../PaginatedBlock/PaginatedBlock'

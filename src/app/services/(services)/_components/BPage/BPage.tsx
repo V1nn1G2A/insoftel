@@ -1,7 +1,7 @@
-import { TextButton } from '@/ui/Buttons/TextButton'
-import { Paragraph } from '@/ui/Paragraph'
-
 import classNames from 'classnames/bind'
+
+import { Paragraph } from '@/ui'
+import { TextButton } from '@/ui/Buttons'
 
 import styles from './index.module.scss'
 
