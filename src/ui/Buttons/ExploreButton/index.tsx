@@ -10,7 +10,7 @@ interface IExploreButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string
   colorVariant?: 'light' | 'dark'
   className?: string
-  onClick: () => void
+  onClick?: () => void
 }
 
 const ExploreButton: React.FC<IExploreButton> = ({
