@@ -47,7 +47,7 @@ export default function RootLayout({
       <body className={neueHaas.variable}>
         <Header />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   )
