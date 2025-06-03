@@ -9,25 +9,28 @@ const cx = classNames.bind(styles)
 interface IExploreButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string
   colorVariant?: 'light' | 'dark'
-  className?: string
-  onClick: () => void
+  classNames?: string[]
+  onClick?: () => void
 }
 
 const ExploreButton: React.FC<IExploreButton> = ({
   text = 'Explore',
   colorVariant = 'light',
-  className,
+  classNames,
   onClick,
-}) => (
-  <button
-    className={cx('button', colorVariant, className)}
-    onClick={onClick}
-  >
-    <p className={cx('text', colorVariant)}>{text}</p>
-    <div className={cx('round', colorVariant)}>
-      <ArrowIcon className={cx('arrow', colorVariant)} />
-    </div>
-  </button>
-)
+}) => {
+  const [miniText, miniRound, miniButton] = classNames ?? []
 
+  return (
+    <button
+      className={cx('button', colorVariant, miniButton)}
+      onClick={onClick}
+    >
+      <p className={cx('text', colorVariant, miniText)}>{text}</p>
+      <div className={cx('round', colorVariant, miniRound)}>
+        <ArrowIcon className={cx('arrow', colorVariant)} />
+      </div>
+    </button>
+  )
+}
 export default ExploreButton
