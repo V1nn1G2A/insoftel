@@ -12,3 +12,5 @@ export {
 export { default as Accordion } from './Accordion'
 export { default as Quote } from './Quote'
 export { default as StatsNumber } from './StatsNumber'
+export { default as Paragraph } from './Paragraph'
+export { default as BigLetter } from './BigLetter'
