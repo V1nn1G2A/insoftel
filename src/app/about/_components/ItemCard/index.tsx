@@ -4,7 +4,7 @@ import styles from './index.module.scss'
 
 interface IItemCard {
   title: string
-  content: string
+  content: string | string[]
   className?: string
 }
 
