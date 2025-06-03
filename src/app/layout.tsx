@@ -44,6 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={neueHaas.variable}>
+        <div className="header"></div>
         {children}
         <Footer />
       </body>
