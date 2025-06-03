@@ -1,0 +1,6 @@
+export { default as AboutUs } from './AboutUs'
+export { default as ChooseUs } from './ChooseUs'
+export { default as Commitment } from './Commitment'
+export { default as Expertise } from './Expertise'
+export { default as QuoteSection } from './QuoteSection'
+export { default as Slogan } from './Slogan'
