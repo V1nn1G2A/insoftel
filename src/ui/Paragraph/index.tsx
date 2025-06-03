@@ -7,7 +7,7 @@ const cx = classNames.bind(styles)
 interface IParagraph {
   title: string
   lines: string[]
-  className?: string
+  className?: string[]
 }
 
 const Paragraph: React.FC<IParagraph> = ({ title, lines, className }) => (
