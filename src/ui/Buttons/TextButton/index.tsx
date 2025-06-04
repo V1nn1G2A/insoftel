@@ -11,18 +11,23 @@ interface IExploreButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant: 'short' | 'long'
   colorVariant?: 'light' | 'dark'
   classNames?: string[]
+  isVisible?: boolean
 }
 
 const TextButton: React.FC<IExploreButton> = ({
   text = 'More About Us',
   colorVariant = 'light',
   variant = 'short',
+  isVisible,
   classNames,
 }) => {
   const [contactsButton, contactsText, size] = classNames ?? []
   return (
     <button
-      className={cx('button', variant, colorVariant, contactsButton, size)}
+      className={cx('button', variant, colorVariant, contactsButton, size, {
+        notVisible: !isVisible,
+      })}
+      onClick={() => console.log('click')}
     >
       <p className={cx('text', variant, colorVariant, contactsText)}>{text}</p>
       <div className={cx('round', variant, colorVariant)}>

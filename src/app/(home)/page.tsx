@@ -5,9 +5,9 @@ export default function Home() {
     <>
       <Main />
       <Services />
-      {/* <Technologies />
+      <Technologies />
       <Company />
-      <Products /> */}
+      <Products />
     </>
   )
 }
