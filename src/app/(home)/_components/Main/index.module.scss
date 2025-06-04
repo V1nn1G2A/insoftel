@@ -1,0 +1,106 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.main {
+  height: 844px;
+  position: relative;
+
+  button {
+    width: 169px;
+    height: 76px;
+  }
+
+  @include media.screen('desktop') {
+    height: 796px;
+  }
+}
+
+.video {
+  overflow: hidden;
+
+  video {
+    transform: translate(-40%, -55%);
+  }
+
+  @include media.screen('desktop') {
+    video {
+      transform: translate(-50%, -55%);
+    }
+  }
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-white);
+
+  @include fonts.text(20px, 24px, 500);
+}
+
+.typed {
+  position: absolute;
+  height: 20px;
+  top: 45%;
+  left: 50%;
+  color: var(--color-white);
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+
+  @include fonts.text(31px, 100%, 600);
+}
+
+.top,
+.bottom {
+  top: 80px;
+  position: absolute;
+  left: 41px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media.screen('desktop') {
+    top: 120px;
+    left: 71px;
+    right: 48px;
+  }
+}
+
+.bottom {
+  top: auto;
+  bottom: 24px;
+  left: 20px;
+
+  @include media.screen('desktop') {
+    left: 48px;
+  }
+}
+
+.letter {
+  color: var(--color-white);
+  opacity: 0.4;
+  transition: opacity 0.3s;
+
+  @include media.screen('desktop') {
+    letter-spacing: -4px;
+    opacity: 1;
+
+    @include fonts.text(113px, 100%, 500);
+  }
+}
+
+.letter + span,
+.letter + span + span {
+  @include fonts.text(113px, 100%, 500);
+
+  text-transform: uppercase;
+  color: var(--color-white);
+  letter-spacing: -4px;
+}
+
+.letterActive {
+  opacity: 1;
+}

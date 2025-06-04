@@ -76,7 +76,10 @@ a {
 
 .header {
   height: 84px;
-  background-color: #0b0a0f;
+  background: rgb(255 255 255 / 0.1%);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
 }
 
 .swiper-wrapper {
