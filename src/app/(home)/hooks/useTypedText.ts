@@ -17,8 +17,6 @@ const useTypedText = ({
   const typedRef = useRef<Typed | null>(null)
   const [activeIndex, setActiveIndex] = useState(0)
 
-  console.log(isTablet)
-
   useEffect(() => {
     if (!strings.length) return
 
