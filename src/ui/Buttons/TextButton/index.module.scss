@@ -6,6 +6,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  z-index: 1000;
 
   &.long {
     padding: 10px 0 20px;
@@ -162,6 +163,10 @@
 
 .mobile {
   display: none;
+}
+
+.notVisible {
+  z-index: -1000;
 }
 
 @media (max-width: 1200px) {

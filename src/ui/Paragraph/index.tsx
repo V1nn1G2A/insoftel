@@ -8,10 +8,16 @@ interface IParagraph {
   title: string
   lines: string[]
   className?: string[]
+  width?: string
 }
 
-const Paragraph: React.FC<IParagraph> = ({ title, lines, className }) => (
-  <div className={cx('paragraph', className)}>
+const Paragraph: React.FC<IParagraph> = ({
+  title,
+  lines,
+  className,
+  width,
+}) => (
+  <div className={cx('paragraph', className, width)}>
     <h3 className={cx('title')}>{title}</h3>
     {lines.map(line => (
       <span
