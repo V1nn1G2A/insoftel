@@ -4,7 +4,7 @@
 
 .animate {
   position: relative;
-  animation-duration: calc(300ms + var(--count) * var(--speed) ms);
+  animation-duration: calc(300ms + var(--count) * var(--speed));
   animation-name: up;
 }
 

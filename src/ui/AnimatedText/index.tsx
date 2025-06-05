@@ -32,6 +32,8 @@ const AnimatedText: FC<Iindex> = ({ children, className, delaySpeed = 50 }) => {
     })
   }, [isInView])
 
+  const delay = `${delaySpeed}ms`
+
   return (
     <span
       className={cx(className, 'text')}
@@ -44,7 +46,7 @@ const AnimatedText: FC<Iindex> = ({ children, className, delaySpeed = 50 }) => {
           style={
             {
               '--count': index + 1,
-              '--speed': `${delaySpeed}ms`,
+              '--speed': delay,
             } as React.CSSProperties
           }
         >
