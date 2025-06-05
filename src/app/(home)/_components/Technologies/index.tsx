@@ -1,6 +1,12 @@
 import type { FC } from 'react'
 
-import { Container, SectionTitle, TextButton, VideoBackground } from '@/ui'
+import {
+  AnimationBlock,
+  Container,
+  SectionTitle,
+  TextButton,
+  VideoBackground,
+} from '@/ui'
 
 import AccordionsList from '../AccordionsList'
 
@@ -19,17 +25,22 @@ const Technologies: FC = ({}) => (
             Technologies
           </SectionTitle>
           <div className={styles['technologies__text-container']}>
-            <p className={styles.technologies__text}>
+            <AnimationBlock
+              type="p"
+              className={styles.technologies__text}
+            >
               We leverage the latest technological advancements to ensure our
               clients receive highly efficient, custom software solutions
               tailored to their needs
-            </p>
+            </AnimationBlock>
             <AccordionsList className={styles.technologies__accordion} />
-            <TextButton
-              text="Explore Our Technologies"
-              variant="short"
-              className={styles.technologies__button}
-            />
+            <AnimationBlock>
+              <TextButton
+                text="Explore Our Technologies"
+                variant="short"
+                className={styles.technologies__button}
+              />
+            </AnimationBlock>
           </div>
         </div>
       </Container>

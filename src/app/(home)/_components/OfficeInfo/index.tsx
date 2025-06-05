@@ -1,5 +1,7 @@
 import type { FC } from 'react'
 
+import { AnimationBlock } from '@/ui'
+
 import styles from './index.module.scss'
 
 interface IOfficeInfo {
@@ -8,23 +10,23 @@ interface IOfficeInfo {
 
 const OfficeInfo: FC<IOfficeInfo> = ({ className }) => (
   <div className={`${styles.office} ${className}`}>
-    <p>
+    <AnimationBlock type="p">
       With a strong focus on innovation and a commitment to excellence, we
       empower businesses and government organisations to thrive in an
       ever-evolving telecommunications landscape.
-    </p>
-    <p>
+    </AnimationBlock>
+    <AnimationBlock type="p">
       Our team of experts specialises in creating custom software tailored
       precisely to your unique requirements, helping you stay ahead in a
       competitive industry.
-    </p>
+    </AnimationBlock>
     <div className={styles.office__contacts}>
-      <p>
+      <AnimationBlock type="p">
         Dubai, UAE <br /> Instanbul, Turkey
-      </p>
-      <p>
+      </AnimationBlock>
+      <AnimationBlock type="p">
         [ Head Office ] <br /> [ Office ]
-      </p>
+      </AnimationBlock>
     </div>
   </div>
 )

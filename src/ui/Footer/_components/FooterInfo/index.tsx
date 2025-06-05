@@ -1,6 +1,8 @@
-import Image from 'next/image'
+'use client'
 
 import { ExploreButton } from '@/ui'
+import { AnimationBlock } from '@/ui'
+import { MotionImage } from '@/ui'
 
 import FooterAddress from '../FooterAddress'
 import FooterNav from '../FooterNav'
@@ -13,20 +15,20 @@ const FooterInfo = () => (
     <FooterNav />
     <FooterAddress />
     <TelegramBlock />
-    <Image
+    <MotionImage
       src={'/img/footer/1.png'}
       width={207}
       height={207}
       alt="logo"
       className={styles.footerInfo__logo}
     />
-    <div className={styles.footerInfo__button}>
+    <AnimationBlock className={styles.footerInfo__button}>
       <ExploreButton
         text="Download Presentation"
         colorVariant="light"
         className={styles.button}
       />
-    </div>
+    </AnimationBlock>
   </div>
 )
 

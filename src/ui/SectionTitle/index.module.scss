@@ -5,6 +5,8 @@
   width: max-content;
   position: relative;
   letter-spacing: 2%;
+  overflow: hidden;
+  min-width: max-content;
 }
 
 .index {
@@ -15,7 +17,7 @@
   right: 0;
   letter-spacing: -0.5px;
 
-  @include media.screen("desktop"){
+  @include media.screen('desktop') {
     top: -4px;
     left: 0;
 
@@ -29,7 +31,11 @@
 
   @include fonts.text(48px, 52px, 400);
 
-  @include media.screen("desktop"){
+  span {
+    transform: translateY(20px);
+  }
+
+  @include media.screen('desktop') {
     margin: 0 0 0 79px;
     letter-spacing: 2%;
 
@@ -54,5 +60,21 @@
 
   .index {
     color: var(--color-white);
+  }
+}
+
+.animate {
+  position: relative;
+  animation-duration: calc(300ms + var(--count) * 50ms);
+  animation-name: up;
+}
+
+@keyframes up {
+  from {
+    top: 56px;
+  }
+
+  to {
+    top: 0;
   }
 }

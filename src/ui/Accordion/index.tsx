@@ -1,3 +1,4 @@
+import { AnimationBlock } from '..'
 import cn from 'classnames'
 import type { FC } from 'react'
 
@@ -31,7 +32,10 @@ const Accordion: FC<IAccordion> = ({
   )
 
   return (
-    <div className={classNames}>
+    <AnimationBlock
+      amount={0.2}
+      className={classNames}
+    >
       <div
         className={styles.accordion__title}
         onClick={onClick}
@@ -52,7 +56,7 @@ const Accordion: FC<IAccordion> = ({
         </div>
       </div>
       {isLine && <span className={styles.accordion__line}></span>}
-    </div>
+    </AnimationBlock>
   )
 }
 

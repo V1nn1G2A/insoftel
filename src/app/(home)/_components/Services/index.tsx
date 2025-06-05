@@ -1,7 +1,12 @@
 import classNames from 'classnames/bind'
-import Image from 'next/image'
 
-import { Container, SectionTitle, TextButton } from '@/ui'
+import {
+  AnimationBlock,
+  Container,
+  MotionImage,
+  SectionTitle,
+  TextButton,
+} from '@/ui'
 
 import Paragraph from '../../../../ui/Paragraph'
 import services from '../../_constants/SERVICE'
@@ -16,7 +21,7 @@ const Services = () => {
       <section className={cx('services')}>
         <div className={cx('title-block')}>
           <SectionTitle index="01">Services</SectionTitle>
-          <Image
+          <MotionImage
             src="/img/services/1.png"
             alt="services-image"
             width={435}
@@ -24,11 +29,14 @@ const Services = () => {
           />
         </div>
         <div className={cx('info-block')}>
-          <p className={cx('text-top')}>
+          <AnimationBlock
+            type="p"
+            className={cx('text-top')}
+          >
             Our solutions are tailored to empower businesses, government
             entities, and startups with cutting-edge technologies that drive
             efficiency, innovation, and growth
-          </p>
+          </AnimationBlock>
           <div className={cx('grid')}>
             {services.map(service => (
               <Paragraph
@@ -39,11 +47,13 @@ const Services = () => {
               />
             ))}
           </div>
-          <TextButton
-            text="Explore Our Services"
-            variant="long"
-            colorVariant="dark"
-          />
+          <AnimationBlock>
+            <TextButton
+              text="Explore Our Services"
+              variant="long"
+              colorVariant="dark"
+            />
+          </AnimationBlock>
         </div>
       </section>
     </Container>
