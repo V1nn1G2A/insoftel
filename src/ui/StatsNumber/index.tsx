@@ -1,11 +1,11 @@
 'use client'
 
 import { AnimationBlock } from '..'
-import { motion, useInView } from 'motion/react'
+import { useInView } from 'motion/react'
 import type { FC, ReactNode } from 'react'
 import { useEffect, useRef } from 'react'
 
-import fromLeft from '@/animations/fromLeft'
+import AnimatedLine from '../AnimatiedLine'
 
 import styles from './index.module.scss'
 
@@ -49,10 +49,8 @@ const StatsNumber: FC<IStatsNumber> = ({ className, title, children }) => {
         ))}
       </div>
       <AnimationBlock type="p">{children}</AnimationBlock>
-      <motion.span
-        variants={fromLeft}
-        initial="hidden"
-        animate={isInView ? 'visible' : 'hidden'}
+      <AnimatedLine
+        ref={divRef}
         className={styles.line}
       />
     </div>

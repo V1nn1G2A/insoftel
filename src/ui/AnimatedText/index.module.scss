@@ -10,7 +10,7 @@
 
 @keyframes up {
   from {
-    top: 56px;
+    top: var(--height);
   }
 
   to {
