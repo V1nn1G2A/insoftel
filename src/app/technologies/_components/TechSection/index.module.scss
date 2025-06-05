@@ -3,6 +3,7 @@
 
 .technologiesSection {
   display: flex;
+  align-items: flex-start;
   gap: 20px;
   padding: 79.5px 0;
   word-spacing: 2px;
@@ -13,12 +14,17 @@
     padding: 44px 0 24px;
   }
 
+  &__wrapper {
+    overflow: hidden;
+  }
+
   &__title {
     @include fonts.text(48px, 52px, 600);
     color: var(--color-black-secondary);
     display: flex;
     gap: 24px;
     width: 50%;
+    overflow: hidden;
 
     @include media.screen('mobile') {
       width: 100%;
@@ -80,4 +86,17 @@
       @include fonts.text(20px, 24px, 400);
     }
   }
+
+  &__line {
+    height: 1px;
+    width: 100%;
+    background-color: #00000033;
+  }
+}
+
+.line {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: rgba($color: #000, $alpha: 20%);
 }

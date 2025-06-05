@@ -1,0 +1,54 @@
+@use 'mixins/media';
+@use 'mixins/fonts';
+
+.list {
+  max-height: 466px;
+  overflow-y: scroll;
+}
+
+.item {
+  padding: 16px 48px;
+  transition: background-color 0.3s ease;
+
+  @include media.screen('mobile') {
+    padding: 16px 20px;
+  }
+
+  &--dark {
+    background-color: #ffffff0d;
+
+    &:hover {
+      background-color: #ffffff1a;
+    }
+  }
+
+  &--light {
+    background-color: #ffffff33;
+
+    &:hover {
+      background-color: #0000001a;
+    }
+  }
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &__title {
+    @include fonts.text(16px, 20px, 400);
+    color: var(--color-text-secondary);
+  }
+
+  &__text {
+    @include fonts.text(16px, 20px, 400);
+    &--dark {
+      color: var(--color-white);
+    }
+
+    &--light {
+      color: var(--color-black);
+    }
+  }
+}

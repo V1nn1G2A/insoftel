@@ -24,7 +24,7 @@ const Main: FC = ({}) => {
     s: null,
     t: null,
   })
-  const isTablet = useMediaQuery('(max-width: 1279px)')
+  const isTablet = useMediaQuery('(max-width: 1340px)')
   const letter = useTypedText({
     isTablet,
     typingPlace,
