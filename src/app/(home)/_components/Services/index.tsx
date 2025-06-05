@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Container, SectionTitle, TextButton } from '@/ui'
 
@@ -39,11 +40,13 @@ const Services = () => {
               />
             ))}
           </div>
-          <TextButton
-            text="Explore Our Services"
-            variant="long"
-            colorVariant="dark"
-          />
+          <Link href="/services">
+            <TextButton
+              text="Explore Our Services"
+              variant="long"
+              colorVariant="dark"
+            />
+          </Link>
         </div>
       </section>
     </Container>
