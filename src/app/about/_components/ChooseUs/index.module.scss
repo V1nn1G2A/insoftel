@@ -32,6 +32,14 @@
   }
 }
 
+.card {
+  transition: filter 0.7s;
+
+  &:hover {
+    filter: invert(1);
+  }
+}
+
 .card + .card {
   margin-top: 20px;
 

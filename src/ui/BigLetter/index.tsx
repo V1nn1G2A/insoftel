@@ -1,5 +1,7 @@
 import type { FC, Ref } from 'react'
 
+import AnimatedText from '../AnimatedText'
+
 import styles from './index.module.scss'
 
 interface IBigLetter {
@@ -13,7 +15,7 @@ const BigLetter: FC<IBigLetter> = ({ className, children, ref }) => (
     className={`${styles.letter} ${className}`}
     ref={ref}
   >
-    {children}
+    <AnimatedText>{children}</AnimatedText>
   </span>
 )
 
