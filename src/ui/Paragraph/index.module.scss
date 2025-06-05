@@ -9,6 +9,7 @@
 
 .title {
   margin-bottom: 8px;
+  overflow: hidden;
 
   @include fonts.text(20px, 24px, 500);
 
@@ -56,17 +57,33 @@
   }
 }
 
+.animate {
+  position: relative;
+  animation-duration: calc(300ms + var(--count) * 30ms);
+  animation-name: up;
+}
+
+@keyframes up {
+  from {
+    top: 56px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
 .w540 {
   max-width: 540px;
 }
 
-@media (max-width: 1080px) {
+@media (width <= 1080px) {
   .paragraph {
     min-height: 163px;
   }
 }
 
-@media (max-width: 800px) {
+@media (width <= 800px) {
   .title {
     letter-spacing: 0.4px;
   }

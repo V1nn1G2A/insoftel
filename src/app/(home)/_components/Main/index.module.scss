@@ -49,6 +49,12 @@
   transform: translate(-50%, -50%);
   white-space: nowrap;
 
+  span + span {
+    position: relative;
+    display: inline-block;
+    transform: translateY(-1px);
+  }
+
   @include fonts.text(31px, 100%, 600);
 }
 
@@ -99,6 +105,12 @@
   text-transform: uppercase;
   color: var(--color-white);
   letter-spacing: -4px;
+}
+
+.letter + span + span {
+  position: relative;
+  display: inline-block;
+  transform: translateY(-6px);
 }
 
 .letterActive {
