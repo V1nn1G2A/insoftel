@@ -1,5 +1,5 @@
 {
-  "/services": [
+  "Services": [
     {
       "IT Consulting": "IT Consulting & Business Solutions. Strategically align your IT infrastructure with your business goals to drive sustainable growth and future-proof your operations",
       "NOUP1": "Technology Strategy & Roadmaps: Develop clear, actionable plans that outline your technology goals, ensuring alignment with your broader business objectives.",
@@ -34,7 +34,7 @@
       "NOUP4": "AI-Powered Personalisation: Create unique, personalised experiences for customers by harnessing AI to deliver the right message at the right time."
     }
   ],
-  "/technologies": [
+  "Technologies": [
     {
       "NOUP1": "Languages. Our versatility across multiple programming languages means we can select the optimal language for each project, ensuring efficiency, scalability, and maintainability",
       "NOUP2": "Business Impact: Whether it’s building high-performance applications, developing custom software, or enhancing system integration, our language expertise enables us to provide solutions that are both powerful and flexible, reducing time to market and supporting long-term growth.",
@@ -52,7 +52,7 @@
       "NOUP14": "Business Impact: Our AI-driven solutions enable businesses to automate processes, forecast trends, and personalise offerings, boosting efficiency, improving decision-making, and enhancing customer satisfaction."
     }
   ],
-  "/about": [
+  "About": [
     {
       "NOUP1": "“ At Insoftel, custom software is just the beginning. By combining deep software expertise with hardware integration, we create adaptable, high-impact solutions that empower clients to lead with confidence and innovation ”",
       "NOUP2": "About Us. Insoftel empowers businesses and government organisations with bespoke software solutions crafted for the digital age. With over 15 years of experience and a team of 50+ expert developers, our company brings your mission to life by blending innovation with precision, helping you stand out in a complex world.",

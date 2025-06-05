@@ -1,11 +1,9 @@
-import Footer from '@/ui/Footer'
-
-import '../styles/globals.scss'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
 import { Footer, Header } from '@/ui'
 
+import '../styles/globals.scss'
 import '../styles/globals.scss'
 
 export const metadata: Metadata = {
