@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { FC } from 'react'
 
 import { Container, SectionTitle, TextButton, VideoBackground } from '@/ui'
@@ -25,11 +26,13 @@ const Technologies: FC = ({}) => (
               tailored to their needs
             </p>
             <AccordionsList className={styles.technologies__accordion} />
-            <TextButton
-              text="Explore Our Technologies"
-              variant="short"
-              className={styles.technologies__button}
-            />
+            <Link href={'/technologies'}>
+              <TextButton
+                text="Explore Our Technologies"
+                variant="short"
+                className={styles.technologies__button}
+              />
+            </Link>
           </div>
         </div>
       </Container>

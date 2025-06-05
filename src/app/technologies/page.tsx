@@ -1,4 +1,5 @@
 import { Container } from '@/ui'
+import SectionHeading from '@/ui/SectionHeading'
 
 import { technologiesContetnt } from './CONSTANTS'
 import TechSection from './_components/TechSection'
@@ -7,7 +8,11 @@ import styles from './index.module.scss'
 
 export default function Technologies() {
   return (
-    <main className="technologies">
+    <main className="Technologies">
+      <SectionHeading
+        title="Technologies"
+        letter="T"
+      />
       <Container>
         <div className={styles.content}>
           {technologiesContetnt.map((item, index) => (

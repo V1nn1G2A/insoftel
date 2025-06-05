@@ -27,7 +27,6 @@ const TextButton: React.FC<IExploreButton> = ({
       className={cx('button', variant, colorVariant, contactsButton, size, {
         notVisible: !isVisible,
       })}
-      onClick={() => console.log('click')}
     >
       <p className={cx('text', variant, colorVariant, contactsText)}>{text}</p>
       <div className={cx('round', variant, colorVariant)}>
