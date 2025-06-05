@@ -1,3 +1,5 @@
+'use client'
+
 import cn from 'classnames'
 import { motion, useInView } from 'motion/react'
 import type { FC, RefObject } from 'react'

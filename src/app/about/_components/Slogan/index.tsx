@@ -16,10 +16,10 @@ const Slogan: FC<ISlogan> = ({ className }) => {
       <Container>
         <div className={styles.slogan__text}>
           <p>
-            <AnimatedText>Insoftel Technologies –</AnimatedText>
+            <AnimatedText height={92}>Insoftel Technologies –</AnimatedText>
           </p>
           <p>
-            <AnimatedText>Your Vision, Our Code</AnimatedText>
+            <AnimatedText height={92}>Your Vision, Our Code</AnimatedText>
           </p>
         </div>
         <ExploreButton
