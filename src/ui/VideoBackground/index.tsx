@@ -1,6 +1,9 @@
+import classNames from 'classnames/bind'
 import type { FC, ReactNode } from 'react'
 
 import styles from './index.module.scss'
+
+const cx = classNames.bind(styles)
 
 interface Props {
   src: string
@@ -15,9 +18,9 @@ const VideoBackground: FC<Props> = ({
   className = '',
   children,
 }) => (
-  <div className={`${styles.wrapper} ${className}`}>
+  <div className={cx('wrapper')}>
     <video
-      className={styles.video}
+      className={cx('video', className)}
       autoPlay
       muted
       loop
@@ -31,7 +34,7 @@ const VideoBackground: FC<Props> = ({
       <img
         src={poster}
         alt="Background fallback"
-        className={styles.fallback}
+        className={cx('fallback')}
       />
     </video>
     {children}

@@ -36,7 +36,7 @@ const useTypedText = ({
 
     typedRef.current = new Typed(targetEl, {
       strings: [typeString],
-      typeSpeed: 50,
+      typeSpeed: 70,
       backSpeed: 30,
       backDelay: 2000,
       showCursor: true,

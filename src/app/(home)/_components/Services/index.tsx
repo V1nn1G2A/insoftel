@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind'
+import Link from 'next/link'
 
 import {
   AnimationBlock,
@@ -48,11 +49,13 @@ const Services = () => {
             ))}
           </div>
           <AnimationBlock>
-            <TextButton
-              text="Explore Our Services"
-              variant="long"
-              colorVariant="dark"
-            />
+            <Link href="/services">
+              <TextButton
+                text="Explore Our Services"
+                variant="long"
+                colorVariant="dark"
+              />
+            </Link>
           </AnimationBlock>
         </div>
       </section>

@@ -14,6 +14,7 @@ interface IParagraph {
   title: string
   lines: string[]
   className?: string[]
+  width?: string
 }
 
 const Paragraph: React.FC<IParagraph> = ({ title, lines, className }) => {

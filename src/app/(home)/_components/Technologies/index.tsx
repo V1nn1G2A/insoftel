@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { FC } from 'react'
 
 import {
@@ -35,11 +36,13 @@ const Technologies: FC = ({}) => (
             </AnimationBlock>
             <AccordionsList className={styles.technologies__accordion} />
             <AnimationBlock>
-              <TextButton
-                text="Explore Our Technologies"
-                variant="short"
-                className={styles.technologies__button}
-              />
+              <Link href={'/technologies'}>
+                <TextButton
+                  text="Explore Our Technologies"
+                  variant="short"
+                  className={styles.technologies__button}
+                />
+              </Link>
             </AnimationBlock>
           </div>
         </div>
