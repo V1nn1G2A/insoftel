@@ -1,0 +1,53 @@
+@use 'mixins/media';
+@use 'mixins/fonts';
+
+.menu {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  margin-left: 138px;
+
+  @include media.screen('mobile') {
+    margin: 0;
+  }
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  border-bottom: 1px solid;
+  padding-top: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-color: transparent;
+  transition: border-color 0.3s ease;
+
+  @include fonts.text(16px, 20px, 400);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: inherit;
+    }
+  }
+
+  &--active {
+    border-color: transparent;
+    margin-left: 20px;
+  }
+}
+
+.desktopSearch {
+  display: block;
+  @include media.screen('mobile') {
+    display: none;
+  }
+}
