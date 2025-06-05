@@ -18,7 +18,7 @@
   color: var(--color-white);
   position: absolute;
   top: 48%;
-  left: calc(50% - 72.79px);
+  left: calc(50% - var(--width));
 }
 
 .miniButton {
@@ -39,7 +39,7 @@
   top: 12%;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 1400px) {
   .heading {
     height: 747px;
   }
