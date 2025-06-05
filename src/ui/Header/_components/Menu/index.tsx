@@ -3,8 +3,6 @@
 import cx from 'classnames'
 import { FC, useState } from 'react'
 
-import { useMediaQuery } from '@/hooks/useMediaQuery'
-
 import CrossIcon from '@assets/icons/cross.svg'
 
 import jsonData from '../../index.json'
@@ -23,12 +21,9 @@ interface IMenu {
 const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
   const [query, setQuery] = useState('')
 
-  const isTablet = useMediaQuery('(max-width: 768px)')
-
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value
     setQuery(query)
-    setIsOpen(!!query || isTablet)
   }
 
   const results = query ? searchContent(jsonData, query) : undefined
@@ -40,6 +35,7 @@ const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
           theme={theme}
           onChange={handleSearch}
           value={query}
+          onFocus={() => setIsOpen(true)}
         />
       </div>
 

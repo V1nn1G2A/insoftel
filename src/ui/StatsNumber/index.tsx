@@ -50,7 +50,7 @@ const StatsNumber: FC<IStatsNumber> = ({ className, title, children }) => {
       </div>
       <AnimationBlock type="p">{children}</AnimationBlock>
       <AnimatedLine
-        ref={divRef}
+        targetRef={divRef}
         className={styles.line}
       />
     </div>

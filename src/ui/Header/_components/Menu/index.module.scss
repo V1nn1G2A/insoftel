@@ -47,6 +47,7 @@
 
 .desktopSearch {
   display: block;
+  width: 100%;
   @include media.screen('mobile') {
     display: none;
   }
