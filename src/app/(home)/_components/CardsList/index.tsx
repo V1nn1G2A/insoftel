@@ -6,9 +6,7 @@ import type SwiperCore from 'swiper'
 import { Keyboard } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import { Card } from '@/ui'
-import { TextButton } from '@/ui/Buttons'
-import { PaginatedButton } from '@/ui/Buttons'
+import { AnimationBlock, Card, PaginatedButton, TextButton } from '@/ui'
 
 import cards from '../../_constants/CARD'
 
@@ -18,7 +16,10 @@ const CardsList: FC = ({}) => {
   const swiperRef = useRef<SwiperCore | null>(null)
 
   return (
-    <div className={styles.cards}>
+    <AnimationBlock
+      className={styles.cards}
+      amount={0.3}
+    >
       <Swiper
         onSwiper={swiper => (swiperRef.current = swiper)}
         keyboard={{ enabled: true }}
@@ -38,7 +39,7 @@ const CardsList: FC = ({}) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className={styles.cards__btns}>
+      <AnimationBlock className={styles.cards__btns}>
         <div className={styles.cards__pagination}>
           <PaginatedButton
             orientation="left"
@@ -55,8 +56,8 @@ const CardsList: FC = ({}) => {
           colorVariant="dark"
           className={styles.cards__explore}
         />
-      </div>
-    </div>
+      </AnimationBlock>
+    </AnimationBlock>
   )
 }
 

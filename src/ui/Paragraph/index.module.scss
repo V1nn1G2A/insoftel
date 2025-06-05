@@ -9,16 +9,18 @@
 
 .title {
   margin-bottom: 8px;
+  overflow: hidden;
 
-  @include fonts.text(30px, 34px, 400);
+  @include fonts.text(20px, 24px, 500);
 
   color: var(--color-text-tertiary);
   letter-spacing: 0.7px;
 
   @include media.screen('desktop') {
-    @include fonts.text(36px, 40px, 400);
+    @include fonts.text(20px, 24px, 500);
 
-    margin-bottom: 14px;
+    margin-bottom: 6px;
+    letter-spacing: 0.4px;
   }
 }
 
@@ -52,5 +54,37 @@
     @include fonts.text(20px, 24px, 600);
 
     margin-bottom: 6px;
+  }
+}
+
+.animate {
+  position: relative;
+  animation-duration: calc(300ms + var(--count) * 30ms);
+  animation-name: up;
+}
+
+@keyframes up {
+  from {
+    top: 56px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+.w540 {
+  max-width: 540px;
+}
+
+@media (width <= 1080px) {
+  .paragraph {
+    min-height: 163px;
+  }
+}
+
+@media (width <= 800px) {
+  .title {
+    letter-spacing: 0.4px;
   }
 }

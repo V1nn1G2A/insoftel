@@ -1,14 +1,20 @@
-import type { FC } from 'react'
+import type { FC, Ref } from 'react'
 
 import styles from './index.module.scss'
 
 interface IBigLetter {
   className?: string
   children: string
+  ref?: Ref<HTMLSpanElement>
 }
 
-const BigLetter: FC<IBigLetter> = ({ className, children }) => (
-  <p className={`${styles.letter} ${className}`}>{children}</p>
+const BigLetter: FC<IBigLetter> = ({ className, children, ref }) => (
+  <span
+    className={`${styles.letter} ${className}`}
+    ref={ref}
+  >
+    {children}
+  </span>
 )
 
 export default BigLetter

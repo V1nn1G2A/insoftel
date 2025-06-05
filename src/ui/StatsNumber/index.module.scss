@@ -2,6 +2,7 @@
 @use 'mixins/media';
 
 .stats {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -9,12 +10,12 @@
   max-width: 662px;
   width: 100%;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba($color: #000, $alpha: 20%);
+  overflow-x: hidden;
   letter-spacing: -2%;
 
   span {
     height: 102px;
-    display: block;
+    display: inline;
 
     @include fonts.text(120px, 120px, 600);
 
@@ -42,5 +43,33 @@
 
   @include media.screen('desktop') {
     padding-bottom: 14px;
+  }
+}
+
+.stats .line {
+  position: absolute;
+  bottom: 1px;
+  height: 1px;
+  width: 100%;
+  background-color: rgba($color: #000, $alpha: 20%);
+}
+
+.text {
+  overflow: hidden;
+}
+
+.animate {
+  position: relative;
+  animation-duration: calc(300ms + var(--count) * 100ms);
+  animation-name: up;
+}
+
+@keyframes up {
+  from {
+    top: 56px;
+  }
+
+  to {
+    top: 0;
   }
 }

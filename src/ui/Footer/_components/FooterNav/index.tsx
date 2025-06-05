@@ -1,27 +1,28 @@
 import Link from 'next/link'
 
+import { AnimationBlock } from '@/ui'
+
+import footerNav from '../../_constants/FOOTER_NAV'
+
 import styles from './index.module.scss'
 
 const FooterNav = () => (
-  <nav className={styles.footerNav}>
-    <ul className={styles.footerNav__list}>
-      <li className={styles.footerNav__item}>
-        <Link href="/services">Services</Link>
-      </li>
-      <li className={styles.footerNav__item}>
-        <Link href="/technologies">Technologies</Link>
-      </li>
-      <li className={styles.footerNav__item}>
-        <Link href="/products">Products</Link>
-      </li>
-      <li className={styles.footerNav__item}>
-        <Link href="/careers">Careers</Link>
-      </li>
-      <li className={styles.footerNav__item}>
-        <Link href="/contacts">Contacts</Link>
-      </li>
-    </ul>
-  </nav>
+  <div>
+    <nav className={styles.footerNav}>
+      <ul className={styles.footerNav__list}>
+        {footerNav.map(el => (
+          <li
+            className={styles.footerNav__item}
+            key={el}
+          >
+            <Link href={`/${el.toLowerCase()}`}>
+              <AnimationBlock type="span">{el}</AnimationBlock>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
 )
 
 export default FooterNav

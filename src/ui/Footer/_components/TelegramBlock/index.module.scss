@@ -35,6 +35,8 @@
   text-align: start;
 
   &__text {
+    overflow: hidden;
+
     @include fonts.text(36px, 40px, 400);
 
     color: var(--color-white);
@@ -80,5 +82,21 @@
   &__wrapper:hover &__arrow {
     color: var(--color-black);
     transform: rotate(-45deg);
+  }
+}
+
+.animate {
+  position: relative;
+  animation-duration: calc(300ms + var(--count) * 25ms);
+  animation-name: up;
+}
+
+@keyframes up {
+  from {
+    top: 56px;
+  }
+
+  to {
+    top: 0;
   }
 }
