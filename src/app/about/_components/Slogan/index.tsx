@@ -2,7 +2,7 @@ import type { FC } from 'react'
 
 import { BigLetter } from '@/ui'
 import { Container } from '@/ui'
-import { ExploreButton } from '@/ui/Buttons'
+import { AnimatedText, ExploreButton } from '@/ui'
 
 import styles from './index.module.scss'
 
@@ -10,29 +10,35 @@ interface ISlogan {
   className?: string
 }
 
-const Slogan: FC<ISlogan> = ({ className }) => (
-  <div className={`${styles.slogan} ${className}`}>
-    <Container>
-      <div className={styles.slogan__text}>
-        <p>Insoftel Technologies –</p>
-        <p>Your Vision, Our Code</p>
-      </div>
-      <ExploreButton
-        colorVariant="dark"
-        text="Unpack the Solutions"
-        className={styles.explore}
-      />
-      <div className={styles.slogan__back}>
-        <BigLetter>S</BigLetter>
+const Slogan: FC<ISlogan> = ({ className }) => {
+  return (
+    <div className={`${styles.slogan} ${className}`}>
+      <Container>
+        <div className={styles.slogan__text}>
+          <p>
+            <AnimatedText>Insoftel Technologies –</AnimatedText>
+          </p>
+          <p>
+            <AnimatedText>Your Vision, Our Code</AnimatedText>
+          </p>
+        </div>
         <ExploreButton
           colorVariant="dark"
           text="Unpack the Solutions"
-          className={styles.explores}
+          classNames={['', '', styles.explore]}
         />
-        <BigLetter>T</BigLetter>
-      </div>
-    </Container>
-  </div>
-)
+        <div className={styles.slogan__back}>
+          <BigLetter>S</BigLetter>
+          <ExploreButton
+            colorVariant="dark"
+            text="Unpack the Solutions"
+            classNames={['', '', styles.explores]}
+          />
+          <BigLetter>T</BigLetter>
+        </div>
+      </Container>
+    </div>
+  )
+}
 
 export default Slogan
