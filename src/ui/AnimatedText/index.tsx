@@ -11,7 +11,7 @@ interface Iindex {
   children: string
   className?: string
   delaySpeed?: number
-  height: number
+  height?: number
 }
 
 const cx = cn.bind(styles)
@@ -37,8 +37,6 @@ const AnimatedText: FC<Iindex> = ({
       else el.classList.remove(styles.animate)
     })
   }, [isInView])
-
-  const delay = `${delaySpeed}ms`
 
   return (
     <span
