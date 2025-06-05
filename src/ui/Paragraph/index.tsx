@@ -17,7 +17,12 @@ interface IParagraph {
   width?: string
 }
 
-const Paragraph: React.FC<IParagraph> = ({ title, lines, className }) => {
+const Paragraph: React.FC<IParagraph> = ({
+  title,
+  lines,
+  className,
+  width,
+}) => {
   const divRef = useRef<HTMLDivElement>(null)
   const lettersRef = useRef<Record<number, HTMLSpanElement>>({})
   const isInView = useInView(divRef)
@@ -36,7 +41,7 @@ const Paragraph: React.FC<IParagraph> = ({ title, lines, className }) => {
 
   return (
     <div
-      className={cx('paragraph', className)}
+      className={cx('paragraph', className, width)}
       ref={divRef}
     >
       <h3 className={cx('title')}>
