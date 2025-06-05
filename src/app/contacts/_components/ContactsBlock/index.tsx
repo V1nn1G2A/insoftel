@@ -1,3 +1,5 @@
+import { BigLetter } from '@/ui'
+
 import Addresses from '../Addresses'
 
 import styles from './index.module.scss'
@@ -6,8 +8,8 @@ const ContactsBlock = () => (
   <div className={styles.contactsBlock}>
     <Addresses />
     <div className={styles.letters}>
-      <span className={styles.i}>I</span>
-      <span className={styles.t}>T</span>
+      <BigLetter className={styles.i}>I</BigLetter>
+      <BigLetter className={styles.t}>T</BigLetter>
     </div>
   </div>
 )

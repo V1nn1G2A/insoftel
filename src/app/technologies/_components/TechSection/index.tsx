@@ -2,8 +2,7 @@
 
 import { FC, useRef } from 'react'
 
-import { AnimatedText, AnimationBlock } from '@/ui'
-import AnimatedLine from '@/ui/AnimatiedLine'
+import { AnimatedText, AnimationBlock, AnimatedLine } from '@/ui'
 
 import styles from './index.module.scss'
 
