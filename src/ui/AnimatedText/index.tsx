@@ -11,11 +11,17 @@ interface Iindex {
   children: string
   className?: string
   delaySpeed?: number
+  height: number
 }
 
 const cx = cn.bind(styles)
 
-const AnimatedText: FC<Iindex> = ({ children, className, delaySpeed = 50 }) => {
+const AnimatedText: FC<Iindex> = ({
+  children,
+  className,
+  delaySpeed = 50,
+  height = 56,
+}) => {
   const triggerRef = useRef<HTMLDivElement>(null)
   const lettersRef = useRef<Record<number, HTMLSpanElement>>({})
   const isInView = useInView(triggerRef)
@@ -45,6 +51,7 @@ const AnimatedText: FC<Iindex> = ({ children, className, delaySpeed = 50 }) => {
             {
               '--count': index + 1,
               '--speed': `${delaySpeed}ms`,
+              '--height': `${height}px`,
             } as React.CSSProperties
           }
         >
