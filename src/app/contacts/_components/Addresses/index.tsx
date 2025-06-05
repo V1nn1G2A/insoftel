@@ -1,4 +1,4 @@
-import { TextButton } from '@/ui'
+import { AnimationBlock, TextButton } from '@/ui'
 
 import { addresses } from '../../_constants/CONTACTS'
 import AddressItem from '../AddresItem'
@@ -16,18 +16,22 @@ const Addresses = () => (
             address={address.text}
           />
         ))}
-        <TextButton
-          classNames={['button-contacts', 'text-contacts', 'desctop']}
-          colorVariant="dark"
-          text="Connect with Us on Telegram"
-          variant="long"
-        />
-        <TextButton
-          classNames={['button-contacts', 'text-contacts', 'mobile']}
-          colorVariant="dark"
-          text="Connect with Us"
-          variant="long"
-        />
+        <AnimationBlock>
+          <TextButton
+            classNames={['button-contacts', 'text-contacts', 'desctop']}
+            colorVariant="dark"
+            text="Connect with Us on Telegram"
+            variant="long"
+          />
+        </AnimationBlock>
+        <AnimationBlock>
+          <TextButton
+            classNames={['button-contacts', 'text-contacts', 'mobile']}
+            colorVariant="dark"
+            text="Connect with Us"
+            variant="long"
+          />
+        </AnimationBlock>
       </div>
     </div>
   </>

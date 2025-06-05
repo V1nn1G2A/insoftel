@@ -1,22 +1,32 @@
 @use 'mixins/fonts';
 
+.enquiries__wrapper {
+  overflow-y: hidden;
+}
+
 .enquiries {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 79px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .title {
   @include fonts.text(90px, 94px, 400);
+
   color: var(--color-text-tertiary);
   letter-spacing: 2px;
   max-width: 400px;
+
+  .line {
+    display: block;
+    overflow: hidden;
+  }
 }
 
 .text {
   @include fonts.text(36px, 40px, 400);
+
   color: var(--color-text-quaternary);
   letter-spacing: -0.1px;
   max-width: 570px;
@@ -27,23 +37,31 @@
   letter-spacing: 0.1px;
 }
 
-@media (max-width: 1200px) {
+@media (width <= 1200px) {
   .enquiries {
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
     padding: 49px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 
   .title {
     @include fonts.text(48px, 50px, 400);
+
     margin-bottom: 26px;
     letter-spacing: 1px;
   }
 
   .text {
     @include fonts.text(24px, 28px, 400);
+
     margin-right: 0;
   }
+}
+
+.border {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(0 0 0 / 20%);
 }

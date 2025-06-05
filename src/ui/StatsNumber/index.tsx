@@ -5,7 +5,7 @@ import { useInView } from 'motion/react'
 import type { FC, ReactNode } from 'react'
 import { useEffect, useRef } from 'react'
 
-import AnimatedLine from '../AnimatiedLine'
+import AnimatedLine from '../AnimatedLine'
 
 import styles from './index.module.scss'
 
