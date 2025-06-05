@@ -12,6 +12,7 @@ interface Iindex {
   animation?: Variants
   children?: React.ReactNode
   className?: string
+  isAnimated?: boolean
 }
 
 const index: FC<Iindex> = ({
@@ -20,8 +21,13 @@ const index: FC<Iindex> = ({
   children,
   animation = disolve,
   className,
+  isAnimated = true,
 }) => {
   const MotionElement = motion(type)
+
+  const Type = type
+
+  if (!isAnimated) return <Type className={className}>{children}</Type>
 
   return (
     <MotionElement

@@ -2,6 +2,8 @@
 @use 'mixins/media';
 
 .letter {
+  overflow: hidden;
+
   @include fonts.text(113px, 100%, 600);
 
   text-transform: uppercase;
