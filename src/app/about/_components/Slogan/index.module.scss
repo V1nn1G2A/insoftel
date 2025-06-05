@@ -20,7 +20,7 @@
   }
 
   @include media.screen('desktop') {
-    padding: 174px 0 0;
+    padding: 158px 0 0;
   }
 }
 
@@ -29,20 +29,22 @@
   p {
     @include fonts.text(48px, 56px, 400);
 
+    overflow: hidden;
     letter-spacing: 2%;
 
     @include media.screen('desktop') {
-      @include fonts.text(90px, 60px, 400);
+      @include fonts.text(90px, 90px, 400);
     }
   }
 
   p:last-of-type {
     width: 243px;
-    margin: 36px 0 0 auto;
+    margin: 22px 0 14px auto;
     text-align: right;
 
     @include media.screen('desktop') {
       width: auto;
+      margin: 12px 0 0 auto;
     }
   }
 }
@@ -59,7 +61,7 @@
 
   @include media.screen('desktop') {
     align-items: center;
-    margin-top: 102px;
+    margin-top: 86px;
 
     .explores {
       display: flex;

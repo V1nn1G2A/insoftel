@@ -1,7 +1,6 @@
 import type { FC } from 'react'
 
-import { SectionTitle } from '@/ui'
-import { Container } from '@/ui'
+import { AnimationBlock, Container, SectionTitle } from '@/ui'
 
 import items from '../../_constants/ITEM_CARD'
 import ItemCard from '../ItemCard'
@@ -17,7 +16,7 @@ const ChooseUs: FC = ({}) => (
       >
         Why Choose Us?
       </SectionTitle>
-      <div className={styles.cards}>
+      <AnimationBlock className={styles.cards}>
         {items.map(item => (
           <ItemCard
             key={item.title}
@@ -26,7 +25,7 @@ const ChooseUs: FC = ({}) => (
             className={styles.card}
           />
         ))}
-      </div>
+      </AnimationBlock>
     </Container>
   </section>
 )

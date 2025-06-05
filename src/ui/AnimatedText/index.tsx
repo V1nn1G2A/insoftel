@@ -11,7 +11,7 @@ interface Iindex {
   children: string
   className?: string
   delaySpeed?: number
-  height: number
+  height?: number
 }
 
 const cx = cn.bind(styles)
