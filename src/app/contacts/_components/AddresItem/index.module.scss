@@ -1,7 +1,7 @@
 @use 'mixins/fonts';
 
 .AddressItem {
-  padding: 40px 0;
+  padding: 41px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -15,7 +15,7 @@
 .text {
   @include fonts.text(20px, 24px, 300);
   color: var(--color-text-quaternary);
-  max-width: 330px;
+  max-width: 331px;
   letter-spacing: 0.8px;
 }
 

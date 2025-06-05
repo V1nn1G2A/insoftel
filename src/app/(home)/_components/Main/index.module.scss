@@ -116,3 +116,16 @@
 .letterActive {
   opacity: 1;
 }
+
+.exploreButton {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  & p {
+    font-size: 14px;
+    margin: 0;
+    padding-bottom: 4px;
+  }
+}

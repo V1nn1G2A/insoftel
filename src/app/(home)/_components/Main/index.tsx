@@ -91,7 +91,7 @@ const Main: FC = ({}) => {
                 }}
               />
             </div>
-            <ExploreButton />
+            <ExploreButton classNames={['', '', styles.exploreButton]} />
           </div>
         </Container>
       </VideoBackground>

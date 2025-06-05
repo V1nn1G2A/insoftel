@@ -1,3 +1,4 @@
+import cx from 'classnames'
 import type { FC } from 'react'
 
 import { AnimationBlock } from '../'
@@ -11,7 +12,7 @@ interface IQuote {
 }
 
 const Quote: FC<IQuote> = ({ author, className, children }) => (
-  <div className={`${styles.quote} ${className}`}>
+  <div className={cx(styles.quote, className)}>
     <AnimationBlock>
       <AnimationBlock className={styles.quote__content}>
         &quot; {children} &quot;
