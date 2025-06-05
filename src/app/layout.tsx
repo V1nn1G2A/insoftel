@@ -48,7 +48,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={neueHaas.variable}>
         <Lenis />
-        <header className="header"></header>
         <Header />
         {children}
         <Footer />

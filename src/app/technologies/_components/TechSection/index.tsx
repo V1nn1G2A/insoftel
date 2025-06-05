@@ -1,4 +1,9 @@
-import { FC } from 'react'
+'use client'
+
+import { FC, useRef } from 'react'
+
+import { AnimatedText, AnimationBlock } from '@/ui'
+import AnimatedLine from '@/ui/AnimatiedLine'
 
 import styles from './index.module.scss'
 
@@ -15,24 +20,43 @@ const TechSection: FC<ITechSection> = ({
   mainText,
   secondaryText,
 }) => {
+  const ref = useRef(null)
   return (
-    <section className={styles.technologiesSection}>
-      <h2 className={styles.technologiesSection__title}>
-        <sup className={styles.technologiesSection__titleIndex}>
-          [ {titleIndex} ]
-        </sup>{' '}
-        {title}
-      </h2>
-      <div className={styles.technologiesSection__content}>
-        <p className={styles.technologiesSection__mainText}>{mainText}</p>
-        <p className={styles.technologiesSection__secondaryText}>
-          <span className={styles.technologiesSection__secondaryTextTitle}>
-            Business Impact:
-          </span>{' '}
-          {secondaryText}
-        </p>
-      </div>
-    </section>
+    <div className={styles.technologiesSection__wrapper}>
+      <section
+        className={styles.technologiesSection}
+        ref={ref}
+      >
+        <h2 className={styles.technologiesSection__title}>
+          <sup className={styles.technologiesSection__titleIndex}>
+            [ {titleIndex} ]
+          </sup>
+          <AnimatedText>{title}</AnimatedText>
+        </h2>
+        <div className={styles.technologiesSection__content}>
+          <AnimationBlock
+            className={styles.technologiesSection__mainText}
+            type="p"
+          >
+            {mainText}
+          </AnimationBlock>
+          <AnimationBlock
+            className={styles.technologiesSection__secondaryText}
+            type="p"
+          >
+            <span className={styles.technologiesSection__secondaryTextTitle}>
+              Business Impact:
+            </span>
+            {secondaryText}
+          </AnimationBlock>
+        </div>
+      </section>
+      <AnimatedLine
+        targetRef={ref}
+        x={-1400}
+        className={styles.line}
+      />
+    </div>
   )
 }
 
