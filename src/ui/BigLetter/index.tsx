@@ -8,14 +8,15 @@ interface IBigLetter {
   className?: string
   children: string
   ref?: Ref<HTMLSpanElement>
+  isAnimated?: boolean
 }
 
-const BigLetter: FC<IBigLetter> = ({ className, children, ref }) => (
+const BigLetter: FC<IBigLetter> = ({ className, children, ref, isAnimated }) => (
   <span
     className={`${styles.letter} ${className}`}
     ref={ref}
   >
-    <AnimatedText height={120}>{children}</AnimatedText>
+    <AnimatedText height={120} isAnimated={isAnimated}>{children}</AnimatedText>
   </span>
 )
 

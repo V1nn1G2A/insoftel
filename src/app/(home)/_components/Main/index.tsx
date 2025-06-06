@@ -41,6 +41,7 @@ const Main: FC = ({}) => {
           <div className={styles.top}>
             <div>
               <BigLetter
+                isAnimated={false}
                 className={cx(styles.letter, {
                   [styles.letterActive]: letter === 'I',
                 })}
@@ -55,6 +56,7 @@ const Main: FC = ({}) => {
             </div>
             <div>
               <BigLetter
+                isAnimated={false}
                 className={cx(styles.letter, {
                   [styles.letterActive]: letter === 'T',
                 })}
@@ -79,6 +81,7 @@ const Main: FC = ({}) => {
           <div className={styles.bottom}>
             <div>
               <BigLetter
+                isAnimated={false}
                 className={cx(styles.letter, {
                   [styles.letterActive]: letter === 'S',
                 })}
