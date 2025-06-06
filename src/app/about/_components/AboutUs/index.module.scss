@@ -30,15 +30,16 @@
     justify-content: space-between;
     margin-bottom: 65px;
 
-    p:first-of-type {
-      margin-left: 22px;
+    span:first-of-type {
+      margin-left: 7px;
+      margin-top: 6px;
     }
   }
 }
 
 .about__content {
   @include media.screen('desktop') {
-    width: 770px;
+    width: 776px;
   }
 }
 
@@ -46,13 +47,13 @@
   margin: 24px 0 48px;
   color: var(--color-text-quaternary);
   text-indent: 45px;
-  letter-spacing: -0.4%;
+  letter-spacing: -0.1px;
 
   @include fonts.text(24px, 28px, 400);
 
   @include media.screen('desktop') {
     margin: 2px 0 74px;
-    text-indent: 36px;
+    text-indent: 40px;
 
     @include fonts.text(30px, 34px, 400);
   }
@@ -64,7 +65,7 @@
   @include media.screen('desktop') {
     max-width: 100%;
     max-width: 762px;
-    margin: -15px -5px 0 -7px;
+    margin: -15px -5px 0 0;
   }
 }
 

@@ -3,7 +3,7 @@
 
 .commitment {
   display: none;
-  padding: 98px 0 108px;
+  padding: 102px 0 108px;
 
   h2 {
     @include fonts.text(48px, 52px, 400);
@@ -21,7 +21,7 @@
   p {
     @include fonts.text(30px, 34px, 400);
 
-    letter-spacing: -0.23%;
+    letter-spacing: -0.07px;
     margin-bottom: 90px;
     color: var(--color-text-tertiary);
   }
@@ -31,7 +31,7 @@
     justify-content: space-between;
     width: 100%;
     padding-bottom: 20px;
-    letter-spacing: 2%;
+    letter-spacing: 0.5px;
 
     @include fonts.text(24px, 28px, 500);
 

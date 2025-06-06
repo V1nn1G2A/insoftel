@@ -20,6 +20,7 @@
 
   &__title {
     @include fonts.text(48px, 52px, 600);
+
     color: var(--color-black-secondary);
     display: flex;
     gap: 24px;
@@ -37,14 +38,18 @@
 
   &__titleIndex {
     width: 48px;
+
     @include fonts.text(20px, 24px, 400);
+
     color: var(--color-text-quaternary);
     white-space: nowrap;
 
     @include media.screen('mobile') {
       order: -1;
+
       @include fonts.text(16px, 20px, 400);
-      margin: -4px -14px 0 0;
+
+      margin: 0 -14px 0 0;
     }
   }
 
@@ -63,6 +68,7 @@
   &__mainText,
   &__secondaryText {
     @include fonts.text(20px, 24px, 400);
+
     color: var(--color-text-quaternary);
     word-spacing: 3px;
 
@@ -90,7 +96,7 @@
   &__line {
     height: 1px;
     width: 100%;
-    background-color: #00000033;
+    background-color: #0003;
   }
 }
 

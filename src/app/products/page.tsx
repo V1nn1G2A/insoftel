@@ -1,3 +1,11 @@
+import Header from './_components/Header'
+import ProductsList from './_components/ProductsList'
+
 export default function Products() {
-  return <h1>Products</h1>
+  return (
+    <>
+      <Header />
+      <ProductsList />
+    </>
+  )
 }

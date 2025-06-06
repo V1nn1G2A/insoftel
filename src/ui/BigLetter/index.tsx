@@ -15,7 +15,7 @@ const BigLetter: FC<IBigLetter> = ({ className, children, ref }) => (
     className={`${styles.letter} ${className}`}
     ref={ref}
   >
-    <AnimatedText height={120}>{children}</AnimatedText>
+    <AnimatedText height={70}>{children}</AnimatedText>
   </span>
 )
 
