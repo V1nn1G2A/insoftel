@@ -31,6 +31,7 @@
       width: 100%;
       flex-direction: row-reverse;
       justify-content: space-between;
+      overflow: visible;
 
       @include fonts.text(30px, 24px, 500);
     }
@@ -49,7 +50,7 @@
 
       @include fonts.text(16px, 20px, 400);
 
-      margin: 0 -14px 0 0;
+      margin: -4px -12px 0 0;
     }
   }
 

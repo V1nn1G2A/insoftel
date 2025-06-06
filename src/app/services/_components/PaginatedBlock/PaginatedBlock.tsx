@@ -64,6 +64,7 @@ const PaginatedBlock: React.FC<IPaginatedBlock> = ({
             {paginatedInfo.map(paragraph => (
               <SwiperSlide key={paragraph.title}>
                 <Paragraph
+                  isAnimated={false}
                   title={paragraph.title}
                   lines={[`${paragraph.text}`]}
                   className={['pagination-block', 'paginated-title']}

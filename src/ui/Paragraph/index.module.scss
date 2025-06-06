@@ -26,6 +26,7 @@
 
 .text {
   letter-spacing: 0.3px;
+  display: block;
 
   @include fonts.text(16px, 20px, 400);
 
@@ -44,7 +45,7 @@
 }
 
 .pagination-block:not(:last-child) {
-  margin-bottom: 21px;
+  margin-bottom: 24px;
 }
 
 .paginated-title {
@@ -80,6 +81,7 @@
 @media (width <= 1080px) {
   .paragraph {
     min-height: 163px;
+    margin-bottom: 0;
   }
 }
 

@@ -1,5 +1,3 @@
-import type { FC } from 'react'
-
 import { Container } from '@/ui'
 import { Quote } from '@/ui'
 import { SectionTitle } from '@/ui'
@@ -11,7 +9,7 @@ import Slogan from '../Slogan'
 
 import styles from './index.module.scss'
 
-const Company: FC = ({}) => (
+const Company = () => (
   <section className={styles.company}>
     <Container>
       <div className={styles.company__header}>
@@ -48,18 +46,13 @@ const Company: FC = ({}) => (
             years <br />
             of experience
           </StatsNumber>
-          <TextButton
-            text="More About Us"
-            variant="short"
-            colorVariant="dark"
-            className={styles.company__btn}
-          />
         </div>
       </div>
       <TextButton
         text="More About Us"
         variant="short"
         colorVariant="dark"
+        classNames={[styles.company__btn]}
       />
     </Container>
   </section>
