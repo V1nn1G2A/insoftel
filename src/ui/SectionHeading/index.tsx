@@ -22,6 +22,7 @@ const SectionHeading = ({
   }
 
   return (
+    <div>
     <VideoBackground
       src={'/video/section-background.mp4'}
       className="section"
@@ -51,6 +52,7 @@ const SectionHeading = ({
         </div>
       </Container>
     </VideoBackground>
+    </div>
   )
 }
 export default SectionHeading
