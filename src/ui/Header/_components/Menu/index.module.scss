@@ -29,6 +29,7 @@
   border-color: transparent;
   transition: border-color 0.3s ease;
 
+  // Жирность должна быть 300
   @include fonts.text(16px, 20px, 400);
 
   @media (hover: hover) and (pointer: fine) {
