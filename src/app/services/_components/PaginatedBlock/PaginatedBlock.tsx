@@ -43,6 +43,7 @@ const PaginatedBlock: React.FC<IPaginatedBlock> = ({
         <div className={cx('paragraph-list')}>
           {paginatedInfo.map(paragraph => (
             <Paragraph
+              isAnimated={false}
               key={paragraph.title}
               title={paragraph.title}
               lines={[`${paragraph.text}`]}

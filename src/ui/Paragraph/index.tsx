@@ -23,17 +23,17 @@ const Paragraph: React.FC<IParagraph> = ({
   lines,
   className,
   width,
-  isAnimated,
+  isAnimated = true,
 }) => {
   return (
     <div className={cx('paragraph', className, width)}>
       <h3 className={cx('title')}>
-        {isAnimated ? <AnimatedText>{title}</AnimatedText> : title}
+        {isAnimated ? <AnimatedText height={35}>{title}</AnimatedText> : title}
       </h3>
       <div>
         {lines.map(line => (
           <AnimationBlock
-            isAnimated={false}
+            isAnimated={isAnimated}
             type="span"
             key={line}
             className={cx('text')}
