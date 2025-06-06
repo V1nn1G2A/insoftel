@@ -32,7 +32,11 @@
   }
 
   &__quote {
-    margin: 114px 0 126px;
+    margin: 0 0 35px;
+
+    @include media.screen('desktop') {
+      margin: 114px 0 126px;
+    }
   }
 }
 
@@ -95,5 +99,9 @@
 .company__statsContent {
   display: flex;
   flex-direction: column;
-  gap: 47px;
+  gap: 24px;
+
+  @include media.screen('desktop') {
+    gap: 47px;
+  }
 }

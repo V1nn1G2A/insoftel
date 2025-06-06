@@ -91,38 +91,50 @@
 }
 
 .grid {
+  display: grid;
+
   @include media.screen('desktop') {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
     row-gap: 36px;
-    margin-bottom: 80px;
+    margin-bottom: 57px;
   }
 }
 
 .paragraph {
+  min-height: auto;
+  margin-bottom: 24px;
+
   & h3 {
-    @include fonts.text(35px, 35px, 500);
-    margin-bottom: 16px;
+    @include fonts.text(30px, 34px, 400);
+    margin-bottom: 8px;
+
+    @include media.screen('desktop') {
+      @include fonts.text(35px, 35px, 500);
+      margin-bottom: 16px;
+    }
   }
 }
 
 .paragraph:not(:last-child) {
-  margin-bottom: 24px;
 
   @include media.screen('desktop') {
     margin-bottom: 9px;
   }
 }
 
-// .paragraph:last-child {
-//   span:first-of-type {
-//     margin-top: 6px;
-//   }
-// }
+.paragraph:last-child {
+  span:first-of-type {
+    margin-top: 6px;
+      @include media.screen('desktop') {
+      margin-top: 0;
+    }
+  }
+}
 
 .services button {
-  margin-top: 48px;
+  margin-top: 25px;
 
   @include media.screen('desktop') {
     margin-top: 0;

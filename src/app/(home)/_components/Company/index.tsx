@@ -48,12 +48,12 @@ const Company: FC = ({}) => (
             years <br />
             of experience
           </StatsNumber>
-          <TextButton
+          {/* <TextButton
             text="More About Us"
             variant="short"
             colorVariant="dark"
             className={styles.company__btn}
-          />
+          /> */}
         </div>
       </div>
       <TextButton
