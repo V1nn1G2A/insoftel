@@ -86,7 +86,7 @@
 
     text-indent: 43px;
     letter-spacing: 0.69px;
-    margin: 0 0 90px;
+    margin: 0 0 85px;
   }
 }
 
@@ -95,15 +95,15 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
-    row-gap: 42px;
+    row-gap: 36px;
     margin-bottom: 80px;
   }
 }
 
 .paragraph {
   & h3 {
-    @include fonts.text(35px, 36px, 500);
-    margin-bottom: 9px;
+    @include fonts.text(35px, 35px, 500);
+    margin-bottom: 16px;
   }
 }
 
@@ -115,11 +115,11 @@
   }
 }
 
-.paragraph:last-child {
-  span:first-of-type {
-    margin-top: 6px;
-  }
-}
+// .paragraph:last-child {
+//   span:first-of-type {
+//     margin-top: 6px;
+//   }
+// }
 
 .services button {
   margin-top: 48px;
