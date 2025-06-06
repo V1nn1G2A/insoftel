@@ -14,12 +14,16 @@
 
   @include media.screen('desktop') {
     display: flex;
-    margin-top: 80px;
+    margin: 80px 0;
   }
 }
 
 .technologies__title {
   margin: 40px 0 24px;
+
+  & h2 {
+    letter-spacing: 2px;
+  }
 
   @include media.screen('desktop') {
     margin-top: 5px;

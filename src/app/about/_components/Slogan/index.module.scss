@@ -20,11 +20,12 @@
   }
 
   @include media.screen('desktop') {
-    padding: 158px 0 0;
+    padding: 241px 0 0;
   }
 }
 
 .slogan__text {
+  letter-spacing: 2px;
   /* stylelint-disable-next-line no-descending-specificity */
   p {
     @include fonts.text(48px, 56px, 400);
@@ -69,6 +70,7 @@
 
     .explores {
       display: flex;
+      gap: 8px;
       width: 263px;
 
       p {

@@ -37,7 +37,7 @@
 
   @include media.screen('desktop') {
     margin: 0 0 0 79px;
-    letter-spacing: 2%;
+    letter-spacing: 2px;
 
     @include fonts.text(90px, 94px, 400);
   }

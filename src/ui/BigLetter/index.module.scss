@@ -4,7 +4,7 @@
 .letter {
   overflow: hidden;
 
-  @include fonts.text(113px, 100%, 600);
+  @include fonts.text(113px, 100%, 500);
 
   text-transform: uppercase;
   color: var(--color-light-gray);

@@ -12,6 +12,7 @@ interface Iindex {
   className?: string
   delaySpeed?: number
   height?: number
+  isAnimated?: boolean
 }
 
 const cx = cn.bind(styles)
@@ -21,6 +22,7 @@ const AnimatedText: FC<Iindex> = ({
   className,
   delaySpeed = 50,
   height = 56,
+  isAnimated = true,
 }) => {
   const triggerRef = useRef<HTMLDivElement>(null)
   const lettersRef = useRef<Record<number, HTMLSpanElement>>({})
@@ -37,6 +39,8 @@ const AnimatedText: FC<Iindex> = ({
       else el.classList.remove(styles.animate)
     })
   }, [isInView])
+
+  if (!isAnimated) return <span className={className}>{children}</span>
 
   return (
     <span

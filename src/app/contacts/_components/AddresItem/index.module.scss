@@ -5,7 +5,7 @@
 }
 
 .AddressItem {
-  padding: 40px 0;
+  padding: 40px 0 42px;
 }
 
 .title {
@@ -20,7 +20,7 @@
   @include fonts.text(20px, 24px, 300);
 
   color: var(--color-text-quaternary);
-  max-width: 330px;
+  max-width: 331px;
   letter-spacing: 0.8px;
 }
 

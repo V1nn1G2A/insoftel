@@ -30,6 +30,16 @@
     @include media.screen('mobile') {
       order: 2;
       padding: 0;
+      width: 100%;
+
+      & button {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    & p {
+      letter-spacing: 0;
     }
   }
 
@@ -52,7 +62,6 @@
 
   @include media.screen('mobile') {
     width: 100%;
-    max-width: 350px;
     justify-content: space-between;
   }
 }
