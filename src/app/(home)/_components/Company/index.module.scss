@@ -31,6 +31,10 @@
   @include media.screen('desktop') {
     padding: 55px 0 78px;
   }
+
+  &__quote {
+    margin: 114px 0 126px;
+  }
 }
 
 .company__title {
@@ -56,7 +60,6 @@
   }
 
   @include media.screen('desktop') {
-    margin-top: 138px;
     justify-content: space-between;
     flex-direction: row;
   }
@@ -78,21 +81,20 @@
   @include media.screen('desktop') {
     order: -1;
     margin-right: 134px;
+    margin-top: 0;
   }
 }
 
 .company__stats {
-  margin-top: 32px;
-
-  & + & {
-    margin-top: 25px;
+  & p {
+    line-height: 30px;
+    padding-bottom: 8px;
+    letter-spacing: 0.5px;
   }
+}
 
-  @include media.screen('desktop') {
-    margin-top: 0;
-
-    & + & {
-      margin-top: 56px;
-    }
-  }
+.company__statsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
 }

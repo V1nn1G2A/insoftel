@@ -36,8 +36,8 @@
 .quote__author {
   width: max-content;
   font-weight: 600;
-  margin: 24px 0 0 auto;
-  letter-spacing: 1%;
+  margin: 22px 0 0 auto;
+  letter-spacing: 0.13px;
   color: var(--color-text-tertiary);
 
   @include media.screen('desktop') {

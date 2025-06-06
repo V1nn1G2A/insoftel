@@ -7,8 +7,8 @@ import footerNav from '../../_constants/FOOTER_NAV'
 import styles from './index.module.scss'
 
 const FooterNav = () => (
-  <div>
-    <nav className={styles.footerNav}>
+  <div className={styles.footerNav}>
+    <nav>
       <ul className={styles.footerNav__list}>
         {footerNav.map(el => (
           <li
