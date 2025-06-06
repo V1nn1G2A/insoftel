@@ -21,6 +21,10 @@
 .technologies__title {
   margin: 40px 0 24px;
 
+  & h2 {
+    letter-spacing: 2px;
+  }
+
   @include media.screen('desktop') {
     margin-top: 5px;
   }

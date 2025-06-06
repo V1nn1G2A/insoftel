@@ -17,7 +17,7 @@
   }
 
   @include media.screen('desktop') {
-    padding: 80px 0;
+    padding: 80px 0 76px;
     display: flex;
     justify-content: space-between;
     min-height: 1074px;
@@ -86,7 +86,7 @@
 
     text-indent: 43px;
     letter-spacing: 0.69px;
-    margin: 0 0 82px;
+    margin: 0 0 90px;
   }
 }
 
@@ -102,8 +102,13 @@
 
 .paragraph {
   & h3 {
-    @include fonts.text(34px, 24px, 500);
-    word-spacing: 2px;
+    @include fonts.text(35px, 24px, 500);
+    overflow: visible;
+    margin-bottom: 20px;
+  }
+
+  & span {
+    display: block;
   }
 }
 
@@ -111,7 +116,7 @@
   margin-bottom: 24px;
 
   @include media.screen('desktop') {
-    margin-bottom: 0;
+    margin-bottom: 9px;
   }
 }
 
