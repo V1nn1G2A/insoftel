@@ -102,13 +102,8 @@
 
 .paragraph {
   & h3 {
-    @include fonts.text(35px, 24px, 500);
-    overflow: visible;
-    margin-bottom: 20px;
-  }
-
-  & span {
-    display: block;
+    @include fonts.text(35px, 36px, 500);
+    margin-bottom: 9px;
   }
 }
 
