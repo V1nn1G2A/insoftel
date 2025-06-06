@@ -1,8 +1,8 @@
 @use 'mixins/media';
 
 .quoteClass {
-  padding: 92px 0 97px;
-  margin: 110px 0;
+  padding: 92px 0 97px !important;
+  margin: 110px 0 !important;
 
   p:last-of-type {
     line-height: 14px;
