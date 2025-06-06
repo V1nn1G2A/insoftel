@@ -5,7 +5,7 @@
 }
 
 .heading {
-  padding-bottom: 47px;
+  padding-bottom: 43px;
 }
 
 .content {
@@ -44,20 +44,20 @@
 }
 
 .s {
-  @include fonts.text(113px, 80%, 500);
+  @include fonts.text(113px, 83%, 500);
 
   color: rgb(0 0 0 / 10%);
 }
 
 .t {
-  @include fonts.text(113px, 80%, 500);
+  @include fonts.text(113px, 83%, 500);
 
   color: rgb(0 0 0 / 10%);
 }
 
 @media (width <= 1200px) {
   .heading {
-    padding-bottom: 50px;
+    padding-bottom: 47px;
   }
 
   .content {
