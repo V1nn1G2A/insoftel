@@ -22,7 +22,7 @@ const OfficeInfo: FC<IOfficeInfo> = ({ className }) => (
     </AnimationBlock>
     <div className={styles.office__contacts}>
       <AnimationBlock type="p">
-        Dubai, UAE <br /> Instanbul, Turkey
+        Dubai, UAE <br /> Istanbul, Turkey
       </AnimationBlock>
       <AnimationBlock type="p">
         [ Head Office ] <br /> [ Office ]
