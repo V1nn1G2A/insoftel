@@ -54,7 +54,7 @@ const CardsList: FC = ({}) => {
           text="Explore Our Products"
           variant="short"
           colorVariant="dark"
-          className={styles.cards__explore}
+          classNames={[styles.cards__explore]}
         />
       </AnimationBlock>
     </AnimationBlock>

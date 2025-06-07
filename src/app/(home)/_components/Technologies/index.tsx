@@ -40,7 +40,7 @@ const Technologies: FC = ({}) => (
                 <TextButton
                   text="Explore Our Technologies"
                   variant="short"
-                  className={styles.technologies__button}
+                  classNames={[styles.technologies__button]}
                 />
               </Link>
             </AnimationBlock>

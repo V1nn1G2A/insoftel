@@ -10,6 +10,8 @@
 
     @include media.screen('desktop') {
       @include fonts.text(48px, 52px, 400);
+
+      letter-spacing: 1px;
     }
   }
 

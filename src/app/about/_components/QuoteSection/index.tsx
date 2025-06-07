@@ -9,7 +9,7 @@ const QuoteSection: FC = ({}) => (
   <Container>
     <Quote
       author="Founder of Insoftel Technologies"
-      className={styles.quoteClass}
+      className={styles.quote}
     >
       At Insoftel, custom software is just the beginning. By combining deep
       software expertise with hardware integration, we create adaptable,
