@@ -1,10 +1,14 @@
 @use 'mixins/media';
 
-.quoteClass {
-  padding: 92px 0 97px !important;
-  margin: 110px 0 !important;
+.quote {
+  @include media.screen('desktop') {
+    padding: 93px 0 99px !important;
+    margin: 108px 0 !important;
 
-  p:last-of-type {
-    line-height: 14px;
+    p:last-of-type {
+      line-height: 11px;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+    }
   }
 }

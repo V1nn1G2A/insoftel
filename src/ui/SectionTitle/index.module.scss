@@ -18,7 +18,7 @@
   letter-spacing: -0.5px;
 
   @include media.screen('desktop') {
-    top: -4px;
+    top: 0;
     left: 0;
 
     @include fonts.text(20px, 24px, 500);

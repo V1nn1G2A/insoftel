@@ -11,12 +11,22 @@ interface IBigLetter {
   isAnimated?: boolean
 }
 
-const BigLetter: FC<IBigLetter> = ({ className, children, ref, isAnimated }) => (
+const BigLetter: FC<IBigLetter> = ({
+  className,
+  children,
+  ref,
+  isAnimated,
+}) => (
   <span
     className={`${styles.letter} ${className}`}
     ref={ref}
   >
-    <AnimatedText height={120} isAnimated={isAnimated}>{children}</AnimatedText>
+    <AnimatedText
+      height={70}
+      isAnimated={isAnimated}
+    >
+      {children}
+    </AnimatedText>
   </span>
 )
 

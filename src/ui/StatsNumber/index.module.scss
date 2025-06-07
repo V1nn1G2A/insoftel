@@ -33,11 +33,14 @@
 
     @include fonts.text(20px, 24px, 'regular');
 
-    letter-spacing: 2%;
+    margin-bottom: 3px;
+    letter-spacing: 0.4px;
     color: var(--color-text-secondary);
 
     @include media.screen('desktop') {
-      @include fonts.text(24px, 36px, 'regular');
+      margin-bottom: 6px;
+
+      @include fonts.text(24px, 30px, 'regular');
     }
   }
 

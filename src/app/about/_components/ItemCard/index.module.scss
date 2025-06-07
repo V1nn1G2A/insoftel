@@ -5,7 +5,7 @@
   width: 350px;
   height: 200px;
   background-color: var(--color-white);
-  padding: 20px 20px 22px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -19,7 +19,7 @@
   @include fonts.text(30px, 34px, 400);
 
   max-width: 200px;
-  letter-spacing: 2%;
+  letter-spacing: 0.8px;
   color: var(--color-text-tertiary);
 
   @include media.screen('desktop') {
@@ -30,12 +30,14 @@
 }
 
 .card__content {
-  @include fonts.text(16px, 20px, 400);
+  @include fonts.text(16px, 21px, 400);
 
-  letter-spacing: 2%;
+  letter-spacing: 0.3px;
   color: var(--color-text-quaternary);
 
   @include media.screen('desktop') {
+    letter-spacing: 0.4px;
+
     @include fonts.text(20px, 24px, 400);
   }
 }

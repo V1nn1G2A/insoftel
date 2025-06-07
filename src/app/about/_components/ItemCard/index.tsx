@@ -1,5 +1,7 @@
 import type { FC } from 'react'
 
+import { AnimationBlock } from '@/ui'
+
 import styles from './index.module.scss'
 
 interface IItemCard {
@@ -9,7 +11,7 @@ interface IItemCard {
 }
 
 const ItemCard: FC<IItemCard> = ({ className, title, content }) => (
-  <div className={`${styles.card} ${className}`}>
+  <AnimationBlock className={`${styles.card} ${className}`}>
     <p className={styles.card__title}>{title}</p>
     <div>
       {Array.isArray(content) ? (
@@ -25,7 +27,7 @@ const ItemCard: FC<IItemCard> = ({ className, title, content }) => (
         <p className={styles.card__content}>{content}</p>
       )}
     </div>
-  </div>
+  </AnimationBlock>
 )
 
 export default ItemCard

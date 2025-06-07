@@ -92,7 +92,7 @@
   transition: opacity 0.3s;
 
   @include media.screen('desktop') {
-    letter-spacing: -4px;
+    letter-spacing: 0;
     opacity: 1;
 
     @include fonts.text(113px, 100%, 500);

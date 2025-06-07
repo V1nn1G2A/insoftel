@@ -1,6 +1,8 @@
 @use 'mixins/media';
 
 .company {
+  position: relative;
+
   h2 {
     margin-right: 144px;
 
@@ -16,19 +18,8 @@
     }
   }
 
-  button:last-of-type {
-    margin-bottom: 42px;
-    width: 100%;
-    justify-content: space-between;
-    margin-top: 7px;
-
-    @include media.screen('desktop') {
-      display: none;
-    }
-  }
-
   @include media.screen('desktop') {
-    padding: 55px 0 78px;
+    padding: 55px 0 148px;
   }
 
   &__quote {
@@ -77,31 +68,59 @@
       flex-direction: column;
       align-items: flex-end;
       width: 100%;
-      margin-top: 3px;
+      margin-top: 26px;
     }
   }
 
   @include media.screen('desktop') {
+    letter-spacing: 0.4px;
     order: -1;
     margin-right: 134px;
-    margin-top: 0;
+    margin-top: 32px;
   }
 }
 
 .company__stats {
   & p {
     line-height: 30px;
-    padding-bottom: 8px;
     letter-spacing: 0.5px;
+
+    @include media.screen('desktop') {
+      margin-bottom: 29px;
+    }
+  }
+
+  & p + span {
+    @include media.screen('desktop') {
+      bottom: 24px !important;
+    }
   }
 }
 
 .company__statsContent {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 47px;
 
   @include media.screen('desktop') {
-    gap: 47px;
+    height: 382px;
+  }
+}
+
+.company__btn {
+  margin-bottom: 42px;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 7px;
+
+  @include media.screen('desktop') {
+    position: absolute;
+    width: 240px;
+    bottom: 35px;
+    right: 470px;
+
+    p {
+      font-weight: 500;
+    }
   }
 }
