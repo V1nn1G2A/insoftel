@@ -11,6 +11,12 @@
     }
   }
 
+  sup {
+    @include media.screen('desktop') {
+      top: -3px;
+    }
+  }
+
   .company__header {
     @include media.screen('desktop') {
       display: flex;
@@ -82,11 +88,12 @@
 
 .company__stats {
   & p {
-    line-height: 30px;
     letter-spacing: 0.5px;
+    line-height: 24px;
 
     @include media.screen('desktop') {
       margin-bottom: 29px;
+      line-height: 30px;
     }
   }
 
@@ -100,10 +107,11 @@
 .company__statsContent {
   display: flex;
   flex-direction: column;
-  gap: 47px;
+  gap: 23px;
 
   @include media.screen('desktop') {
     height: 382px;
+    gap: 47px;
   }
 }
 

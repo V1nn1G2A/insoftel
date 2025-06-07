@@ -6,10 +6,12 @@
 
   @include media.screen('desktop') {
     h2 {
+      letter-spacing: 1px;
+
       @include fonts.text(48px, 52px, 400);
     }
 
-    padding: 0 0 80px;
+    padding: 0 0 60px;
   }
 }
 
@@ -52,10 +54,23 @@
   @include fonts.text(24px, 28px, 400);
 
   @include media.screen('desktop') {
-    margin: 2px 0 74px;
+    margin: 0 0 94px;
     text-indent: 40px;
 
     @include fonts.text(30px, 34px, 400);
+  }
+}
+
+.company__stats {
+  @include media.screen('desktop') {
+    p {
+      margin-bottom: 24px !important;
+    }
+
+    /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+    :global(.line) {
+      bottom: 22px !important;
+    }
   }
 }
 
@@ -88,6 +103,6 @@
     width: 348px;
     height: 343px;
     left: 0;
-    bottom: 0;
+    bottom: 20px;
   }
 }

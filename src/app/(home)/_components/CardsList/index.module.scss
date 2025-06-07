@@ -18,7 +18,7 @@
 }
 
 .cards__btns {
-  padding: 48px 0 40px;
+  padding: 48px 0 42px;
 
   @include media.screen('desktop') {
     display: flex;
@@ -50,6 +50,9 @@
     max-width: 324px;
 
     p {
+      font-size: 23px;
+      letter-spacing: 0.7px; //не исправлять на 1px! потому что иначе в firefox становится в 2 линии
+      font-weight: 500;
       margin-left: 10px;
     }
   }
