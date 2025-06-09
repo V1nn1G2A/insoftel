@@ -1,0 +1,15 @@
+@use 'mixins/media';
+
+
+.error__page {
+    position: relative;
+    min-height: 1024px;
+    background-image: url('/img/error/error-fullBackground.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @include media.screen('mobile') {
+        min-height: 844px;
+    }
+}
