@@ -1,0 +1,26 @@
+$weightMap: (
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'bold': 700,
+);
+
+@mixin display($size, $weight: 'medium') {
+  font-size: $size;
+  line-height: $line-heigth;
+  font-weight: if(
+    type-of($weight) == 'string',
+    map-get($weightMap, $weight),
+    $weight
+  );
+}
+
+@mixin text($size, $line-heigth, $weight: 'regular') {
+  font-size: $size;
+  line-height: $line-heigth;
+  font-weight: if(
+    type-of($weight) == 'string',
+    map-get($weightMap, $weight),
+    $weight
+  );
+}

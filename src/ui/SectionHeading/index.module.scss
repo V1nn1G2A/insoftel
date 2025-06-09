@@ -1,0 +1,69 @@
+@use 'mixins/fonts';
+
+.heading {
+  position: relative;
+  height: 613px;
+}
+
+.title {
+  @include fonts.text(230px, 100%, 400);
+  color: var(--color-white);
+  position: absolute;
+  top: 33%;
+}
+
+.miniTitle {
+  display: none;
+  @include fonts.text(31px, 100%, 400);
+  color: var(--color-white);
+  position: absolute;
+  top: 48%;
+  left: calc(50% - var(--width));
+}
+
+.miniButton {
+  position: absolute;
+  right: 0;
+  bottom: 50px;
+}
+
+.button {
+  display: none;
+}
+
+.letter {
+  display: none;
+  @include fonts.text(113px, 80%, 500);
+  color: var(--color-white);
+  position: absolute;
+  top: 12%;
+}
+
+@media (max-width: 1400px) {
+  .heading {
+    height: 747px;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .miniTitle {
+    display: block;
+  }
+
+  .letter {
+    display: block;
+  }
+
+  .miniButton {
+    display: none;
+  }
+
+  .button {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 43px;
+  }
+}

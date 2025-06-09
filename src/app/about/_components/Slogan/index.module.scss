@@ -1,0 +1,83 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.slogan {
+  padding: 98px 0 40px;
+
+  .explore {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 63px;
+    width: 100%;
+
+    p {
+      letter-spacing: 0;
+    }
+
+    @include media.screen('desktop') {
+      display: none;
+    }
+  }
+
+  @include media.screen('desktop') {
+    padding: 241px 0 0;
+  }
+}
+
+.slogan__text {
+  letter-spacing: 2px;
+  /* stylelint-disable-next-line no-descending-specificity */
+  p {
+    @include fonts.text(48px, 56px, 400);
+
+    overflow: hidden;
+    letter-spacing: 1.1px;
+
+    @include media.screen('desktop') {
+      letter-spacing: 2px;
+
+      @include fonts.text(90px, 90px, 400);
+    }
+  }
+
+  p:last-of-type {
+    width: 263px;
+    text-align: right;
+    letter-spacing: 0.6px;
+    margin: 40px 0 14px auto;
+
+    @include media.screen('desktop') {
+      width: auto;
+      letter-spacing: 1.8px;
+      margin: 12px 0 0 auto;
+    }
+  }
+}
+
+.slogan__back {
+  margin-top: 54px;
+  display: flex;
+  justify-content: space-between;
+
+  .explores {
+    display: none;
+    margin: 0;
+  }
+
+  @include media.screen('desktop') {
+    align-items: center;
+    margin-top: 86px;
+
+    .explores {
+      display: flex;
+      gap: 15px;
+      width: 263px;
+
+      p {
+        margin-right: 0;
+        font-size: 16px;
+        letter-spacing: -0.3px;
+      }
+    }
+  }
+}

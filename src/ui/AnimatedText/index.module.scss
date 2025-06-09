@@ -1,0 +1,19 @@
+.text {
+  overflow: hidden;
+}
+
+.animate {
+  position: relative;
+  animation-duration: calc(300ms + var(--count) * var(--speed));
+  animation-name: up;
+}
+
+@keyframes up {
+  from {
+    top: var(--height);
+  }
+
+  to {
+    top: 0;
+  }
+}

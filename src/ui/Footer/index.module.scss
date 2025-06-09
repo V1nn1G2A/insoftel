@@ -1,0 +1,12 @@
+@use 'mixins/media';
+
+.footer {
+  width: 100%;
+  background-color: var(--color-black);
+  padding: 50px 0;
+  word-spacing: 2px;
+
+  @include media.screen('tablet') {
+    padding: 48px 0;
+  }
+}

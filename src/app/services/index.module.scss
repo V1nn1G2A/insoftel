@@ -1,0 +1,89 @@
+.services-content {
+  padding: 73px 0;
+  height: 3786px; // фиксированная высота всего блока
+}
+
+.services-wrapper {
+  height: 878px;
+  padding-top: 39px;
+  position: sticky;
+  top: 0; // прилипает к верху вьюпорта
+}
+
+.services-absolute {
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  min-width: 1344px;
+  left: calc(50% - 672px);
+}
+
+.button {
+  position: absolute;
+  bottom: 37px;
+  right: calc(50% - 672px);
+  min-width: 662px;
+}
+
+@media (max-width: 1400px) {
+  .content {
+    min-width: 1024px;
+    left: calc(50% - 512px);
+  }
+
+  .button {
+    right: calc(50% - 512px);
+  }
+}
+
+@media (max-width: 1080px) {
+  .content {
+    min-width: 760px;
+    left: calc(50% - 380px);
+  }
+
+  .button {
+    right: auto;
+    left: calc(50% - 380px);
+    bottom: 67.5px;
+  }
+
+  .services-content {
+    padding: 0;
+  }
+
+  .services-wrapper {
+    padding-top: 67.5px;
+    height: 911px;
+  }
+}
+
+@media (max-width: 800px) {
+  .content {
+    min-width: 550px;
+    left: calc(50% - 275px);
+  }
+
+  .button {
+    left: calc(50% - 275px);
+    min-width: 550px;
+  }
+
+  .services-wrapper {
+    height: 844px;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    min-width: 350px;
+    left: calc(50% - 175px);
+  }
+
+  .button {
+    left: calc(50% - 175px);
+    min-width: 350px;
+  }
+}

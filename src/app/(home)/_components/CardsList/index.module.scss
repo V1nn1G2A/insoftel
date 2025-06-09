@@ -1,0 +1,59 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.cards {
+  margin-top: 50px;
+
+  @include media.screen('desktop') {
+    margin-top: 56px;
+  }
+}
+
+.slide:not(:first-child) {
+  margin-left: 16px;
+
+  @include media.screen('desktop') {
+    margin-left: 20px;
+  }
+}
+
+.cards__btns {
+  padding: 48px 0 42px;
+
+  @include media.screen('desktop') {
+    display: flex;
+    justify-content: space-between;
+    padding: 62px 0 80px;
+  }
+}
+
+.cards__pagination {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 48px;
+
+  @include media.screen('desktop') {
+    max-width: 148px;
+    margin-bottom: 0;
+  }
+}
+
+.cards__explore {
+  width: 100%;
+  display: flex;
+  margin-top: -2px;
+  justify-content: space-between;
+  color: var(--color-black);
+
+  @include media.screen('desktop') {
+    max-width: 324px;
+
+    p {
+      font-size: 23px;
+      letter-spacing: 0.7px; //не исправлять на 1px! потому что иначе в firefox становится в 2 линии
+      font-weight: 500;
+      margin-left: 10px;
+    }
+  }
+}
