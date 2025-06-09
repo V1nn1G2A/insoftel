@@ -1,12 +1,12 @@
 import { TextButton } from '@/ui/Buttons'
 import styles from './index.module.scss'
 
-interface IErrorContent {
+interface INotFoundContent {
     code: string
     message: string
 }
 
-const ErrorContent: React.FC<IErrorContent> = ({code, message}) => (
+const NotFoundContent: React.FC<INotFoundContent> = ({code, message}) => (
     <div className={styles.error}>
         <p className={styles.error__code}>{code}</p>
         <p className={styles.error__message}>{message}</p>
@@ -14,4 +14,4 @@ const ErrorContent: React.FC<IErrorContent> = ({code, message}) => (
     </div>
 )
 
-export default ErrorContent
+export default NotFoundContent
