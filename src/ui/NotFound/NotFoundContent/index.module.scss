@@ -28,13 +28,11 @@
 
         &__code {
         @include fonts.text(120px, 100%, 500);
-        margin-bottom: 44px;
 
         }
 
         &__message {
             @include fonts.text(36px, 40px, 400);
-            margin-bottom: 20px;
             letter-spacing: 1px;
         }
     }
