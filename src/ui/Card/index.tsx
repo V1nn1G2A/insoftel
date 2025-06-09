@@ -1,6 +1,6 @@
 'use client'
 
-import cn from 'classnames'
+import cn from 'classnames/bind'
 import Image from 'next/image'
 import type { FC } from 'react'
 import { useState } from 'react'
