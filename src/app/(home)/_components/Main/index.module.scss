@@ -61,7 +61,6 @@
 
 .top,
 .bottom {
-  top: 80px;
   position: absolute;
   left: 41px;
   right: 20px;
@@ -70,18 +69,25 @@
   align-items: center;
 
   @include media.screen('desktop') {
-    top: 120px;
     left: 71px;
     right: 48px;
   }
 }
 
+.top {
+  top: 120px;
+
+  @include media.screen('mobile') {
+    top: 76px;
+  }
+}
+
 .bottom {
-  top: auto;
-  bottom: 28px;
+  bottom: 22px;
   left: 20px;
 
   @include media.screen('desktop') {
+    bottom: 28px;
     left: 48px;
   }
 }
