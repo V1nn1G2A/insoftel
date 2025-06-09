@@ -1,0 +1,27 @@
+@use 'mixins/media';
+@use 'mixins/fonts';
+
+.adventage {
+  &__title {
+    @include fonts.text(20px, 24px, 500);
+
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+    color: var(--color-text-tertiary);
+  }
+
+  &__text {
+    @include fonts.text(16px, 20px, 400);
+
+    letter-spacing: 0.3px;
+    color: var(--color-text-quaternary);
+  }
+
+  &__text + &__text {
+    margin-top: 20px;
+  }
+
+  @include media.screen('desktop') {
+    margin-right: 34px;
+  }
+}
