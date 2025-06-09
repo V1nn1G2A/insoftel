@@ -2,7 +2,7 @@
 
 import { FC, useRef } from 'react'
 
-import { AnimatedText, AnimationBlock, AnimatedLine } from '@/ui'
+import { AnimatedLine, AnimatedText, AnimationBlock } from '@/ui'
 
 import styles from './index.module.scss'
 
@@ -11,6 +11,7 @@ export interface ITechSection {
   titleIndex: string
   mainText: string
   secondaryText: string
+  isLast?: boolean
 }
 
 const TechSection: FC<ITechSection> = ({
@@ -18,6 +19,7 @@ const TechSection: FC<ITechSection> = ({
   titleIndex,
   mainText,
   secondaryText,
+  isLast,
 }) => {
   const ref = useRef(null)
   return (
@@ -50,11 +52,14 @@ const TechSection: FC<ITechSection> = ({
           </AnimationBlock>
         </div>
       </section>
-      <AnimatedLine
-        targetRef={ref}
-        x={-1400}
-        className={styles.line}
-      />
+
+      {!isLast && (
+        <AnimatedLine
+          targetRef={ref}
+          x={-1400}
+          className={styles.line}
+        />
+      )}
     </div>
   )
 }

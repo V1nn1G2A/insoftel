@@ -19,6 +19,7 @@ export default function Technologies() {
             <TechSection
               key={index}
               {...item}
+              isLast={index === technologiesContetnt.length - 1}
             />
           ))}
         </div>
