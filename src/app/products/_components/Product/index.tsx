@@ -4,7 +4,7 @@ import cn from 'classnames/bind'
 import Image from 'next/image'
 import type { FC } from 'react'
 
-import { TextButton } from '@/ui'
+import { AnimationBlock, TextButton } from '@/ui'
 
 import Adventage from '../Adventage'
 
@@ -30,15 +30,27 @@ const Product: FC<IProduct> = ({
   isLine = true,
 }) => (
   <section className={cx('product', className)}>
-    <Image
-      width={662}
-      height={335}
-      src={img}
-      alt={title}
-      className={styles.product__img}
-    />
-    <h3 className={styles.product__title}>{title}</h3>
-    <p className={styles.product__content}>{mainContent}</p>
+    <AnimationBlock>
+      <Image
+        width={662}
+        height={335}
+        src={img}
+        alt={title}
+        className={styles.product__img}
+      />
+    </AnimationBlock>
+    <AnimationBlock
+      type="h3"
+      className={styles.product__title}
+    >
+      {title}
+    </AnimationBlock>
+    <AnimationBlock
+      type="p"
+      className={styles.product__content}
+    >
+      {mainContent}
+    </AnimationBlock>
     {advantages.map((el, index) => (
       <Adventage
         key={index}
@@ -46,13 +58,20 @@ const Product: FC<IProduct> = ({
         className={styles.product__adventage}
       />
     ))}
-    <TextButton
-      text="Connect with Us"
-      variant="short"
-      classNames={[styles.product__btn]}
-      colorVariant="dark"
-    />
-    {isLine && <span className={styles.product__line} />}
+    <AnimationBlock>
+      <TextButton
+        text="Connect with Us"
+        variant="short"
+        classNames={[styles.product__btn]}
+        colorVariant="dark"
+      />
+    </AnimationBlock>
+    {isLine && (
+      <AnimationBlock
+        type="span"
+        className={styles.product__line}
+      />
+    )}
   </section>
 )
 
