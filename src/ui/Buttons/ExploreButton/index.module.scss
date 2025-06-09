@@ -1,0 +1,96 @@
+@use 'mixins/fonts';
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px 8px 30px;
+  border-radius: 100px;
+  cursor: pointer;
+
+  &.dark {
+    background-color: transparent;
+    border: 1px solid rgb(0 0 0 / 20%);
+
+    &:hover {
+      border: 1px solid rgb(0 0 0 / 50%);
+    }
+  }
+
+  &.light {
+    background-color: rgb(255 255 255 / 5%);
+    border: 1px solid rgb(255 255 255 / 20%);
+
+    &:hover {
+      border: 1px solid rgb(255 255 255 / 50%);
+    }
+  }
+}
+
+.text {
+  margin-right: 14px;
+
+  @include fonts.text(16px, 20px, 'regular');
+
+  letter-spacing: 1px;
+
+  &.dark {
+    color: var(--color-text-tertiary);
+  }
+
+  &.light {
+    color: var(--color-white);
+  }
+}
+
+.round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+
+  &.dark {
+    background-color: var(--color-black);
+  }
+
+  &.light {
+    background-color: var(--color-white);
+  }
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+
+  &.dark {
+    color: var(--color-white);
+  }
+
+  &.light {
+    color: var(--color-black);
+  }
+}
+
+.button:hover .arrow {
+  transform: rotate(45deg);
+}
+
+.mini-button {
+  padding: 7px 9px 7px 27px;
+}
+
+.mini-round {
+  width: 53px;
+  height: 53px;
+}
+
+.mini-text {
+  margin-right: 12.5px;
+  @include fonts.text(12px, 18px, 400);
+}
+
+@media (max-width: 968px) {
+  .mini-text {
+    @include fonts.text(14px, 18px, 400);
+  }
+}

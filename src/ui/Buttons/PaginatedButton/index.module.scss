@@ -1,0 +1,32 @@
+.arrow {
+  color: var(--color-black);
+
+  &.left {
+    transform: rotate(135deg);
+  }
+
+  &.right {
+    transform: rotate(-45deg);
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid rgba($color: #000, $alpha: 20%);
+  border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: var(--color-black);
+  }
+
+  &:hover .arrow {
+    color: var(--color-white);
+  }
+}

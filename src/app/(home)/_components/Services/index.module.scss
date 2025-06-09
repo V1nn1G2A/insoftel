@@ -1,0 +1,142 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.services {
+  padding: 40px 0;
+
+  img {
+    display: none;
+  }
+
+  h2 {
+    margin-right: 166px;
+
+    @include media.screen('desktop') {
+      margin-right: 0;
+    }
+  }
+
+  @include media.screen('desktop') {
+    padding: 80px 0 76px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 1074px;
+
+    img {
+      display: block;
+    }
+  }
+}
+
+.title-block {
+  @include media.screen('desktop') {
+    width: 51.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.title-top {
+  @include media.screen('desktop') {
+    display: flex;
+  }
+}
+
+.title {
+  @include fonts.text(48px, 52px, 400);
+
+  color: var(--color-text-tertiary);
+
+  @include media.screen('desktop') {
+    @include fonts.text(90px, 94px, 400);
+
+    letter-spacing: 1px;
+  }
+}
+
+.number {
+  color: var(--color-text-tertiary);
+
+  @include media.screen('desktop') {
+    @include fonts.text(20px, 24px, 400);
+
+    letter-spacing: 1px;
+    margin-right: 32px;
+  }
+}
+
+.info-block {
+  @include media.screen('desktop') {
+    width: 50%;
+  }
+}
+
+.text-top {
+  @include fonts.text(24px, 28px, 400);
+
+  text-indent: 26px;
+  margin: 24px 0 48px;
+  color: var(--color-text-quaternary);
+
+  @include media.screen('desktop') {
+    text-indent: 0;
+
+    @include fonts.text(36px, 40px, 300);
+
+    text-indent: 43px;
+    letter-spacing: 0.69px;
+    margin: 0 0 85px;
+  }
+}
+
+.grid {
+  display: grid;
+
+  @include media.screen('desktop') {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    row-gap: 36px;
+    margin-bottom: 57px;
+  }
+}
+
+.paragraph {
+  min-height: auto;
+  margin-bottom: 24px;
+
+  & h3 {
+    @include fonts.text(30px, 34px, 400);
+    margin-bottom: 8px;
+
+    @include media.screen('desktop') {
+      @include fonts.text(35px, 35px, 500);
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.paragraph:not(:last-child) {
+
+  @include media.screen('desktop') {
+    margin-bottom: 9px;
+  }
+}
+
+.paragraph:last-child {
+  span:first-of-type {
+    margin-top: 6px;
+      @include media.screen('desktop') {
+      margin-top: 0;
+    }
+  }
+}
+
+.services button {
+  margin-top: 25px;
+
+  @include media.screen('desktop') {
+    margin-top: 0;
+  }
+}

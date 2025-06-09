@@ -1,0 +1,11 @@
+@use 'mixins/media';
+
+.content {
+  padding-bottom: 5px;
+
+  @include media.screen('mobile') {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}

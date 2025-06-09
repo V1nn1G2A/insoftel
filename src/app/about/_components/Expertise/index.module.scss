@@ -1,0 +1,39 @@
+@use 'mixins/media';
+@use 'mixins/fonts';
+
+.expertise {
+  padding: 36px 0 43px;
+  color: var(--color-text-quaternary);
+
+  h2 {
+    margin-right: 54px;
+
+    @include media.screen('desktop') {
+      @include fonts.text(48px, 52px, 400);
+
+      letter-spacing: 1px;
+    }
+  }
+
+  @include fonts.text(24px, 28px, 400);
+
+  p {
+    margin-top: 24px;
+    text-indent: 48px;
+
+    @include media.screen('desktop') {
+      max-width: 776px;
+      margin-top: 0;
+      text-indent: 77px;
+      letter-spacing: -0.04px;
+    }
+  }
+
+  @include media.screen('desktop') {
+    display: flex;
+    justify-content: space-between;
+    padding: 96px 0 102px;
+
+    @include fonts.text(30px, 34px, 400);
+  }
+}

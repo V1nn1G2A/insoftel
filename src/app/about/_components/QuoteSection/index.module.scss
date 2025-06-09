@@ -1,0 +1,14 @@
+@use 'mixins/media';
+
+.quote {
+  @include media.screen('desktop') {
+    padding: 93px 0 99px !important;
+    margin: 110px 0 !important;
+
+    p:last-of-type {
+      line-height: 11px;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+    }
+  }
+}

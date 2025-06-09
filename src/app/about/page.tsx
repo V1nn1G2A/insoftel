@@ -1,3 +1,21 @@
+import {
+  AboutUs,
+  ChooseUs,
+  Commitment,
+  Expertise,
+  QuoteSection,
+  Slogan,
+} from './_components'
+
 export default function About() {
-  return <h1>About</h1>
+  return (
+    <>
+      <Slogan />
+      <QuoteSection />
+      <AboutUs />
+      <Expertise />
+      <ChooseUs />
+      <Commitment />
+    </>
+  )
 }

@@ -1,0 +1,24 @@
+@use 'mixins/fonts';
+
+.letters {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 78px;
+}
+
+.i {
+  @include fonts.text(113px, 80%, 500);
+  color: rgba(0, 0, 0, 0.1);
+  margin-left: 23px;
+}
+
+.t {
+  @include fonts.text(113px, 80%, 500);
+  color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .letters {
+    padding-top: 46px;
+  }
+}

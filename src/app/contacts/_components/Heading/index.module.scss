@@ -1,0 +1,89 @@
+@use 'mixins/fonts';
+
+.heading__wrapper {
+  overflow-y: hidden;
+}
+
+.heading {
+  padding-bottom: 43px;
+}
+
+.content {
+  height: 348px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.title {
+  @include fonts.text(90px, 97px, 400);
+
+  .line {
+    display: block;
+    overflow: hidden;
+  }
+
+  color: var(--color-text-tertiary);
+  max-width: 650px;
+  letter-spacing: 1.9px;
+}
+
+.text {
+  @include fonts.text(36px, 39px, 300);
+
+  color: var(--color-text-quaternary);
+  align-self: flex-end;
+  max-width: 661px;
+  text-indent: 115px;
+  letter-spacing: 0.7px;
+}
+
+.letters {
+  display: flex;
+  justify-content: space-between;
+}
+
+.s {
+  @include fonts.text(113px, 83%, 500);
+
+  color: rgb(0 0 0 / 10%);
+}
+
+.t {
+  @include fonts.text(113px, 83%, 500);
+
+  color: rgb(0 0 0 / 10%);
+}
+
+@media (width <= 1200px) {
+  .heading {
+    padding-bottom: 47px;
+  }
+
+  .content {
+    height: 309px;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .title {
+    @include fonts.text(55px, 64px, 400);
+
+    max-width: 380px;
+    letter-spacing: 0.7px;
+  }
+
+  .text {
+    @include fonts.text(24px, 28px, 300);
+
+    text-indent: 57px;
+    letter-spacing: 0.5px;
+  }
+}
+
+.border {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(0 0 0 / 20%);
+}

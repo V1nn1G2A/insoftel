@@ -1,0 +1,134 @@
+@use 'mixins/media';
+
+.company {
+  position: relative;
+
+  h2 {
+    margin-right: 144px;
+
+    @include media.screen('desktop') {
+      margin-right: 0;
+    }
+  }
+
+  sup {
+    @include media.screen('desktop') {
+      top: -3px;
+    }
+  }
+
+  .company__header {
+    @include media.screen('desktop') {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @include media.screen('desktop') {
+    padding: 55px 0 148px;
+  }
+
+  &__quote {
+    margin: 0 0 35px;
+
+    @include media.screen('desktop') {
+      margin: 114px 0 126px;
+    }
+  }
+}
+
+.company__title {
+  margin: 38px 0 48px;
+
+  @include media.screen('desktop') {
+    margin-top: 30px;
+  }
+}
+
+.company__info {
+  display: flex;
+  flex-direction: column;
+
+  button.company__btn {
+    display: none;
+
+    @include media.screen('desktop') {
+      margin: 48px 0 0;
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+
+  @include media.screen('desktop') {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.company__office {
+  order: 1;
+
+  & + div {
+    @include media.screen('desktop') {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      margin-top: 26px;
+    }
+  }
+
+  @include media.screen('desktop') {
+    letter-spacing: 0.4px;
+    order: -1;
+    margin-right: 134px;
+    margin-top: 32px;
+  }
+}
+
+.company__stats {
+  & p {
+    letter-spacing: 0.5px;
+    line-height: 24px;
+
+    @include media.screen('desktop') {
+      margin-bottom: 29px;
+      line-height: 30px;
+    }
+  }
+
+  & p + span {
+    @include media.screen('desktop') {
+      bottom: 24px !important;
+    }
+  }
+}
+
+.company__statsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+
+  @include media.screen('desktop') {
+    height: 382px;
+    gap: 47px;
+  }
+}
+
+.company__btn {
+  margin-bottom: 42px;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 7px;
+
+  @include media.screen('desktop') {
+    position: absolute;
+    width: 240px;
+    bottom: 35px;
+    right: 470px;
+
+    p {
+      font-weight: 500;
+    }
+  }
+}

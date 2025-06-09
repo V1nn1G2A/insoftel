@@ -1,0 +1,52 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.choose {
+  padding: 40px 0;
+  background-color: var(--color-middle-gray);
+
+  @include media.screen('desktop') {
+    padding: 123px 0 117px;
+  }
+}
+
+.choose__title {
+  h2 {
+    margin-right: 77px;
+    letter-spacing: 0.7px;
+
+    @include fonts.text(36px, 40px, 400);
+
+    @include media.screen('desktop') {
+      letter-spacing: 2px;
+
+      @include fonts.text(90px, 94px, 400);
+    }
+  }
+}
+
+.cards {
+  margin-top: 48px;
+
+  @include media.screen('desktop') {
+    margin-top: 76px;
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.card {
+  transition: filter 0.7s;
+
+  &:hover {
+    filter: invert(1);
+  }
+}
+
+.card + .card {
+  margin-top: 20px;
+
+  @include media.screen('desktop') {
+    margin-top: 0;
+  }
+}

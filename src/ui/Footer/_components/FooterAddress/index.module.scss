@@ -1,0 +1,44 @@
+@use 'mixins/media';
+@use 'mixins/fonts';
+
+.footerAddress {
+  max-width: 274px;
+
+  @include media.screen('tablet') {
+    justify-self: center;
+  }
+
+  @include media.screen('mobile') {
+    order: 3;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    @include fonts.text(16px, 20px, 400);
+
+    color: var(--color-white);
+  }
+
+  &__subtitle {
+    color: var(--color-text-secondary);
+  }
+}
+
+.link {
+  @include fonts.text(16px, 20px, 400);
+
+  color: var(--color-white);
+
+  &:hover {
+    color: var(--color-text-secondary);
+  }
+}
