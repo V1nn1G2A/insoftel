@@ -25,8 +25,6 @@ const Accordion: FC<IAccordion> = ({
   isActive,
   onClick,
 }) => {
-  console.log
-
   return (
     <AnimationBlock
       className={cx('accordion', className, {
