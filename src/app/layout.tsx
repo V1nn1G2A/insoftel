@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 
 import { Lenis } from '@/ui'
 import { Footer, Header } from '@/ui'
+import Loading from './(loading)/loading'
 
 import '../styles/globals.scss'
 import '../styles/globals.scss'
@@ -49,6 +50,7 @@ export default function RootLayout({
       <body className={neueHaas.variable}>
         <Lenis />
         <Header />
+        <Loading />
         {children}
         <Footer />
       </body>
