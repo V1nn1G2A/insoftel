@@ -3,7 +3,7 @@
 
 .commitment {
   display: none;
-  padding: 102px 0 100px;
+  padding: 102px 0 87px;
 
   h2 {
     @include fonts.text(48px, 52px, 400);
@@ -26,7 +26,7 @@
     @include fonts.text(30px, 34px, 400);
 
     letter-spacing: -0.07px;
-    margin-bottom: 90px;
+    margin-bottom: 81px;
     color: var(--color-text-tertiary);
   }
 
@@ -34,15 +34,25 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding-bottom: 20px;
     letter-spacing: 0.5px;
 
     @include fonts.text(24px, 28px, 500);
-
-    border-bottom: 1px solid rgba($color: #000, $alpha: 20%);
   }
 
   svg {
     margin: 2px 15px 0 0;
+  }
+}
+
+.button {
+  margin-bottom: 12px;
+  & p {
+    margin: 0;
+    @include fonts.text(24px, 28px, 600);
+    letter-spacing: -0.6px;
+  }
+
+  & svg {
+    margin: 0;
   }
 }

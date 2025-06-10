@@ -1,9 +1,7 @@
 import Link from 'next/link'
 import type { FC } from 'react'
 
-import { AnimationBlock, Container, SectionTitle } from '@/ui'
-
-import Arrow from '@assets/icons/arrow.svg'
+import { AnimationBlock, Container, SectionTitle, TextButton } from '@/ui'
 
 import styles from './index.module.scss'
 
@@ -23,8 +21,16 @@ const Commitment: FC<ICommitment> = ({ className }) => (
           here to turn your vision into reality
         </AnimationBlock>
         <AnimationBlock>
-          <Link href="/services">
-            Explore Our Services <Arrow />
+          <Link
+            href="/services"
+            className={styles.link}
+          >
+            <TextButton
+              text="Explore Our Services"
+              colorVariant="dark"
+              variant="long"
+              classNames={['', '', styles.button]}
+            />
           </Link>
         </AnimationBlock>
       </div>
