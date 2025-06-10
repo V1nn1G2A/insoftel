@@ -17,7 +17,12 @@ interface ISearchResultProps {
   setHoverLink: (link: string) => void
 }
 
-const SearchResult: FC<ISearchResultProps> = ({ results, theme, query, setHoverLink }) => {
+const SearchResult: FC<ISearchResultProps> = ({
+  results,
+  theme,
+  query,
+  setHoverLink,
+}) => {
   const highlightQuery = (text: string, query: string) => {
     const regex = new RegExp(`(${query})`, 'gi')
 
@@ -36,7 +41,10 @@ const SearchResult: FC<ISearchResultProps> = ({ results, theme, query, setHoverL
   }
 
   return (
-    <ul className={styles.list}>
+    <ul
+      className={styles.list}
+      tabIndex={0}
+    >
       {results.map(({ title, path, text }) => (
         <li
           key={text}

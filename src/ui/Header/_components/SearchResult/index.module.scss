@@ -3,7 +3,13 @@
 
 .list {
   max-height: 466px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  @include media.screen('mobile') {
+    max-height: 534px;
+    margin-top: 32px;
+  }
 }
 
 .item {

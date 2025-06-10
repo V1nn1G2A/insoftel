@@ -52,10 +52,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={neueHaas.variable}>
         <Lenis />
-        <Header />
-        <Loading />
-        {children}
-        <Footer />
+        <div id="lenis-root">
+          <Header />
+          <Loading />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   )
