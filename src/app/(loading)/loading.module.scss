@@ -40,4 +40,36 @@
         margin-top: 23px;
         letter-spacing: 0.6px;
     }
+
+    @include media.screen('mobile') {
+        &__wrapper {
+            position: absolute;
+            top: calc(37% - 2px);
+            left: calc(50% - 114px);
+            padding-top: 32px;
+            margin-right: 10px;
+        }
+
+        &__text {
+            @include fonts.text(60px, 64px, 400);
+            color: var(--color-text-tertiary);
+            align-self: flex-end;
+            letter-spacing: 1.3px;
+        }
+
+        &__percent {
+            position: absolute;
+            @include fonts.text(40px, 28px, 400);
+            color: var(--color-text-quaternary);
+            left: -61px;
+            top: -260px;
+        }
+
+        &__message {
+            @include fonts.text(24px, 28px, 300);
+            margin-top: 17px;
+            margin-left: -10px;
+            letter-spacing: 0.5px;
+        }
+    }
 }
