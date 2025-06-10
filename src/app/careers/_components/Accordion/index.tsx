@@ -2,9 +2,11 @@
 
 import cn from 'classnames/bind'
 import type { FC } from 'react'
+import { motion } from 'motion/react'
+import Form from '@/ui/Form'
 
 import Arrow from '@/assets/icons/arrow.svg'
-import { AnimationBlock } from '@/ui'
+import animation from '@/animations/disolve'
 
 import styles from './index.module.scss'
 
@@ -25,11 +27,19 @@ const Accordion: FC<IAccordion> = ({
   isActive,
   onClick,
 }) => {
+  const classNames = cx(
+    styles.accordion,
+    { [styles['accordion--active']]: isActive },
+    className
+  )
+
   return (
-    <AnimationBlock
-      className={cx('accordion', className, {
-        ['accordion--active']: isActive,
-      })}
+    <motion.div
+    initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={animation}
+      className={classNames}
     >
       <div
         className={styles.trigger}
@@ -41,8 +51,12 @@ const Accordion: FC<IAccordion> = ({
           <Arrow />
         </span>
       </div>
-      <div className={styles.content}>{children}</div>
-    </AnimationBlock>
+      <div className={styles.content}><div>
+        {children}
+        <Form/>
+        </div>
+      </div>
+    </motion.div>
   )
 }
 

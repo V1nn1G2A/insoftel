@@ -12,6 +12,8 @@ interface IExploreButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   colorVariant?: 'light' | 'dark'
   classNames?: string[]
   isVisible?: boolean
+  disabled?: boolean
+  onClick?: () => void
 }
 
 const TextButton: React.FC<IExploreButton> = ({
@@ -20,14 +22,29 @@ const TextButton: React.FC<IExploreButton> = ({
   variant = 'short',
   isVisible,
   classNames,
+  disabled,
+  onClick,
 }) => {
   const [contactsButton, contactsText, size] = classNames ?? []
 
+  const handleClick = () => {
+    if (!disabled) onClick?.()
+  }
+
   return (
     <button
-      className={cx('button', variant, colorVariant, contactsButton, size, {
-        notVisible: !isVisible,
-      })}
+      className={cx(
+        'button',
+        variant,
+        colorVariant,
+        contactsButton,
+        size,
+        { disabled: disabled },
+        {
+          notVisible: !isVisible,
+        }
+      )}
+      onClick={handleClick}
     >
       <p className={cx('text', variant, colorVariant, contactsText)}>{text}</p>
       <div className={cx('round', variant, colorVariant)}>
