@@ -1,0 +1,18 @@
+@use 'mixins/media';
+
+
+.error__page {
+    position: relative;
+    min-height: 1024px;
+
+    @include media.screen('mobile') {
+        min-height: 844px;
+    }
+}
+
+
+@include media.screen('mobile') {
+    .video {
+        top: 36%;
+    } 
+}
