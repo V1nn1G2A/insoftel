@@ -10,7 +10,7 @@ const ChooseUs: FC = ({}) => (
   <section className={styles.choose}>
     <Container>
       <h2 className={styles.choose__title}>
-        <AnimatedText height={50}>Why Insoftel?</AnimatedText>
+        <AnimatedText height={40}>Why Insoftel?</AnimatedText>
       </h2>
       <div className={styles.cards}>
         {items.map(item => (

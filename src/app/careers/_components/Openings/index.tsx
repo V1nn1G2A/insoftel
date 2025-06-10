@@ -2,8 +2,7 @@
 
 import { AnimatedText, AnimationBlock, Container } from '@/ui'
 
-import items from '../../constants/OPENING'
-import Accordion from '../Accordion'
+import AccordionsList from '../AccordionsList'
 
 import styles from './index.module.scss'
 
@@ -21,13 +20,7 @@ const Openings = () => (
         and consulting. <br /> Each role offers the chance to work with a
         skilled, supportive team on advanced software solutions
       </AnimationBlock>
-      {items.map(el => (
-        <Accordion
-          title={el}
-          onClick={() => {}}
-          key={el}
-        ></Accordion>
-      ))}
+      <AccordionsList />
     </section>
   </Container>
 )

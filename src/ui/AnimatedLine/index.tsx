@@ -19,7 +19,7 @@ const AnimatedLine: FC<IAnimatedLine> = ({
   x = -700,
   className,
 }) => {
-  const isInView = useInView(targetRef)
+  const isInView = useInView(targetRef, { once: true })
 
   const fromLeft = {
     hidden: {

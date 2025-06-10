@@ -18,7 +18,7 @@ interface IStatsNumber {
 const StatsNumber: FC<IStatsNumber> = ({ className, title, children }) => {
   const divRef = useRef<HTMLDivElement>(null)
   const lettersRef = useRef<Record<number, HTMLSpanElement>>({})
-  const isInView = useInView(divRef)
+  const isInView = useInView(divRef, { once: true })
 
   const setLetterRef = (node: HTMLSpanElement | null, index: number) => {
     if (!node) return

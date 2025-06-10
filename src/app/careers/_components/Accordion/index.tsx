@@ -24,22 +24,28 @@ const Accordion: FC<IAccordion> = ({
   children,
   isActive,
   onClick,
-}) => (
-  <AnimationBlock
-    className={cx('accordion', className, { ['accordion--active']: isActive })}
-  >
-    <div
-      className={styles.trigger}
-      onClick={onClick}
+}) => {
+  console.log
+
+  return (
+    <AnimationBlock
+      className={cx('accordion', className, {
+        ['accordion--active']: isActive,
+      })}
     >
-      <p className={styles.triggerTitle}>{title}</p>
-      <span className={styles.triggerIconWrapper}>
-        <span className={styles.triggerIconLabel}>Learn More</span>
-        <Arrow />
-      </span>
-    </div>
-    <div className={styles.content}>{children}</div>
-  </AnimationBlock>
-)
+      <div
+        className={styles.trigger}
+        onClick={onClick}
+      >
+        <p className={styles.triggerTitle}>{title}</p>
+        <span className={styles.triggerIconWrapper}>
+          <span className={styles.triggerIconLabel}>Learn More</span>
+          <Arrow />
+        </span>
+      </div>
+      <div className={styles.content}>{children}</div>
+    </AnimationBlock>
+  )
+}
 
 export default Accordion
