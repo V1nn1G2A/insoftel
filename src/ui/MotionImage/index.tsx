@@ -21,7 +21,7 @@ const Motion: FC<Iindex> = ({ width, height, src, alt, className }) => (
     variants={scale}
     initial="hidden"
     whileInView="visible"
-    viewport={{ once: false }}
+    viewport={{ once: true }}
     src={src}
     alt={alt || 'visuall image'}
     width={width}
