@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { Container } from '@/ui'
 import { Quote } from '@/ui'
 import { SectionTitle } from '@/ui'
@@ -48,12 +50,14 @@ const Company = () => (
           </StatsNumber>
         </div>
       </div>
-      <TextButton
-        text="More About Us"
-        variant="short"
-        colorVariant="dark"
-        classNames={[styles.company__btn]}
-      />
+      <Link href="/about">
+        <TextButton
+          text="More About Us"
+          variant="short"
+          colorVariant="dark"
+          classNames={[styles.company__btn]}
+        />
+      </Link>
     </Container>
   </section>
 )

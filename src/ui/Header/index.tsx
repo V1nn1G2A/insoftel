@@ -17,9 +17,23 @@ import styles from './index.module.scss'
 const Header = () => {
   const path = usePathname()
 
+  const allPaths = [
+    'services',
+    'technologies',
+    'products',
+    '',
+    'about',
+    'careers',
+    'contacts',
+  ]
   const lightPaths = ['about', 'careers', 'contacts']
 
-  const theme = lightPaths.some(item => path.includes(item)) ? 'light' : 'dark'
+  const isKnownPath = allPaths.some(
+    item => path === `/${item}` || (item === '' && path === '/')
+  )
+  const isLightPath = lightPaths.some(item => path === `/${item}`)
+
+  const theme = isLightPath || !isKnownPath ? 'light' : 'dark'
 
   const [isOpen, setIsOpen] = useState(false)
 

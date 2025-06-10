@@ -1,6 +1,7 @@
 'use client'
 
 import classNames from 'classnames/bind'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 import { Container, TextButton } from '@/ui'
@@ -79,11 +80,13 @@ const Services = () => {
               ))}
             </div>
             <div className={cx('button')}>
-              <TextButton
-                text="Connect with Us"
-                variant="long"
-                colorVariant="dark"
-              />
+              <Link href={'/careers'}>
+                <TextButton
+                  text="Connect with Us"
+                  variant="long"
+                  colorVariant="dark"
+                />
+              </Link>
             </div>
           </div>
         </section>
