@@ -1,20 +1,17 @@
 import type { FC } from 'react'
 
-import { Container, ItemCard, SectionTitle } from '@/ui'
+import { AnimatedText, Container, ItemCard } from '@/ui'
 
-import items from '../../_constants/ITEM_CARD'
+import items from '../../constants/ITEM_CARD'
 
 import styles from './index.module.scss'
 
 const ChooseUs: FC = ({}) => (
   <section className={styles.choose}>
     <Container>
-      <SectionTitle
-        index="03"
-        className={styles.choose__title}
-      >
-        Why Choose Us?
-      </SectionTitle>
+      <h2 className={styles.choose__title}>
+        <AnimatedText height={40}>Why Insoftel?</AnimatedText>
+      </h2>
       <div className={styles.cards}>
         {items.map(item => (
           <ItemCard

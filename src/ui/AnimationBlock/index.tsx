@@ -13,6 +13,7 @@ interface IAnimationBlock {
   children?: React.ReactNode
   className?: string
   isAnimated?: boolean
+  isOnce?: boolean
 }
 
 const AnimationBlock: FC<IAnimationBlock> = ({
@@ -33,7 +34,7 @@ const AnimationBlock: FC<IAnimationBlock> = ({
     <MotionElement
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount }}
+      viewport={{ once: true, amount }}
       variants={animation}
       className={className}
     >

@@ -11,7 +11,7 @@ const string = 'Connect with Us on Telegram'
 const TelegramBlock = () => {
   const divRef = useRef<HTMLDivElement>(null)
   const lettersRef = useRef<Record<number, HTMLSpanElement>>({})
-  const isInView = useInView(divRef)
+  const isInView = useInView(divRef, { once: true })
 
   const setLetterRef = (node: HTMLSpanElement | null, index: number) => {
     if (!node) return

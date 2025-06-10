@@ -1,0 +1,79 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.accordion {
+  display: flex;
+  align-items: center;
+  margin-top: 48px;
+
+  @include media.screen('desktop') {
+    margin-top: 66px;
+  }
+}
+
+.accordion + .accordion {
+  margin-top: 30px;
+
+  @include media.screen('desktop') {
+    margin-top: 20px;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.accordion--active {
+  .content {
+    grid-template-rows: 1fr;
+  }
+}
+
+.trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  cursor: pointer;
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba($color: #000, $alpha: 20%);
+
+  &Title {
+    @include fonts.text(24px, 28px, 400);
+
+    letter-spacing: 0.5px;
+    color: var(--color-text-tertiary);
+
+    @include media.screen('desktop') {
+      letter-spacing: 0.7px;
+
+      @include fonts.text(36px, 40px, 400);
+    }
+  }
+
+  &IconWrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &IconLabel {
+    @include fonts.text(24px, 28px, 500);
+
+    display: none;
+    color: var(--color-text-tertiary);
+
+    @include media.screen('desktop') {
+      display: block;
+      line-height: 40px;
+      letter-spacing: 0.4px;
+      margin-right: 34px;
+    }
+  }
+
+  @include media.screen('desktop') {
+    margin: 0 14px 16px 0;
+  }
+}
