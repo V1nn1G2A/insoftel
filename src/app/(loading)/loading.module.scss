@@ -1,0 +1,39 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.loading {
+    min-height: 100vh;
+    width: 330px;
+    height: 140px;
+    overflow: hidden;
+
+    &__wrapper {
+    position: absolute;
+    top: calc(45% - 7px);
+    left: calc(50% - 121px);
+    padding-top: 32px;
+    margin-right: 10px;
+    
+    }
+
+    &__text {
+        @include fonts.text(60px, 60px, 400);
+        color: var(--color-text-tertiary);
+        align-self: flex-end;
+        letter-spacing: 1.3px;
+    }
+
+    &__percent {
+        position: absolute;
+        @include fonts.text(24px, 28px, 300);
+        color: var(--color-text-quaternary);
+        left: -78px;
+        top: 9px;
+    }
+
+    &__message {
+        @include fonts.text(30px, 34px, 300);
+        margin-top: 23px;
+        letter-spacing: 0.6px;
+    }
+}
