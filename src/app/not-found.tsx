@@ -1,3 +1,7 @@
-export default function NotFound() {
-  return <h1>Not Found</h1>
-}
+ import { NotFoundPage } from "@/ui"
+ 
+ const NotFound = () => (
+  <NotFoundPage />
+ )
+
+export default NotFound
