@@ -54,7 +54,6 @@ export default function RootLayout({
         <PopupProvider>
           <Lenis />
           <Header />
-          <Loading />
           {children}
           <Footer />
           <Popup />
