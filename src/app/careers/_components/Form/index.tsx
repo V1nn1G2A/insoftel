@@ -40,11 +40,10 @@ const Form: FC<IForm> = ({ id, className }) => {
     watch('email') &&
     watch('letter') &&
     watch('phoneOrTelegram') &&
-    file
+    file &&
+    Object.keys(errors).length === 0
 
   if (isSucces) return <Success className={styles.success} />
-
-  console.log(errors)
 
   return (
     <form
