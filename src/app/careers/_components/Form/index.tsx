@@ -2,11 +2,12 @@
 
 import { zodResolver } from '@hookform/resolvers/zod'
 import cn from 'classnames/bind'
-import type { FC } from 'react'
+import type { FC, FormEvent } from 'react'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
-import { DragAndDrop, Input, TextButton } from '@/ui'
+import { DragAndDrop, FormPopup, Input, TextButton } from '@/ui'
+import { usePopup } from '@/ui/Popup/PopupContext'
 
 import inputs from '../../constants/FORM'
 import File from '../File'
@@ -25,7 +26,7 @@ const cx = cn.bind(styles)
 const Form: FC<IForm> = ({ id, className }) => {
   const {
     register,
-    handleSubmit,
+    getValues,
     watch,
     formState: { errors },
   } = useForm({
@@ -34,6 +35,7 @@ const Form: FC<IForm> = ({ id, className }) => {
   })
   const [file, setFile] = useState<File | null>(null)
   const [isSucces, setIsSuccess] = useState(false)
+  const { openPopup } = usePopup()
 
   const isFilled =
     watch('name') &&
@@ -43,16 +45,33 @@ const Form: FC<IForm> = ({ id, className }) => {
     file &&
     Object.keys(errors).length === 0
 
+  const handleOpenInfo = () => {
+    const handleClick = () => {
+      return !!isFilled ? setIsSuccess(true) : null
+    }
+    openPopup(
+      <FormPopup
+        isConfirm={!!isFilled}
+        onClick={handleClick}
+      />
+    )
+  }
+
+  const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    console.log(getValues())
+    console.log(file)
+    handleOpenInfo()
+  }
+
   if (isSucces) return <Success className={styles.success} />
+
+  const classNames = cx('form', className, { formFilled: isFilled })
 
   return (
     <form
-      className={cx('form', className)}
-      onSubmit={handleSubmit(data => {
-        console.log(data)
-        console.log(file)
-        setIsSuccess(true)
-      })}
+      className={classNames}
+      onSubmit={handleFormSubmit}
     >
       {inputs.map(el => (
         <Input
@@ -86,7 +105,6 @@ const Form: FC<IForm> = ({ id, className }) => {
         colorVariant="dark"
         variant="short"
         classNames={[styles.button, '', '']}
-        disabled={!isFilled}
         type="submit"
       />
     </form>
