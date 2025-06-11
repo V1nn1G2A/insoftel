@@ -9,7 +9,7 @@ const TelegramPopup = () => {
     
    return (
         <div className={styles.popup__content}>
-            <p className={styles.popup__text}>By clicking "Confirm," you will be redirected to an Telegram chat</p>
+            <p className={styles.popup__text}>By clicking &quot;Confirm,&quot; you will be redirected to an Telegram chat</p>
             <div className={styles.popup__buttons}>
             <button className={styles.popup__cancel} onClick={closePopup}>Cancel</button>
             <TextButton text='Confirm' variant='short' colorVariant='dark' />
