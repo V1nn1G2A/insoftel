@@ -12,6 +12,11 @@
   &__text {
     @include fonts.text(36px, 40px, 400);
     letter-spacing: 0.7px;
+
+    @include media.screen('mobile') {
+        @include fonts.text(24px, 28px, 400);
+        letter-spacing: 0.45px;
+    }
   }
 
   &__buttons {
@@ -26,5 +31,9 @@
     background-color: transparent;
     cursor: pointer;
     margin-left: 45px;
+
+    @include media.screen('mobile') {
+        margin-left: 25px;
+    }
   }
 }
