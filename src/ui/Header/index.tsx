@@ -26,7 +26,7 @@ const Header = () => {
     'careers',
     'contacts',
   ]
-  const lightPaths = ['about', 'careers', 'contacts']
+  const lightPaths = ['about', 'careers', 'contacts', 'products']
 
   const isKnownPath = allPaths.some(
     item => path === `/${item}` || (item === '' && path === '/')
