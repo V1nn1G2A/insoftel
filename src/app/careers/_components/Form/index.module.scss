@@ -33,5 +33,10 @@
 }
 
 .button {
+  opacity: 0.5;
   margin-bottom: 30px !important;
+}
+
+.formFilled .button {
+  opacity: 1;
 }

@@ -26,6 +26,13 @@
 .cards {
   margin-top: 48px;
 
+  @include media.screen('tablet') {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
   @include media.screen('desktop') {
     margin-top: 76px;
     display: flex;
@@ -59,13 +66,22 @@
     filter: invert(1);
   }
 
+  @include media.screen('tablet') {
+    width: 300px;
+  }
+
   @include media.screen('desktop') {
     height: 208px;
+    width: 350px;
   }
 }
 
 .card + .card {
   margin-top: 20px;
+
+  @include media.screen('tablet') {
+    margin-top: 0;
+  }
 
   @include media.screen('desktop') {
     margin-top: 0;
