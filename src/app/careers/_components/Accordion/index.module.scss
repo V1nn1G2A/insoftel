@@ -2,9 +2,13 @@
 @use 'mixins/media';
 
 .accordion {
-  display: flex;
-  align-items: center;
+  box-sizing: border-box;
   margin-top: 48px;
+  border-bottom: 1px solid rgba($color: #000, $alpha: 20%);
+
+  svg {
+    transition: transform 0.2s;
+  }
 
   @include media.screen('desktop') {
     margin-top: 66px;
@@ -15,7 +19,7 @@
   margin-top: 30px;
 
   @include media.screen('desktop') {
-    margin-top: 20px;
+    margin-top: 37px;
   }
 }
 
@@ -23,12 +27,22 @@
   display: grid;
   grid-template-rows: 0fr;
   overflow: hidden;
-  transition: grid-template-rows 0.3s ease;
+  transition: grid-template-rows 0.7s ease;
+
+  > div {
+    overflow: hidden;
+  }
 }
 
 .accordion--active {
   .content {
     grid-template-rows: 1fr;
+  }
+
+  .trigger {
+    svg {
+      transform: rotate(45deg);
+    }
   }
 }
 
@@ -37,9 +51,10 @@
   justify-content: space-between;
   align-items: flex-end;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
   width: 100%;
   padding-bottom: 30px;
-  border-bottom: 1px solid rgba($color: #000, $alpha: 20%);
 
   &Title {
     @include fonts.text(24px, 28px, 400);
@@ -68,12 +83,28 @@
     @include media.screen('desktop') {
       display: block;
       line-height: 40px;
-      letter-spacing: 0.4px;
-      margin-right: 34px;
+      letter-spacing: 0.3px;
+      margin-right: 38px;
+    }
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  svg {
+    @include media.screen('desktop') {
+      margin-right: 12px;
     }
   }
 
   @include media.screen('desktop') {
+    padding-bottom: 14px;
     margin: 0 14px 16px 0;
+  }
+}
+
+.contentFlex {
+  @include media.screen('desktop') {
+    display: flex;
+    justify-content: column;
+    gap: 20px;
   }
 }

@@ -1,0 +1,87 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.file {
+  display: flex;
+  position: relative;
+  height: 76px;
+  width: 100%;
+  padding: 16px 16px 16px 56px;
+  background-color: rgba($color: #151719, $alpha: 15%);
+
+  @include media.screen('desktop') {
+    height: 78px;
+  }
+}
+
+.file__title {
+  @include fonts.text(18px, 22px, 400);
+
+  color: var(--color-text-tertiary);
+}
+
+.file__size {
+  @include fonts.text(14px, 18px, 400);
+
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+
+  @include media.screen('tablet') {
+    @include fonts.text(16px, 20px, 400);
+  }
+}
+
+.file__del {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 16px;
+  right: 8px;
+
+  @include media.screen('desktop') {
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+.file__loading {
+  position: absolute;
+  bottom: 16px;
+  right: 8px;
+
+  @include media.screen('desktop') {
+    right: 16px;
+  }
+}
+
+.button {
+  position: absolute;
+  top: 17px;
+  right: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media.screen('desktop') {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+.pin {
+  position: absolute;
+  top: 18px;
+  left: 11px;
+
+  @include media.screen('tablet') {
+    top: 26px;
+    left: 16px;
+  }
+}

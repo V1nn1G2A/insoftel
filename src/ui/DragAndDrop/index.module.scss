@@ -1,0 +1,33 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.wrapper {
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 134px;
+  padding: 24px 16px;
+  background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: rgb(156, 156, 156); stroke-width: 1; stroke-dasharray: 5 5'/></svg>");
+}
+
+.title {
+  @include fonts.text(20px, 24px, 400);
+
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--color-text-tertiary);
+}
+
+.text {
+  @include fonts.text(14px, 18px, 400);
+
+  max-width: 460px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.wrapper-dragged {
+  background-color: rgba($color: #000, $alpha: 5%);
+}
