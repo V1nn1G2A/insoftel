@@ -60,6 +60,7 @@
     @include fonts.text(24px, 28px, 400);
 
     letter-spacing: 0.5px;
+    text-align: left;
     color: var(--color-text-tertiary);
 
     @include media.screen('desktop') {
