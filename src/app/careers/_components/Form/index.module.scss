@@ -1,0 +1,42 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.form {
+  width: 100%;
+  max-width: 662px;
+  margin-left: auto;
+}
+
+.file {
+  margin: 30px 0;
+
+  @include media.screen('desktop') {
+    margin: 32px 0;
+  }
+}
+
+.drop {
+  margin: 30px 0;
+}
+
+.license {
+  @include fonts.text(14px, 18px, 400);
+
+  max-width: 280px;
+  margin-right: auto;
+  color: var(--color-text-secondary);
+  margin-bottom: 32px;
+
+  a {
+    color: var(--color-text-tertiary);
+  }
+}
+
+.button {
+  opacity: 0.5;
+  margin-bottom: 30px !important;
+}
+
+.formFilled .button {
+  opacity: 1;
+}

@@ -4,15 +4,13 @@ import FooterInfo from './_components/FooterInfo'
 
 import styles from './index.module.scss'
 
-const Footer = () => {
-  return (
-    <footer className={styles.footer}>
-      <Container>
-        <FooterInfo />
-        <Copyright />
-      </Container>
-    </footer>
-  )
-}
+const Footer = () => (
+  <footer className={styles.footer}>
+    <Container>
+      <FooterInfo />
+      <Copyright />
+    </Container>
+  </footer>
+)
 
 export default Footer

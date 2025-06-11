@@ -26,7 +26,7 @@ const AnimatedText: FC<Iindex> = ({
 }) => {
   const triggerRef = useRef<HTMLDivElement>(null)
   const lettersRef = useRef<Record<number, HTMLSpanElement>>({})
-  const isInView = useInView(triggerRef)
+  const isInView = useInView(triggerRef, { once: true })
 
   const setLetterRef = (node: HTMLSpanElement | null, index: number) => {
     if (!node) return
@@ -34,10 +34,10 @@ const AnimatedText: FC<Iindex> = ({
   }
 
   useEffect(() => {
-    Object.values(lettersRef.current).forEach(el => {
-      if (isInView) el.classList.add(styles.animate)
-      else el.classList.remove(styles.animate)
-    })
+    if (isInView)
+      Object.values(lettersRef.current).forEach(el =>
+        el.classList.add(styles.animate)
+      )
   }, [isInView])
 
   if (!isAnimated) return <span className={className}>{children}</span>

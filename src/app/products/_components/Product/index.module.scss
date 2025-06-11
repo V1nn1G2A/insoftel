@@ -1,0 +1,62 @@
+@use 'mixins/media';
+@use 'mixins/fonts';
+
+.product {
+  padding: 50px 0 48px;
+  overflow-y: hidden;
+  position: relative;
+
+  &__img {
+    width: 100%;
+    height: 188px;
+
+    @include media.screen('desktop') {
+      height: 355px;
+    }
+  }
+
+  &__title {
+    @include fonts.text(30px, 34px, 400);
+
+    margin: 16px 0 18px;
+    letter-spacing: 0.6px;
+    color: var(--color-black-secondary);
+
+    @include media.screen('desktop') {
+      margin: 28px 0 18px;
+    }
+  }
+
+  &__content {
+    @include fonts.text(16px, 20px, 400);
+
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+    color: var(--color-text-quaternary);
+  }
+
+  &__adventage + &__adventage {
+    margin-top: 20px;
+  }
+
+  &__btn {
+    margin: 20px 0 0;
+  }
+
+  &__line {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(0 0 0 / 20%);
+    bottom: 1px;
+
+    @include media.screen('desktop') {
+      display: none;
+    }
+  }
+
+  @include media.screen('desktop') {
+    padding: 70px 0;
+  }
+}

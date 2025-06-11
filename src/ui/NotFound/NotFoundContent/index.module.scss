@@ -1,0 +1,40 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.error {
+    position: absolute;
+    left: calc(50% - 209.5px);
+    top: calc(50% - 184px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__code {
+        @include fonts.text(160px, 100%, 500);
+        color: var(--color-text-tertiary);
+        margin-bottom: 44px;
+    }
+
+    &__message {
+        @include fonts.text(60px, 64px, 400);
+        color: var(--color-text-tertiary);
+        margin-bottom: 20px;
+        letter-spacing: 1.2px;
+    }
+
+    @include media.screen('mobile') {
+        left: calc(50% - 126px);
+        top: calc(50% - 149px);
+
+        &__code {
+        @include fonts.text(120px, 100%, 500);
+
+        }
+
+        &__message {
+            @include fonts.text(36px, 40px, 400);
+            letter-spacing: 1px;
+        }
+    }
+}
+

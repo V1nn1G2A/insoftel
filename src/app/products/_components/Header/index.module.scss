@@ -1,0 +1,77 @@
+@use 'mixins/media';
+@use 'mixins/fonts';
+
+.header {
+  padding: 120px 0 0;
+
+  &__main {
+    @include media.screen('desktop') {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    @include fonts.text(55px, 64px, 400);
+
+    overflow: hidden;
+    color: var(--color-text-tertiary);
+    letter-spacing: 1px;
+
+    @include media.screen('desktop') {
+      max-width: 467px;
+      margin-top: 4px;
+      letter-spacing: 1.8px;
+
+      @include fonts.text(90px, 94px, 400);
+    }
+  }
+
+  &__contentWrapper {
+    @include media.screen('desktop') {
+      max-width: 662px;
+    }
+  }
+
+  &__content {
+    @include fonts.text(24px, 28px, 400);
+
+    text-indent: 54px;
+    margin: 40px 0;
+    color: var(--color-text-quaternary);
+
+    @include media.screen('desktop') {
+      margin: 0 0 60px;
+      text-indent: 24px;
+      letter-spacing: -0.1px;
+
+      @include fonts.text(30px, 34px, 400);
+    }
+  }
+
+  &__back {
+    display: flex;
+    justify-content: space-between;
+
+    @include media.screen('desktop') {
+      margin: 10px 0 0;
+    }
+  }
+
+  @include media.screen('desktop') {
+    padding: 164px 0 0;
+  }
+}
+
+.explore {
+  margin-bottom: 24px;
+  width: 100%;
+
+  p {
+    margin-right: auto;
+  }
+
+  @include media.screen('desktop') {
+    max-width: 169px;
+  }
+}

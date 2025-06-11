@@ -1,9 +1,8 @@
 import type { FC } from 'react'
 
-import { Container, SectionTitle } from '@/ui'
+import { Container, ItemCard, SectionTitle } from '@/ui'
 
 import items from '../../_constants/ITEM_CARD'
-import ItemCard from '../ItemCard'
 
 import styles from './index.module.scss'
 

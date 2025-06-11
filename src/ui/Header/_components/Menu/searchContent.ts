@@ -32,7 +32,7 @@ export function searchContent(
         const filteredKeys = keyPath.filter(k => !k.startsWith('NOUP'))
         const title = `[ ${filteredKeys.join(' / ')} ]`
         const rootSection = filteredKeys[0]
-        const path = paths.get(rootSection) || '/'
+        const path = paths.get(rootSection) + `#${filteredKeys.slice(1)}` || '/'
         results.push({ title, text: obj, path })
       }
     }

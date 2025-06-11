@@ -1,7 +1,10 @@
-import { AnimationBlock } from '..'
+'use client'
+
 import cn from 'classnames'
+import { motion } from 'motion/react'
 import type { FC } from 'react'
 
+import animation from '@/animations/disolve'
 import Arrow from '@/assets/icons/arrow.svg'
 
 import styles from './index.module.scss'
@@ -32,11 +35,14 @@ const Accordion: FC<IAccordion> = ({
   )
 
   return (
-    <AnimationBlock
-      amount={0.2}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={animation}
       className={classNames}
     >
-      <div
+      <button
         className={styles.accordion__title}
         onClick={onClick}
       >
@@ -49,14 +55,14 @@ const Accordion: FC<IAccordion> = ({
         <span className={styles.accordion__btn}>
           <Arrow />
         </span>
-      </div>
+      </button>
       <div className={styles.accordion__content}>
         <div>
           <p>{content.join(', ')}</p>
         </div>
       </div>
       {isLine && <span className={styles.accordion__line}></span>}
-    </AnimationBlock>
+    </motion.div>
   )
 }
 

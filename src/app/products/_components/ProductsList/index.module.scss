@@ -1,0 +1,77 @@
+@use 'mixins/media';
+
+.products {
+  padding: 36px 0 110px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: auto;
+
+    @include media.screen('desktop') {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @include media.screen('desktop') {
+    padding: 16px 0 66px;
+  }
+}
+
+.product:nth-child(1),
+.product:nth-child(2) {
+  @include media.screen('desktop') {
+    border-bottom: 1px solid rgb(0 0 0 / 20%);
+  }
+}
+
+.product:nth-child(1) {
+  @include media.screen('desktop') {
+    div:nth-of-type(4) {
+      margin-right: 70px;
+    }
+  }
+}
+
+.product:nth-child(2) {
+  @include media.screen('desktop') {
+    h3 {
+      width: 341px;
+    }
+  }
+}
+
+.product:nth-child(2n) {
+  @include media.screen('desktop') {
+    padding-left: 10px;
+  }
+}
+
+.product:nth-child(3),
+.product:nth-child(4) {
+  @include media.screen('desktop') {
+    button {
+      margin-top: 30px;
+    }
+  }
+}
+
+.product:nth-child(odd) {
+  @include media.screen('desktop') {
+    padding-right: 10px;
+  }
+}
+
+.letters {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -14px;
+
+  span:first-of-type {
+    margin-left: 8px;
+  }
+
+  @include media.screen('desktop') {
+    margin-top: 0;
+  }
+}

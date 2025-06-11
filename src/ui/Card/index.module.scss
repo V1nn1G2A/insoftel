@@ -138,23 +138,6 @@
     padding: 0;
   }
 
-  &:hover .card__picture {
-    opacity: 0.4;
-  }
-
-  &:hover .card__content {
-    transform: translateY(-100%);
-  }
-
-  &:hover .card__text p {
-    animation: appear 0.3s 0.3s both;
-    opacity: 1;
-  }
-
-  &:hover svg {
-    transform: rotate(-45deg);
-  }
-
   @include media.screen('desktop') {
     width: 435px;
     height: 530px;

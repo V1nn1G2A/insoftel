@@ -1,4 +1,5 @@
 @use 'mixins/fonts';
+@use 'mixins/media';
 
 .accordion {
   box-sizing: border-box;
@@ -31,10 +32,10 @@
   word-spacing: 2%;
   color: var(--color-white);
 
-  @include fonts.text(18px, 22px, 'regular');
-
   p {
     margin-top: 16px;
+
+    @include fonts.text(18px, 22px, 'regular');
   }
 
   > div {
@@ -45,6 +46,9 @@
 .accordion__title {
   display: flex;
   align-items: center;
+  background-color: transparent;
+  border: none;
+  width: 100%;
   justify-content: space-between;
   padding: 14px 0 0;
 
@@ -63,7 +67,9 @@
   }
 
   &:hover + .accordion__content {
-    grid-template-rows: 1fr;
+    @include media.screen('desktop') {
+      grid-template-rows: 1fr;
+    }
   }
 }
 
@@ -83,7 +89,6 @@
   grid-template-rows: 1fr;
 }
 
-.accordion__title:hover,
 .accordion--active .accordion__title {
   p {
     color: var(--color-white);
@@ -108,4 +113,25 @@
   width: 100%;
   height: 2px;
   background-color: rgb(255 255 255 / 20%);
+}
+
+.accordion__title:hover {
+  @include media.screen('desktop') {
+    p {
+      color: var(--color-white);
+    }
+
+    svg {
+      transform: rotate(45deg);
+      color: var(--color-black);
+    }
+
+    .accordion__btn {
+      background-color: var(--color-white);
+    }
+
+    .card__content-counter {
+      opacity: 1;
+    }
+  }
 }

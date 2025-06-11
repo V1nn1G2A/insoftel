@@ -1,3 +1,5 @@
+'use client'
+
 import classNames from 'classnames/bind'
 
 import ArrowIcon from '@/assets/icons/arrow.svg'
@@ -12,6 +14,8 @@ interface IExploreButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   colorVariant?: 'light' | 'dark'
   classNames?: string[]
   isVisible?: boolean
+  disabled?: boolean
+  onClick?: () => void
 }
 
 const TextButton: React.FC<IExploreButton> = ({
@@ -20,14 +24,32 @@ const TextButton: React.FC<IExploreButton> = ({
   variant = 'short',
   isVisible,
   classNames,
+  disabled,
+  onClick,
 }) => {
   const [contactsButton, contactsText, size] = classNames ?? []
 
+  const buttonClasses = cx(
+    'button',
+    variant,
+    colorVariant,
+    contactsButton,
+    size,
+    { disabled: disabled },
+    {
+      notVisible: !isVisible,
+    }
+  )
+
+  const handleClick = () => {
+    if (!disabled) onClick?.()
+  }
+
   return (
     <button
-      className={cx('button', variant, colorVariant, contactsButton, size, {
-        notVisible: !isVisible,
-      })}
+      className={buttonClasses}
+      onClick={handleClick}
+      disabled={disabled}
     >
       <p className={cx('text', variant, colorVariant, contactsText)}>{text}</p>
       <div className={cx('round', variant, colorVariant)}>

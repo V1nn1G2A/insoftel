@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import type { FC } from 'react'
 import { useRef } from 'react'
 import type SwiperCore from 'swiper'
@@ -50,12 +51,14 @@ const CardsList: FC = ({}) => {
             onClick={() => swiperRef.current?.slideNext()}
           />
         </div>
-        <TextButton
-          text="Explore Our Products"
-          variant="short"
-          colorVariant="dark"
-          classNames={[styles.cards__explore]}
-        />
+        <Link href="/products">
+          <TextButton
+            text="Explore Our Products"
+            variant="short"
+            colorVariant="dark"
+            classNames={[styles.cards__explore]}
+          />
+        </Link>
       </AnimationBlock>
     </AnimationBlock>
   )
