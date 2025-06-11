@@ -9,29 +9,40 @@ import styles from './index.module.scss'
 interface IInput extends React.ComponentProps<'input'> {
   className?: string
   label: string
+  isFulled?: boolean
+  id: string
 }
 
 const cx = cn.bind(styles)
 
-const Input: FC<IInput> = ({ className, label, ...props }) => {
+const Input: FC<IInput> = ({ className, label, isFulled, id, ...props }) => {
   const [isFocused, setIsFocused] = useState(false)
 
   const classNames = cx('wrapper', { 'wrapper--active': isFocused })
 
+  const handleFocus = () => {
+    setIsFocused(true)
+  }
+
+  const handleBlur = () => {
+    if (!isFulled) setIsFocused(false)
+  }
+
   return (
     <div
       className={classNames}
-      onFocus={() => setIsFocused(true)}
-      onBlur={() => setIsFocused(false)}
+      onFocus={handleFocus}
+      onBlur={handleBlur}
     >
       <label
-        htmlFor={label}
+        htmlFor={id}
         className={styles.label}
+        onClick={handleFocus}
       >
         {label}
       </label>
       <input
-        id={label}
+        id={id}
         {...props}
         className={cx('input', className)}
       />

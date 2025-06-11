@@ -26,7 +26,7 @@ const AccordionsList: FC<IAccordionsList> = ({ className }) => {
           isActive={activeItem === index}
           key={index}
         >
-          <>{el.content}</>
+          {el.content}
         </Accordion>
       ))}
     </div>

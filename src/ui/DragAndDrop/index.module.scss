@@ -2,6 +2,8 @@
 @use 'mixins/media';
 
 .wrapper {
+  cursor: pointer;
+  box-sizing: border-box;
   display: block;
   width: 100%;
   height: 134px;
@@ -24,4 +26,8 @@
   margin: 0 auto;
   text-align: center;
   color: var(--color-text-secondary);
+}
+
+.wrapper-dragged {
+  background-color: rgba($color: #000, $alpha: 5%);
 }

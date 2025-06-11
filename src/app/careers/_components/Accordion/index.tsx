@@ -1,12 +1,11 @@
 'use client'
 
 import cn from 'classnames/bind'
-import type { FC } from 'react'
 import { motion } from 'motion/react'
-import Form from '@/ui/Form'
+import type { FC } from 'react'
 
-import Arrow from '@/assets/icons/arrow.svg'
 import animation from '@/animations/disolve'
+import Arrow from '@/assets/icons/arrow.svg'
 
 import styles from './index.module.scss'
 
@@ -35,13 +34,13 @@ const Accordion: FC<IAccordion> = ({
 
   return (
     <motion.div
-    initial="hidden"
+      initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={animation}
       className={classNames}
     >
-      <div
+      <button
         className={styles.trigger}
         onClick={onClick}
       >
@@ -50,11 +49,9 @@ const Accordion: FC<IAccordion> = ({
           <span className={styles.triggerIconLabel}>Learn More</span>
           <Arrow />
         </span>
-      </div>
-      <div className={styles.content}><div>
-        {children}
-        <Form/>
-        </div>
+      </button>
+      <div className={styles.content}>
+        <div className={styles.contentFlex}>{children}</div>
       </div>
     </motion.div>
   )

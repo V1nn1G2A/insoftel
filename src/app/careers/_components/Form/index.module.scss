@@ -7,6 +7,14 @@
   margin-left: auto;
 }
 
+.file {
+  margin: 30px 0;
+
+  @include media.screen('desktop') {
+    margin: 32px 0;
+  }
+}
+
 .drop {
   margin: 30px 0;
 }
