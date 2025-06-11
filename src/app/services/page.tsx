@@ -73,6 +73,7 @@ const Services = () => {
                   }}
                 >
                   <PaginatedBlock
+                    id={page.id}
                     mainTitle={page.mainTitle}
                     headingText={page.headingText}
                     letter={page.letter}

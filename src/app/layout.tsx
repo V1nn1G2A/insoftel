@@ -5,13 +5,11 @@ import { PopupProvider } from '@/ui/Popup/PopupContext'
 import { Lenis } from '@/ui'
 import { Footer, Header } from '@/ui'
 
-import Loading from './(loading)/loading'
-
 import '../styles/globals.scss'
 import { Popup } from '@/ui/Popup'
 
 export const metadata: Metadata = {
-  title: 'InsInsoftel Technologies',
+  title: 'Insoftel Technologies',
   description: 'Insoftel Technologies',
   icons: {
     icon: './assets/favicon.ico',
