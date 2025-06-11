@@ -1,7 +1,10 @@
 import { z } from 'zod'
 
 const formSchema = z.object({
-  name: z.string().min(1, { message: 'Input is required.' }),
+  name: z
+    .string()
+    .min(1, { message: 'Input is required.' })
+    .regex(/^[a-zA-Z\s]+$/, { message: 'Invalid format' }),
   phoneOrTelegram: z
     .string()
     .regex(/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/, {
