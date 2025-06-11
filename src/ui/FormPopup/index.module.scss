@@ -1,0 +1,30 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.popup {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__text {
+    @include fonts.text(36px, 40px, 400);
+    letter-spacing: 0.7px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  &__cancel {
+    @include fonts.text(24px, 28px, 600);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 45px;
+  }
+}
