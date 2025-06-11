@@ -1,0 +1,30 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.success {
+  width: 350px;
+  padding-bottom: 30px;
+
+  @include media.screen('desktop') {
+    width: 100%;
+    max-width: 662px;
+    margin-left: auto;
+  }
+}
+
+.title {
+  @include fonts.text(48px, 52px, 400);
+
+  margin-bottom: 32px;
+  color: var(--color-text-tertiary);
+
+  @include media.screen('desktop') {
+    @include fonts.text(60px, 64px, 400);
+  }
+}
+
+.message {
+  @include fonts.text(16px, 20px, 400);
+
+  color: var(--color-text-tertiary);
+}

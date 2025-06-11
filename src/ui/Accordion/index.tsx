@@ -42,7 +42,7 @@ const Accordion: FC<IAccordion> = ({
       variants={animation}
       className={classNames}
     >
-      <div
+      <button
         className={styles.accordion__title}
         onClick={onClick}
       >
@@ -55,7 +55,7 @@ const Accordion: FC<IAccordion> = ({
         <span className={styles.accordion__btn}>
           <Arrow />
         </span>
-      </div>
+      </button>
       <div className={styles.accordion__content}>
         <div>
           <p>{content.join(', ')}</p>
