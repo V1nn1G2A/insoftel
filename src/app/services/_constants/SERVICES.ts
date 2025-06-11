@@ -1,5 +1,6 @@
 export const servicesPagination = [
   {
+    id: 'IT Consulting',
     mainTitle: 'IT Consulting & Business Solutions',
     headingText:
       'Strategically align your IT infrastructure with your business goals to drive sustainable growth and future-proof your operations',
@@ -26,6 +27,7 @@ export const servicesPagination = [
     ],
   },
   {
+    id: 'Web & Mobile Development',
     mainTitle: 'Web & Mobile Development',
     headingText:
       'Create seamless, user-friendly digital experiences that drive engagement and retention',
@@ -50,6 +52,7 @@ export const servicesPagination = [
     ],
   },
   {
+    id: 'UX/UI & Product Design',
     mainTitle: 'UX/UI & Product Design',
     headingText:
       'Craft engaging, user-centric designs that align with your brand and resonate with your audience',
@@ -74,6 +77,7 @@ export const servicesPagination = [
     ],
   },
   {
+    id: 'Quality & Branding',
     mainTitle: 'Quality & Branding',
     headingText:
       'Maintain excellence with rigorous quality assurance and build a powerful brand that resonates with your audience',
@@ -90,6 +94,7 @@ export const servicesPagination = [
     ],
   },
   {
+    id: 'Artificial Intelligence',
     mainTitle: 'Artificial Intelligence',
     headingText:
       'Unlock the power of data with AI solutions that transform decision-making, optimise processes, and personalise customer interactions',
