@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import { PopupProvider } from '@/ui/Popup/PopupContext'
 
 import { Lenis } from '@/ui'
 import { Footer, Header } from '@/ui'
 
 import '../styles/globals.scss'
+import { Popup } from '@/ui/Popup'
 
 export const metadata: Metadata = {
   title: 'Insoftel Technologies',
@@ -49,10 +51,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={neueHaas.variable}>
-        <Lenis />
-        <Header />
-        {children}
-        <Footer />
+        <PopupProvider>
+          <Lenis />
+          <Header />
+          <Loading />
+          {children}
+          <Footer />
+          <Popup />
+        </PopupProvider>
+        <div id='portal-root'></div>
       </body>
     </html>
   )
