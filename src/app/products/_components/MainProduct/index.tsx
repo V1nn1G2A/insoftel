@@ -1,12 +1,15 @@
+'use client'
+
 import cn from 'classnames/bind'
 import Image from 'next/image'
 import type { FC } from 'react'
 
-import { AnimationBlock, TextButton } from '@/ui'
+import { AnimationBlock, TelegramPopup, TextButton } from '@/ui'
 
 import Adventage from '../Adventage'
 
 import styles from './index.module.scss'
+import { usePopup } from '@/ui/Popup/PopupContext'
 
 interface IMainProduct {
   className?: string
@@ -26,7 +29,14 @@ const MainProduct: FC<IMainProduct> = ({
   mainContent,
   advantages,
   isLine,
-}) => (
+}) => {
+  const { openPopup } = usePopup();
+  
+  const handleOpenInfo = () => {
+    openPopup(<TelegramPopup />);
+  };
+
+  return (
   <section className={cx('product', className)}>
     <AnimationBlock>
       <Image
@@ -62,6 +72,7 @@ const MainProduct: FC<IMainProduct> = ({
     </div>
     <AnimationBlock>
       <TextButton
+        onClick={handleOpenInfo}
         text="Connect with Us"
         variant="short"
         classNames={[styles.product__btn]}
@@ -76,5 +87,5 @@ const MainProduct: FC<IMainProduct> = ({
     )}
   </section>
 )
-
+}
 export default MainProduct

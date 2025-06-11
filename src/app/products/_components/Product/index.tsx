@@ -4,11 +4,12 @@ import cn from 'classnames/bind'
 import Image from 'next/image'
 import type { FC } from 'react'
 
-import { AnimationBlock, TextButton } from '@/ui'
+import { AnimationBlock, TelegramPopup, TextButton } from '@/ui'
 
 import Adventage from '../Adventage'
 
 import styles from './index.module.scss'
+import { usePopup } from '@/ui/Popup/PopupContext'
 
 interface IProduct {
   className?: string
@@ -28,7 +29,14 @@ const Product: FC<IProduct> = ({
   mainContent,
   advantages,
   isLine = true,
-}) => (
+}) => {
+  const { openPopup } = usePopup();
+  
+  const handleOpenInfo = () => {
+    openPopup(<TelegramPopup />);
+  };
+
+  return (
   <section className={cx('product', className)}>
     <AnimationBlock>
       <Image
@@ -60,6 +68,7 @@ const Product: FC<IProduct> = ({
     ))}
     <AnimationBlock>
       <TextButton
+        onClick={handleOpenInfo}
         text="Connect with Us"
         variant="short"
         classNames={[styles.product__btn]}
@@ -74,5 +83,5 @@ const Product: FC<IProduct> = ({
     )}
   </section>
 )
-
+}
 export default Product

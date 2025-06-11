@@ -1,21 +1,26 @@
 'use client'
 
 import classNames from 'classnames/bind'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-import { Container, TextButton } from '@/ui'
+import { Container, TelegramPopup, TextButton } from '@/ui'
 import SectionHeading from '@/ui/SectionHeading'
 
 import { PaginatedBlock } from './_components'
 import { servicesPagination } from './_constants/SERVICES'
 
 import styles from './index.module.scss'
+import { usePopup } from '@/ui/Popup/PopupContext'
 
 const cx = classNames.bind(styles)
 
 const Services = () => {
   const [activeIndex, setActiveIndex] = useState(0)
+  const { openPopup } = usePopup()
+
+  const handleOpenInfo = () => {
+    openPopup(<TelegramPopup />);
+  };
 
   const scrollStart = 1386
   const sectionHeight = 600
@@ -25,17 +30,14 @@ const Services = () => {
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop
 
-      // Если скролл ещё до начала
       if (scrollTop < scrollStart) {
         setActiveIndex(0)
         return
       }
 
-      // Вычисляем, сколько "кусков" уже проскроллил
       const sectionIndex =
         Math.floor((scrollTop - scrollStart) / sectionHeight) + 1
 
-      // Ограничиваем в пределах [0, totalSections - 1]
       const clampedIndex = Math.min(
         Math.max(sectionIndex, 0),
         totalSections - 1
@@ -71,6 +73,7 @@ const Services = () => {
                   }}
                 >
                   <PaginatedBlock
+                    id={page.id}
                     mainTitle={page.mainTitle}
                     headingText={page.headingText}
                     letter={page.letter}
@@ -80,13 +83,12 @@ const Services = () => {
               ))}
             </div>
             <div className={cx('button')}>
-              <Link href={'/careers'}>
                 <TextButton
+                  onClick={handleOpenInfo}
                   text="Connect with Us"
                   variant="long"
                   colorVariant="dark"
                 />
-              </Link>
             </div>
           </div>
         </section>

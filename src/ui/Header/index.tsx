@@ -41,6 +41,8 @@ const Header = () => {
 
   useEffect(() => {
     setIsOpen(false)
+
+    window.scrollTo(0, 0)
   }, [path])
 
   return (
