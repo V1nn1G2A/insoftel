@@ -4,12 +4,10 @@ import localFont from 'next/font/local'
 import { Lenis } from '@/ui'
 import { Footer, Header } from '@/ui'
 
-import Loading from './(loading)/loading'
-
 import '../styles/globals.scss'
 
 export const metadata: Metadata = {
-  title: 'InsInsoftel Technologies',
+  title: 'Insoftel Technologies',
   description: 'Insoftel Technologies',
   icons: {
     icon: './assets/favicon.ico',
@@ -53,7 +51,6 @@ export default function RootLayout({
       <body className={neueHaas.variable}>
         <Lenis />
         <Header />
-        <Loading />
         {children}
         <Footer />
       </body>
