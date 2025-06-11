@@ -4,6 +4,8 @@ import cn from 'classnames/bind'
 import type { FC } from 'react'
 import { useState } from 'react'
 
+import ErrorIcon from '@/assets/icons/error.svg'
+
 import styles from './index.module.scss'
 
 interface IInput extends React.ComponentProps<'input'> {
@@ -11,11 +13,19 @@ interface IInput extends React.ComponentProps<'input'> {
   label: string
   isFulled?: boolean
   id: string
+  error: string | undefined
 }
 
 const cx = cn.bind(styles)
 
-const Input: FC<IInput> = ({ className, label, isFulled, id, ...props }) => {
+const Input: FC<IInput> = ({
+  className,
+  label,
+  isFulled,
+  id,
+  error,
+  ...props
+}) => {
   const [isFocused, setIsFocused] = useState(false)
 
   const classNames = cx('wrapper', { 'wrapper--active': isFocused })
@@ -46,6 +56,12 @@ const Input: FC<IInput> = ({ className, label, isFulled, id, ...props }) => {
         {...props}
         className={cx('input', className)}
       />
+      {error && (
+        <div className={styles.error}>
+          <ErrorIcon className={styles.errorIcon} />
+          <p className={styles.errorText}>{error}</p>
+        </div>
+      )}
     </div>
   )
 }

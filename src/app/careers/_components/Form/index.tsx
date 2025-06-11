@@ -1,5 +1,6 @@
 'use client'
 
+import { zodResolver } from '@hookform/resolvers/zod'
 import cn from 'classnames/bind'
 import type { FC } from 'react'
 import { useState } from 'react'
@@ -10,6 +11,7 @@ import { DragAndDrop, Input, TextButton } from '@/ui'
 import inputs from '../../constants/FORM'
 import File from '../File'
 import Success from '../Success'
+import formSchema from './formSchema'
 
 import styles from './index.module.scss'
 
@@ -21,7 +23,15 @@ interface IForm {
 const cx = cn.bind(styles)
 
 const Form: FC<IForm> = ({ id, className }) => {
-  const { register, handleSubmit, watch } = useForm()
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm({
+    mode: 'all',
+    resolver: zodResolver(formSchema),
+  })
   const [file, setFile] = useState<File | null>(null)
   const [isSucces, setIsSuccess] = useState(false)
 
@@ -29,10 +39,12 @@ const Form: FC<IForm> = ({ id, className }) => {
     watch('name') &&
     watch('email') &&
     watch('letter') &&
-    watch('number') &&
+    watch('phoneOrTelegram') &&
     file
 
   if (isSucces) return <Success className={styles.success} />
+
+  console.log(errors)
 
   return (
     <form
@@ -50,6 +62,7 @@ const Form: FC<IForm> = ({ id, className }) => {
           label={el.label}
           {...register(el.id)}
           isFulled={!!watch(el.id)}
+          error={errors[el.id]?.message}
         />
       ))}
       {file && (
@@ -65,7 +78,8 @@ const Form: FC<IForm> = ({ id, className }) => {
         className={styles.drop}
       />
       <p className={styles.license}>
-        By clicking the Submit button you agreeto our <a>Privacy Policy</a>{' '}
+        By clicking the Submit button you agreeto our
+        <a href="#"> Privacy Policy </a>
         terms
       </p>
       <TextButton
