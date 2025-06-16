@@ -5,6 +5,7 @@ import { useState } from 'react'
 
 import items from '../../constants/OPENING'
 import Accordion from '../Accordion'
+import Form from '../Form'
 
 interface IAccordionsList {
   className?: string
@@ -26,7 +27,7 @@ const AccordionsList: FC<IAccordionsList> = ({ className }) => {
           isActive={activeItem === index}
           key={index}
         >
-          {el.content}
+          <Form id={el.id} />
         </Accordion>
       ))}
     </div>

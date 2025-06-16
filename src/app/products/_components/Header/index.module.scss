@@ -15,6 +15,7 @@
     @include fonts.text(55px, 64px, 400);
 
     overflow: hidden;
+    height: max-content;
     color: var(--color-text-tertiary);
     letter-spacing: 1px;
 
@@ -73,5 +74,9 @@
 
   @include media.screen('desktop') {
     max-width: 169px;
+
+    p {
+      font-size: 14px;
+    }
   }
 }

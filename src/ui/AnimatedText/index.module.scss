@@ -1,3 +1,5 @@
+@use 'mixins/media';
+
 .text {
   overflow: hidden;
 }
@@ -15,5 +17,17 @@
 
   to {
     top: 0;
+  }
+}
+
+@include media.screen('desktop') {
+  @keyframes up {
+    from {
+      top: calc(var(--height) * 2);
+    }
+
+    to {
+      top: 0;
+    }
   }
 }

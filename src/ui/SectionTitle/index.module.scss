@@ -7,6 +7,8 @@
   letter-spacing: 2%;
   overflow: hidden;
   min-width: max-content;
+
+  --height: 56px;
 }
 
 .index {
@@ -28,6 +30,7 @@
 .text {
   margin: 0 155px 0 0;
   letter-spacing: 1px;
+  overflow: hidden;
 
   @include fonts.text(48px, 52px, 400);
 
@@ -71,10 +74,22 @@
 
 @keyframes up {
   from {
-    top: 56px;
+    top: var(--height);
   }
 
   to {
     top: 0;
+  }
+}
+
+@include media.screen('desktop') {
+  @keyframes up {
+    from {
+      top: calc(var(--height) * 2);
+    }
+
+    to {
+      top: 0;
+    }
   }
 }
