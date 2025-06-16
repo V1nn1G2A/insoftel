@@ -13,6 +13,7 @@ const Enquiries = () => {
     <div
       className={styles.enquiries__wrapper}
       ref={ref}
+      id="General Enquiries"
     >
       <div className={styles.enquiries}>
         <h2 className={styles.title}>

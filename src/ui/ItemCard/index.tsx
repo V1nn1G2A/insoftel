@@ -12,7 +12,12 @@ interface IItemCard {
 
 const ItemCard: FC<IItemCard> = ({ className, title, content }) => (
   <AnimationBlock className={`${styles.card} ${className}`}>
-    <p className={styles.card__title}>{title}</p>
+    <p
+      className={styles.card__title}
+      id={title}
+    >
+      {title}
+    </p>
     <div>
       {Array.isArray(content) ? (
         content.map(item => (

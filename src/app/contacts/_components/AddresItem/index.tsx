@@ -19,6 +19,7 @@ const AddressItem = ({
     <div
       className={styles.address__wrapper}
       ref={ref}
+      id={title}
     >
       <AnimationBlock className={styles.AddressItem}>
         <h3 className={styles.title}>{title}</h3>
