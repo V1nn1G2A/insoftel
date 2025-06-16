@@ -8,6 +8,7 @@ const formSchema = z.object({
   phoneOrTelegram: z
     .string()
     .regex(/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/, {
+      //Ориентировано на российские мобильные + городские с кодом из 3 цифр (например, Москва).
       message: 'Invalid format.',
     })
     .or(z.string().regex(/^@[a-zA-Z]\w{4,32}/, { message: 'Invalid format.' })),
