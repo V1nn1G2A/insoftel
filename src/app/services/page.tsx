@@ -10,13 +10,13 @@ import { PaginatedBlock } from './_components'
 import { servicesPagination } from './_constants/SERVICES'
 
 import styles from './index.module.scss'
-import { usePopup } from '@/ui/Popup/PopupContext'
+import { usePopupDispatch } from '@/ui/Popup/PopupContext'
 
 const cx = classNames.bind(styles)
 
 const Services = () => {
   const [activeIndex, setActiveIndex] = useState(0)
-  const { openPopup } = usePopup()
+  const { openPopup } = usePopupDispatch()
 
   const handleOpenInfo = () => {
     openPopup(<TelegramPopup />);
