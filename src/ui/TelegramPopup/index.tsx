@@ -1,11 +1,11 @@
 'use client'
 
 import { TextButton } from '../Buttons'
-import { usePopup } from '../Popup/PopupContext'
+import { usePopupDispatch } from '../Popup/PopupContext'
 import styles from './index.module.scss'
 
 const TelegramPopup = () => {
-    const { closePopup } = usePopup();
+    const { closePopup } = usePopupDispatch();
     
    return (
         <div className={styles.popup__content}>

@@ -1,41 +1,58 @@
 "use client";
 
-import { createContext, useState, useContext, ReactNode } from "react";
+import { createContext, useState, useContext, ReactNode, useCallback, useMemo } from "react";
 
-type PopupContextType = {
+type PopupStateContextType = {
   isPopupOpen: boolean;
   popupContent: ReactNode | null;
+};
+
+type PopupDispatchContextType = {
   openPopup: (content: ReactNode) => void;
   closePopup: () => void;
 };
 
-const PopupContext = createContext<PopupContextType | undefined>(undefined);
+const PopupStateContext = createContext<PopupStateContextType | undefined>(undefined);
+const PopupDispatchContext = createContext<PopupDispatchContextType | undefined>(undefined);
 
 export const PopupProvider = ({ children }: { children: ReactNode }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [popupContent, setPopupContent] = useState<ReactNode | null>(null);
 
-  const openPopup = (content: ReactNode) => {
+  const openPopup = useCallback((content: ReactNode) => {
     setPopupContent(content);
     setIsPopupOpen(true);
-  };
+  }, []);
 
-  const closePopup = () => {
+  const closePopup = useCallback(() => {
     setIsPopupOpen(false);
-    setPopupContent(null); // Очищаем контент при закрытии
-  };
+    setPopupContent(null);
+  }, []);
+
+  const stateValue = useMemo(() => ({ isPopupOpen, popupContent }), [isPopupOpen, popupContent]);
+  const dispatchValue = useMemo(() => ({ openPopup, closePopup }), [openPopup, closePopup]);
 
   return (
-    <PopupContext.Provider value={{ isPopupOpen, popupContent, openPopup, closePopup }}>
-      {children}
-    </PopupContext.Provider>
+    <PopupStateContext.Provider value={stateValue}>
+      <PopupDispatchContext.Provider value={dispatchValue}>
+        {children}
+      </PopupDispatchContext.Provider>
+    </PopupStateContext.Provider>
   );
 };
 
-export const usePopup = () => {
-  const context = useContext(PopupContext);
+export const usePopupDispatch = () => {
+  const context = useContext(PopupDispatchContext);
   if (!context) {
-    throw new Error("usePopup must be used within a PopupProvider");
+    throw new Error('usePopupDispatch must be used within a PopupProvider');
+  }
+  return context;
+};
+
+export const usePopupState = () => {
+  const context = useContext(PopupStateContext);
+  if (!context) {
+    throw new Error('usePopupState must be used within a PopupProvider');
   }
   return context;
 };

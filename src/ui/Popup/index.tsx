@@ -1,12 +1,14 @@
 "use client";
 
-import { usePopup } from "./PopupContext";
+import { usePopupDispatch } from "./PopupContext";
+import { usePopupState } from './PopupContext'
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import styles from "./index.module.scss";
 
 export const Popup = () => {
-  const { isPopupOpen, popupContent, closePopup } = usePopup();
+  const { closePopup } = usePopupDispatch();
+  const { isPopupOpen, popupContent } = usePopupState();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
