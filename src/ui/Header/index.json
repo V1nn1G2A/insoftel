@@ -57,19 +57,31 @@
       "NOUP1": "“ At Insoftel, custom software is just the beginning. By combining deep software expertise with hardware integration, we create adaptable, high-impact solutions that empower clients to lead with confidence and innovation ”",
       "NOUP2": "About Us. Insoftel empowers businesses and government organisations with bespoke software solutions crafted for the digital age. With over 15 years of experience and a team of 50+ expert developers, our company brings your mission to life by blending innovation with precision, helping you stand out in a complex world.",
       "NOUP3": "Our Expertise. From AI-powered automation and predictive analytics to blockchain, mobile development, and hardware integration, our custom solutions cover a broad range of needs, ensuring every aspect of your brand’s digital journey is expertly crafted. Explore examples of our past work on our website to see how we’ve helped clients make a meaningful impact.",
-      "NOUP4": "Our Commitment. At Insoftel, we make it our mission to help you explore and learn the best of digital transformation, whether it’s optimising operations, engaging customers, or redefining your brand's impact. We're here to turn your vision into reality"
+      "NOUP4": "Our Commitment. At Insoftel, we make it our mission to help you explore and learn the best of digital transformation, whether it’s optimising operations, engaging customers, or redefining your brand's impact. We're here to turn your vision into reality",
+      "NOUP5": "Why Choose Us? AI & Machine Learning: Make your operations smarter with intelligent automation",
+      "NOUP6": "Why Choose Us? Blockchain Innovation: Build secure, transparent systems to lead in a connected world",
+      "NOUP7": "Why Choose Us? IT Consulting: Scale with future-ready, tailored technology solutions",
+      "NOUP8": "Why Choose Us? Comprehensive Solutions: We specialise in large-scale enterprise solutions, hardware integration, and custom software development for businesses of all sizes"
     }
   ],
   "Careers": [
     {
       "NOUP1": "At Insoftel, we’re seeking talented professionals to drive innovation with us. If you’re passionate about technology and eager to work on impactful projects, explore our open roles",
-      "NOUP2": "Current Openings. Discover opportunities across development, design, project management, and consulting.Each role offers the chance to work with a skilled, supportive team on advanced software solutions"
+      "NOUP2": "Current Openings. Discover opportunities across development, design, project management, and consulting.Each role offers the chance to work with a skilled, supportive team on advanced software solutions",
+      "NOUP3": "Current Openings: Sr. Product Designer, Sr. UX Designer, Sr. Front-end Developer Freelance",
+      "NOUP4": "Why Insoftel? Innovative Projects: Tackle industry-leading challenges",
+      "NOUP5": "Why Insoftel? Collaborative Culture: Be part of a team that values teamwork and fresh ideas",
+      "NOUP6": "Why Insoftel? Career Development: Benefit from continuous learning and mentorship",
+      "NOUP7": "Why Insoftel? Flexible Working: We support a balanced, adaptable work environment"
     }
   ],
   "Contacts": [
     {
       "NOUP1": "We’d Love to Hear from You!. Whether you have a question about our services, are interested in a partnership, or want to learn more about our company, feel free to reach out",
-      "NOUP2": "General Enquiries. For general information or specific questions, please email us at info@insofteltechnologies.com We’ll respond promptly to assist with any queries"
+      "NOUP2": "General Enquiries. For general information or specific questions, please email us at info@insofteltechnologies.com We’ll respond promptly to assist with any queries",
+      "NOUP3": "[ Head Office – Dubai ]. The Binary Tower, 32 Marasi Drive St., Business Bay, Dubai, UAE",
+      "NOUP4": "[ Office – Istanbul ]. Business Center, Nur Sokak 2A, Merdivenköy, Kadıköy, Istanbul, Turkey",
+      "NOUP5": "[ Email ]. info@insofteltechnologies.com"
     }
   ]
 }
