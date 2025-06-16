@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useRef } from 'react'
 
 import { AnimatedLine, AnimatedText, AnimationBlock } from '@/ui'
@@ -35,8 +36,10 @@ const Enquiries = () => {
           className={styles.text}
         >
           For general information or specific questions, please email us at
-          <b className={styles.mail}> info@insofteltechnologies.com</b> We’ll
-          respond promptly to assist with any queries.
+          <Link href="mailto:info@insofteltechnologies.com">
+            <b className={styles.mail}> info@insofteltechnologies.com</b>
+          </Link>{' '}
+          We’ll respond promptly to assist with any queries.
         </AnimationBlock>
       </div>
       <AnimatedLine
