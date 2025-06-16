@@ -1,5 +1,5 @@
 import { TextButton } from '../Buttons'
-import { usePopup } from '../Popup/PopupContext'
+import { usePopupDispatch } from '../Popup/PopupContext'
 
 import styles from './index.module.scss'
 
@@ -9,7 +9,7 @@ interface IFormPopup {
 }
 
 const FormPopup: React.FC<IFormPopup> = ({ isConfirm, onClick }) => {
-  const { closePopup } = usePopup()
+  const { closePopup } = usePopupDispatch()
 
   const handleClick = () => {
     closePopup()

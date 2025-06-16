@@ -9,7 +9,7 @@ import { AnimationBlock, TelegramPopup, TextButton } from '@/ui'
 import Adventage from '../Adventage'
 
 import styles from './index.module.scss'
-import { usePopup } from '@/ui/Popup/PopupContext'
+import { usePopupDispatch  } from '@/ui/Popup/PopupContext'
 
 interface IProduct {
   className?: string
@@ -30,7 +30,7 @@ const Product: FC<IProduct> = ({
   advantages,
   isLine = true,
 }) => {
-  const { openPopup } = usePopup();
+  const { openPopup } = usePopupDispatch();
   
   const handleOpenInfo = () => {
     openPopup(<TelegramPopup />);
