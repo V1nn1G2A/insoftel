@@ -28,6 +28,7 @@
 .text {
   margin: 0 155px 0 0;
   letter-spacing: 1px;
+  overflow: hidden;
 
   @include fonts.text(48px, 52px, 400);
 

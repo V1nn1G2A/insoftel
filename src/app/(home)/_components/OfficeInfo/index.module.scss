@@ -16,6 +16,10 @@
     }
   }
 
+  @include media.screen('tablet') {
+    margin: 36px auto 0;
+  }
+
   @include media.screen('desktop') {
     margin-top: 23px;
   }

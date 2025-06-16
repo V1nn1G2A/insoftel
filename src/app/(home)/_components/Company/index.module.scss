@@ -109,6 +109,10 @@
   flex-direction: column;
   gap: 23px;
 
+  @include media.screen('tablet') {
+    align-items: center;
+  }
+
   @include media.screen('desktop') {
     height: 382px;
     gap: 47px;

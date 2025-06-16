@@ -28,24 +28,24 @@
     }
   }
 
-  p {
-    text-align: right;
-
-    @include fonts.text(20px, 24px, 'regular');
-
-    margin-bottom: 3px;
-    letter-spacing: 0.4px;
-    color: var(--color-text-secondary);
-
-    @include media.screen('desktop') {
-      margin-bottom: 6px;
-
-      @include fonts.text(24px, 30px, 'regular');
-    }
-  }
-
   @include media.screen('desktop') {
     padding-bottom: 14px;
+  }
+}
+
+.children {
+  text-align: right;
+
+  @include fonts.text(20px, 24px, 'regular');
+
+  margin-bottom: 3px;
+  letter-spacing: 0.4px;
+  color: var(--color-text-secondary);
+
+  @include media.screen('desktop') {
+    margin-bottom: 6px;
+
+    @include fonts.text(24px, 30px, 'regular');
   }
 }
 
