@@ -59,6 +59,10 @@ body {
   min-height: 100%;
 }
 
+* {
+  font-family: var(--font-neue-haas);
+}
+
 body {
   font-family: var(--font-neue-haas);
   -webkit-font-smoothing: antialiased;
