@@ -48,7 +48,7 @@ const LinkList: FC<LinkListProps> = ({
       <Image
         src={
           theme === 'dark'
-            ? './assets/linkLogoDark.svg'
+            ? './assets/linkLogoDark1.svg'
             : './assets/linkLogo.svg'
         }
         width={312}
