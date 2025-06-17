@@ -21,6 +21,11 @@ const neueHaas = localFont({
   display: 'swap',
   src: [
     {
+      path: '../fonts/nhgd/NeueHaasDisplay-XThin.woff2',
+      weight: '200',
+      style: 'xthin',
+    },
+    {
       path: '../fonts/nhgd/NeueHaasDisplay-Light.woff2',
       weight: '300',
       style: 'normal',

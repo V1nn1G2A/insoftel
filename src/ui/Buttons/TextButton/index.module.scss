@@ -59,6 +59,7 @@
 
 .text {
   @include fonts.text(24px, 28px, 600);
+  font-family: var(--font-neue-haas);
 
   margin-right: 20px;
   letter-spacing: -0.7px;

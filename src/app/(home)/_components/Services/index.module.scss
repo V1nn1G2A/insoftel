@@ -116,8 +116,7 @@
     margin-bottom: 8px;
 
     @include media.screen('desktop') {
-      @include fonts.text(35px, 35px, 500);
-
+      @include fonts.text(35px, 35px, 400);
       margin-bottom: 16px;
     }
   }
