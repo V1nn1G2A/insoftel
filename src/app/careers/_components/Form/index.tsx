@@ -96,7 +96,7 @@ const Form: FC<IForm> = ({ id, className }) => {
         className={styles.drop}
       />
       <p className={styles.license}>
-        By clicking the Submit button you agreeto our
+        By clicking the Submit button you agree to our
         <a href="#"> Privacy Policy </a>
         terms
       </p>
