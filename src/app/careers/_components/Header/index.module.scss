@@ -19,7 +19,7 @@
 
   @include media.screen('desktop') {
     letter-spacing: 0;
-    margin: 0 0 55px 38px;
+    margin: 0 0 55px 34px;
 
     @include fonts.text(210px, 220px, 'regular');
   }
