@@ -93,6 +93,10 @@
 .grid {
   display: grid;
 
+  @include media.screen('tablet') {
+    grid-template-columns: 1fr 1fr;
+  }
+
   @include media.screen('desktop') {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -108,6 +112,7 @@
 
   & h3 {
     @include fonts.text(30px, 34px, 400);
+
     margin-bottom: 8px;
 
     @include media.screen('desktop') {
@@ -118,7 +123,6 @@
 }
 
 .paragraph:not(:last-child) {
-
   @include media.screen('desktop') {
     margin-bottom: 9px;
   }
@@ -127,7 +131,8 @@
 .paragraph:last-child {
   span:first-of-type {
     margin-top: 6px;
-      @include media.screen('desktop') {
+
+    @include media.screen('desktop') {
       margin-top: 0;
     }
   }

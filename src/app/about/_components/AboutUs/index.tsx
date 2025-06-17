@@ -12,7 +12,10 @@ import {
 import styles from './index.module.scss'
 
 const AboutUs: FC = ({}) => (
-  <section className={styles.about}>
+  <section
+    className={styles.about}
+    id="AboutContent"
+  >
     <Container>
       <div className={styles.letters}>
         <BigLetter>I</BigLetter>

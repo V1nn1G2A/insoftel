@@ -9,6 +9,10 @@
 
   @include fonts.text(48px, 52px, 400);
 
+  @include media.screen('tablet') {
+    margin: 0 auto;
+  }
+
   @include media.screen('desktop') {
     border: none;
 

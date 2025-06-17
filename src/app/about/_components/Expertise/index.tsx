@@ -6,7 +6,10 @@ import styles from './index.module.scss'
 
 const Expertise: FC = ({}) => (
   <Container>
-    <section className={styles.expertise}>
+    <section
+      className={styles.expertise}
+      id="Our Expertise"
+    >
       <SectionTitle index="02">Our Expertise</SectionTitle>
       <AnimationBlock type="p">
         From AI-powered automation and predictive analytics to blockchain,
