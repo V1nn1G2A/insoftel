@@ -35,11 +35,11 @@
 .link {
   transition: all 0.3s ease;
   &--dark {
-    color: var(--color-white);
+    color: var(--color-text-secondary);
 
     &:hover,
     &.link--active {
-      color: var(--color-text-secondary);
+      color: var(--color-white);
     }
   }
 
@@ -102,8 +102,8 @@
   position: absolute;
   bottom: 48px;
   right: 48px;
-  width: fit-content;
-  height: fit-content;
+  width: 312px;
+  height: 312px;
 
   transition:
     width 0.6s ease,
@@ -124,5 +124,9 @@
     right: 20px;
     width: 166px;
     height: 166px;
+  }
+
+  &--dark {
+    color: #00000033;
   }
 }

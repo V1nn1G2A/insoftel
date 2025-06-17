@@ -1,6 +1,7 @@
 {
   "Services": [
     {
+      "NOUP": "Services",
       "IT Consulting": "IT Consulting & Business Solutions. Strategically align your IT infrastructure with your business goals to drive sustainable growth and future-proof your operations",
       "NOUP1": "Technology Strategy & Roadmaps: Develop clear, actionable plans that outline your technology goals, ensuring alignment with your broader business objectives.",
       "NOUP2": "Infrastructure Design: Build a secure, scalable, and resilient IT foundation that supports your organisation’s growth and adaptability.",
@@ -36,6 +37,7 @@
   ],
   "Technologies": [
     {
+      "NOUP": "Technologies",
       "Languages": "Languages. Our versatility across multiple programming languages means we can select the optimal language for each project, ensuring efficiency, scalability, and maintainability",
       "NOUP2": "Business Impact: Whether it’s building high-performance applications, developing custom software, or enhancing system integration, our language expertise enables us to provide solutions that are both powerful and flexible, reducing time to market and supporting long-term growth.",
       "Frontend / Design": "Frontend / Design.Our backend development proficiency ensures that your applications are secure, scalable, and capable of handling complex business logic and data processes",
@@ -54,6 +56,7 @@
   ],
   "About": [
     {
+      "NOUP": "About",
       "AboutQuote": "“ At Insoftel, custom software is just the beginning. By combining deep software expertise with hardware integration, we create adaptable, high-impact solutions that empower clients to lead with confidence and innovation ”",
       "AboutContent": "About Us. Insoftel empowers businesses and government organisations with bespoke software solutions crafted for the digital age. With over 15 years of experience and a team of 50+ expert developers, our company brings your mission to life by blending innovation with precision, helping you stand out in a complex world.",
       "Our Expertise": "Our Expertise. From AI-powered automation and predictive analytics to blockchain, mobile development, and hardware integration, our custom solutions cover a broad range of needs, ensuring every aspect of your brand’s digital journey is expertly crafted. Explore examples of our past work on our website to see how we’ve helped clients make a meaningful impact.",
@@ -66,6 +69,7 @@
   ],
   "Careers": [
     {
+      "NOUP": "Careers",
       "NOUP1": "At Insoftel, we’re seeking talented professionals to drive innovation with us. If you’re passionate about technology and eager to work on impactful projects, explore our open roles",
       "Current Openings": "Current Openings. Discover opportunities across development, design, project management, and consulting.Each role offers the chance to work with a skilled, supportive team on advanced software solutions",
       "NOUP3": "Current Openings: Sr. Product Designer, Sr. UX Designer, Sr. Front-end Developer Freelance",
@@ -77,6 +81,7 @@
   ],
   "Contacts": [
     {
+      "NOUP": "Contacts",
       "NOUP1": "We’d Love to Hear from You!. Whether you have a question about our services, are interested in a partnership, or want to learn more about our company, feel free to reach out",
       "General Enquiries": "General Enquiries. For general information or specific questions, please email us at info@insofteltechnologies.com We’ll respond promptly to assist with any queries",
       "[ Head Office – Dubai ]": "[ Head Office – Dubai ]. The Binary Tower, 32 Marasi Drive St., Business Bay, Dubai, UAE",

@@ -19,40 +19,47 @@ const LinkList: FC<LinkListProps> = ({
   theme,
   hasQuery,
   hoverLink,
-}) => (
-  <>
-    <ul
-      className={cx(styles.list, {
-        [styles['list--active']]: isOpen,
-        [styles['list--withQuery']]: hasQuery,
-      })}
-    >
-      {links.map(({ title, path, titleIndex }) => (
-        <li key={titleIndex}>
-          <Link
-            href={path}
-            className={cx(styles.link, [styles[`link--${theme}`]], {
-              [styles['link--active']]: hoverLink === path,
-            })}
-          >
-            <h2 className={styles.link__title}>
-              <sup className={styles.link__titleIndex}>[ {titleIndex} ]</sup>{' '}
-              {title}
-            </h2>
-          </Link>
-        </li>
-      ))}
-    </ul>
-    <Image
-      src={'./assets/linkLogo.svg'}
-      width={312}
-      height={312}
-      alt="linkLogo"
-      className={cx(styles.linkLogo, {
-        [styles['linkLogo--active']]: hasQuery,
-      })}
-    />
-  </>
-)
+}) => {
+  console.log(hoverLink)
+  return (
+    <>
+      <ul
+        className={cx(styles.list, {
+          [styles['list--active']]: isOpen,
+          [styles['list--withQuery']]: hasQuery,
+        })}
+      >
+        {links.map(({ title, path, titleIndex }) => (
+          <li key={titleIndex}>
+            <Link
+              href={path}
+              className={cx(styles.link, [styles[`link--${theme}`]], {
+                [styles['link--active']]: hoverLink.includes(path),
+              })}
+            >
+              <h2 className={styles.link__title}>
+                <sup className={styles.link__titleIndex}>[ {titleIndex} ]</sup>{' '}
+                {title}
+              </h2>
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <Image
+        src={
+          theme === 'dark'
+            ? './assets/linkLogoDark.svg'
+            : './assets/linkLogo.svg'
+        }
+        width={312}
+        height={312}
+        alt="linkLogo"
+        className={cx(styles.linkLogo, {
+          [styles['linkLogo--active']]: hasQuery,
+        })}
+      />
+    </>
+  )
+}
 
 export default LinkList
