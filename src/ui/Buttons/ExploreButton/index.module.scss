@@ -30,8 +30,7 @@
   margin-right: 14px;
 
   @include fonts.text(16px, 20px, 'regular');
-
-  letter-spacing: 1px;
+  font-family: var(--font-neue-haas);
 
   &.dark {
     color: var(--color-text-tertiary);
