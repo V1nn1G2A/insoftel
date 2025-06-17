@@ -1,7 +1,7 @@
 @use 'mixins/media';
 
 .accordion-wrapper {
-  height: 728px;
+  height: 670px;
 
   @include media.screen('desktop') {
     height: 668px;
