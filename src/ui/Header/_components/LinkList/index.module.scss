@@ -44,11 +44,11 @@
   }
 
   &--light {
-    color: var(--color-black);
+    color: var(--color-text-secondary);
 
     &:hover,
     &.link--active {
-      color: var(--color-text-secondary);
+      color: var(--color-black);
     }
   }
 
