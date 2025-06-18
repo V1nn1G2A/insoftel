@@ -30,7 +30,7 @@ const Search: FC<ISearch> = ({ theme, ...props }) => {
           }}
           onBlur={() => setIsFocused(false)}
         />
-        <SearcIcon />
+        <SearcIcon className={cx({ [styles.iconActive]: props.value })} />
       </div>
     </div>
   )
