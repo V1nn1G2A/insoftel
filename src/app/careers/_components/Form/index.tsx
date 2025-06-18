@@ -83,6 +83,11 @@ const Form: FC<IForm> = ({ id, className }) => {
           error={errors[el.id]?.message}
         />
       ))}
+      <DragAndDrop
+        id={id}
+        setFile={(file: File) => setFile(file)}
+        className={styles.drop}
+      />
       {file && (
         <File
           file={file}
@@ -90,11 +95,6 @@ const Form: FC<IForm> = ({ id, className }) => {
           className={styles.file}
         />
       )}
-      <DragAndDrop
-        id={id}
-        setFile={(file: File) => setFile(file)}
-        className={styles.drop}
-      />
       <p className={styles.license}>
         By clicking the Submit button you agree to our
         <a href="#"> Privacy Policy </a>

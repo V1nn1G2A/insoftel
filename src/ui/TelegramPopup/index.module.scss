@@ -29,16 +29,21 @@
   }
 
   &__cancel {
-    @include fonts.text(24px, 28px, 600);
+    @include fonts.text(24px, 28px, 500);
 
     border: none;
     background-color: transparent;
     cursor: pointer;
-    color: var(--color-black-secondary);
+    color: var(--color-black);
     margin-left: 45px;
 
     @include media.screen('mobile') {
       margin-left: 25px;
     }
+  }
+
+  &__confirm {
+    @include fonts.text(24px, 28px, 500);
+    color: var(--color-black);
   }
 }

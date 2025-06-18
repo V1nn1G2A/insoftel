@@ -25,6 +25,7 @@ const TelegramPopup = () => {
           text="Confirm"
           variant="short"
           colorVariant="dark"
+          classNames={['', styles.popup__confirm, '']}
         />
       </div>
     </div>

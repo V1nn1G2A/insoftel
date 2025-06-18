@@ -42,12 +42,12 @@ const SearchResult: FC<ISearchResultProps> = ({
 
   return (
     <ul
-      className={styles.list}
+      className={cx(styles.list, styles[`list--${theme}`])}
       tabIndex={0}
     >
-      {results.map(({ title, path, text }) => (
+      {results.map(({ title, path, text }, index) => (
         <li
-          key={text}
+          key={text + index}
           className={cx(styles.item, {
             [styles['item--dark']]: theme === 'dark',
             [styles['item--light']]: theme === 'light',
