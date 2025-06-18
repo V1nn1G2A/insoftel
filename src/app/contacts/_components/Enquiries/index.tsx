@@ -38,7 +38,8 @@ const Enquiries = () => {
           For general information or specific questions, please email us at
           <Link href="mailto:info@insofteltechnologies.com">
             <b className={styles.mail}> info@insofteltechnologies.com</b>
-          </Link>{' '}
+          </Link>
+          <br />
           We’ll respond promptly to assist with any queries.
         </AnimationBlock>
       </div>

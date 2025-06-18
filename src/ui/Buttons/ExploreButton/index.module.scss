@@ -5,6 +5,7 @@
   align-items: center;
   padding: 8px 10px 8px 30px;
   border-radius: 100px;
+  backdrop-filter: blur(14.22px);
   cursor: pointer;
 
   &.dark {
@@ -30,6 +31,7 @@
   margin-right: 14px;
 
   @include fonts.text(16px, 20px, 'regular');
+
   font-family: var(--font-neue-haas);
 
   &.dark {
@@ -86,10 +88,11 @@
 .mini-text {
   margin-right: 12.5px;
   letter-spacing: 1px;
+
   @include fonts.text(14px, 18px, 300);
 }
 
-@media (max-width: 968px) {
+@media (width <= 968px) {
   .mini-text {
     @include fonts.text(16px, 18px, 300);
   }

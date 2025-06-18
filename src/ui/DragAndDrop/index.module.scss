@@ -28,6 +28,10 @@
   color: var(--color-text-secondary);
 }
 
+.wrapper .text {
+  letter-spacing: 0.5px;
+}
+
 .wrapper-dragged {
   background-color: rgba($color: #000, $alpha: 5%);
 }
