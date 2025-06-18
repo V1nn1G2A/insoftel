@@ -6,19 +6,33 @@
 }
 
 .title {
-  @include fonts.text(230px, 100%, 400);
+  @include fonts.text(230px, 107%, 400);
+
   color: var(--color-white);
   position: absolute;
   top: 33%;
+  margin-top: -10px;
+  overflow: hidden;
 }
 
 .miniTitle {
   display: none;
-  @include fonts.text(31px, 100%, 400);
   color: var(--color-white);
   position: absolute;
+  white-space: nowrap;
   top: 48%;
   left: calc(50% - var(--width));
+
+  h1,
+  span {
+    @include fonts.text(31px, 100%, 500);
+
+    text-transform: uppercase;
+  }
+
+  span {
+    transform: translateY(-1px);
+  }
 }
 
 .miniButton {
@@ -33,13 +47,15 @@
 
 .letter {
   display: none;
+
   @include fonts.text(113px, 80%, 500);
+
   color: var(--color-white);
   position: absolute;
   top: 12%;
 }
 
-@media (max-width: 1400px) {
+@media (width <= 1400px) {
   .heading {
     height: 747px;
   }
@@ -49,7 +65,7 @@
   }
 
   .miniTitle {
-    display: block;
+    display: flex;
   }
 
   .letter {
