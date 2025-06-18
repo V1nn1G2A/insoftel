@@ -22,11 +22,9 @@
   border-bottom: 1px solid;
   padding-top: 6px;
   font-family: var(--font-neue-haas);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-color: transparent;
   transition: border-color 0.3s ease;
 
@@ -50,6 +48,7 @@
 .desktopSearch {
   display: block;
   width: 100%;
+
   @include media.screen('mobile') {
     display: none;
   }

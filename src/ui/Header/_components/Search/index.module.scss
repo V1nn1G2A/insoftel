@@ -2,7 +2,6 @@
 @use 'mixins/fonts';
 
 .searchWrapper {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -34,7 +33,6 @@
 }
 
 .input {
-  width: 100%;
   border: 1px solid;
   border-radius: 100px;
   outline: none;
@@ -42,7 +40,6 @@
   width: 100%;
   margin-left: auto;
   color: inherit;
-
   transition: all 0.3s ease;
 
   &::placeholder {
@@ -55,6 +52,15 @@
     background-color: #ffffff1a;
     border-color: #ffffff1a;
 
+    & + svg {
+      color: rgba($color: #fff, $alpha: 30%);
+      transition: color 0.2s;
+    }
+
+    & + .iconActive {
+      color: var(--color-white);
+    }
+
     &:hover,
     &:focus-within {
       border-color: var(--color-white);
@@ -64,6 +70,15 @@
   &--light {
     background-color: #0000000d;
     border-color: #0000000d;
+
+    & + svg {
+      color: rgba($color: #000, $alpha: 50%);
+      transition: color 0.2s;
+    }
+
+    & + .iconActive {
+      color: var(--color-black);
+    }
 
     &:hover,
     &:focus-within {
