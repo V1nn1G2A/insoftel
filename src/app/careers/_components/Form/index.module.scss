@@ -40,3 +40,22 @@
 .formFilled .button {
   opacity: 1;
 }
+
+.success {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  p:first-of-type {
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  p:nth-of-type(2) {
+    letter-spacing: 0.3px;
+  }
+
+  @include media.screen('desktop') {
+    margin-top: 60px;
+    margin-bottom: 58px;
+  }
+}
