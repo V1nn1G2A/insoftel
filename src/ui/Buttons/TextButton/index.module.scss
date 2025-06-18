@@ -40,6 +40,7 @@
   background-color: transparent;
   width: 60px;
   height: 60px;
+  backdrop-filter: blur(14.22px);
 
   &.dark {
     border: 1px solid rgb(0 0 0 / 20%);
@@ -59,8 +60,8 @@
 
 .text {
   @include fonts.text(24px, 28px, 600);
-  font-family: var(--font-neue-haas);
 
+  font-family: var(--font-neue-haas);
   margin-right: 20px;
   letter-spacing: 0.1px;
 

@@ -16,11 +16,21 @@ const cx = cn.bind(styles)
 
 const maxSize = 10
 
+const acceptedTypes = [
+  'application/pdf', // PDF
+  'application/msword', // DOC
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document', // DOCX
+  'image/jpeg', // JPG
+  'image/png', // PNG
+]
+
 const DragAndDrop: FC<IDragAndDrop> = ({ setFile, className, id }) => {
   const [isDragging, setIsDragging] = useState(false)
 
   const handleSetFile = (file: File) => {
-    if (file.size <= maxSize * 1024 * 1024) setFile(file)
+    if (file.size > maxSize * 1024 * 1024) return
+    if (!acceptedTypes.includes(file.type)) return
+    setFile(file)
   }
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {

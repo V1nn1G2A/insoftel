@@ -22,7 +22,7 @@
 .license {
   @include fonts.text(14px, 18px, 400);
 
-  max-width: 280px;
+  max-width: 270px;
   margin-right: auto;
   color: var(--color-text-secondary);
   margin-bottom: 32px;
@@ -39,4 +39,23 @@
 
 .formFilled .button {
   opacity: 1;
+}
+
+.success {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  p:first-of-type {
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  p:nth-of-type(2) {
+    letter-spacing: 0.3px;
+  }
+
+  @include media.screen('desktop') {
+    margin-top: 60px;
+    margin-bottom: 58px;
+  }
 }
