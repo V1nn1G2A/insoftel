@@ -29,7 +29,8 @@
   }
 
   &--active {
-    height: calc(100vh - 83px);
+    min-height: calc(100vh - 83px);
+    overflow-y: scroll;
 
     &.wrapper--dark {
       border-top: 1px solid #ffffff33;

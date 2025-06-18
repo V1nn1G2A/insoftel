@@ -19,7 +19,7 @@
   }
 
   &__title {
-    @include fonts.text(48px, 52px, 600);
+    @include fonts.text(48px, 52px, 500);
 
     color: var(--color-black-secondary);
     display: flex;
@@ -87,11 +87,12 @@
   }
 
   &__secondaryTextTitle {
+    @include fonts.text(20px, 24px, 500);
     color: var(--color-text-tertiary);
     letter-spacing: 0.5px;
 
     @include media.screen('mobile') {
-      @include fonts.text(20px, 24px, 400);
+      @include fonts.text(20px, 24px, 500);
     }
   }
 

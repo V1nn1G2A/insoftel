@@ -23,7 +23,10 @@ const TechSection: FC<ITechSection> = ({
 }) => {
   const ref = useRef(null)
   return (
-    <div className={styles.technologiesSection__wrapper}>
+    <div
+      className={styles.technologiesSection__wrapper}
+      id={title}
+    >
       <section
         className={styles.technologiesSection}
         ref={ref}

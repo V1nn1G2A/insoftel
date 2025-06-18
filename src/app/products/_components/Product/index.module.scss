@@ -41,6 +41,11 @@
 
   &__btn {
     margin: 20px 0 0;
+
+    & p {
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
   }
 
   &__line {

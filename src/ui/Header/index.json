@@ -1,6 +1,7 @@
 {
   "Services": [
     {
+      "NOUP": "Services",
       "IT Consulting": "IT Consulting & Business Solutions. Strategically align your IT infrastructure with your business goals to drive sustainable growth and future-proof your operations",
       "NOUP1": "Technology Strategy & Roadmaps: Develop clear, actionable plans that outline your technology goals, ensuring alignment with your broader business objectives.",
       "NOUP2": "Infrastructure Design: Build a secure, scalable, and resilient IT foundation that supports your organisation’s growth and adaptability.",
@@ -36,28 +37,95 @@
   ],
   "Technologies": [
     {
-      "NOUP1": "Languages. Our versatility across multiple programming languages means we can select the optimal language for each project, ensuring efficiency, scalability, and maintainability",
+      "NOUP": "Technologies",
+      "Languages": "Languages. Our versatility across multiple programming languages means we can select the optimal language for each project, ensuring efficiency, scalability, and maintainability",
       "NOUP2": "Business Impact: Whether it’s building high-performance applications, developing custom software, or enhancing system integration, our language expertise enables us to provide solutions that are both powerful and flexible, reducing time to market and supporting long-term growth.",
-      "NOUP3": "Frontend / Design.Our backend development proficiency ensures that your applications are secure, scalable, and capable of handling complex business logic and data processes",
+      "Frontend / Design": "Frontend / Design.Our backend development proficiency ensures that your applications are secure, scalable, and capable of handling complex business logic and data processes",
       "NOUP4": "Business Impact: We build robust backends that support seamless integration, data management, and scalability, allowing businesses to expand their capabilities and optimise operational efficiency without compromising performance",
-      "NOUP5": "Mobile Development. Our cross-platform and native mobile development skills enable us to deliver responsive, high-quality mobile experiences for diverse user bases",
+      "Mobile Development": "Mobile Development. Our cross-platform and native mobile development skills enable us to deliver responsive, high-quality mobile experiences for diverse user bases",
       "NOUP6": "Business Impact: By creating mobile applications that function seamlessly across devices, we help businesses increase reach, enhance customer engagement, and drive revenue through an expanded mobile presence",
-      "NOUP7": "Databases. Our expertise in various database systems ensures secure, efficient data storage and retrieval, supporting the unique data needs of each project",
+      "Databases": "Databases. Our expertise in various database systems ensures secure, efficient data storage and retrieval, supporting the unique data needs of each project",
       "NOUP8": "Business Impact: With optimised data management and real-time access, our database solutions empower businesses to make data-driven decisions quickly, streamline workflows, and maintain data integrity across applications.",
-      "NOUP9": "Cloud Platforms. We leverage cloud platforms to build scalable, flexible, and cost-effective applications that can adapt to changing business needs",
+      "Cloud Platforms": "Cloud Platforms. We leverage cloud platforms to build scalable, flexible, and cost-effective applications that can adapt to changing business needs",
       "NOUP10": "Business Impact: Our cloud solutions help businesses reduce infrastructure costs, improve accessibility, and scale effortlessly, ensuring operational resilience and supporting growth in a digital-first world",
-      "NOUP11": "DevOps / Automation. Our DevOps and automation practices streamline development and deployment, accelerating time-to-market and improving reliability",
+      "DevOps / Automation": "DevOps / Automation. Our DevOps and automation practices streamline development and deployment, accelerating time-to-market and improving reliability",
       "NOUP12": "Business Impact:By implementing continuous integration and deployment, we reduce manual processes, minimise errors, and increase agility, allowing businesses to release features faster and maintain a competitive edge",
-      "NOUP13": "Artificial Intelligence / Machine Learning. We harness the power of AI and ML to drive intelligent automation, predictive insights, and personalised user experiences",
+      "Artificial Intelligence / Machine Learning": "Artificial Intelligence / Machine Learning. We harness the power of AI and ML to drive intelligent automation, predictive insights, and personalised user experiences",
       "NOUP14": "Business Impact: Our AI-driven solutions enable businesses to automate processes, forecast trends, and personalise offerings, boosting efficiency, improving decision-making, and enhancing customer satisfaction."
     }
   ],
   "About": [
     {
-      "NOUP1": "“ At Insoftel, custom software is just the beginning. By combining deep software expertise with hardware integration, we create adaptable, high-impact solutions that empower clients to lead with confidence and innovation ”",
-      "NOUP2": "About Us. Insoftel empowers businesses and government organisations with bespoke software solutions crafted for the digital age. With over 15 years of experience and a team of 50+ expert developers, our company brings your mission to life by blending innovation with precision, helping you stand out in a complex world.",
-      "NOUP3": "Our Expertise. From AI-powered automation and predictive analytics to blockchain, mobile development, and hardware integration, our custom solutions cover a broad range of needs, ensuring every aspect of your brand’s digital journey is expertly crafted. Explore examples of our past work on our website to see how we’ve helped clients make a meaningful impact.",
-      "NOUP4": "Our Commitment. At Insoftel, we make it our mission to help you explore and learn the best of digital transformation, whether it’s optimising operations, engaging customers, or redefining your brand's impact. We're here to turn your vision into reality"
+      "NOUP": "About",
+      "AboutQuote": "“ At Insoftel, custom software is just the beginning. By combining deep software expertise with hardware integration, we create adaptable, high-impact solutions that empower clients to lead with confidence and innovation ”",
+      "AboutContent": "About Us. Insoftel empowers businesses and government organisations with bespoke software solutions crafted for the digital age. With over 15 years of experience and a team of 50+ expert developers, our company brings your mission to life by blending innovation with precision, helping you stand out in a complex world.",
+      "Our Expertise": "Our Expertise. From AI-powered automation and predictive analytics to blockchain, mobile development, and hardware integration, our custom solutions cover a broad range of needs, ensuring every aspect of your brand’s digital journey is expertly crafted. Explore examples of our past work on our website to see how we’ve helped clients make a meaningful impact.",
+      "Our Commitment": "Our Commitment. At Insoftel, we make it our mission to help you explore and learn the best of digital transformation, whether it’s optimising operations, engaging customers, or redefining your brand's impact. We're here to turn your vision into reality",
+      "AI & Machine Learning": "Why Choose Us? AI & Machine Learning: Make your operations smarter with intelligent automation",
+      "Blockchain Innovation": "Why Choose Us? Blockchain Innovation: Build secure, transparent systems to lead in a connected world",
+      "IT Consulting": "Why Choose Us? IT Consulting: Scale with future-ready, tailored technology solutions",
+      "Comprehensive Solutions": "Why Choose Us? Comprehensive Solutions: We specialise in large-scale enterprise solutions, hardware integration, and custom software development for businesses of all sizes"
+    }
+  ],
+  "Careers": [
+    {
+      "NOUP": "Careers",
+      "NOUP1": "At Insoftel, we’re seeking talented professionals to drive innovation with us. If you’re passionate about technology and eager to work on impactful projects, explore our open roles",
+      "Current Openings": "Current Openings. Discover opportunities across development, design, project management, and consulting.Each role offers the chance to work with a skilled, supportive team on advanced software solutions",
+      "NOUP3": "Current Openings: Sr. Product Designer, Sr. UX Designer, Sr. Front-end Developer Freelance",
+      "Innovative Projects": "Why Insoftel? Innovative Projects: Tackle industry-leading challenges",
+      "Collaborative Culture": "Why Insoftel? Collaborative Culture: Be part of a team that values teamwork and fresh ideas",
+      "Career Development": "Why Insoftel? Career Development: Benefit from continuous learning and mentorship",
+      "Flexible Working": "Why Insoftel? Flexible Working: We support a balanced, adaptable work environment"
+    }
+  ],
+  "Contacts": [
+    {
+      "NOUP": "Contacts",
+      "NOUP1": "We’d Love to Hear from You!. Whether you have a question about our services, are interested in a partnership, or want to learn more about our company, feel free to reach out",
+      "General Enquiries": "General Enquiries. For general information or specific questions, please email us at info@insofteltechnologies.com We’ll respond promptly to assist with any queries",
+      "[ Head Office – Dubai ]": "[ Head Office – Dubai ]. The Binary Tower, 32 Marasi Drive St., Business Bay, Dubai, UAE",
+      "[ Office – Istanbul ]": "[ Office – Istanbul ]. Business Center, Nur Sokak 2A, Merdivenköy, Kadıköy, Istanbul, Turkey",
+      "[ Email ]": "[ Email ]. info@insofteltechnologies.com"
+    }
+  ],
+  "Products": [
+    {
+      "NOUP": "Products",
+      "NOUP1": "Our Products.      Discover innovative solutions that redefine smart living, industrial automation, financial management, and creative content distribution. With advanced technologies, our products are designed to deliver real-world impact, making everyday challenges simpler and more efficient.",
+      "Smart Home Management System": "Smart Home Management System. Transform your home into a hub of convenience, energy efficiency, and security with our state-of-the-art Smart Home Management System. Designed for modern living, this solution puts you in complete control of your home’s vital systems, allowing you to save energy, enhance safety, and simplify your daily life. Whether you’re at home or away, experience peace of mind knowing your home is smartly managed with just a tap or a voice command.",
+      "NOUP2": "Effortless Control: Manage heating, water supply, electrical appliances, ventilation, and split systems through intuitive web and mobile apps",
+      "NOUP3": "Hands-Free Convenience: Integrated with Google Assistant SDK and Apple HomeKit, enabling seamless voice control",
+      "NOUP4": "Enhanced Safety:  Compatible with third-party sensors for leak detection, air quality monitoring, and humidity assessment",
+      "NOUP5": "Enjoy the perfect blend of technology and simplicity to create a smarter, safer, and more sustainable lifestyle."
+    },
+    {
+      "Industrial Automation and Monitoring System": "Industrial Automation and Monitoring System (Digital Twin). Revolutionise your industrial operations with a robust automation and monitoring system designed to optimise processes, reduce downtime, and ensure safety. This comprehensive solution delivers unparalleled precision, scalability, and efficiency for managing complex workflows, making it an essential tool for modern industries striving to stay competitive.",
+      "NOUP2": "Precision Monitoring: Sensors and machine vision provide real-time insights into pressure, temperature, and humidity fluctuations.",
+      "NOUP3": "Seamless Hardware Integration: Built with C/C++, Python, Java, and SCADA, handling everything from hardware selection to circuit board programming.",
+      "NOUP4": "Centralised Control: Accessible through a Vue.js and Spring Boot interface on both web and mobile platforms.",
+      "NOUP5": "With this system, you can reduce operational risks, enhance productivity, and drive innovation with ease."
+    },
+    {
+      "Large Capital Management Platform": "Large Capital Management Platform. Dominate the fast-paced financial markets with a powerful platform that combines speed, precision, and data-driven decision-making. Designed for traders and investors, this platform offers advanced tools to predict market trends, manage risks, and automate strategies, empowering you to make smarter, faster moves in volatile markets.",
+      "NOUP2": "Predictive Analytics:  Advanced modelling powered by C/C++, Python, R, and TensorFlow for accurate market forecasting.",
+      "NOUP3": "Live and Historical Data Insights: Process data from CEX and DEX exchanges in real time using WebSockets, InfluxDB, and PostgreSQL.",
+      "NOUP4": "Smarter Strategies: Algorithmic hedging models and automated portfolio management tools help you navigate market volatility with confidence.",
+      "NOUP5": "Stay ahead of the curve with a platform tailored to meet the demands of high-frequency trading and strategic investment planning."
+    },
+    {
+      "Proprietary Data Transmission Protocol": "Proprietary Data Transmission Protocol. Empower artists and redefine the music industry with a platform that merges cutting-edge technology and creative freedom. This all-in-one solution ensures secure distribution, innovative monetisation, and AI-powered collaboration, making it a game-changer for artists looking to expand their reach and connect with fans in a meaningful way.",
+      "NOUP2": "Content Protection: Secure your work with IPFS and Smart Contract-based DRM.",
+      "NOUP3": "Monetisation Opportunities: Leverage NFTs and Web 3.0 token systems to create new revenue streams.",
+      "NOUP4": "AI-Driven Creativity: Collaborate and innovate with OpenAI-powered tools tailored for artists.",
+      "NOUP5": "Whether you’re an independent artist or a global label, this platform offers the tools and resources you need to thrive in the digital era."
+    },
+    {
+      "Music Label & Content Distribution Platform": "Music Label & Content Distribution Platform. Empower artists and redefine the music industry with a platform that merges cutting-edge technology and creative freedom. This all-in-one solution ensures secure distribution, innovative monetisation, and AI-powered collaboration, making it a game-changer for artists looking to expand their reach and connect with fans in a meaningful way.",
+      "NOUP2": "Content Protection: Secure your work with IPFS and Smart Contract-based DRM.",
+      "NOUP3": "Monetisation Opportunities: Leverage NFTs and Web 3.0 token systems to create new revenue streams.",
+      "NOUP4": "AI-Driven Creativity: Collaborate and innovate with OpenAI-powered tools tailored for artists.",
+      "NOUP5": "Whether you’re an independent artist or a global label, this platform offers the tools and resources you need to thrive in the digital era."
     }
   ]
 }

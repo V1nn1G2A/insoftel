@@ -21,6 +21,11 @@ const neueHaas = localFont({
   display: 'swap',
   src: [
     {
+      path: '../fonts/nhgd/NeueHaasDisplay-XThin.woff2',
+      weight: '200',
+      style: 'xthin',
+    },
+    {
       path: '../fonts/nhgd/NeueHaasDisplay-Light.woff2',
       weight: '300',
       style: 'normal',
@@ -43,6 +48,18 @@ const neueHaas = localFont({
   ],
 })
 
+const neueWeb = localFont({
+  variable: '--font-neue-web',
+  display: 'swap',
+  src: [
+    {
+      path: '../fonts/nwgd/HaasGrotDispWeb15XXThnRegular.woff2',
+      weight: '200',
+      style: 'normal',
+    },
+  ],
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -50,7 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={neueHaas.variable}>
+      <body className={neueHaas.variable + ' ' + neueWeb.variable}>
         <PopupProvider>
           <Lenis />
           <Header />

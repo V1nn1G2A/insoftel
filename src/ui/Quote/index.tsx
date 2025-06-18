@@ -8,10 +8,11 @@ interface IQuote {
   author: string
   className?: string
   children: string
+  id?: string
 }
 
-const Quote: FC<IQuote> = ({ author, className, children }) => (
-  <div className={`${styles.quote} ${className}`}>
+const Quote: FC<IQuote> = ({ author, className, children, id }) => (
+  <div className={`${styles.quote} ${className}`} id={id}>
     <AnimationBlock className={styles.quote__content}>
       &quot; {children} &quot;
       <AnimationBlock>

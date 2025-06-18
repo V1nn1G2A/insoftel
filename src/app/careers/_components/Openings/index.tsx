@@ -8,7 +8,10 @@ import styles from './index.module.scss'
 
 const Openings = () => (
   <Container>
-    <section className={styles.openings}>
+    <section
+      className={styles.openings}
+      id="Current Openings"
+    >
       <h2 className={styles.title}>
         <AnimatedText height={50}>Current Openings</AnimatedText>
       </h2>

@@ -23,19 +23,19 @@
 }
 
 .accordion__content {
+  font-family: var(--font-neue-haas);
   display: grid;
   grid-template-rows: 0fr;
   overflow: hidden;
   transition: grid-template-rows 0.3s ease;
   padding: 0 0 16px;
-  letter-spacing: 2%;
   word-spacing: 2%;
   color: var(--color-white);
 
   p {
     margin-top: 16px;
 
-    @include fonts.text(18px, 22px, 'regular');
+    @include fonts.text(18px, 22px, 300);
   }
 
   > div {
@@ -44,6 +44,7 @@
 }
 
 .accordion__title {
+  font-family: var(--font-neue-haas);
   display: flex;
   align-items: center;
   background-color: transparent;
@@ -56,9 +57,9 @@
     position: relative;
     color: rgb(255 255 255 / 50%);
     transition: color 0.3s;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 
-    @include fonts.text(24px, 28px, 'regular');
+    @include fonts.text(24px, 28px, 300);
   }
 
   svg {

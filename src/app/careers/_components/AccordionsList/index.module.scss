@@ -1,0 +1,13 @@
+@use 'mixins/media';
+
+.accordion {
+  & p {
+    letter-spacing: 0.5px;
+  }
+
+  @include media.screen('desktop') {
+    & p {
+      letter-spacing: 0.7px;
+    }
+  }
+}

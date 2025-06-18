@@ -27,17 +27,17 @@
 
   @include media.screen('desktop') {
     text-indent: 30px;
-    letter-spacing: 0;
+    letter-spacing: 0.6px;
     word-spacing: -6%;
 
-    @include fonts.text(30px, 34px, 400);
+    @include fonts.text(30px, 34px, 300);
   }
 }
 
 .quote__author {
   width: max-content;
-  font-weight: 600;
-  margin: 24px 0 0 auto;
+  font-weight: 500;
+  margin: 23px 0 0 auto;
   letter-spacing: 0.1px;
   color: var(--color-text-tertiary);
 

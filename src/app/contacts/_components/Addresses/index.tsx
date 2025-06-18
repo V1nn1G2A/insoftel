@@ -7,10 +7,10 @@ import AddressItem from '../AddresItem'
 import { TelegramPopup } from '@/ui'
 
 import styles from './index.module.scss'
-import { usePopup } from '@/ui/Popup/PopupContext'
+import { usePopupDispatch } from '@/ui/Popup/PopupContext'
 
 const Addresses = () => {
-    const { openPopup } = usePopup();
+    const { openPopup } = usePopupDispatch();
   
     const handleOpenInfo = () => {
       openPopup(<TelegramPopup />);
@@ -38,6 +38,7 @@ const Addresses = () => {
           </AnimationBlock>
           <AnimationBlock>
             <TextButton
+              onClick={handleOpenInfo}
               classNames={['button-contacts', 'text-contacts', 'mobile']}
               colorVariant="dark"
               text="Connect with Us"

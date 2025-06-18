@@ -7,6 +7,8 @@ import items from '../../constants/OPENING'
 import Accordion from '../Accordion'
 import Form from '../Form'
 
+import styles from './index.module.scss'
+
 interface IAccordionsList {
   className?: string
 }
@@ -26,6 +28,7 @@ const AccordionsList: FC<IAccordionsList> = ({ className }) => {
           onClick={() => handleClick(index)}
           isActive={activeItem === index}
           key={index}
+          className={styles.accordion}
         >
           <Form id={el.id} />
         </Accordion>

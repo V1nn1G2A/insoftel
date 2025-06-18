@@ -7,7 +7,8 @@ const paths = new Map([
   ['Technologies', '/technologies'],
   ['Products', '/products'],
   ['Blog', '/blog'],
-  ['Contact', '/contact'],
+  ['Contacts', '/contacts'],
+  ['Careers', '/careers'],
 ])
 
 export function searchContent(

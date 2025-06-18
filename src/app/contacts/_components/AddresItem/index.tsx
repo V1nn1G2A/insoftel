@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useRef } from 'react'
 
 import { AnimatedLine, AnimationBlock } from '@/ui'
@@ -19,10 +20,20 @@ const AddressItem = ({
     <div
       className={styles.address__wrapper}
       ref={ref}
+      id={title}
     >
       <AnimationBlock className={styles.AddressItem}>
         <h3 className={styles.title}>{title}</h3>
-        <p className={styles.text}>{address}</p>
+        {title === '[ Email ]' ? (
+          <Link
+            href={`mailto:${address}`}
+            className={styles.text}
+          >
+            {address}
+          </Link>
+        ) : (
+          <p className={styles.text}>{address}</p>
+        )}
       </AnimationBlock>
       <AnimatedLine
         targetRef={ref}

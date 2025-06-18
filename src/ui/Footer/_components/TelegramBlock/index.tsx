@@ -5,7 +5,7 @@ import ArrowIcon from '@/assets/icons/bigArrow.svg'
 import { AnimationBlock, TelegramPopup } from '@/ui'
 
 import styles from './index.module.scss'
-import { usePopup } from '@/ui/Popup/PopupContext'
+import { usePopupDispatch } from '@/ui/Popup/PopupContext'
 
 const string = 'Connect with Us on Telegram'
 
@@ -13,7 +13,7 @@ const TelegramBlock = () => {
   const divRef = useRef<HTMLDivElement>(null)
   const lettersRef = useRef<Record<number, HTMLSpanElement>>({})
   const isInView = useInView(divRef, { once: true })
-  const { openPopup } = usePopup()
+  const { openPopup } = usePopupDispatch()
 
   const setLetterRef = (node: HTMLSpanElement | null, index: number) => {
     if (!node) return

@@ -12,18 +12,18 @@
 }
 
 .index {
-  @include fonts.text(16px, 20px, 500);
+  @include fonts.text(16px, 20px, 400);
 
   position: absolute;
   top: 0;
   right: 0;
-  letter-spacing: -0.5px;
+  letter-spacing: 0.5px;
 
   @include media.screen('desktop') {
     top: 0;
     left: 0;
 
-    @include fonts.text(20px, 24px, 500);
+    @include fonts.text(20px, 24px, 400);
   }
 }
 

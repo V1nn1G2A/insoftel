@@ -45,16 +45,17 @@
 .technologies__text {
   margin: 0 0 33px;
   text-indent: 28px;
-  letter-spacing: -0.1px;
+  letter-spacing: 0.8px;
   color: var(--color-white);
 
-  @include fonts.text(24px, 28px, 400);
+  @include fonts.text(24px, 28px, 200);
 
   @include media.screen('desktop') {
-    @include fonts.text(36px, 40px, 400);
+    @include fonts.text(36px, 40px, 200);
 
     text-indent: 43px;
     margin-bottom: 64px;
+    letter-spacing: 1.1px;
   }
 }
 

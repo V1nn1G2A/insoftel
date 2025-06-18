@@ -78,6 +78,7 @@
   &IconLabel {
     @include fonts.text(24px, 28px, 500);
 
+    font-family: var(--font-neue-haas);
     display: none;
     color: var(--color-text-tertiary);
 
@@ -91,6 +92,8 @@
 
   /* stylelint-disable-next-line no-descending-specificity */
   svg {
+    color: var(--color-text-tertiary);
+
     @include media.screen('desktop') {
       margin-right: 12px;
     }

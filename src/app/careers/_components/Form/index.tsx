@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 import { DragAndDrop, FormPopup, Input, TextButton } from '@/ui'
-import { usePopup } from '@/ui/Popup/PopupContext'
+import { usePopupDispatch } from '@/ui/Popup/PopupContext'
 
 import inputs from '../../constants/FORM'
 import File from '../File'
@@ -35,7 +35,7 @@ const Form: FC<IForm> = ({ id, className }) => {
   })
   const [file, setFile] = useState<File | null>(null)
   const [isSucces, setIsSuccess] = useState(false)
-  const { openPopup } = usePopup()
+  const { openPopup } = usePopupDispatch()
 
   const isFilled =
     watch('name') &&
@@ -83,6 +83,11 @@ const Form: FC<IForm> = ({ id, className }) => {
           error={errors[el.id]?.message}
         />
       ))}
+      <DragAndDrop
+        id={id}
+        setFile={(file: File) => setFile(file)}
+        className={styles.drop}
+      />
       {file && (
         <File
           file={file}
@@ -90,13 +95,8 @@ const Form: FC<IForm> = ({ id, className }) => {
           className={styles.file}
         />
       )}
-      <DragAndDrop
-        id={id}
-        setFile={(file: File) => setFile(file)}
-        className={styles.drop}
-      />
       <p className={styles.license}>
-        By clicking the Submit button you agreeto our
+        By clicking the Submit button you agree to our
         <a href="#"> Privacy Policy </a>
         terms
       </p>
