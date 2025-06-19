@@ -2,7 +2,6 @@
 @use 'mixins/media';
 
 .office {
-  max-width: 548px;
   margin-top: 36px;
   letter-spacing: 0.239px;
 
@@ -21,6 +20,7 @@
   }
 
   @include media.screen('desktop') {
+    max-width: 548px;
     margin-top: 23px;
   }
 }

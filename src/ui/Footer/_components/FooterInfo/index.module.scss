@@ -55,6 +55,8 @@
 
 .button {
   padding-left: 26px;
+  background-color: transparent;
+  backdrop-filter: blur(16px);
 
   & p {
     letter-spacing: 0;

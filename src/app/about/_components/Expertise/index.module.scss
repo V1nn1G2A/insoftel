@@ -32,6 +32,7 @@
   @include media.screen('desktop') {
     display: flex;
     justify-content: space-between;
+    gap: 110px;
     padding: 96px 0 102px;
 
     @include fonts.text(30px, 34px, 400);
