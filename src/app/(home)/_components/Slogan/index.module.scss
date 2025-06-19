@@ -1,11 +1,18 @@
 @use 'mixins/fonts';
 @use 'mixins/media';
 
+.wrapper {
+  border-top: 1px solid rgba($color: #000, $alpha: 20%);
+
+  @include media.screen('desktop') {
+    border: none;
+  }
+}
+
 .slogan {
   color: var(--color-black);
   max-width: 662px;
   padding: 48px 0;
-  border-top: 1px solid rgba($color: #000, $alpha: 20%);
 
   @include fonts.text(48px, 52px, 400);
 
@@ -14,8 +21,6 @@
   }
 
   @include media.screen('desktop') {
-    border: none;
-
     @include fonts.text(80px, 84px, 400);
   }
 }

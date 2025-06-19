@@ -26,7 +26,7 @@ const FooterInfo = () => (
       <ExploreButton
         text="Download Presentation"
         colorVariant="light"
-        className={styles.button}
+        classNames={['', '', styles.button]}
       />
     </AnimationBlock>
   </div>

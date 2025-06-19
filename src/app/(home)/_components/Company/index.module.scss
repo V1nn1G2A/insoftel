@@ -124,6 +124,7 @@
   width: 100%;
   justify-content: space-between;
   margin-top: 7px;
+  max-width: 350px;
 
   @include media.screen('desktop') {
     position: absolute;
