@@ -4,14 +4,6 @@
 .technologies {
   margin-bottom: 40px;
 
-  h2 {
-    margin-right: 66px;
-
-    @include media.screen('desktop') {
-      margin-right: 0;
-    }
-  }
-
   @include media.screen('desktop') {
     display: flex;
     justify-content: space-between;

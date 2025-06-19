@@ -12,7 +12,6 @@
 
 .choose__title {
   h2 {
-    margin-right: 77px;
     letter-spacing: 0.7px;
 
     @include fonts.text(36px, 40px, 400);
@@ -27,41 +26,22 @@
 
 .cards {
   margin-top: 48px;
-
-  @include media.screen('tablet') {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 
   @include media.screen('desktop') {
     margin-top: 76px;
-    display: flex;
     gap: 20px;
   }
 }
 
 .card {
   transition: filter 0.7s;
+  flex: 1 1 321px;
 
   &:hover {
     filter: invert(1);
-  }
-
-  @include media.screen('tablet') {
-    width: 300px;
-  }
-}
-
-.card + .card {
-  margin-top: 20px;
-
-  @include media.screen('tablet') {
-    margin-top: 0;
-  }
-
-  @include media.screen('desktop') {
-    margin-top: 0;
   }
 }

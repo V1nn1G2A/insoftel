@@ -6,8 +6,6 @@
   color: var(--color-text-quaternary);
 
   h2 {
-    margin-right: 54px;
-
     @include media.screen('desktop') {
       @include fonts.text(48px, 52px, 400);
 
