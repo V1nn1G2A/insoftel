@@ -8,24 +8,23 @@
   width: 100%;
   z-index: 100;
   overflow: hidden;
-
   height: 0;
-  border-bottom: 1px solid currentColor;
-
+  min-height: 0;
+  border-bottom: 1px solid currentcolor;
   transition:
-    height 0.4s ease,
+    min-height 0.4s ease,
     border-top 0.6s ease;
 
   &--dark {
     background-color: var(--color-black);
     color: #fff;
-    border-color: #ffffff33;
+    border-color: #fff3;
   }
 
   &--light {
     background-color: var(--color-white);
     color: #000;
-    border-color: #00000033;
+    border-color: #0003;
   }
 
   &--active {
@@ -33,17 +32,17 @@
     overflow-y: scroll;
 
     &.wrapper--dark {
-      border-top: 1px solid #ffffff33;
-      border-bottom: 1px solid #ffffff33;
+      border-top: 1px solid #fff3;
+      border-bottom: 1px solid #fff3;
     }
 
     &.wrapper--light {
-      border-top: 1px solid #00000033;
-      border-bottom: 1px solid #00000033;
+      border-top: 1px solid #0003;
+      border-bottom: 1px solid #0003;
     }
 
     @include media.screen('mobile') {
-      height: calc(100vh - 60px);
+      min-height: calc(100vh - 60px);
       overflow-y: scroll;
     }
   }

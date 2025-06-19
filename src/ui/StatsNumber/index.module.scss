@@ -7,7 +7,6 @@
   justify-content: space-between;
   align-items: flex-end;
   flex-grow: 1;
-  max-width: 662px;
   width: 100%;
   padding-bottom: 20px;
   overflow-x: hidden;
@@ -30,6 +29,7 @@
 
   @include media.screen('desktop') {
     padding-bottom: 14px;
+    max-width: 662px;
   }
 }
 
