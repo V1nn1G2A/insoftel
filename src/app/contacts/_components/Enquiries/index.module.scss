@@ -1,4 +1,5 @@
 @use 'mixins/fonts';
+@use 'mixins/media';
 
 .enquiries__wrapper {
   overflow-y: hidden;
@@ -31,12 +32,20 @@
   letter-spacing: -0.1px;
   max-width: 570px;
   margin-right: 92px;
+
+  @include media.screen('desktop') {
+    letter-spacing: 0.7px;
+  }
 }
 
 .mail {
   letter-spacing: 0.1px;
   font-weight: 500;
   margin-right: 10px;
+
+  @include media.screen('desktop') {
+    letter-spacing: 0.7px;
+  }
 }
 
 @media (width <= 1200px) {

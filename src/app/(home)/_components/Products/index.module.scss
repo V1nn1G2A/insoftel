@@ -5,14 +5,6 @@
   background-color: var(--color-middle-gray);
   overflow-x: hidden;
 
-  h2 {
-    margin-right: 156px;
-
-    @include media.screen('desktop') {
-      margin-right: 0;
-    }
-  }
-
   @include media.screen('desktop') {
     padding-top: 84px;
   }

@@ -8,14 +8,6 @@
     display: none;
   }
 
-  h2 {
-    margin-right: 166px;
-
-    @include media.screen('desktop') {
-      margin-right: 0;
-    }
-  }
-
   @include media.screen('desktop') {
     padding: 80px 0 76px;
     display: flex;
@@ -117,6 +109,7 @@
 
     @include media.screen('desktop') {
       @include fonts.text(35px, 35px, 400);
+
       margin-bottom: 16px;
     }
   }
