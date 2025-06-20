@@ -26,6 +26,7 @@
     gap: 24px;
     width: 50%;
     overflow: hidden;
+    letter-spacing: 1px;
 
     @include media.screen('mobile') {
       width: 100%;
@@ -33,7 +34,7 @@
       justify-content: space-between;
       overflow: visible;
 
-      @include fonts.text(30px, 24px, 500);
+      @include fonts.text(30px, 34px, 500);
     }
   }
 
