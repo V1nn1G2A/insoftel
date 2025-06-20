@@ -19,11 +19,12 @@ import styles from './index.module.scss'
 interface IForm {
   className?: string
   id: string
+  position: string
 }
 
 const cx = cn.bind(styles)
 
-const Form: FC<IForm> = ({ id, className }) => {
+const Form: FC<IForm> = ({ id, className, position }) => {
   const {
     register,
     getValues,
@@ -32,6 +33,7 @@ const Form: FC<IForm> = ({ id, className }) => {
   } = useForm({
     mode: 'all',
     resolver: zodResolver(formSchema),
+    defaultValues: { position },
   })
   const [file, setFile] = useState<File | null>(null)
   const [isSucces, setIsSuccess] = useState(false)
@@ -40,8 +42,8 @@ const Form: FC<IForm> = ({ id, className }) => {
   const isFilled =
     watch('name') &&
     watch('email') &&
-    watch('letter') &&
-    watch('phoneOrTelegram') &&
+    watch('cover_letter') &&
+    watch('contact') &&
     file &&
     Object.keys(errors).length === 0
 
@@ -57,11 +59,27 @@ const Form: FC<IForm> = ({ id, className }) => {
     )
   }
 
-  const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log(getValues())
-    console.log(file)
-    handleOpenInfo()
+
+    const formData = new FormData()
+
+    Object.entries(getValues()).forEach(([key, value]) => {
+      formData.append(key, value)
+    })
+
+    if (file) {
+      formData.append('files', file) // имя должно совпадать с тем, что ожидает сервер
+    }
+
+    try {
+      fetch('https://insoftel.tecman.ru/api/v1/feedback', {
+        method: 'POST',
+        body: formData,
+      })
+
+      handleOpenInfo()
+    } catch {}
   }
 
   if (isSucces) return <Success className={styles.success} />

@@ -30,7 +30,10 @@ const AccordionsList: FC<IAccordionsList> = ({ className }) => {
           key={index}
           className={styles.accordion}
         >
-          <Form id={el.id} />
+          <Form
+            id={el.id}
+            position={el.title}
+          />
         </Accordion>
       ))}
     </div>
