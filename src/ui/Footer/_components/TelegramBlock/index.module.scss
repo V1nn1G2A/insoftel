@@ -42,6 +42,7 @@
 
     color: var(--color-white);
     padding: 2px 0 0 4px;
+    letter-spacing: 0.7px;
 
     @include media.screen('mobile') {
       @include fonts.text(30px, 34px, 400);
