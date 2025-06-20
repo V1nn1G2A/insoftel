@@ -6,7 +6,7 @@
   justify-content: space-between;
   width: 100%;
   padding-top: 30px;
-  border-top: 1px solid #ffffff80;
+  border-top: 1px solid rgb(255 255 255 / 20%);
 
   @include media.screen('mobile') {
     flex-direction: column;

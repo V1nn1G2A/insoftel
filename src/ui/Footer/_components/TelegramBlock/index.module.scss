@@ -46,6 +46,8 @@
     @include media.screen('mobile') {
       @include fonts.text(30px, 34px, 400);
 
+      letter-spacing: 0.5px;
+      margin-right: 30px;
       padding: 4px 0 0;
     }
   }
