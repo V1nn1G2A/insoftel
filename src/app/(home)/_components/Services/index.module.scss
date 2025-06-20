@@ -110,6 +110,7 @@
     @include media.screen('desktop') {
       @include fonts.text(35px, 35px, 400);
 
+      letter-spacing: 1px;
       margin-bottom: 16px;
     }
   }
@@ -136,5 +137,10 @@
 
   @include media.screen('desktop') {
     margin-top: 0;
+
+    p {
+      letter-spacing: 0.5px;
+      font-weight: 500;
+    }
   }
 }

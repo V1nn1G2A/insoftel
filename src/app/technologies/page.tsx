@@ -20,6 +20,7 @@ export default function Technologies() {
               key={index}
               {...item}
               isLast={index === technologiesContetnt.length - 1}
+              className={styles.techSection}
             />
           ))}
         </div>

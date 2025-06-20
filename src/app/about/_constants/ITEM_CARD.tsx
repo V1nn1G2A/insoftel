@@ -15,7 +15,7 @@ const ITEM_CARD = [
     content: ['Scale with future-ready,', 'tailored technology solutions'],
   },
   {
-    title: 'Comprehensive Solutions',
+    title: 'Comprehensive Solutions:',
     content:
       'We specialise in large-scale enterprise solutions, hardware integration, and custom software development for businesses of all sizes',
   },

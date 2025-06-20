@@ -59,7 +59,7 @@
 }
 
 .technologies__button {
-  margin-top: 2px;
+  margin-top: 32px;
 
   p {
     font-size: 22px;
@@ -70,6 +70,7 @@
   }
 
   @include media.screen('desktop') {
+    margin-top: 0;
     margin-bottom: 82px;
 
     p {

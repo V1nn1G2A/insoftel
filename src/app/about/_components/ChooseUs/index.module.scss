@@ -2,11 +2,11 @@
 @use 'mixins/media';
 
 .choose {
-  padding: 40px 0;
+  padding: 40px 0 39px;
   background-color: var(--color-middle-gray);
 
   @include media.screen('desktop') {
-    padding: 123px 0 117px;
+    padding: 123px 0 121px;
   }
 }
 
@@ -40,6 +40,12 @@
 .card {
   transition: filter 0.7s;
   flex: 1 1 321px;
+
+  & > p:first-of-type {
+    @include media.screen('desktop') {
+      margin-top: 3px;
+    }
+  }
 
   &:hover {
     filter: invert(1);

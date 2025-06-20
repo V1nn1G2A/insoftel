@@ -18,6 +18,10 @@
 
     color: var(--color-white);
 
+    span {
+      letter-spacing: 0.3px;
+    }
+
     &:hover {
       color: var(--color-text-secondary);
     }

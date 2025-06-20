@@ -1,5 +1,7 @@
 'use client'
 
+import cn from 'classnames/bind'
+
 import { AnimationBlock, TextButton } from '@/ui'
 import { TelegramPopup } from '@/ui'
 import { usePopupDispatch } from '@/ui/Popup/PopupContext'
@@ -8,6 +10,8 @@ import { addresses } from '../../_constants/CONTACTS'
 import AddressItem from '../AddresItem'
 
 import styles from './index.module.scss'
+
+const cx = cn.bind(styles)
 
 const Addresses = () => {
   const { openPopup } = usePopupDispatch()
@@ -30,7 +34,11 @@ const Addresses = () => {
           <AnimationBlock>
             <TextButton
               onClick={handleOpenInfo}
-              classNames={['button-contacts', '', 'desctop']}
+              classNames={[
+                cx('button-contacts'),
+                cx('text-contacts'),
+                cx('desctop'),
+              ]}
               colorVariant="dark"
               text="Connect with Us on Telegram"
               variant="long"
@@ -39,7 +47,11 @@ const Addresses = () => {
           <AnimationBlock>
             <TextButton
               onClick={handleOpenInfo}
-              classNames={['button-contacts', '', 'mobile']}
+              classNames={[
+                cx('button-contacts'),
+                cx('text-contacts'),
+                cx('mobile'),
+              ]}
               colorVariant="dark"
               text="Connect with Us"
               variant="long"

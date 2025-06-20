@@ -21,14 +21,26 @@
 
   &__item {
     display: flex;
-    gap: 8px;
+    gap: 7px;
     flex-direction: column;
+
     @include fonts.text(16px, 20px, 400);
 
     color: var(--color-white);
+
+    @include media.screen('desktop') {
+      gap: 8px;
+    }
+  }
+
+  &__item:nth-child(2) {
+    p {
+      letter-spacing: 0.1px;
+    }
   }
 
   &__subtitle {
+    letter-spacing: -0.2px;
     color: var(--color-text-secondary);
   }
 }
@@ -37,6 +49,7 @@
   @include fonts.text(16px, 20px, 400);
 
   color: var(--color-white);
+  letter-spacing: 0.3px;
 
   &:hover {
     color: var(--color-text-secondary);

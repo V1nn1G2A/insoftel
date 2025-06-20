@@ -6,6 +6,26 @@
   @include media.screen('mobile') {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 38px;
+  }
+}
+
+@include media.screen('desktop') {
+  .techSection:nth-child(2) {
+    h2 {
+      letter-spacing: 0.7px;
+    }
+  }
+
+  .techSection:nth-child(6) {
+    h2 {
+      letter-spacing: 0.7px;
+    }
+  }
+
+  .techSection:nth-child(7) {
+    h2 {
+      letter-spacing: 1px;
+    }
   }
 }
