@@ -51,7 +51,7 @@
   border: none;
   width: 100%;
   justify-content: space-between;
-  padding: 14px 0 0;
+  padding: 15px 0 0;
 
   p {
     position: relative;
@@ -60,6 +60,10 @@
     letter-spacing: 1px;
 
     @include fonts.text(24px, 28px, 300);
+
+    @include media.screen('desktop') {
+      letter-spacing: 0.8px;
+    }
   }
 
   svg {

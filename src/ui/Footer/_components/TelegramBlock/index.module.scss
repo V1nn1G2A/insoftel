@@ -23,6 +23,7 @@
 
   @include media.screen('mobile') {
     padding-left: 0;
+    letter-spacing: 0.05px;
   }
 }
 
@@ -37,7 +38,7 @@
 
   &__text {
     overflow: hidden;
-    letter-spacing: 0.7px;
+
     @include fonts.text(36px, 40px, 400);
 
     color: var(--color-white);

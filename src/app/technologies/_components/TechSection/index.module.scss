@@ -10,7 +10,7 @@
 
   @include media.screen('mobile') {
     flex-direction: column;
-    gap: 30px;
+    gap: 24px;
     padding: 44px 0 24px;
   }
 
@@ -21,20 +21,25 @@
   &__title {
     @include fonts.text(48px, 52px, 500);
 
-    color: var(--color-black-secondary);
+    color: var(--color-text-tertiary);
     display: flex;
     gap: 24px;
     width: 50%;
     overflow: hidden;
-    letter-spacing: 1px;
+    letter-spacing: 0.9px;
+
+    sup {
+      letter-spacing: 0;
+    }
 
     @include media.screen('mobile') {
       width: 100%;
       flex-direction: row-reverse;
       justify-content: space-between;
       overflow: visible;
+      letter-spacing: 0.5px;
 
-      @include fonts.text(30px, 34px, 500);
+      @include fonts.text(30px, 30px, 400);
     }
   }
 
@@ -74,10 +79,15 @@
 
     color: var(--color-text-quaternary);
     word-spacing: 3px;
+    letter-spacing: -0.001px;
 
     @include media.screen('mobile') {
       @include fonts.text(16px, 20px, 400);
     }
+  }
+
+  &__mainText {
+    letter-spacing: -0.1px;
   }
 
   &__secondaryText {
@@ -89,6 +99,7 @@
 
   &__secondaryTextTitle {
     @include fonts.text(20px, 24px, 500);
+
     color: var(--color-text-tertiary);
     letter-spacing: 0.5px;
 

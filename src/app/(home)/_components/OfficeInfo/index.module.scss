@@ -2,7 +2,7 @@
 @use 'mixins/media';
 
 .office {
-  margin-top: 36px;
+  margin-top: 38px;
   letter-spacing: 0.239px;
 
   p {
@@ -48,5 +48,5 @@
 
 .office p:last-of-type {
   margin-bottom: 40px;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.25px;
 }

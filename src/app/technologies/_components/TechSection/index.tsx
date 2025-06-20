@@ -1,5 +1,6 @@
 'use client'
 
+import cn from 'classnames/bind'
 import { FC, useRef } from 'react'
 
 import { AnimatedLine, AnimatedText, AnimationBlock } from '@/ui'
@@ -12,7 +13,10 @@ export interface ITechSection {
   mainText: string
   secondaryText: string
   isLast?: boolean
+  className?: string
 }
+
+const cx = cn.bind(styles)
 
 const TechSection: FC<ITechSection> = ({
   title,
@@ -20,11 +24,12 @@ const TechSection: FC<ITechSection> = ({
   mainText,
   secondaryText,
   isLast,
+  className,
 }) => {
   const ref = useRef(null)
   return (
     <div
-      className={styles.technologiesSection__wrapper}
+      className={cx(styles.technologiesSection__wrapper, className)}
       id={title}
     >
       <section

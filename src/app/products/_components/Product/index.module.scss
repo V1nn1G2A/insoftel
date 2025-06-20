@@ -2,7 +2,7 @@
 @use 'mixins/fonts';
 
 .product {
-  padding: 50px 0 48px;
+  padding: 48px 0 49px;
   overflow-y: hidden;
   position: relative;
 
@@ -62,6 +62,6 @@
   }
 
   @include media.screen('desktop') {
-    padding: 70px 0;
+    padding: 68px 0 72px;
   }
 }

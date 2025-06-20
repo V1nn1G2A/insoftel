@@ -1,7 +1,7 @@
 @use 'mixins/media';
 
 .products {
-  padding: 36px 0 110px;
+  padding: 36px 0 112px;
 
   &__list {
     display: grid;
@@ -14,7 +14,7 @@
   }
 
   @include media.screen('desktop') {
-    padding: 16px 0 66px;
+    padding: 16px 0 64px;
   }
 }
 
