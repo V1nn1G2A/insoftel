@@ -25,17 +25,13 @@
 
 .cards {
   margin-top: 48px;
-
-  @include media.screen('tablet') {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 
   @include media.screen('desktop') {
     margin-top: 76px;
-    display: flex;
     gap: 20px;
   }
 }
@@ -45,6 +41,7 @@
   justify-content: flex-start;
   height: 168px;
   padding: 22px 20px 20px;
+  flex: 1 1 321px;
 
   p {
     letter-spacing: 0.5px;
@@ -66,24 +63,7 @@
     filter: invert(1);
   }
 
-  @include media.screen('tablet') {
-    width: 300px;
-  }
-
   @include media.screen('desktop') {
     height: 208px;
-    width: 350px;
-  }
-}
-
-.card + .card {
-  margin-top: 20px;
-
-  @include media.screen('tablet') {
-    margin-top: 0;
-  }
-
-  @include media.screen('desktop') {
-    margin-top: 0;
   }
 }

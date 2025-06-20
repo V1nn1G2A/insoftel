@@ -2,35 +2,45 @@
 @use 'mixins/media';
 
 .header {
-  width: max-content;
+  flex: 1;
   position: relative;
-  letter-spacing: 2%;
-  overflow: hidden;
   min-width: max-content;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  height: max-content;
 
   --height: 56px;
+
+  @include media.screen('desktop') {
+    order: -1;
+    justify-content: flex-start;
+
+    @include fonts.text(20px, 24px, 400);
+  }
 }
 
 .index {
   @include fonts.text(16px, 20px, 400);
 
-  position: absolute;
-  top: 0;
-  right: 0;
   letter-spacing: 0.5px;
+  position: relative;
+  order: 1;
 
   @include media.screen('desktop') {
-    top: 0;
-    left: 0;
+    order: -1;
+    top: -5px;
+    margin-right: 32px;
+    margin-top: 5px;
 
     @include fonts.text(20px, 24px, 400);
   }
 }
 
 .text {
-  margin: 0 155px 0 0;
   letter-spacing: 1px;
   overflow: hidden;
+  height: max-content;
 
   @include fonts.text(48px, 52px, 400);
 
@@ -39,7 +49,7 @@
   }
 
   @include media.screen('desktop') {
-    margin: 0 0 0 79px;
+    margin: 0 0 0 5px;
     letter-spacing: 2px;
 
     @include fonts.text(90px, 94px, 400);

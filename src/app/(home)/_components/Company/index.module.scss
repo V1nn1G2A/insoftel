@@ -3,14 +3,6 @@
 .company {
   position: relative;
 
-  h2 {
-    margin-right: 144px;
-
-    @include media.screen('desktop') {
-      margin-right: 0;
-    }
-  }
-
   sup {
     @include media.screen('desktop') {
       top: -3px;

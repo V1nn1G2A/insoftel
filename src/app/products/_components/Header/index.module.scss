@@ -39,6 +39,7 @@
 
     text-indent: 54px;
     margin: 40px 0;
+    letter-spacing: 0.5px;
     color: var(--color-text-quaternary);
 
     @include media.screen('desktop') {
