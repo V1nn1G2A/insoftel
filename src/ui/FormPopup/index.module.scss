@@ -7,6 +7,10 @@
     flex-direction: column;
     justify-content: space-between;
     height: 160px;
+
+    @include media.screen('mobile') {
+      height: 104px;
+    }
   }
 
   &__text {
@@ -38,5 +42,29 @@
     @include media.screen('mobile') {
       margin-left: 25px;
     }
+  }
+}
+
+.popup__content .popup__btnRound {
+  @include media.screen('mobile') {
+    width: max-content;
+    filter: none;
+    border: none;
+  }
+}
+
+.popup__content .popup__btnText {
+  @include media.screen('mobile') {
+    margin-right: 8px;
+  }
+}
+
+.popup__btn:hover {
+  .popup__btnRound {
+    background-color: transparent !important;
+  }
+
+  svg {
+    color: var(--color-black-secondary) !important;
   }
 }

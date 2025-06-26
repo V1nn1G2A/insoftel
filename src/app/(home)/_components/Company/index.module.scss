@@ -17,7 +17,7 @@
   }
 
   @include media.screen('desktop') {
-    padding: 55px 0 148px;
+    padding: 55px 0 82px;
   }
 
   &__quote {
@@ -60,16 +60,6 @@
 .company__office {
   order: 1;
 
-  & + div {
-    @include media.screen('desktop') {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      width: 100%;
-      margin-top: 26px;
-    }
-  }
-
   @include media.screen('desktop') {
     letter-spacing: 0.4px;
     order: -1;
@@ -96,6 +86,13 @@
   }
 }
 
+.company__statsContainer {
+  @include media.screen('desktop') {
+    width: 100%;
+    max-width: 662px;
+  }
+}
+
 .company__statsContent {
   display: flex;
   flex-direction: column;
@@ -108,6 +105,11 @@
   @include media.screen('desktop') {
     height: 382px;
     gap: 47px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 26px;
   }
 }
 
@@ -124,13 +126,15 @@
   }
 
   @include media.screen('desktop') {
-    position: absolute;
-    width: 240px;
-    bottom: 37px;
-    right: 470px;
+    display: none;
+  }
+}
 
-    p {
-      letter-spacing: 0.3px;
-    }
+.company__deskBtn {
+  display: none;
+
+  @include media.screen('desktop') {
+    display: flex;
+    margin: 20px auto 0 0;
   }
 }

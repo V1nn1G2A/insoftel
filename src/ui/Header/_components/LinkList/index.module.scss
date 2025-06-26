@@ -39,6 +39,10 @@
     &.link--active {
       color: var(--color-white);
     }
+
+    @include media.screen('mobile') {
+      color: var(--color-white);
+    }
   }
 
   &--light {
@@ -47,6 +51,10 @@
     &:hover,
     &.link--active {
       color: var(--color-black);
+    }
+
+    @include media.screen('mobile') {
+      color: var(--color-text-tertiary);
     }
   }
 

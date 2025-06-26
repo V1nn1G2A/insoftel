@@ -34,20 +34,32 @@ const Company = () => (
       </Quote>
       <div className={styles.company__info}>
         <OfficeInfo className={styles.company__office} />
-        <div className={styles.company__statsContent}>
-          <StatsNumber
-            title="50+"
-            className={styles.company__stats}
+        <div className={styles.company__statsContainer}>
+          <div className={styles.company__statsContent}>
+            <StatsNumber
+              title="50+"
+              className={styles.company__stats}
+            >
+              advanced <br /> developers
+            </StatsNumber>
+            <StatsNumber
+              title="15+"
+              className={styles.company__stats}
+            >
+              years <br />
+              of experience
+            </StatsNumber>
+          </div>
+          <Link
+            href="/about"
+            className={styles.company__deskBtn}
           >
-            advanced <br /> developers
-          </StatsNumber>
-          <StatsNumber
-            title="15+"
-            className={styles.company__stats}
-          >
-            years <br />
-            of experience
-          </StatsNumber>
+            <TextButton
+              text="More About Us"
+              variant="short"
+              colorVariant="dark"
+            />
+          </Link>
         </div>
       </div>
       <Link href="/about">
