@@ -41,7 +41,10 @@ const Card: FC<ICard> = ({ picture, title, text, className }) => {
       <div className={styles.card__content}>
         <div className={styles.card__title}>
           <p>{title}</p>
-          <button onClick={handleOpen}>
+          <button
+            onClick={handleOpen}
+            className={styles.card__button}
+          >
             <PlusIcon />
           </button>
         </div>
