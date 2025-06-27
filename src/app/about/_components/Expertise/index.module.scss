@@ -18,6 +18,7 @@
   p {
     margin-top: 24px;
     text-indent: 48px;
+    font-weight: 300;
 
     @include media.screen('desktop') {
       max-width: 776px;

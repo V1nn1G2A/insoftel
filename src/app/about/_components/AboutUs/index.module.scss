@@ -52,13 +52,13 @@
   text-indent: 45px;
   letter-spacing: -0.1px;
 
-  @include fonts.text(24px, 28px, 400);
+  @include fonts.text(24px, 28px, 300);
 
   @include media.screen('desktop') {
     margin: 0 0 94px;
     text-indent: 40px;
 
-    @include fonts.text(30px, 34px, 400);
+    @include fonts.text(30px, 34px, 300);
   }
 }
 

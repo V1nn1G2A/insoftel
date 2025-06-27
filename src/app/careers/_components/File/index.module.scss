@@ -82,7 +82,7 @@
 .pin {
   position: absolute;
   top: 18px;
-  left: 11px;
+  left: 16px;
 
   @include media.screen('tablet') {
     top: 26px;

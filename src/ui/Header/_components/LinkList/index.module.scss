@@ -130,6 +130,11 @@
     right: 20px;
     width: 166px;
     height: 166px;
+
+    &--active {
+      width: auto;
+      height: auto;
+    }
   }
 
   &--dark {
