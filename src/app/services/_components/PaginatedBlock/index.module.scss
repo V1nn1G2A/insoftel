@@ -1,74 +1,103 @@
+/* stylelint-disable selector-pseudo-class-no-unknown */
 @use 'mixins/fonts';
+@use 'mixins/media';
 
 .paginated-block {
-  display: flex;
-  min-height: 800px;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.paragraph-list {
-  position: absolute;
-  bottom: 84px;
-  right: 0;
-}
-
-.paragraph-paginate {
-  display: none;
-  max-width: 662px;
-  position: absolute;
-  bottom: 186px;
-  left: 0;
-}
-
-.heading {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 48px;
-  margin-bottom: 124px;
-}
-
-.main-title {
-  @include fonts.text(60px, 64px, 400);
-
-  max-width: 500px;
-  letter-spacing: 1.2px;
-  margin-right: 40px;
-}
-
-.heading-text {
-  @include fonts.text(30px, 34px, 400);
-
-  color: var(--color-text-quaternary);
-  max-width: 662px;
-  letter-spacing: 0.6px;
-}
-
-.line {
-  position: absolute;
-  top: 176px;
-  height: 1px;
+  // padding: 67.5px 0;
   width: 100%;
-  background-color: rgb(0 0 0 / 20%);
+  height: max-content;
+  // overflow-y: scroll;
+
+  // @include media.screen('desktop') {
+  //   padding: 112px 0;
+  // }
 }
 
-.paginated-content {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
+.contentWrapper {
+  @include media.screen('desktop') {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.content {
+  @include media.screen('desktop') {
+    height: 624px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 }
 
 .letter {
-  @include fonts.text(250px, 67%, 500);
+  font-size: 180px;
+  display: block;
+  margin: 24px 0 16px;
 
-  color: var(--color-light-gray);
+  @include media.screen('desktop') {
+    display: block;
+    box-sizing: border-box;
+    margin: auto 0 0;
+    font-size: 250px;
+    line-height: 200px;
+    margin-bottom: -20px;
+  }
 }
 
+.paragraphDesk {
+  display: none;
+
+  @include media.screen('desktop') {
+    display: block;
+  }
+}
+
+.paragraphMobile {
+  position: relative;
+  display: block;
+  min-height: 150px;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 48px;
+
+  @include media.screen('desktop') {
+    display: none;
+  }
+}
+
+.paragraphContent {
+  min-height: 150px;
+}
+
+.button {
+  margin-top: 48px;
+
+  @include media.screen('desktop') {
+    margin-top: 32px;
+  }
+}
+
+// SWIPER LAYOUT LOGIC
 .mySwiperWrapper {
+  :global(.swiper) {
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+
+    div {
+      max-width: 100%;
+    }
+  }
+
   :global(.swiper-pagination) {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  :global(.swiper-pagination-bullets) {
+    position: absolute;
+    bottom: 0;
   }
 
   :global(.swiper-pagination-bullet) {
@@ -82,115 +111,5 @@
     background-color: rgb(78 82 86 / 100%);
     width: 10px;
     height: 10px;
-  }
-}
-
-@media (width <= 1400px) {
-  .heading {
-    flex-direction: column;
-  }
-
-  .main-title {
-    margin-right: 0;
-    max-width: 650px;
-    margin-bottom: 24px;
-  }
-
-  .heading-text {
-    max-width: 1000px;
-  }
-
-  .line {
-    top: 244px;
-  }
-}
-
-@media (width <= 1080px) {
-  .paragraph-paginate {
-    display: block;
-  }
-
-  .main-title {
-    @include fonts.text(30px, 34px, 400);
-  }
-
-  .heading-text {
-    @include fonts.text(24px, 28px, 300);
-  }
-
-  .paginated-block {
-    justify-content: start;
-  }
-
-  .heading-text {
-    max-width: 700px;
-  }
-
-  .paragraph-list {
-    display: none;
-  }
-
-  .line {
-    top: 136px;
-  }
-
-  .letter {
-    @include fonts.text(250px, 0, 500);
-  }
-}
-
-@media (width <= 800px) {
-  .paragraph-paginate {
-    max-width: 400px;
-  }
-
-  .heading {
-    margin-bottom: 93px;
-  }
-
-  .heading-text {
-    letter-spacing: 0.5px;
-    max-width: 410px;
-  }
-
-  .main-title {
-    letter-spacing: 0.6px;
-    max-width: 400px;
-  }
-
-  .line {
-    top: 227px;
-  }
-
-  .letter {
-    position: absolute;
-    top: 345px;
-
-    @include fonts.text(180px, 0, 500);
-  }
-}
-
-@media (width <= 600px) {
-  .paragraph-paginate {
-    max-width: 350px;
-  }
-
-  .heading-text {
-    max-width: 350px;
-  }
-
-  .main-title {
-    max-width: 350px;
-  }
-
-  .line {
-    top: 227px;
-  }
-
-  .letter {
-    position: absolute;
-    top: 345px;
-
-    @include fonts.text(180px, 0, 500);
   }
 }
