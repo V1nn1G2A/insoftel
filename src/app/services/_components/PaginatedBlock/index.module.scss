@@ -3,14 +3,24 @@
 @use 'mixins/media';
 
 .paginated-block {
-  // padding: 67.5px 0;
+  padding: 67.5px 0 120px;
   width: 100%;
   height: max-content;
-  // overflow-y: scroll;
+  overflow-y: scroll;
 
-  // @include media.screen('desktop') {
-  //   padding: 112px 0;
-  // }
+  @include media.screen('desktop') {
+    padding: 112px 0 200px;
+  }
+
+  @media (height >= 715px) and (width <= 1279px) {
+    overflow: hidden;
+    padding: 67.5px 0 !important;
+  }
+
+  @media (height >= 848px) and (width >= 1279px) {
+    overflow: hidden;
+    padding: 0 !important;
+  }
 }
 
 .contentWrapper {

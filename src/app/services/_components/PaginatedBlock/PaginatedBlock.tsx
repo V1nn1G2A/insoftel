@@ -20,6 +20,7 @@ interface IPaginatedBlock {
   letter: string
   paginatedInfo: IPaginatedInfo[]
   id: string
+  className?: string
   letterClassName?: string
   headerClassName?: string
   contectClassName?: string
@@ -33,6 +34,7 @@ const PaginatedBlock: React.FC<IPaginatedBlock> = ({
   letter,
   paginatedInfo,
   id,
+  className,
   letterClassName,
   headerClassName,
   contectClassName,
@@ -47,7 +49,7 @@ const PaginatedBlock: React.FC<IPaginatedBlock> = ({
 
   return (
     <div
-      className={cx('paginated-block')}
+      className={cx('paginated-block', className)}
       id={id}
     >
       <Header

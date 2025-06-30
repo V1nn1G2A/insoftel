@@ -4,8 +4,6 @@ import { Paragraph } from '@/ui'
 
 import type { IPaginatedInfo } from '../../model/IPagintedInfo'
 
-import styles from './index.module.scss'
-
 interface IParagraphsList {
   paragraphs: IPaginatedInfo[]
   className?: string

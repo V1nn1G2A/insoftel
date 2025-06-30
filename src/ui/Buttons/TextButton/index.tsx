@@ -29,8 +29,6 @@ const TextButton: React.FC<IExploreButton> = ({
 }) => {
   const [contactsButton, contactsText, size, round] = classNames ?? []
 
-  console.log(contactsText)
-
   const buttonClasses = cx(
     'button',
     variant,
