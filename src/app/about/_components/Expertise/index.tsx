@@ -11,7 +11,10 @@ const Expertise: FC = ({}) => (
       id="Our Expertise"
     >
       <SectionTitle index="02">Our Expertise</SectionTitle>
-      <AnimationBlock type="p">
+      <AnimationBlock
+        type="p"
+        className={styles.expertise__text}
+      >
         From AI-powered automation and predictive analytics to blockchain,
         mobile development, and hardware integration, our custom solutions cover
         a broad range of needs, ensuring every aspect of your brand’s digital
