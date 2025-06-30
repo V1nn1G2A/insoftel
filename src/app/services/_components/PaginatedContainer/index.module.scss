@@ -1,0 +1,110 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.container {
+  height: max-content;
+  min-height: 844px;
+  overflow: hidden;
+
+  @include media.screen('desktop') {
+    min-height: 1010px;
+  }
+
+  @media (height >= 715px) and (width <= 1279px) {
+    margin: 0;
+  }
+
+  @media (height >= 848px) and (width >= 1279px) {
+    margin: 0;
+  }
+}
+
+.content {
+  top: 0;
+  width: 100%;
+  height: max-content;
+  overflow: hidden;
+  min-height: 844px;
+  // overflow-y: scroll;
+
+  @include media.screen('desktop') {
+    min-height: 1024px;
+  }
+}
+
+.block:nth-child(1) {
+  padding-top: 112px;
+}
+
+.content:nth-child(3),
+.content:nth-child(4),
+.content:nth-child(5) {
+  .letter {
+    font-size: 220px;
+  }
+}
+
+.content:nth-child(3) {
+  .paginationContent {
+    @include media.screen('desktop') {
+      div:first-of-type {
+        max-width: 588px;
+        margin-right: 76px;
+      }
+    }
+  }
+
+  .paginationButton {
+    div {
+      margin-right: 14px !important;
+    }
+  }
+}
+
+.content:nth-child(4) {
+  @include media.screen('desktop') {
+    .sectionHeader {
+      padding-bottom: 70px;
+    }
+
+    .paginationContent {
+      > div {
+        max-width: 518px;
+        margin-right: 144px;
+        margin-top: 25px;
+      }
+    }
+
+    .paginationButtonWrapper {
+      margin-right: 0;
+      min-width: 100%;
+    }
+  }
+}
+
+.content:nth-child(5) {
+  @include media.screen('desktop') {
+    h2 {
+      width: 400px;
+      min-width: max-content;
+      letter-spacing: -1px;
+    }
+
+    .sectionHeader {
+      padding-bottom: 72px;
+    }
+
+    .paginationContent {
+      > div {
+        margin-top: 26px;
+        width: 490px;
+        margin-right: 170px;
+      }
+    }
+
+    .paginationButtonWrapper {
+      margin-right: 0;
+      min-width: 100%;
+    }
+  }
+}

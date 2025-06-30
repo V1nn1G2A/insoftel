@@ -27,7 +27,7 @@ const TextButton: React.FC<IExploreButton> = ({
   disabled,
   onClick,
 }) => {
-  const [contactsButton, contactsText, size] = classNames ?? []
+  const [contactsButton, contactsText, size, round] = classNames ?? []
 
   const buttonClasses = cx(
     'button',
@@ -52,7 +52,7 @@ const TextButton: React.FC<IExploreButton> = ({
       disabled={disabled}
     >
       <p className={cx('text', variant, colorVariant, contactsText)}>{text}</p>
-      <div className={cx('round', variant, colorVariant)}>
+      <div className={cx('round', variant, colorVariant, round)}>
         <ArrowIcon className={cx('arrow', variant, colorVariant)} />
       </div>
     </button>

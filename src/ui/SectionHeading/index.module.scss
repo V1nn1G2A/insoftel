@@ -1,4 +1,5 @@
 @use 'mixins/fonts';
+@use 'mixins/media';
 
 .heading {
   position: relative;
@@ -52,7 +53,15 @@
 
   color: var(--color-white);
   position: absolute;
-  top: 12%;
+  top: 90px;
+
+  @include media.screen('tablet') {
+    top: 140px;
+  }
+
+  @include media.screen('desktop') {
+    top: 140px;
+  }
 }
 
 @media (width <= 1400px) {

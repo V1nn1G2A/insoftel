@@ -41,6 +41,10 @@
   @include media.screen('desktop') {
     h3 {
       width: 341px;
+
+      @media (width > 1640px) {
+        width: auto;
+      }
     }
   }
 }

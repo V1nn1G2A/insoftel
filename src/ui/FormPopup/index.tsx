@@ -41,6 +41,12 @@ const FormPopup: React.FC<IFormPopup> = ({ isConfirm, onClick }) => {
             text="Confirm"
             variant="short"
             colorVariant="dark"
+            classNames={[
+              styles.popup__btn,
+              styles.popup__btnText,
+              '',
+              styles.popup__btnRound,
+            ]}
             onClick={closePopup}
           />
         </div>

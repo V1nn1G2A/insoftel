@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
-import { Lenis } from '@/ui'
 import { Footer, Header } from '@/ui'
 import { Popup } from '@/ui/Popup'
 import { PopupProvider } from '@/ui/Popup/PopupContext'
@@ -69,7 +68,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={neueHaas.variable + ' ' + neueWeb.variable}>
         <PopupProvider>
-          <Lenis />
           <Header />
           {children}
           <Footer />
