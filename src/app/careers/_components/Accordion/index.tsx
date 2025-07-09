@@ -1,8 +1,6 @@
-'use client'
-
 import cn from 'classnames/bind'
 import { motion } from 'motion/react'
-import type { FC } from 'react'
+import { type FC } from 'react'
 
 import animation from '@/animations/disolve'
 import Arrow from '@/assets/icons/arrow.svg'
