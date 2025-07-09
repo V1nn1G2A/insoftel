@@ -93,17 +93,23 @@
   }
 }
 
-.about__img {
+.about__imgContainer {
   display: flex;
   margin: 48px 0 0 auto;
+
+  @include media.screen('desktop') {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+  }
+}
+
+.about__img {
   width: 154px;
   height: 152px;
 
   @include media.screen('desktop') {
-    position: absolute;
     width: 348px;
     height: 343px;
-    left: 0;
-    bottom: 20px;
   }
 }

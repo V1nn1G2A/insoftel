@@ -44,10 +44,18 @@
   }
 
   &__logo {
+    width: 115px;
+    height: 115px;
+
+    @include media.screen('desktop') {
+      width: 207px;
+      height: 207px;
+    }
+  }
+
+  &__logoContainer {
     @include media.screen('mobile') {
       order: 5;
-      width: 115px;
-      height: 115px;
       align-self: end;
     }
   }

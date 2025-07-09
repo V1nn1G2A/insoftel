@@ -27,6 +27,7 @@ const TechSection: FC<ITechSection> = ({
   className,
 }) => {
   const ref = useRef(null)
+
   return (
     <div
       className={cx(styles.technologiesSection__wrapper, className)}

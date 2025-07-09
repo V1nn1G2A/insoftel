@@ -1,10 +1,15 @@
 @use 'mixins/fonts';
 @use 'mixins/media';
 
+.services-container {
+  background-color: var(--color-white-secondary);
+}
+
 .services {
   padding: 40px 0;
+  background-color: var(--color-white-secondary);
 
-  img {
+  .logoContainer {
     display: none;
   }
 
@@ -14,7 +19,7 @@
     justify-content: space-between;
     min-height: 1074px;
 
-    img {
+    .logoContainer {
       display: block;
     }
   }
@@ -85,6 +90,7 @@
 
 .grid {
   display: grid;
+  gap: 24px;
 
   @include media.screen('tablet') {
     grid-template-columns: 1fr 1fr;
@@ -101,7 +107,6 @@
 
 .paragraph {
   min-height: auto;
-  margin-bottom: 24px;
 
   & h3 {
     @include fonts.text(30px, 34px, 400);
@@ -144,4 +149,9 @@
       font-weight: 500;
     }
   }
+}
+
+.logo {
+  width: 435px;
+  height: 435px;
 }

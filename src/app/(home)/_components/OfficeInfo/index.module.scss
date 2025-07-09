@@ -8,10 +8,10 @@
   p {
     color: var(--color-text-quaternary);
 
-    @include fonts.text(16px, 20px, 400);
+    @include fonts.text(16px, 20px, 300);
 
     @include media.screen('desktop') {
-      @include fonts.text(20px, 24px, 400);
+      @include fonts.text(20px, 24px, 300);
     }
   }
 

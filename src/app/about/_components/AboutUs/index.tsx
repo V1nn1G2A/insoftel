@@ -1,10 +1,13 @@
+'use client'
+
 import type { FC } from 'react'
 
+import Logo from '@/assets/icons/imageDark.svg'
 import {
   AnimationBlock,
   BigLetter,
   Container,
-  MotionImage,
+  MotionSvg,
   SectionTitle,
   StatsNumber,
 } from '@/ui'
@@ -47,12 +50,10 @@ const AboutUs: FC = ({}) => (
             years <br />
             of experience
           </StatsNumber>
-          <MotionImage
-            width={348}
-            height={343}
-            src="/img/services/1.png"
-            alt="Visual Picture"
+          <MotionSvg
+            Svg={Logo}
             className={styles.about__img}
+            containerClassName={styles.about__imgContainer}
           />
         </div>
       </div>

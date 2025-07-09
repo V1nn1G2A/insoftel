@@ -11,7 +11,9 @@
     height: 188px;
 
     @include media.screen('desktop') {
-      height: 355px;
+      height: auto;
+      min-height: 355px;
+      aspect-ratio: 662 / 355;
     }
   }
 

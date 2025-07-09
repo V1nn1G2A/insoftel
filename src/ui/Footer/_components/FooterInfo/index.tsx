@@ -1,8 +1,7 @@
 'use client'
 
-import { ExploreButton } from '@/ui'
-import { AnimationBlock } from '@/ui'
-import { MotionImage } from '@/ui'
+import Logo from '@/assets/icons/imageLight.svg'
+import { AnimationBlock, ExploreButton, MotionSvg } from '@/ui'
 
 import FooterAddress from '../FooterAddress'
 import FooterNav from '../FooterNav'
@@ -15,12 +14,10 @@ const FooterInfo = () => (
     <FooterNav />
     <FooterAddress />
     <TelegramBlock />
-    <MotionImage
-      src={'/img/footer/1.png'}
-      width={207}
-      height={207}
-      alt="logo"
+    <MotionSvg
+      Svg={Logo}
       className={styles.footerInfo__logo}
+      containerClassName={styles.footerInfo__logoContainer}
     />
     <AnimationBlock className={styles.footerInfo__button}>
       <ExploreButton

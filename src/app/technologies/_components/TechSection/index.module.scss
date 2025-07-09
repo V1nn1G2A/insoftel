@@ -75,7 +75,7 @@
 
   &__mainText,
   &__secondaryText {
-    @include fonts.text(20px, 24px, 400);
+    @include fonts.text(20px, 24px, 300);
 
     color: var(--color-text-quaternary);
     word-spacing: 3px;

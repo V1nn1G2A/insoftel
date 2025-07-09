@@ -2,16 +2,12 @@
 @use 'mixins/media';
 
 .main {
-  height: 844px;
+  height: 100vh;
   position: relative;
 
   button {
     width: 169px;
     height: 76px;
-  }
-
-  @include media.screen('desktop') {
-    height: 796px;
   }
 }
 
@@ -29,25 +25,35 @@
   }
 }
 
-.text {
+.center {
+  height: 71px;
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -90%);
+}
+
+.text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   color: var(--color-white);
   letter-spacing: 0.85px;
+  width: max-content;
 
   @include fonts.text(20px, 24px, 300);
 }
 
 .typed {
   position: absolute;
-  height: 20px;
-  top: 45%;
+  top: 0;
   left: 50%;
+  height: 20px;
   color: var(--color-white);
   text-transform: uppercase;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   white-space: nowrap;
   user-select: none;
 

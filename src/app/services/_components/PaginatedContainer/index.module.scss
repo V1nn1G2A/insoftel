@@ -1,10 +1,15 @@
 @use 'mixins/fonts';
 @use 'mixins/media';
 
+.container-wrapper {
+  background-color: var(--color-white-secondary);
+}
+
 .container {
   height: max-content;
   min-height: 844px;
   overflow: hidden;
+  background-color: var(--color-white-secondary);
 
   @include media.screen('desktop') {
     min-height: 1010px;

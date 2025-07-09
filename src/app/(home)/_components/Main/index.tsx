@@ -70,14 +70,16 @@ const Main: FC = ({}) => {
               />
             </div>
           </div>
-          <div className={styles.typed}>
-            <span
-              ref={ref => {
-                typingPlace.current.center = ref
-              }}
-            />
+          <div className={styles.center}>
+            <div className={styles.typed}>
+              <span
+                ref={ref => {
+                  typingPlace.current.center = ref
+                }}
+              />
+            </div>
+            <p className={styles.text}>Your Vision . Our Code</p>
           </div>
-          <p className={styles.text}>Your Vision . Our Code</p>
           <div className={styles.bottom}>
             <div>
               <BigLetter
