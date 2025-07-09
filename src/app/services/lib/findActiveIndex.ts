@@ -1,7 +1,7 @@
 import { IPosition } from '../model'
 
 export const findActiveIndex = (positions: IPosition[]) => {
-  for (let i = 0; i < positions.length; i++) {
+  for (let i = 0; i < positions?.length; i++) {
     const position = positions[i]
 
     if (

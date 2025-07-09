@@ -28,7 +28,7 @@
   }
 
   &__content {
-    @include fonts.text(16px, 20px, 400);
+    @include fonts.text(16px, 20px, 300);
 
     margin-bottom: 20px;
     letter-spacing: 0.3px;
