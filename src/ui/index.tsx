@@ -1,3 +1,4 @@
+export { default as MotionSvg } from './MotionSvg'
 export { default as VideoBackground } from './VideoBackground'
 export { default as SectionTitle } from './SectionTitle'
 export { default as Footer } from './Footer'

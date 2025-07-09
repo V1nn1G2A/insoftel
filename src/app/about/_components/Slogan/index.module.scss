@@ -36,7 +36,7 @@
     @include media.screen('desktop') {
       letter-spacing: 2px;
 
-      @include fonts.text(90px, 90px, 400);
+      @include fonts.text(90px, 94px, 400);
     }
   }
 

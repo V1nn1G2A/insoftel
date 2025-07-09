@@ -3,8 +3,11 @@
 
 .form {
   width: 100%;
-  max-width: 662px;
   margin-left: auto;
+
+  @include media.screen('desktop') {
+    width: 50%;
+  }
 }
 
 .file {
@@ -35,6 +38,10 @@
 .button {
   opacity: 0.5;
   margin-bottom: 30px !important;
+
+  @include media.screen('desktop') {
+    margin-bottom: 50px !important;
+  }
 }
 
 .formFilled .button {

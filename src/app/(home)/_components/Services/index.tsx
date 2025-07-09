@@ -1,10 +1,13 @@
+'use client'
+
 import classNames from 'classnames/bind'
 import Link from 'next/link'
 
+import Logo from '@/assets/icons/imageDark.svg'
 import {
   AnimationBlock,
   Container,
-  MotionImage,
+  MotionSvg,
   SectionTitle,
   TextButton,
 } from '@/ui'
@@ -18,15 +21,14 @@ const cx = classNames.bind(styles)
 
 const Services = () => {
   return (
-    <Container>
+    <Container className={cx('services-container')}>
       <section className={cx('services')}>
         <div className={cx('title-block')}>
           <SectionTitle index="01">Services</SectionTitle>
-          <MotionImage
-            src="/img/services/1.png"
-            alt="services-image"
-            width={435}
-            height={435}
+          <MotionSvg
+            Svg={Logo}
+            className={styles.logo}
+            containerClassName={styles.logoContainer}
           />
         </div>
         <div className={cx('info-block')}>

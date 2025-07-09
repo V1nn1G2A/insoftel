@@ -15,7 +15,7 @@ const Services = () => (
       title="Services"
       letter="S"
     />
-    <Container>
+    <Container className={cx('services-wrapper')}>
       <section className={cx('services-content')}>
         <PaginatedContainer />
       </section>

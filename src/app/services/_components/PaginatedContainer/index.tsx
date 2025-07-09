@@ -34,8 +34,6 @@ export const PaginatedContainer: FC<IPaginatedContainer> = ({ className }) => {
     '(min-height: 848px) and (min-width: 1279px )'
   )
 
-  console.log(positions)
-
   useEffect(() => {
     if (!containerRef.current) return
 
@@ -116,7 +114,7 @@ export const PaginatedContainer: FC<IPaginatedContainer> = ({ className }) => {
   }
 
   const getContainerWrapperHeight = () => {
-    if (mobileMatch || deskMatch) return '4388px'
+    if (mobileMatch || deskMatch) return `${1650 + positions?.[0]?.end}px`
     return 'max-content'
   }
 
@@ -137,7 +135,7 @@ export const PaginatedContainer: FC<IPaginatedContainer> = ({ className }) => {
 
   const getZIndex = (index: number) => {
     if (mobileMatch || deskMatch) return activeMatchIndex === index ? 1 : 0
-    return 0
+    return activeIndex === index ? 1 : 0
   }
 
   const getContainerMargins = () => {

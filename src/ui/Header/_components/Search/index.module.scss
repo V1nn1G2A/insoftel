@@ -43,6 +43,8 @@
   color: inherit;
   transition: all 0.3s ease;
 
+  @include fonts.text(16px, 20px, 400);
+
   &::placeholder {
     color: var(--color-text-secondary);
 
@@ -51,7 +53,7 @@
 
   &--dark {
     background-color: #ffffff1a;
-    border-color: #ffffff1a;
+    border-color: transparent;
 
     & + svg {
       color: rgba($color: #fff, $alpha: 30%);
@@ -70,7 +72,7 @@
 
   &--light {
     background-color: #0000000d;
-    border-color: #0000000d;
+    border-color: transparent;
 
     & + svg {
       color: rgba($color: #000, $alpha: 50%);

@@ -1,7 +1,9 @@
 import cx from 'classnames'
-import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
+
+import LogoDark from '@/assets/icons/imageDark.svg'
+import LogoLight from '@/assets/icons/imageLight.svg'
 
 import { links } from './CONST'
 
@@ -43,15 +45,19 @@ const LinkList: FC<LinkListProps> = ({
         </li>
       ))}
     </ul>
-    <Image
-      src={theme === 'dark' ? '/img/footer/1.png' : '/img/services/1.png'}
-      width={312}
-      height={312}
-      alt="linkLogo"
-      className={cx(styles.linkLogo, {
-        [styles['linkLogo--active']]: hasQuery,
-      })}
-    />
+    {theme === 'dark' ? (
+      <LogoLight
+        className={cx(styles.linkLogo, {
+          [styles['linkLogo--active']]: hasQuery,
+        })}
+      />
+    ) : (
+      <LogoDark
+        className={cx(styles.linkLogo, {
+          [styles['linkLogo--active']]: hasQuery,
+        })}
+      />
+    )}
   </>
 )
 

@@ -13,7 +13,7 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (width >= 768px) {
     display: flex;
     justify-content: space-between;
     gap: 100px;
@@ -24,7 +24,7 @@
   width: 776px;
 
   p {
-    @include fonts.text(30px, 34px, 400);
+    @include fonts.text(30px, 34px, 300);
 
     letter-spacing: -0.07px;
     margin-bottom: 81px;
