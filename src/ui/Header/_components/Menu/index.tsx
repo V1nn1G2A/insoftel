@@ -36,6 +36,7 @@ const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
           onChange={handleSearch}
           value={query}
           onFocus={() => setIsOpen(true)}
+          onClear={() => setQuery('')}
         />
       </div>
 

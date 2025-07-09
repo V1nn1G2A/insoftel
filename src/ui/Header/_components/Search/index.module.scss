@@ -87,3 +87,22 @@
     }
   }
 }
+
+.clear {
+  position: absolute;
+  right: 46px;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &--dark {
+    color: rgba($color: #fff, $alpha: 30%);
+  }
+
+  &--light {
+    color: rgba($color: #000, $alpha: 50%);
+  }
+}

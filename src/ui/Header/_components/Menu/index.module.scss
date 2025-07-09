@@ -32,16 +32,18 @@
   @include fonts.text(16px, 20px, 400);
 
   @media (hover: hover) and (pointer: fine) {
-    &:hover,
-    &:focus,
-    &:active {
+    &:hover {
       border-color: inherit;
     }
   }
 
   &--active {
-    border-color: transparent;
     margin-left: 20px;
+    border-color: transparent;
+
+    &:hover {
+      border-color: transparent;
+    }
   }
 }
 
