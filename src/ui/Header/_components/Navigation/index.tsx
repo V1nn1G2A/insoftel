@@ -16,6 +16,7 @@ interface NavigationProps {
   value: string
   results?: ISearchResult[]
   query: string
+  onClear: () => void
 }
 
 const Navigation: FC<NavigationProps> = ({
@@ -25,6 +26,7 @@ const Navigation: FC<NavigationProps> = ({
   value,
   results,
   query,
+  onClear,
 }) => {
   const [hoverLink, setHoverLink] = useState('')
 
@@ -41,6 +43,7 @@ const Navigation: FC<NavigationProps> = ({
           theme={theme}
           onChange={onChange}
           value={value}
+          onClear={onClear}
         />
       </div>
       <SearchResult
