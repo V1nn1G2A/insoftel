@@ -1,17 +1,9 @@
-import type { FC } from 'react';
+import type { FC } from 'react'
 
+import { Quote } from '@/ui'
+import { Container } from '@/ui'
 
-
-import { Quote } from '@/ui';
-import { Container } from '@/ui';
-
-
-
-import styles from './index.module.scss';
-
-
-
-
+import styles from './index.module.scss'
 
 const QuoteSection: FC = ({}) => (
   <Container>
@@ -20,10 +12,10 @@ const QuoteSection: FC = ({}) => (
       className={styles.quote}
       id="AboutQuote"
     >
-      At Insoftel, custom software is just the beginning. By combining deep
-      software expertise with hardware integration, we create adaptable,
-      high-impact solutions that empower clients to lead with confidence and
-      innovation
+      At Insoftel Technologies, custom software is just the beginning. By
+      combining deep software expertise with hardware integration, we create
+      adaptable, high-impact solutions that empower clients to lead with
+      confidence and innovation
     </Quote>
   </Container>
 )

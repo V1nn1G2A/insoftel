@@ -35,12 +35,18 @@ const Search: FC<ISearch> = ({ theme, onClear, ...props }) => {
           onBlur={() => setIsFocused(false)}
         />
         <SearcIcon className={cx({ [styles.iconActive]: props.value })} />
-        <button
-          className={cx(styles.clear, { [styles.clearActive]: props.value }, styles[`clear--${theme}`] )}
-          onClick={onClear}
-        >
-          <CrossIcon />
-        </button>
+        {props.value && (
+          <button
+            className={cx(
+              styles.clear,
+              { [styles.clearActive]: props.value },
+              styles[`clear--${theme}`]
+            )}
+            onClick={onClear}
+          >
+            <CrossIcon />
+          </button>
+        )}
       </div>
     </div>
   )

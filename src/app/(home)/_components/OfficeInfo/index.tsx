@@ -21,12 +21,8 @@ const OfficeInfo: FC<IOfficeInfo> = ({ className }) => (
       competitive industry.
     </AnimationBlock>
     <div className={styles.office__contacts}>
-      <AnimationBlock type="p">
-        Dubai, UAE <br /> Istanbul, Turkey
-      </AnimationBlock>
-      <AnimationBlock type="p">
-        [ Head Office ] <br /> [ Office ]
-      </AnimationBlock>
+      <AnimationBlock type="p">Dubai, UAE</AnimationBlock>
+      <AnimationBlock type="p">[ Head Office ]</AnimationBlock>
     </div>
   </div>
 )

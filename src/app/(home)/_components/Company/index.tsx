@@ -27,10 +27,10 @@ const Company = () => (
         author="Founder of Insoftel Technologies"
         className={styles.company__quote}
       >
-        At Insoftel, custom software is just the beginning. By combining deep
-        software expertise with hardware integration, we create adaptable,
-        high-impact solutions that empower clients to lead with confidence and
-        innovation
+        At Insoftel Technologies, custom software is just the beginning. By
+        combining deep software expertise with hardware integration, we create
+        adaptable, high-impact solutions that empower clients to lead with
+        confidence and innovation
       </Quote>
       <div className={styles.company__info}>
         <OfficeInfo className={styles.company__office} />

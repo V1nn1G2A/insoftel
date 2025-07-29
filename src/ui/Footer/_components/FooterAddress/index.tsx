@@ -23,17 +23,6 @@ const FooterAddress = () => (
           type="span"
           className={styles.footerAddress__subtitle}
         >
-          [ Office – Istanbul ]
-        </AnimationBlock>
-        <AnimationBlock type="p">
-          Business Center, Nur Sokak 2A, Merdivenköy, Kadıköy, Istanbul, Turkey
-        </AnimationBlock>
-      </li>
-      <li className={styles.footerAddress__item}>
-        <AnimationBlock
-          type="span"
-          className={styles.footerAddress__subtitle}
-        >
           [ Email ]
         </AnimationBlock>
         <Link
