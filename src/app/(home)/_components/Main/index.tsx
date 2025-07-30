@@ -5,11 +5,13 @@ import type { FC } from 'react'
 import { useRef } from 'react'
 
 import { useMediaQuery } from '@/hooks/useMediaQuery'
+import { useLenis } from '@/providers'
 import { VideoBackground } from '@/ui'
 import { BigLetter } from '@/ui'
 import { ExploreButton } from '@/ui'
 import { Container } from '@/ui'
 
+import { smoothAutoScroll } from '../../../../lib/smoothAutoScroll'
 import strings from '../../_constants/MAIN'
 import useTypedText from '../../hooks/useTypedText'
 
@@ -30,9 +32,15 @@ const Main: FC = ({}) => {
     typingPlace,
     strings,
   })
+  const ref = useRef<HTMLDivElement>(null)
+  const requestId = useRef<number>(null)
+  const lenis = useLenis()
 
   return (
-    <section className={styles.main}>
+    <section
+      className={styles.main}
+      ref={ref}
+    >
       <VideoBackground
         src="/video/background.mp4"
         className={styles.video}
@@ -96,7 +104,13 @@ const Main: FC = ({}) => {
                 }}
               />
             </div>
-            <ExploreButton classNames={['', '', styles.exploreButton]} />
+            <ExploreButton
+              classNames={['', '', styles.exploreButton]}
+              onClick={(e: React.MouseEvent) => {
+                e.stopPropagation()
+                smoothAutoScroll(requestId, lenis)
+              }}
+            />
           </div>
         </Container>
       </VideoBackground>

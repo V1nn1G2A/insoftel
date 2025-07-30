@@ -3,6 +3,8 @@
 import { useEffect, useRef } from 'react'
 import Typed from 'typed.js'
 
+import { smoothAutoScroll } from '@/lib/smoothAutoScroll'
+import { useLenis } from '@/providers'
 import { AnimatedText } from '@/ui'
 
 import { ExploreButton } from '../Buttons'
@@ -20,6 +22,8 @@ const SectionHeading = ({
 }) => {
   const ref = useRef<HTMLHeadingElement>(null)
   const typedRef = useRef<Typed | null>(null)
+  const requestId = useRef<number>(null)
+  const lenis = useLenis()
   let width
 
   switch (title) {
@@ -74,10 +78,20 @@ const SectionHeading = ({
             <div className={styles.miniButton}>
               <ExploreButton
                 classNames={['mini-text', 'mini-round', 'mini-button']}
+                onClick={(e: React.MouseEvent) => {
+                  e.stopPropagation()
+                  smoothAutoScroll(requestId, lenis)
+                }}
               />
             </div>
             <div className={styles.button}>
-              <ExploreButton classNames={['mini-text']} />
+              <ExploreButton
+                classNames={['mini-text']}
+                onClick={(e: React.MouseEvent) => {
+                  e.stopPropagation()
+                  smoothAutoScroll(requestId, lenis)
+                }}
+              />
             </div>
           </div>
         </Container>

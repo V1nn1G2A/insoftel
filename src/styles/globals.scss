@@ -110,6 +110,10 @@ a {
   overflow: hidden;
 }
 
+.typed-cursor {
+  display: none !important; // убирает курсор при вводе букв на главной странице
+}
+
 // Это можно комментить, чтобы менять цвет body
 // @media (prefers-color-scheme: dark) {
 //   html {

@@ -2,7 +2,7 @@
 @use 'mixins/fonts';
 
 .header {
-  padding: 20px 0;
+  padding: 18px 0;
   background-color: transparent;
   position: absolute;
   top: 0;
@@ -12,25 +12,17 @@
   transition: all 0.3s ease;
 
   &--dark {
+    background-color: var(--color-black);
     color: var(--color-white);
   }
 
   &--light {
+    background-color: var(--color-white-secondary);
     color: var(--color-black);
   }
 
   @include media.screen('mobile') {
     padding: 18px 0;
-  }
-}
-
-.header--active {
-  &.header--dark {
-    background-color: var(--color-black);
-  }
-
-  &.header--light {
-    background-color: var(--color-white-secondary);
   }
 }
 

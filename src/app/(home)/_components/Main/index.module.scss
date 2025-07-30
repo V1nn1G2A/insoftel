@@ -141,6 +141,11 @@
   align-items: center;
   gap: 14px;
 
+  @include media.screen('desktop') {
+    gap: 15px;
+    padding: 8px 4px 8px 30px;
+  }
+
   & p {
     font-size: 16px;
     font-weight: 300;

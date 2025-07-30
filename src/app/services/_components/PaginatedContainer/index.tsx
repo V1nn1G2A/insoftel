@@ -5,6 +5,7 @@ import { type FC, useEffect, useRef, useState } from 'react'
 import { flushSync } from 'react-dom'
 
 import { useMediaQuery } from '@/hooks'
+import { useLenis } from '@/providers'
 
 import { servicesPagination } from '../../_constants/SERVICES'
 import { findActiveIndex, findActiveMatchIndex } from '../../lib'
@@ -20,6 +21,7 @@ interface IPaginatedContainer {
 const cx = cn.bind(styles)
 
 export const PaginatedContainer: FC<IPaginatedContainer> = ({ className }) => {
+  const lenis = useLenis()
   const containerWrapperRef = useRef<React.ComponentRef<'div'>>(null)
   const containerRef = useRef<React.ComponentRef<'div'>>(null)
   const refs = useRef<React.ComponentRef<'div'>[]>([])
@@ -28,7 +30,7 @@ export const PaginatedContainer: FC<IPaginatedContainer> = ({ className }) => {
   const [positions, setPositions] = useState<IPosition[]>([])
   const [isRelative, setIsRelative] = useState(false)
   const mobileMatch = useMediaQuery(
-    '(min-height: 715px) and (max-width: 1279px)'
+    '(min-height: 780px) and (max-width: 1279px)'
   )
   const deskMatch = useMediaQuery(
     '(min-height: 848px) and (min-width: 1279px )'
@@ -82,31 +84,31 @@ export const PaginatedContainer: FC<IPaginatedContainer> = ({ className }) => {
     })
 
     const onWindowScroll = () => {
-      const activeIndex = findActiveIndex(positions)
+      const activeIndex = findActiveIndex(positions, lenis)
       setActiveIndex(activeIndex)
     }
 
-    window.addEventListener('scroll', onWindowScroll)
+    lenis.on('scroll', onWindowScroll)
     resizeObserver.observe(containerRef.current)
 
     return () => {
-      window.removeEventListener('scroll', onWindowScroll)
+      lenis.off('scroll', onWindowScroll)
       resizeObserver.disconnect()
     }
-  }, [])
+  }, [lenis])
 
   useEffect(() => {
     const handleScroll = () => {
-      const activeIndex = findActiveMatchIndex(positions)
+      const activeIndex = findActiveMatchIndex(positions, lenis)
       setActiveMatchIndex(activeIndex)
     }
 
-    window.addEventListener('scroll', handleScroll)
+    lenis.on('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
+      lenis.off('scroll', handleScroll)
     }
-  }, [mobileMatch, deskMatch, positions])
+  }, [mobileMatch, deskMatch, positions, lenis])
 
   const getContainerHeight = () => {
     if (mobileMatch || deskMatch) return 'max-content'
