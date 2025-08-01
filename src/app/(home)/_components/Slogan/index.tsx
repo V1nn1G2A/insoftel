@@ -8,8 +8,18 @@ const Slogan: FC = ({}) => (
   <AnimationBlock className={styles.wrapper}>
     <p className={styles.slogan}>
       We create custom software solutions{' '}
-      <AnimationBlock type="span">tailored for businesses and </AnimationBlock>
-      <AnimationBlock type="span">government entities</AnimationBlock>
+      <AnimationBlock
+        type="span"
+        amount={0.7}
+      >
+        tailored for businesses and{' '}
+      </AnimationBlock>
+      <AnimationBlock
+        type="span"
+        amount={0.7}
+      >
+        government entities
+      </AnimationBlock>
     </p>
   </AnimationBlock>
 )

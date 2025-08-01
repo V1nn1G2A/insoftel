@@ -36,6 +36,10 @@
     margin-top: 16px;
 
     @include fonts.text(18px, 22px, 300);
+
+    @include media.screen('desktop-l') {
+      @include fonts.text(22px, 29px, 300);
+    }
   }
 
   > div {
@@ -63,6 +67,10 @@
 
     @include media.screen('desktop') {
       letter-spacing: 0.8px;
+    }
+
+    @include media.screen('desktop-l') {
+      @include fonts.text(28px, 35.37px, 300);
     }
   }
 
