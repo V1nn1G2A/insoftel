@@ -9,4 +9,8 @@
   @include media.screen('tablet') {
     padding: 48px 0;
   }
+
+  @include media.screen('desktop') {
+    padding: 63px 0;
+  }
 }

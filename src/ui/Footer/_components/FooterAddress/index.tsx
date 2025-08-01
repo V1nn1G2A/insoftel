@@ -12,7 +12,7 @@ const FooterAddress = () => (
           type="span"
           className={styles.footerAddress__subtitle}
         >
-          [ Head Office – Dubai ]
+          [ Office ]
         </AnimationBlock>
         <AnimationBlock type="p">
           The Binary Tower, 32 Marasi Drive St., Business Bay, Dubai, UAE

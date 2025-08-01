@@ -5,6 +5,10 @@
   display: flex;
   flex-direction: column;
   max-width: 320px;
+
+  @include media.screen('desktop-l') {
+    max-width: none;
+  }
 }
 
 .title {
@@ -36,6 +40,10 @@
     letter-spacing: 0.8px;
 
     @include fonts.text(20px, 24px, 300);
+  }
+
+  @include media.screen('desktop-l') {
+    @include fonts.text(24px, 29.01px, 300);
   }
 }
 

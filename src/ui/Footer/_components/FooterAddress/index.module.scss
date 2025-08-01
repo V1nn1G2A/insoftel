@@ -12,11 +12,19 @@
     order: 3;
   }
 
+  @include media.screen('desktop-l') {
+    max-width: 346px;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
     gap: 32px;
     list-style: none;
+
+    @include media.screen('desktop-l') {
+      gap: 40px;
+    }
   }
 
   &__item {
@@ -28,8 +36,11 @@
 
     color: var(--color-white);
 
-    @include media.screen('desktop') {
-      gap: 8px;
+    gap: 8px;
+    @include media.screen('desktop-l') {
+      gap: 10px;
+
+      @include fonts.text(20px, 25.26px, 400);
     }
   }
 
@@ -53,5 +64,9 @@
 
   &:hover {
     color: var(--color-text-secondary);
+  }
+
+  @include media.screen('desktop-l') {
+    @include fonts.text(20px, 25.26px, 400);
   }
 }

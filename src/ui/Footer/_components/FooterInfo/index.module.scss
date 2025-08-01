@@ -1,4 +1,5 @@
 @use 'mixins/media';
+@use 'mixins/fonts';
 
 .footerInfo {
   display: grid;
@@ -20,6 +21,12 @@
     padding-bottom: 47px;
   }
 
+  @include media.screen('desktop-l') {
+    grid-template-columns: 0.68fr 1fr 1fr;
+    grid-gap: 256px 0;
+    padding-bottom: 48px;
+  }
+
   &__button {
     grid-column-start: 3;
     display: flex;
@@ -38,6 +45,10 @@
       }
     }
 
+    @include media.screen('desktop-l') {
+      padding-bottom: 16px;
+    }
+
     & p {
       letter-spacing: 0;
     }
@@ -50,6 +61,11 @@
     @include media.screen('desktop') {
       width: 207px;
       height: 207px;
+    }
+
+    @include media.screen('desktop-l') {
+      width: 261px;
+      height: 261px;
     }
   }
 
@@ -73,5 +89,22 @@
   @include media.screen('mobile') {
     width: 100%;
     justify-content: space-between;
+  }
+
+  @include media.screen('desktop-l') {
+    gap: 12px;
+
+    & p {
+      @include fonts.text(20px, 25.26px, 'regular');
+    }
+
+    & div {
+      width: 75px;
+      height: 75px;
+
+      & svg {
+        transform: scale(1.38);
+      }
+    }
   }
 }
