@@ -10,9 +10,12 @@
   width: 100%;
   z-index: 9000;
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 
   &--dark {
-    background-color: var(--color-black);
+    --color-black-rgb: 21, 23, 25;
+
+    background-color: rgb(var(--color-black-rgb), var(--header-bg-opacity));
     color: var(--color-white);
   }
 
@@ -23,6 +26,16 @@
 
   @include media.screen('mobile') {
     padding: 18px 0;
+  }
+}
+
+.header--active {
+  &.header--dark {
+    background-color: var(--color-black);
+  }
+
+  &.header--light {
+    background-color: var(--color-white-secondary);
   }
 }
 

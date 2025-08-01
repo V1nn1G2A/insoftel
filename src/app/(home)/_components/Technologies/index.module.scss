@@ -33,6 +33,11 @@
     max-width: 662px;
     width: 100%;
   }
+
+  @include media.screen('desktop-l') {
+    max-width: 798px;
+    width: 100%;
+  }
 }
 
 .technologies__text {
@@ -49,6 +54,10 @@
     text-indent: 43px;
     margin-bottom: 64px;
     letter-spacing: 1.1px;
+  }
+
+  @include media.screen('desktop-l') {
+    @include fonts.text(44px, 48.34px, 200);
   }
 }
 

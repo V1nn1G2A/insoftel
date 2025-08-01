@@ -1,0 +1,49 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.word {
+  height: fit-content;
+  display: inline-flex;
+  font-size: 48px;
+  font-weight: bold;
+  overflow: var(--overflow);
+  font-family: sans-serif;
+  color: var(--color-white);
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.letter {
+  display: inline-block;
+  animation: crawl-in 3s ease both;
+  animation-delay: calc(var(--count) * 0.05s);
+
+  @include fonts.text(31px, 100%, 600);
+
+  @media (width >= 1401px) {
+    @include fonts.text(113px, 100%, 500);
+  }
+}
+
+@keyframes crawl-in {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+    width: var(--width);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+    width: max-content;
+  }
+
+  68% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    width: var(--width);
+  }
+}

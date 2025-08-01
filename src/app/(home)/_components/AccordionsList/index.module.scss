@@ -15,4 +15,8 @@
   @include media.screen('desktop') {
     max-width: 660px;
   }
+
+  @include media.screen('desktop-l') {
+    max-width: 798px;
+  }
 }

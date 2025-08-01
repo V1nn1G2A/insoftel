@@ -1,8 +1,3 @@
-const MAIN = [
-  'innovative ^2000',
-  'software ^2000',
-  'telecommunication ^2000',
-  'technologies ^2000',
-]
+const MAIN = ['innovative', 'software', 'telecommunication', 'technologies']
 
 export default MAIN

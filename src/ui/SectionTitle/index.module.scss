@@ -54,6 +54,10 @@
 
     @include fonts.text(90px, 94px, 400);
   }
+
+  @include media.screen('desktop-l') {
+    @include fonts.text(109px, 113.61px, 400);
+  }
 }
 
 .header--dark {

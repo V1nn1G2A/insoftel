@@ -18,8 +18,9 @@ export const LenisProvider = ({ children }: { children: ReactNode }) => {
       wrapper: wrapperRef.current,
       content: contentRef.current,
       duration: 1.2,
-      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      easing: t => Math.min(1, 1 - Math.pow(2, -8 * t)),
       smoothWheel: true,
+      syncTouch: true,
     })
 
     setLenis(lenis)

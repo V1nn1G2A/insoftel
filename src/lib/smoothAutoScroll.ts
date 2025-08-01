@@ -5,7 +5,8 @@ import { RefObject } from 'react'
 
 export const smoothAutoScroll = (
   requestId: RefObject<number | null>,
-  lenis: Lenis
+  lenis: Lenis,
+  target: number
 ) => {
   if (!lenis) return
 
@@ -19,8 +20,7 @@ export const smoothAutoScroll = (
   }
 
   const scrollStep = () => {
-    lenis.resize()
-    if (lenis.scroll >= lenis.limit) {
+    if (lenis.scroll >= target) {
       stopFunction()
       return
     }
@@ -30,7 +30,11 @@ export const smoothAutoScroll = (
     requestId.current = requestAnimationFrame(scrollStep)
   }
 
-  scrollStep()
+  const setAnimation = () => {
+    requestId.current = requestAnimationFrame(scrollStep)
+  }
+
+  setAnimation()
 
   window.addEventListener('click', stopFunction)
 }
