@@ -24,7 +24,12 @@ const Services = () => {
     <Container className={cx('services-container')}>
       <section className={cx('services')}>
         <div className={cx('title-block')}>
-          <SectionTitle index="01">Services</SectionTitle>
+          <SectionTitle
+            index="01"
+            className={styles.title}
+          >
+            Services
+          </SectionTitle>
           <MotionSvg
             Svg={Logo}
             className={styles.logo}
@@ -51,11 +56,15 @@ const Services = () => {
             ))}
           </div>
           <AnimationBlock>
-            <Link href="/services">
+            <Link
+              href="/services"
+              className={styles.link}
+            >
               <TextButton
                 text="Explore Our Services"
                 variant="long"
                 colorVariant="dark"
+                classNames={[styles.button, styles.buttonText, '', '']}
               />
             </Link>
           </AnimationBlock>

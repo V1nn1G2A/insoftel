@@ -11,9 +11,17 @@
     flex-direction: column;
     gap: 16px;
     list-style: none;
+
+    @include media.screen('desktop-l') {
+      gap: 20.21px;
+    }
   }
 
   &__item {
+    @include media.screen('desktop-l') {
+      @include fonts.text(20px, 25.26px, 400);
+    }
+
     @include fonts.text(16px, 20px, 400);
 
     color: var(--color-white);

@@ -23,6 +23,10 @@
       display: block;
     }
   }
+
+  @include media.screen('desktop-l') {
+    padding: 100px 0 103px;
+  }
 }
 
 .title-block {
@@ -68,6 +72,10 @@
     width: 50%;
     max-width: 662px;
   }
+
+  @include media.screen('desktop-l') {
+    max-width: none;
+  }
 }
 
 .text-top {
@@ -86,6 +94,16 @@
     letter-spacing: 0.69px;
     margin: 0 0 85px;
   }
+
+  @include media.screen('desktop-l') {
+    @include fonts.text(44px, 48.34px, 400);
+
+    letter-spacing: 0;
+    margin: 0 0 110px;
+    &::first-letter {
+      margin-left: 10px;
+    }
+  }
 }
 
 .grid {
@@ -103,6 +121,11 @@
     row-gap: 36px;
     margin-bottom: 57px;
   }
+
+  @include media.screen('desktop-l') {
+    row-gap: 50px;
+    margin-bottom: 127px;
+  }
 }
 
 .paragraph {
@@ -119,6 +142,16 @@
       letter-spacing: 1px;
       margin-bottom: 16px;
     }
+
+    @include media.screen('desktop-l') {
+      @include fonts.text(43px, 48.34px, 400);
+
+      margin-bottom: 18px;
+    }
+  }
+
+  @include media.screen('desktop-l') {
+    letter-spacing: 1px;
   }
 }
 
@@ -154,4 +187,33 @@
 .logo {
   width: 435px;
   height: 435px;
+
+  @include media.screen('desktop-l') {
+    width: 549px;
+    height: 549px;
+
+    display: flex;
+  }
+}
+
+.buttonText {
+  @include media.screen('desktop-l') {
+    @include fonts.text(28px, 35px, 500);
+  }
+}
+
+.title {
+  & h2 {
+    @include media.screen('desktop-l') {
+      @include fonts.text(109px, 113.61px, 400);
+
+      margin: 0 0 0 14px;
+    }
+  }
+
+  & sup {
+    @include media.screen('desktop-l') {
+      @include fonts.text(24px, 29.01px, 400);
+    }
+  }
 }

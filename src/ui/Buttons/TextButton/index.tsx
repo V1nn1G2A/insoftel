@@ -33,7 +33,6 @@ const TextButton: React.FC<IExploreButton> = ({
     'button',
     variant,
     colorVariant,
-    contactsButton,
     size,
     { disabled: disabled },
     {
@@ -47,7 +46,7 @@ const TextButton: React.FC<IExploreButton> = ({
 
   return (
     <button
-      className={buttonClasses}
+      className={cx(buttonClasses, contactsButton)}
       onClick={handleClick}
       disabled={disabled}
     >
