@@ -23,9 +23,15 @@
   @include media.screen('desktop') {
     @include fonts.text(80px, 84px, 400);
   }
+
+  @include media.screen('desktop-l') {
+    max-width: 795px;
+
+    @include fonts.text(97px, 106.1px, 400);
+  }
 }
 
-.slogan span:first-of-type {
+.slogan span:nth-of-type(2) {
   color: rgb(21 23 25 / 50%);
 }
 

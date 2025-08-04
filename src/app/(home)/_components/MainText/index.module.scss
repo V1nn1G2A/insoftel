@@ -15,8 +15,18 @@
 
 .letter {
   display: inline-block;
-  animation: crawl-in 3s ease both;
-  animation-delay: calc(var(--count) * 0.05s);
+  opacity: 0;
+  transform: translateX(30px);
+  width: var(--width);
+  animation:
+    appear var(--appear-duration) ease forwards,
+    disappear var(--disappear-duration) ease forwards;
+  animation-delay:
+    calc(var(--count) * var(--appear-delay) * 1s),
+    calc(
+      var(--count-dissapear) * var(--disappear-delay) * 1s +
+        var(--appear-duration) + 1.5s
+    );
 
   @include fonts.text(31px, 100%, 600);
 
@@ -25,25 +35,26 @@
   }
 }
 
-@keyframes crawl-in {
+@keyframes appear {
   0% {
     opacity: 0;
     transform: translateX(30px);
     width: var(--width);
   }
 
-  50% {
+  100% {
     opacity: 1;
     transform: translateX(0);
     width: max-content;
   }
+}
 
-  68% {
-    opacity: 0;
+@keyframes disappear {
+  0% {
+    opacity: 1;
   }
 
   100% {
     opacity: 0;
-    width: var(--width);
   }
 }

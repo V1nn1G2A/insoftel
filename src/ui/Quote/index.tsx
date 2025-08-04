@@ -12,13 +12,24 @@ interface IQuote {
 }
 
 const Quote: FC<IQuote> = ({ author, className, children, id }) => (
-  <div className={`${styles.quote} ${className}`} id={id}>
-    <AnimationBlock className={styles.quote__content}>
-      &quot; {children} &quot;
-      <AnimationBlock>
-        <p className={styles.quote__author}>{author}</p>
+  <div
+    className={`${styles.quote} ${className}`}
+    id={id}
+  >
+    <div className={styles.wrapper}>
+      <AnimationBlock
+        className={styles.quote__content}
+        type="p"
+      >
+        &quot; {children} &quot;
       </AnimationBlock>
-    </AnimationBlock>
+      <AnimationBlock
+        type="p"
+        className={styles.quote__author}
+      >
+        {author}
+      </AnimationBlock>
+    </div>
   </div>
 )
 

@@ -99,6 +99,10 @@
   &.light {
     color: var(--color-white);
   }
+
+  @include media.screen('desktop-l') {
+    @include fonts.text(28px, 35px, 500);
+  }
 }
 
 .arrow {

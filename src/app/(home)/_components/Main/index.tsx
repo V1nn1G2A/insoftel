@@ -27,6 +27,7 @@ const Main: FC = ({}) => {
   const requestId = useRef<number>(null)
   const lenis = useLenis()
   const [activeIndex, setActiveIndex] = useState(0)
+  const [shouldDisappear, setShouldDisappear] = useState(false)
   const activeLetter = strings[activeIndex]
   const header = useHeaderHeight()
 
@@ -43,10 +44,27 @@ const Main: FC = ({}) => {
   }
 
   useEffect(() => {
-    const interval = setInterval(setNextIndex, 3000)
+    const interval = setInterval(setNextIndex, (activeLetter.length + 1) * 500)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [activeLetter])
+
+  useEffect(() => {
+    if (activeLetter === 'telecommunication') {
+      // Вычисляем длительность появления на основе длины слова
+      const appearDuration = ('telecommunication'.length * 0.5) / 2
+      const timer = setTimeout(() => {
+        setShouldDisappear(true)
+      }, appearDuration * 1000)
+
+      return () => {
+        clearTimeout(timer)
+        setShouldDisappear(false)
+      }
+    } else {
+      setShouldDisappear(false)
+    }
+  }, [activeLetter])
 
   return (
     <>
@@ -70,22 +88,27 @@ const Main: FC = ({}) => {
                 >
                   I
                 </BigLetter>
-                {isActive('innovative') && <MainText>nnovative</MainText>}
+                {isActive('innovative') && (
+                  <MainText direction="left">nnovative</MainText>
+                )}
               </div>
               <div>
-                <BigLetter
-                  isAnimated={false}
-                  className={cx(styles.letter, {
-                    [styles.letterActive]: activeLetter === 'T',
-                  })}
-                >
-                  T
-                </BigLetter>
+                {!isActive('technologies') && (
+                  <BigLetter
+                    isAnimated={false}
+                    className={cx(styles.letter, {
+                      [styles.letterActive]: activeLetter === 'T',
+                      [styles.letterDissapear]: shouldDisappear,
+                    })}
+                  >
+                    T
+                  </BigLetter>
+                )}
                 {isActive('telecommunication') && (
                   <MainText hideWidth>elecommunication</MainText>
                 )}
                 {isActive('technologies') && (
-                  <MainText hideWidth>echnologies</MainText>
+                  <MainText hideWidth>technologies</MainText>
                 )}
               </div>
             </div>
@@ -114,7 +137,9 @@ const Main: FC = ({}) => {
                 >
                   S
                 </BigLetter>
-                {isActive('software') && <MainText>oftware</MainText>}
+                {isActive('software') && (
+                  <MainText direction="left">oftware</MainText>
+                )}
               </div>
               <ExploreButton
                 classNames={['', '', styles.exploreButton]}

@@ -1,5 +1,6 @@
 .arrow {
   color: var(--color-black);
+  transition: color 0.5s;
 
   &.left {
     transform: rotate(135deg);
@@ -20,7 +21,7 @@
   width: 60px;
   height: 60px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.5s;
 
   &:hover {
     background-color: var(--color-black);
