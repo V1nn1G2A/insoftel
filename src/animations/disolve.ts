@@ -5,7 +5,7 @@ const disolve = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 1.3,
+      duration: 3,
       ease: 'easeOut',
     },
   },

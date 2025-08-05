@@ -2,7 +2,7 @@
 @use 'mixins/fonts';
 
 .header {
-  padding: 20px 0;
+  padding: 18px 0;
   background-color: transparent;
   position: absolute;
   top: 0;
@@ -10,12 +10,17 @@
   width: 100%;
   z-index: 9000;
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 
   &--dark {
+    --color-black-rgb: 21, 23, 25;
+
+    background-color: rgb(var(--color-black-rgb), var(--header-bg-opacity));
     color: var(--color-white);
   }
 
   &--light {
+    background-color: var(--color-white-secondary);
     color: var(--color-black);
   }
 

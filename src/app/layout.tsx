@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
+import { ClientProviders } from '@/providers'
 import { Footer, Header } from '@/ui'
 import { Popup } from '@/ui/Popup'
 import { PopupProvider } from '@/ui/Popup/PopupContext'
@@ -69,8 +70,12 @@ export default function RootLayout({
       <body className={neueHaas.variable + ' ' + neueWeb.variable}>
         <PopupProvider>
           <Header />
-          {children}
-          <Footer />
+          <ClientProviders>
+            <>
+              {children}
+              <Footer />
+            </>
+          </ClientProviders>
           <Popup />
         </PopupProvider>
         <div id="portal-root"></div>

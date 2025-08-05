@@ -1,7 +1,7 @@
 'use client'
 
 import cx from 'classnames'
-import { FC, useState } from 'react'
+import { FC, useRef, useState } from 'react'
 
 import CrossIcon from '@assets/icons/cross.svg'
 
@@ -20,6 +20,7 @@ interface IMenu {
 
 const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
   const [query, setQuery] = useState('')
+  const ref = useRef<HTMLDivElement | null>(null)
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value
@@ -29,7 +30,10 @@ const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
   const results = query ? searchContent(jsonData, query) : undefined
 
   return (
-    <div className={styles.menu}>
+    <div
+      className={styles.menu}
+      ref={ref}
+    >
       <div className={styles.desktopSearch}>
         <Search
           theme={theme}

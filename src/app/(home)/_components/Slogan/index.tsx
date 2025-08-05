@@ -5,13 +5,15 @@ import { AnimationBlock } from '@/ui'
 import styles from './index.module.scss'
 
 const Slogan: FC = ({}) => (
-  <AnimationBlock className={styles.wrapper}>
+  <div className={styles.wrapper}>
     <p className={styles.slogan}>
-      We create custom software solutions{' '}
+      <AnimationBlock type="span">
+        We create custom software solutions{' '}
+      </AnimationBlock>
       <AnimationBlock type="span">tailored for businesses and </AnimationBlock>
       <AnimationBlock type="span">government entities</AnimationBlock>
     </p>
-  </AnimationBlock>
+  </div>
 )
 
 export default Slogan

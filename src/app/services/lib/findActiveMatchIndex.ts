@@ -1,13 +1,15 @@
 //import { getOffsetHeights } from '../lib/getOffsetHeights'
+import type Lenis from '@studio-freight/lenis/types'
+
 import { IPosition } from '../model'
 
-export const findActiveMatchIndex = (positions: IPosition[]) => {
+export const findActiveMatchIndex = (positions: IPosition[], lenis: Lenis) => {
   const contentHeight = 1400
   const oneSectionHeight = contentHeight / positions.length
   const maxIndex = positions.length - 1
 
   let activeIndex = Math.floor(
-    (window.scrollY - positions[0].end) / oneSectionHeight
+    (lenis.scroll - positions[0].end) / oneSectionHeight
   )
 
   activeIndex = activeIndex < 0 ? 0 : activeIndex

@@ -3,7 +3,10 @@
 import { useEffect, useRef } from 'react'
 import Typed from 'typed.js'
 
-import { AnimatedText } from '@/ui'
+import { useHeaderHeight } from '@/hooks'
+import { smoothAutoScroll } from '@/lib/smoothAutoScroll'
+import { useLenis } from '@/providers'
+import { AnimatedText, ScrollColorController } from '@/ui'
 
 import { ExploreButton } from '../Buttons'
 import Container from '../Container'
@@ -19,7 +22,11 @@ const SectionHeading = ({
   letter: string
 }) => {
   const ref = useRef<HTMLHeadingElement>(null)
+  const sectionRef = useRef<HTMLDivElement>(null)
   const typedRef = useRef<Typed | null>(null)
+  const requestId = useRef<number>(null)
+  const lenis = useLenis()
+  const height = useHeaderHeight()
   let width
 
   switch (title) {
@@ -50,39 +57,60 @@ const SectionHeading = ({
   }, [title])
 
   return (
-    <div>
-      <VideoBackground
-        src={'/video/section-background.mp4'}
-        className="section"
-      >
-        <Container>
-          <div className={styles.heading}>
-            <span className={styles.letter}>{letter}</span>
-            <h1 className={styles.title}>
-              <AnimatedText height={230}>{title}</AnimatedText>
-            </h1>
-            <div
-              className={styles.miniTitle}
-              style={
-                { '--width': width } as React.CSSProperties & {
-                  [key: string]: string
+    <>
+      <ScrollColorController sectionRef={sectionRef} />
+      <div ref={sectionRef}>
+        <VideoBackground
+          src={'/video/section-background.mp4'}
+          className="section"
+        >
+          <Container>
+            <div className={styles.heading}>
+              <span className={styles.letter}>{letter}</span>
+              <h1 className={styles.title}>
+                <AnimatedText height={230}>{title}</AnimatedText>
+              </h1>
+              <div
+                className={styles.miniTitle}
+                style={
+                  { '--width': width } as React.CSSProperties & {
+                    [key: string]: string
+                  }
                 }
-              }
-            >
-              <h1 ref={ref} />
+              >
+                <h1 ref={ref} />
+              </div>
+              <div className={styles.miniButton}>
+                <ExploreButton
+                  classNames={['mini-text', 'mini-round', 'mini-button']}
+                  onClick={(e: React.MouseEvent) => {
+                    e.stopPropagation()
+                    smoothAutoScroll(
+                      requestId,
+                      lenis,
+                      (sectionRef.current?.scrollHeight ?? 0) - height
+                    )
+                  }}
+                />
+              </div>
+              <div className={styles.button}>
+                <ExploreButton
+                  classNames={['mini-text']}
+                  onClick={(e: React.MouseEvent) => {
+                    e.stopPropagation()
+                    smoothAutoScroll(
+                      requestId,
+                      lenis,
+                      (sectionRef.current?.scrollHeight ?? 0) - height
+                    )
+                  }}
+                />
+              </div>
             </div>
-            <div className={styles.miniButton}>
-              <ExploreButton
-                classNames={['mini-text', 'mini-round', 'mini-button']}
-              />
-            </div>
-            <div className={styles.button}>
-              <ExploreButton classNames={['mini-text']} />
-            </div>
-          </div>
-        </Container>
-      </VideoBackground>
-    </div>
+          </Container>
+        </VideoBackground>
+      </div>
+    </>
   )
 }
 export default SectionHeading
