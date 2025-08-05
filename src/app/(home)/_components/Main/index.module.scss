@@ -118,8 +118,8 @@
 
 .letterDissapear {
   @include media.screen('desktop') {
-    animation: letter-disappear calc(15 * 0.5s / 3) ease both;
-    animation-delay: 1.5s;
+    animation: letter-disappear calc((var(--count) - 3) * 0.5s / 3) ease both;
+    animation-delay: 1.4s;
   }
 }
 

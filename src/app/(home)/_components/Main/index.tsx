@@ -28,6 +28,7 @@ const Main: FC = ({}) => {
   const lenis = useLenis()
   const [activeIndex, setActiveIndex] = useState(0)
   const [shouldDisappear, setShouldDisappear] = useState(false)
+  const [shouldShowT, setShouldShowT] = useState(false)
   const activeLetter = strings[activeIndex]
   const header = useHeaderHeight()
 
@@ -51,7 +52,8 @@ const Main: FC = ({}) => {
 
   useEffect(() => {
     if (activeLetter === 'telecommunication') {
-      // Вычисляем длительность появления на основе длины слова
+      setShouldShowT(true)
+
       const appearDuration = ('telecommunication'.length * 0.5) / 2
       const timer = setTimeout(() => {
         setShouldDisappear(true)
@@ -60,9 +62,24 @@ const Main: FC = ({}) => {
       return () => {
         clearTimeout(timer)
         setShouldDisappear(false)
+        setShouldShowT(false)
+      }
+    } else if (activeLetter === 'technologies') {
+      setShouldShowT(true)
+
+      const appearDuration = ('technologies'.length * 0.5) / 2
+      const timer = setTimeout(() => {
+        setShouldDisappear(true)
+      }, appearDuration * 1000)
+
+      return () => {
+        clearTimeout(timer)
+        setShouldDisappear(false)
+        setShouldShowT(false)
       }
     } else {
       setShouldDisappear(false)
+      setShouldShowT(false)
     }
   }, [activeLetter])
 
@@ -72,6 +89,11 @@ const Main: FC = ({}) => {
       <section
         className={styles.main}
         ref={ref}
+        style={
+          {
+            '--count': activeLetter.length,
+          } as React.CSSProperties
+        }
       >
         <VideoBackground
           src="/video/background.mp4"
@@ -93,11 +115,12 @@ const Main: FC = ({}) => {
                 )}
               </div>
               <div>
-                {!isActive('technologies') && (
+                {(!isActive('technologies') || shouldShowT) && (
                   <BigLetter
                     isAnimated={false}
                     className={cx(styles.letter, {
-                      [styles.letterActive]: activeLetter === 'T',
+                      [styles.letterActive]:
+                        activeLetter === 'T' || shouldShowT,
                       [styles.letterDissapear]: shouldDisappear,
                     })}
                   >
@@ -108,7 +131,7 @@ const Main: FC = ({}) => {
                   <MainText hideWidth>elecommunication</MainText>
                 )}
                 {isActive('technologies') && (
-                  <MainText hideWidth>technologies</MainText>
+                  <MainText hideWidth>echnologies</MainText>
                 )}
               </div>
             </div>
