@@ -2,9 +2,10 @@
 
 import cn from 'classnames'
 import type { FC } from 'react'
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 
 import { useHeaderHeight } from '@/hooks'
+import { useAnimatedWords } from '@/hooks'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { useLenis } from '@/providers'
 import { VideoBackground } from '@/ui'
@@ -26,62 +27,19 @@ const Main: FC = ({}) => {
   const ref = useRef<HTMLDivElement>(null)
   const requestId = useRef<number>(null)
   const lenis = useLenis()
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [shouldDisappear, setShouldDisappear] = useState(false)
-  const [shouldShowT, setShouldShowT] = useState(false)
-  const activeLetter = strings[activeIndex]
   const header = useHeaderHeight()
 
+  const { activeWord, shouldDisappear, shouldShowT, hideWord } =
+    useAnimatedWords(strings)
+
   const isActive = (letter: string, isMobile?: boolean) => {
-    if (isMobile) return isTablet && strings[activeIndex] === letter
-    return !isTablet && strings[activeIndex] === letter
+    if (isMobile) return isTablet && activeWord === letter
+    return !isTablet && activeWord === letter
   }
 
-  const setNextIndex = () => {
-    setActiveIndex(prev => {
-      if (prev === strings.length - 1) return 0
-      else return ++prev
-    })
+  const isActiveLetter = (word: string, letter: string): boolean => {
+    return word.toLowerCase() === letter
   }
-
-  useEffect(() => {
-    const interval = setInterval(setNextIndex, (activeLetter.length + 1) * 500)
-
-    return () => clearInterval(interval)
-  }, [activeLetter])
-
-  useEffect(() => {
-    if (activeLetter === 'telecommunication') {
-      setShouldShowT(true)
-
-      const appearDuration = ('telecommunication'.length * 0.5) / 2
-      const timer = setTimeout(() => {
-        setShouldDisappear(true)
-      }, appearDuration * 1000)
-
-      return () => {
-        clearTimeout(timer)
-        setShouldDisappear(false)
-        setShouldShowT(false)
-      }
-    } else if (activeLetter === 'technologies') {
-      setShouldShowT(true)
-
-      const appearDuration = ('technologies'.length * 0.5) / 2
-      const timer = setTimeout(() => {
-        setShouldDisappear(true)
-      }, appearDuration * 1000)
-
-      return () => {
-        clearTimeout(timer)
-        setShouldDisappear(false)
-        setShouldShowT(false)
-      }
-    } else {
-      setShouldDisappear(false)
-      setShouldShowT(false)
-    }
-  }, [activeLetter])
 
   return (
     <>
@@ -91,7 +49,7 @@ const Main: FC = ({}) => {
         ref={ref}
         style={
           {
-            '--count': activeLetter.length,
+            '--count': activeWord.length,
           } as React.CSSProperties
         }
       >
@@ -105,7 +63,7 @@ const Main: FC = ({}) => {
                 <BigLetter
                   isAnimated={false}
                   className={cx(styles.letter, {
-                    [styles.letterActive]: activeLetter === 'I',
+                    [styles.letterActive]: isActiveLetter(activeWord[0], 'i'),
                   })}
                 >
                   I
@@ -120,17 +78,17 @@ const Main: FC = ({}) => {
                     isAnimated={false}
                     className={cx(styles.letter, {
                       [styles.letterActive]:
-                        activeLetter === 'T' || shouldShowT,
+                        isActiveLetter(activeWord[0], 't') || shouldShowT,
                       [styles.letterDissapear]: shouldDisappear,
                     })}
                   >
                     T
                   </BigLetter>
                 )}
-                {isActive('telecommunication') && (
+                {isActive('telecommunication') && !hideWord && (
                   <MainText hideWidth>elecommunication</MainText>
                 )}
-                {isActive('technologies') && (
+                {isActive('technologies') && !hideWord && (
                   <MainText hideWidth>echnologies</MainText>
                 )}
               </div>
@@ -155,7 +113,7 @@ const Main: FC = ({}) => {
                 <BigLetter
                   isAnimated={false}
                   className={cx(styles.letter, {
-                    [styles.letterActive]: activeLetter === 'S',
+                    [styles.letterActive]: isActiveLetter(activeWord[0], 's'),
                   })}
                 >
                   S
