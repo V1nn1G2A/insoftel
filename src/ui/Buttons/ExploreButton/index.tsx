@@ -10,7 +10,7 @@ interface IExploreButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string
   colorVariant?: 'light' | 'dark'
   classNames?: string[]
-  onClick?: () => void
+  onClick?: (e: React.MouseEvent) => void
 }
 
 const ExploreButton: React.FC<IExploreButton> = ({

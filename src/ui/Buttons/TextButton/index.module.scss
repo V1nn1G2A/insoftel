@@ -8,6 +8,7 @@
   border: none;
   cursor: pointer;
   z-index: 1000;
+  transition: border-bottom 0.4s;
 
   &.long {
     padding: 10px 0 20px;
@@ -48,6 +49,7 @@
   width: 60px;
   height: 60px;
   backdrop-filter: blur(14.22px);
+  transition: background-color 0.4s;
 
   &.dark {
     border: 1px solid rgb(0 0 0 / 20%);
@@ -97,10 +99,14 @@
   &.light {
     color: var(--color-white);
   }
+
+  @include media.screen('desktop-l') {
+    @include fonts.text(28px, 35px, 500);
+  }
 }
 
 .arrow {
-  transition: transform 0.2s ease;
+  transition: transform 0.4s ease;
 
   &.long {
     &.dark {

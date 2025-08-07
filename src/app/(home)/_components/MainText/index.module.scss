@@ -1,0 +1,60 @@
+@use 'mixins/fonts';
+@use 'mixins/media';
+
+.word {
+  height: fit-content;
+  display: inline-flex;
+  font-size: 48px;
+  font-weight: bold;
+  overflow: var(--overflow);
+  font-family: sans-serif;
+  color: var(--color-white);
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(30px);
+  width: var(--width);
+  animation:
+    appear var(--appear-duration) ease forwards,
+    disappear var(--disappear-duration) ease forwards;
+  animation-delay:
+    calc(var(--count) * var(--appear-delay) * 1s),
+    calc(
+      var(--count-dissapear) * var(--disappear-delay) * 1s +
+        var(--appear-duration) + 1.5s
+    );
+
+  @include fonts.text(31px, 100%, 600);
+
+  @media (width >= 1401px) {
+    @include fonts.text(113px, 100%, 500);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+    width: var(--width);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    width: max-content;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

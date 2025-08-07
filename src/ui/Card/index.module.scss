@@ -5,17 +5,30 @@
   display: block;
   width: 335px;
   height: 334px;
-  transition: opacity 0.4s;
+  transition:
+    opacity 0.4s,
+    transform 0.5s;
 
   @include media.screen('desktop') {
-    width: 435px;
-    height: 434px;
+    width: 379.73px;
+    height: 378.86px;
+  }
+
+  @include media.screen('desktop-l') {
+    width: 524.5px;
+    height: 523.3px;
+  }
+}
+
+.card:hover {
+  img {
+    transform: scale(1.05);
   }
 }
 
 .card svg {
   transform: rotate(0);
-  transition: transform 0.5s;
+  transition: transform 0.7s;
   width: 20px;
 
   @include media.screen('desktop') {
@@ -27,11 +40,15 @@
 .card__content {
   position: absolute;
   background-color: var(--color-white);
-  transition: transform 0.4s;
+  transition: transform 0.7s;
   height: calc(410px - 75px);
 
   @include media.screen('desktop') {
-    height: calc(530px - 95px);
+    height: calc(464.23px - 85px);
+  }
+
+  @include media.screen('desktop-l') {
+    height: calc(638.4px - 114px);
   }
 }
 
@@ -63,7 +80,7 @@
   @include media.screen('desktop') {
     @include fonts.text(24px, 28px, 'regular');
 
-    height: 96px;
+    height: 85px;
     padding: 20px 27px 20px 20px;
 
     button {
@@ -75,6 +92,13 @@
     p {
       margin: 0 42px 0 0;
     }
+  }
+
+  @include media.screen('desktop-l') {
+    @include fonts.text(29px, 33px, 'regular');
+
+    height: 116px;
+    padding: 24px 20px 24px 24px;
   }
 }
 
@@ -95,13 +119,20 @@
   }
 
   @include media.screen('desktop') {
-    @include fonts.text(20px, 24px, 300);
+    @include fonts.text(18px, 20px, 300);
 
-    line-height: 24px;
     padding: 10px 20px;
 
     p {
-      height: calc(530px - 95px);
+      height: calc(464.23px - 85px);
+    }
+  }
+
+  @include media.screen('desktop-l') {
+    @include fonts.text(24px, 29px, 300);
+
+    p {
+      height: calc(638.4px - 116px);
     }
   }
 }
@@ -140,8 +171,13 @@
   }
 
   @include media.screen('desktop') {
-    width: 435px;
-    height: 530px;
+    width: 381.02px;
+    height: 464.23px;
+  }
+
+  @include media.screen('desktop-l') {
+    width: 524px;
+    height: 638.4px;
   }
 }
 

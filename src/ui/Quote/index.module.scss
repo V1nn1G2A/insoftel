@@ -4,6 +4,9 @@
 .quote {
   @include fonts.text(16px, 20px, 400);
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 48px 0;
   border-top: 1px solid rgba($color: #000, $alpha: 20%);
   border-bottom: 1px solid rgba($color: #000, $alpha: 20%);
@@ -15,9 +18,17 @@
   }
 
   div {
-    max-width: 851px;
+    max-width: 756px;
     margin: 0 auto;
+
+    @include media.screen('desktop-l') {
+      max-width: 1075px;
+    }
   }
+}
+
+.wrapper {
+  max-width: 780px;
 }
 
 .quote__content {
@@ -30,7 +41,11 @@
     letter-spacing: 0.6px;
     word-spacing: -6%;
 
-    @include fonts.text(30px, 34px, 300);
+    @include fonts.text(26px, 30px, 300);
+  }
+
+  @include media.screen('desktop-l') {
+    @include fonts.text(38px, 42.95px, 300);
   }
 }
 
@@ -42,8 +57,12 @@
   color: var(--color-text-tertiary);
 
   @include media.screen('desktop') {
-    @include fonts.text(20px, 20px, 500);
+    @include fonts.text(18px, 21px, 500);
 
     letter-spacing: 0.4px;
+  }
+
+  @include media.screen('desktop-l') {
+    @include fonts.text(24px, 30.31px, 500);
   }
 }
