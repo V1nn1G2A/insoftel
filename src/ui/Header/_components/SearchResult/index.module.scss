@@ -3,12 +3,28 @@
 
 .list {
   max-height: 51%;
-  overflow-y: auto;
+  overflow-y: scroll;
   overscroll-behavior: contain;
 
   @include media.screen('mobile') {
-    max-height: 534px;
+    max-height: 45vh;
     margin-top: 32px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: #4e5256;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #323538;
+  }
+
+  &::-webkit-scrollbar {
+    display: block;
+    width: 4px;
+    background-color: #151719;
   }
 }
 
@@ -22,6 +38,10 @@
 
   &--dark {
     background-color: #ffffff0d;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #ffffff1a;
+    }
 
     &:hover {
       background-color: #ffffff1a;

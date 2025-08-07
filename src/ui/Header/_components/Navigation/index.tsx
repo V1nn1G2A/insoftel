@@ -52,14 +52,12 @@ const Navigation: FC<NavigationProps> = ({
         query={query}
         setHoverLink={setHoverLink}
       />
-      <nav className={styles.navigation}>
-        <LinkList
-          isOpen={isOpen}
-          theme={theme}
-          hasQuery={!!query}
-          hoverLink={hoverLink}
-        />
-      </nav>
+      <LinkList
+        isOpen={isOpen}
+        theme={theme}
+        hasQuery={!!query}
+        hoverLink={hoverLink}
+      />
     </div>
   )
 }

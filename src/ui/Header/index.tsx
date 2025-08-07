@@ -9,7 +9,6 @@ import { useScrollLock } from '@/hooks/useScrollLock'
 
 import LogoIcon from '@assets/icons/logo.svg'
 
-import Container from '../Container'
 import Menu from './_components/Menu'
 
 import styles from './index.module.scss'
@@ -51,7 +50,7 @@ const Header = () => {
         [styles['header--active']]: isOpen,
       })}
     >
-      <Container>
+      <div className={styles.container}>
         <div className={styles.wrapper}>
           <Link
             href="/"
@@ -65,7 +64,7 @@ const Header = () => {
             setIsOpen={setIsOpen}
           />
         </div>
-      </Container>
+      </div>
     </header>
   )
 }

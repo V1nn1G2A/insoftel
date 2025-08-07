@@ -110,12 +110,12 @@
     }
   }
 
-  &__wrapper:hover &__round {
+  &:hover &__round {
     background-color: var(--color-white);
     transform: scale(0.75) translateY(20px) translateX(-20px);
   }
 
-  &__wrapper:hover &__arrow {
+  &:hover &__arrow {
     color: var(--color-black);
     transform: rotate(-45deg);
   }

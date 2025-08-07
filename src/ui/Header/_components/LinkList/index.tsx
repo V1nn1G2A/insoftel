@@ -22,7 +22,7 @@ const LinkList: FC<LinkListProps> = ({
   hasQuery,
   hoverLink,
 }) => (
-  <>
+  <nav className={cx(styles.nav, { [styles['nav--active']]: hasQuery })}>
     <ul
       className={cx(styles.list, {
         [styles['list--active']]: isOpen,
@@ -58,7 +58,7 @@ const LinkList: FC<LinkListProps> = ({
         })}
       />
     )}
-  </>
+  </nav>
 )
 
 export default LinkList
