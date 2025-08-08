@@ -23,7 +23,7 @@ import styles from './index.module.scss'
 const cx = cn.bind(styles)
 
 const Main: FC = ({}) => {
-  const isTablet = useMediaQuery('(max-width: 1400px)')
+  const isTablet = useMediaQuery('(max-width: 1439px)')
   const ref = useRef<HTMLDivElement>(null)
   const requestId = useRef<number>(null)
   const lenis = useLenis()

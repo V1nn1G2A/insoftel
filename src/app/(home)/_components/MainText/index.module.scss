@@ -30,7 +30,7 @@
 
   @include fonts.text(31px, 100%, 600);
 
-  @media (width >= 1401px) {
+  @include media.screen('desktop-l') {
     @include fonts.text(113px, 100%, 500);
   }
 }

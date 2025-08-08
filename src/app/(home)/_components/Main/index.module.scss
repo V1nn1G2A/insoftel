@@ -76,7 +76,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @include media.screen('desktop') {
+  @include media.screen('desktop-l') {
     left: 71px;
     right: 48px;
   }
@@ -94,7 +94,7 @@
   bottom: 22px;
   left: 20px;
 
-  @include media.screen('desktop') {
+  @include media.screen('desktop-l') {
     bottom: 28px;
     left: 48px;
   }
@@ -105,7 +105,7 @@
   opacity: 0.4;
   transition: opacity 0.3s;
 
-  @include media.screen('desktop') {
+  @include media.screen('desktop-l') {
     letter-spacing: 0;
     opacity: 0;
     color: var(--color-white) !important;
@@ -117,28 +117,10 @@
 }
 
 .letterDissapear {
-  @include media.screen('desktop') {
+  @include media.screen('desktop-l') {
     animation: letter-disappear calc((var(--count) - 3) * 0.5s / 3) ease both;
     animation-delay: 1.4s;
   }
-}
-
-/* stylelint-disable-next-line no-descending-specificity */
-.letter + span,
-.letter + span + span {
-  @include fonts.text(113px, 100%, 500);
-
-  text-transform: uppercase;
-  user-select: none;
-  color: var(--color-white);
-  letter-spacing: 0;
-}
-
-.letter + span + span {
-  user-select: none;
-  position: relative;
-  display: inline-block;
-  transform: translateY(-6px);
 }
 
 .letterActive {
