@@ -104,7 +104,7 @@
 
   &__arrow {
     color: var(--color-white);
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 
     @include media.screen('desktop-l') {
       transform: scale(1.2);
@@ -113,7 +113,10 @@
 
   &:hover &__round {
     background-color: var(--color-white);
-    transform: scale(0.75) translateY(20px) translateX(-20px);
+
+    @include media.screen('desktop-m') {
+      transform: scale(0.75) translateY(20px) translateX(-20px);
+    }
   }
 
   &:hover &__arrow {

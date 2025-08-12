@@ -42,7 +42,7 @@ const Navigation: FC<NavigationProps> = ({
         <Search
           theme={theme}
           onChange={onChange}
-          value={value}
+          value={isOpen ? value : ''}
           onClear={onClear}
         />
       </div>

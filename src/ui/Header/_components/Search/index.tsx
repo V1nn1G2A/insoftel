@@ -3,7 +3,6 @@
 import cx from 'classnames'
 import { FC, useEffect, useRef, useState } from 'react'
 
-import CrossIcon from '@assets/icons/cross.svg'
 import SearchIcon from '@assets/icons/search.svg'
 
 import styles from './index.module.scss'
