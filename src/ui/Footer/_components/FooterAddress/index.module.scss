@@ -29,14 +29,13 @@
 
   &__item {
     display: flex;
-    gap: 7px;
     flex-direction: column;
 
     @include fonts.text(16px, 20px, 400);
 
     color: var(--color-white);
-
     gap: 8px;
+
     @include media.screen('desktop-l') {
       gap: 10px;
 
@@ -60,6 +59,7 @@
   @include fonts.text(16px, 20px, 400);
 
   color: var(--color-white);
+  transition: color 0.7s;
   letter-spacing: 0.3px;
 
   &:hover {
