@@ -1,15 +1,42 @@
 @use 'mixins/media';
 @use 'mixins/fonts';
 
+.nav {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease;
+
+  margin: 48px 64px;
+
+  &--active {
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  @include media.screen('mobile') {
+    margin: 0 20px;
+
+    &--active {
+      max-height: 20vh;
+      width: 100%;
+    }
+  }
+
+  @include media.screen('desktop-l') {
+    margin: 64px;
+  }
+}
+
 .list {
   display: flex;
   flex-flow: column wrap;
   gap: 32px 116px;
   list-style: none;
-  height: 200px;
+  max-height: 201px;
   max-width: 500px;
   opacity: 0;
-  margin: 64px 0 0 48px;
   animation: listDisappear 0.2s ease;
 
   &--active {
@@ -19,12 +46,11 @@
 
   @include media.screen('mobile') {
     flex-wrap: nowrap;
-    margin: 0 0 0 22px;
     transition: all 0.3s ease;
 
     &--withQuery {
       opacity: 0;
-      height: 0;
+      height: fit-content;
     }
   }
 }
@@ -70,6 +96,10 @@
 
       gap: 19px;
     }
+
+    @include media.screen('desktop-l') {
+      @include fonts.text(40px, 45.34px, 400);
+    }
   }
 
   &__titleIndex {
@@ -85,6 +115,10 @@
       @include fonts.text(16px, 20px, 400);
 
       margin: -0 -14px 0 0;
+    }
+
+    @include media.screen('desktop-l') {
+      @include fonts.text(20px, 26.67px, 400);
     }
   }
 }
@@ -124,13 +158,8 @@
     height 0.6s ease;
 
   &--active {
-    width: 166px;
-    height: 166px;
-
-    @include media.screen('mobile') {
-      width: auto;
-      height: auto;
-    }
+    height: 100%;
+    bottom: 0;
   }
 
   @include media.screen('mobile') {
@@ -140,8 +169,9 @@
     height: 166px;
 
     &--active {
-      width: auto;
-      height: auto;
+      height: 100%;
+      bottom: 20px;
+      right: 24px;
     }
   }
 

@@ -44,6 +44,7 @@ const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
           theme={theme}
           onChange={handleSearch}
           value={query}
+          isInitFocused={isOpen}
           onFocus={() => setIsOpen(true)}
           onClear={handleClear}
         />

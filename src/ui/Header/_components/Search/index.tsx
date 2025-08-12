@@ -1,7 +1,7 @@
 'use client'
 
 import cx from 'classnames'
-import { FC, useRef, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 
 import CrossIcon from '@assets/icons/cross.svg'
 import SearchIcon from '@assets/icons/search.svg'
@@ -11,16 +11,25 @@ import styles from './index.module.scss'
 interface ISearch extends React.InputHTMLAttributes<HTMLInputElement> {
   theme: 'dark' | 'light'
   onClear: () => void
+  isInitFocused?: boolean
 }
 
-const Search: FC<ISearch> = ({ theme, onClear, ...props }) => {
+const Search: FC<ISearch> = ({ theme, onClear, isInitFocused, ...props }) => {
   const [isFocused, setIsFocused] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    if (isInitFocused) {
+      inputRef.current?.focus()
+    }
+  }, [isInitFocused])
 
   return (
     <div className={cx(styles.searchWrapper)}>
       <div
-        className={cx(styles.search, { [styles['search--active']]: isFocused })}
+        className={cx(styles.search, {
+          [styles['search--active']]: isFocused || isInitFocused,
+        })}
       >
         <input
           ref={inputRef}
@@ -44,7 +53,7 @@ const Search: FC<ISearch> = ({ theme, onClear, ...props }) => {
             )}
             onClick={onClear}
           >
-            <CrossIcon />
+            Erase
           </button>
         )}
       </div>
