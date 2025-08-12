@@ -15,7 +15,7 @@ import styles from './index.module.scss'
 
 const Technologies: FC = ({}) => (
   <section>
-    <VideoBackground src={'/video/section-background.mp4'}>
+    <VideoBackground src={'/video/background'}>
       <Container>
         <div className={styles.technologies}>
           <SectionTitle

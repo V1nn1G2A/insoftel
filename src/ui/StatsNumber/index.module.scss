@@ -3,17 +3,11 @@
 
 .stats {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-grow: 1;
-  width: 100%;
   padding-bottom: 20px;
   overflow-x: hidden;
-  letter-spacing: -2%;
+  width: 100%;
 
   span {
-    height: 102px;
     display: inline;
 
     @include fonts.text(120px, 120px, 500);
@@ -21,17 +15,21 @@
     color: var(--color-black);
 
     @include media.screen('desktop') {
-      height: 124px;
-
-      @include fonts.text(142px, 106px, 500);
+      @include fonts.text(142px, 142px, 500);
     }
 
     @include media.screen('desktop-l') {
-      height: 170px;
-
-      @include fonts.text(192px, 186px, 500);
+      @include fonts.text(192px, 142px, 500);
     }
   }
+}
+
+.stats__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-grow: 1;
+  width: 100%;
 
   @include media.screen('desktop') {
     padding-bottom: 14px;
@@ -48,13 +46,10 @@
 
   @include fonts.text(20px, 24px, 'regular');
 
-  margin-bottom: 3px;
   letter-spacing: 0.4px;
   color: var(--color-text-secondary);
 
   @include media.screen('desktop') {
-    margin-bottom: 6px;
-
     @include fonts.text(21px, 25px, 'regular');
   }
 

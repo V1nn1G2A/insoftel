@@ -33,6 +33,7 @@
 
   @include media.screen('desktop-l') {
     @include fonts.text(20px, 25.26px, 400);
+
     letter-spacing: 0.2px;
     max-width: 402px;
   }
@@ -67,7 +68,7 @@
     @include media.screen('desktop-l') {
       @include fonts.text(44px, 48.34px, 400);
 
-      letter-spacing: 0px;
+      letter-spacing: 0;
     }
   }
 
@@ -93,7 +94,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease;
+    transition: all 0.7s ease;
 
     @include media.screen('desktop-l') {
       width: 100px;

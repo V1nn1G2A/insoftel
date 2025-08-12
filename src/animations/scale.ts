@@ -8,7 +8,7 @@ const scale = {
   },
   visible: {
     scale: 1,
-    opacity: 1,
+    opacity: 0.8,
     x: 0,
     y: 0,
     transition: {

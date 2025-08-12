@@ -37,23 +37,25 @@ const StatsNumber: FC<IStatsNumber> = ({ className, title, children }) => {
       className={`${styles.stats} ${className}`}
       ref={divRef}
     >
-      <div className={styles.text}>
-        {[...title].map((el, index) => (
-          <span
-            key={index}
-            ref={node => setLetterRef(node, index)}
-            style={{ '--count': index + 1 } as React.CSSProperties}
-          >
-            {el}
-          </span>
-        ))}
+      <div className={styles.stats__main}>
+        <div className={styles.text}>
+          {[...title].map((el, index) => (
+            <span
+              key={index}
+              ref={node => setLetterRef(node, index)}
+              style={{ '--count': index + 1 } as React.CSSProperties}
+            >
+              {el}
+            </span>
+          ))}
+        </div>
+        <AnimationBlock
+          type="p"
+          className={styles.children}
+        >
+          {children}
+        </AnimationBlock>
       </div>
-      <AnimationBlock
-        type="p"
-        className={styles.children}
-      >
-        {children}
-      </AnimationBlock>
       <AnimatedLine
         targetRef={divRef}
         className={styles.line}

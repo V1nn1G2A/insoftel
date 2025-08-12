@@ -26,7 +26,9 @@ const CardsList: FC = ({}) => {
         keyboard={{ enabled: true }}
         modules={[Keyboard]}
         slidesPerView={'auto'}
+        slidesPerGroup={1}
         className={styles.swiper}
+        speed={1400}
       >
         {cards.map(card => (
           <SwiperSlide
