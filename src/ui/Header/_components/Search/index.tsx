@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { FC, useRef, useState } from 'react'
 
 import CrossIcon from '@assets/icons/cross.svg'
-import SearcIcon from '@assets/icons/search.svg'
+import SearchIcon from '@assets/icons/search.svg'
 
 import styles from './index.module.scss'
 
@@ -34,7 +34,7 @@ const Search: FC<ISearch> = ({ theme, onClear, ...props }) => {
           }}
           onBlur={() => setIsFocused(false)}
         />
-        <SearcIcon className={cx({ [styles.iconActive]: props.value })} />
+        <SearchIcon className={cx({ [styles.iconActive]: props.value })} />
         {props.value && (
           <button
             className={cx(

@@ -32,6 +32,7 @@
 .office__contacts {
   display: flex;
   justify-content: space-between;
+  margin-top: 40px;
 
   p {
     letter-spacing: 0.4px;
@@ -40,14 +41,20 @@
     @include fonts.text(20px, 24px, 400);
 
     @include media.screen('desktop') {
-      margin-top: 112px;
-
       @include fonts.text(17px, 21.34px, 400);
     }
 
     @include media.screen('desktop-l') {
       @include fonts.text(24px, 30.31px, 400);
     }
+  }
+
+  @include media.screen('desktop') {
+    margin-top: 210px;
+  }
+
+  @include media.screen('desktop-l') {
+    margin-top: 120px;
   }
 }
 
@@ -57,6 +64,5 @@
 }
 
 .office p:last-of-type {
-  margin-bottom: 40px;
   letter-spacing: 0.25px;
 }

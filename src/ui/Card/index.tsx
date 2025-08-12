@@ -25,12 +25,20 @@ const Card: FC<ICard> = ({ picture, title, text, className }) => {
     [styles['card--active']]: isActive,
   })
 
-  const handleOpen = () => {
+  const handleOpen = (e: React.MouseEvent) => {
+    e.stopPropagation()
     setIsActive(prev => !prev)
   }
 
+  const handleClose = () => {
+    setIsActive(false)
+  }
+
   return (
-    <div className={classNames}>
+    <div
+      className={classNames}
+      onClick={handleClose}
+    >
       <Image
         src={picture}
         width={435}

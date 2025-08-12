@@ -96,10 +96,11 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(44px, 48.34px, 400);
+    @include fonts.text(44px, 48.34px, 300);
 
     letter-spacing: 0;
     margin: 0 0 110px;
+
     &::first-letter {
       margin-left: 10px;
     }
@@ -191,7 +192,6 @@
   @include media.screen('desktop-l') {
     width: 549px;
     height: 549px;
-
     display: flex;
   }
 }

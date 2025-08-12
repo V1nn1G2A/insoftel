@@ -18,6 +18,8 @@
   }
 
   &__item {
+    transition: color 0.5s;
+
     @include media.screen('desktop-l') {
       @include fonts.text(20px, 25.26px, 400);
     }

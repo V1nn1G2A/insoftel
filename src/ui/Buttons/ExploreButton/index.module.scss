@@ -5,9 +5,15 @@
   align-items: center;
   padding: 8px 10px 8px 30px;
   border-radius: 100px;
-  backdrop-filter: blur(14.22px);
+  backdrop-filter: blur(14.22px) contrast(1);
   cursor: pointer;
-  transition: border 0.4s;
+  transition:
+    border 0.4s,
+    backdrop-filter 0.9s;
+
+  &:hover {
+    backdrop-filter: blur(14.22px) contrast(0.87);
+  }
 
   &.dark {
     background-color: transparent;

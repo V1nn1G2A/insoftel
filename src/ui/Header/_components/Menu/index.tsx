@@ -29,6 +29,11 @@ const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
 
   const results = query ? searchContent(jsonData, query) : undefined
 
+  const handleClear = () => {
+    setQuery('')
+    setIsOpen(!isOpen)
+  }
+
   return (
     <div
       className={styles.menu}
@@ -40,7 +45,7 @@ const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
           onChange={handleSearch}
           value={query}
           onFocus={() => setIsOpen(true)}
-          onClear={() => setQuery('')}
+          onClear={handleClear}
         />
       </div>
 
