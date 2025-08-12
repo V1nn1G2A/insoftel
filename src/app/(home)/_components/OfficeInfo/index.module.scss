@@ -50,11 +50,11 @@
   }
 
   @include media.screen('desktop') {
-    margin-top: 210px;
+    margin-top: 200px;
   }
 
   @include media.screen('desktop-l') {
-    margin-top: 120px;
+    margin-top: 140px;
   }
 }
 
