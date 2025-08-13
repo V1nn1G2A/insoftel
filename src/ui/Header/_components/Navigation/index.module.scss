@@ -64,8 +64,52 @@
 .mobileSearch {
   display: none;
   padding: 30px 20px 0;
+  margin-bottom: 32px;
 
   @include media.screen('mobile') {
     display: block;
+  }
+}
+
+.linkLogo {
+  position: absolute;
+  bottom: 64px;
+  right: 64px;
+  width: 312px;
+  height: 312px;
+  transition:
+    width 0.6s ease,
+    height 0.6s ease;
+
+  &--active {
+    height: 200px;
+    width: 200px;
+  }
+
+  @include media.screen('desktop-m') {
+      bottom: 48px;
+      right: 48px;
+
+      &--active {
+        height: 166px;
+        width: 166px;
+      }
+  }
+
+  @include media.screen('mobile') {
+    bottom: 20px;
+    right: 20px;
+    width: 166px;
+    height: 166px;
+
+    &--active {
+      height: 166px;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+
+  &--dark {
+    color: #0003;
   }
 }

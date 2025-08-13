@@ -2,9 +2,6 @@ import cx from 'classnames'
 import Link from 'next/link'
 import { FC } from 'react'
 
-import LogoDark from '@/assets/icons/imageDark.svg'
-import LogoLight from '@/assets/icons/imageLight.svg'
-
 import { links } from './CONST'
 
 import styles from './index.module.scss'
@@ -45,19 +42,6 @@ const LinkList: FC<LinkListProps> = ({
         </li>
       ))}
     </ul>
-    {theme === 'dark' ? (
-      <LogoLight
-        className={cx(styles.linkLogo, {
-          [styles['linkLogo--active']]: hasQuery,
-        })}
-      />
-    ) : (
-      <LogoDark
-        className={cx(styles.linkLogo, {
-          [styles['linkLogo--active']]: hasQuery,
-        })}
-      />
-    )}
   </nav>
 )
 

@@ -29,7 +29,7 @@ $mobile-max-screen: $max-mobile-width;
       @content;
     }
   } @else if $screen == desktop-m {
-    @media screen and (max-width: $max-tablet-width) {
+    @media screen and (max-width: $max-desktop-width) {
       @content;
     }
   } @else if $screen == desktop {
