@@ -27,7 +27,7 @@ const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
     setQuery(query)
   }
 
-  const results = query ? searchContent(jsonData, query) : undefined
+  const results = query.length > 4 ? searchContent(jsonData, query) : undefined
 
   const handleClear = () => {
     setQuery('')
