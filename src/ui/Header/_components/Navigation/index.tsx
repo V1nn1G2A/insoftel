@@ -27,12 +27,12 @@ const Navigation: FC<NavigationProps> = ({
   theme,
   onChange,
   value,
-  results,
+  results = [],
   query,
   onClear,
 }) => {
   const [hoverLink, setHoverLink] = useState('')
-  const isQueryValid = query.length > 4
+  const isQueryValid = results?.length > 0
 
   return (
     <div
@@ -51,7 +51,7 @@ const Navigation: FC<NavigationProps> = ({
         />
       </div>
       <SearchResult
-        results={results || []}
+        results={results}
         theme={theme}
         query={query}
         setHoverLink={setHoverLink}
