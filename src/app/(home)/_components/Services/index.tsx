@@ -1,28 +1,60 @@
 'use client'
 
 import classNames from 'classnames/bind'
+import { useInView } from 'motion/react'
 import Link from 'next/link'
+import { useEffect, useRef, useState } from 'react'
 
 import Logo from '@/assets/icons/imageDark.svg'
+import {
+  useHeaderHeight,
+  useLenisScrollDirection,
+  useMediaQuery,
+} from '@/hooks'
 import {
   AnimationBlock,
   Container,
   MotionSvg,
+  Paragraph,
   SectionTitle,
   TextButton,
 } from '@/ui'
 
-import Paragraph from '../../../../ui/Paragraph'
 import services from '../../_constants/SERVICE'
+import { useInnerScrollLock } from '../../hooks'
 
 import styles from './index.module.scss'
 
 const cx = classNames.bind(styles)
 
 const Services = () => {
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const headerHeight = useHeaderHeight()
+  const isDesktop = useMediaQuery('(min-width: 1280px)')
+  const infoRef = useRef<HTMLDivElement>(null)
+  const direction = useLenisScrollDirection()
+  const isInView = useInView(sectionRef, {
+    amount: 1,
+    margin: direction === 'up' ? `-65px 0px 0px 0px` : '0px 0px 0px 0px',
+  })
+  useInnerScrollLock({
+    ref: infoRef,
+    isInView,
+    isEnabled: isDesktop,
+    scrollDuration: 600,
+  })
+
   return (
     <Container className={cx('services-container')}>
-      <section className={cx('services')}>
+      <section
+        className={cx('services')}
+        ref={sectionRef}
+        style={{
+          height: isDesktop
+            ? `${window.innerHeight - headerHeight}px`
+            : 'max-content',
+        }}
+      >
         <div className={cx('title-block')}>
           <SectionTitle
             index="01"
@@ -36,7 +68,14 @@ const Services = () => {
             containerClassName={styles.logoContainer}
           />
         </div>
-        <div className={cx('info-block')}>
+
+        <div
+          className={cx('info-block')}
+          ref={infoRef}
+          style={{
+            overflow: isDesktop ? 'auto' : 'hidden',
+          }}
+        >
           <AnimationBlock
             type="p"
             className={cx('text-top')}
