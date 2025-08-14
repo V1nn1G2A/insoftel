@@ -28,7 +28,7 @@ const CardsList: FC = ({}) => {
         onTouchMove={() => (draggingRef.current = true)}
         keyboard={{ enabled: true }}
         modules={[Keyboard]}
-        slidesPerView={3}
+        slidesPerView={'auto'}
         slidesPerGroup={1}
         className={styles.swiper}
         speed={800}
