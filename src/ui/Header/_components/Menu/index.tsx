@@ -1,7 +1,7 @@
 'use client'
 
 import cx from 'classnames'
-import { FC, useRef, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 
 import CrossIcon from '@assets/icons/cross.svg'
 
@@ -34,6 +34,12 @@ const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
     setIsOpen(!isOpen)
   }
 
+  useEffect(() => {
+    if (!isOpen) {
+      setQuery('')
+    }
+  }, [isOpen])
+
   return (
     <div
       className={styles.menu}
@@ -43,7 +49,7 @@ const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
         <Search
           theme={theme}
           onChange={handleSearch}
-          value={isOpen ? query : ''}
+          value={query}
           isInitFocused={isOpen}
           onFocus={() => setIsOpen(true)}
           onClear={handleClear}
