@@ -1,6 +1,6 @@
 import cx from 'classnames'
 import Link from 'next/link'
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 import styles from './index.module.scss'
 
@@ -23,6 +23,17 @@ const SearchResult: FC<ISearchResultProps> = ({
   query,
   setHoverLink,
 }) => {
+  const [visibleResults, setVisibleResults] = useState<ISearchResult[]>(results)
+
+  useEffect(() => {
+    if (results.length > 0) {
+      setVisibleResults(results)
+    } else {
+      const timer = setTimeout(() => setVisibleResults([]), 600)
+      return () => clearTimeout(timer)
+    }
+  }, [results])
+
   const highlightQuery = (text: string, query: string) => {
     const regex = new RegExp(`(${query})`, 'gi')
 
@@ -42,10 +53,12 @@ const SearchResult: FC<ISearchResultProps> = ({
 
   return (
     <ul
-      className={cx(styles.list, styles[`list--${theme}`])}
+      className={cx(styles.list, styles[`list--${theme}`], {
+        [styles[`list--active`]]: results.length > 0,
+      })}
       tabIndex={0}
     >
-      {results.map(({ title, path, text }, index) => (
+      {visibleResults.map(({ title, path, text }, index) => (
         <li
           key={text + index}
           className={cx(styles.item, {

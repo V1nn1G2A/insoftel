@@ -2,13 +2,18 @@
 @use 'mixins/fonts';
 
 .list {
+  height: 0;
   max-height: 51%;
   overflow-y: scroll;
   overscroll-behavior: contain;
+  transition: height 0.6s ease;
+
+  &--active {
+    height: 51%;
+  }
 
   @include media.screen('mobile') {
     max-height: 45vh;
-    margin-top: 32px;
   }
 
   &::-webkit-scrollbar-thumb {

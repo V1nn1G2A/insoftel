@@ -1,7 +1,7 @@
 'use client'
 
 import cx from 'classnames'
-import { FC, useRef, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 
 import CrossIcon from '@assets/icons/cross.svg'
 
@@ -27,12 +27,18 @@ const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
     setQuery(query)
   }
 
-  const results = query ? searchContent(jsonData, query) : undefined
+  const results = query.length > 4 ? searchContent(jsonData, query) : undefined
 
   const handleClear = () => {
     setQuery('')
     setIsOpen(!isOpen)
   }
+
+  useEffect(() => {
+    if (!isOpen) {
+      setQuery('')
+    }
+  }, [isOpen])
 
   return (
     <div

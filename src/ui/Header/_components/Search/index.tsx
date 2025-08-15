@@ -3,7 +3,6 @@
 import cx from 'classnames'
 import { FC, useEffect, useRef, useState } from 'react'
 
-import CrossIcon from '@assets/icons/cross.svg'
 import SearchIcon from '@assets/icons/search.svg'
 
 import styles from './index.module.scss'
@@ -12,9 +11,16 @@ interface ISearch extends React.InputHTMLAttributes<HTMLInputElement> {
   theme: 'dark' | 'light'
   onClear: () => void
   isInitFocused?: boolean
+  isOpen?: boolean
 }
 
-const Search: FC<ISearch> = ({ theme, onClear, isInitFocused, ...props }) => {
+const Search: FC<ISearch> = ({
+  theme,
+  onClear,
+  isInitFocused,
+  isOpen,
+  ...props
+}) => {
   const [isFocused, setIsFocused] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
 
