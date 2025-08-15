@@ -24,7 +24,6 @@ const SectionHeading = ({
   const ref = useRef<HTMLHeadingElement>(null)
   const sectionRef = useRef<HTMLDivElement>(null)
   const typedRef = useRef<Typed | null>(null)
-  const requestId = useRef<number>(null)
   const lenis = useLenis()
   const height = useHeaderHeight()
   let width
@@ -86,7 +85,6 @@ const SectionHeading = ({
                   onClick={(e: React.MouseEvent) => {
                     e.stopPropagation()
                     smoothAutoScroll(
-                      requestId,
                       lenis,
                       (sectionRef.current?.scrollHeight ?? 0) - height
                     )
@@ -99,7 +97,6 @@ const SectionHeading = ({
                   onClick={(e: React.MouseEvent) => {
                     e.stopPropagation()
                     smoothAutoScroll(
-                      requestId,
                       lenis,
                       (sectionRef.current?.scrollHeight ?? 0) - height
                     )

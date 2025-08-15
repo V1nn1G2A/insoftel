@@ -1,16 +1,11 @@
 'use client'
 
 import classNames from 'classnames/bind'
-import { useInView } from 'motion/react'
 import Link from 'next/link'
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 
 import Logo from '@/assets/icons/imageDark.svg'
-import {
-  useHeaderHeight,
-  useLenisScrollDirection,
-  useMediaQuery,
-} from '@/hooks'
+import { useHeaderHeight, useMediaQuery } from '@/hooks'
 import {
   AnimationBlock,
   Container,
@@ -21,6 +16,7 @@ import {
 } from '@/ui'
 
 import services from '../../_constants/SERVICE'
+import { useLenisInView } from '../../hooks'
 import { useInnerScrollLock } from '../../hooks'
 
 import styles from './index.module.scss'
@@ -32,11 +28,10 @@ const Services = () => {
   const headerHeight = useHeaderHeight()
   const isDesktop = useMediaQuery('(min-width: 1280px)')
   const infoRef = useRef<HTMLDivElement>(null)
-  const direction = useLenisScrollDirection()
-  const isInView = useInView(sectionRef, {
-    amount: 1,
-    margin: direction === 'up' ? `-65px 0px 0px 0px` : '0px 0px 0px 0px',
-  })
+  const isInView = useLenisInView({ ref: sectionRef })
+
+  console.log(isInView)
+
   useInnerScrollLock({
     ref: infoRef,
     isInView,
