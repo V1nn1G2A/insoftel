@@ -104,7 +104,7 @@
 
   &__arrow {
     color: var(--color-white);
-    transition: all 0.3s ease;
+    transition: all 0.7s ease;
 
     @include media.screen('desktop-l') {
       transform: scale(1.2);

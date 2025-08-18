@@ -3,6 +3,7 @@
 import { motion } from 'motion/react'
 import type { Variants } from 'motion/react'
 import type { FC, JSX } from 'react'
+import { useMemo, useState } from 'react'
 
 import disolve from '@/animations/disolve'
 
@@ -24,7 +25,8 @@ const AnimationBlock: FC<IAnimationBlock> = ({
   className,
   isAnimated = true,
 }) => {
-  const MotionElement = motion(type)
+  const MotionElement = useMemo(() => motion(type), [type])
+  const [hasAnimated, setHasAnimated] = useState(false)
 
   const Type = type
 
@@ -33,7 +35,9 @@ const AnimationBlock: FC<IAnimationBlock> = ({
   return (
     <MotionElement
       initial="hidden"
-      whileInView="visible"
+      animate={hasAnimated ? 'visible' : undefined}
+      whileInView={!hasAnimated ? 'visible' : undefined}
+      onViewportEnter={() => setHasAnimated(true)}
       viewport={{ once: true, amount }}
       variants={animation}
       className={className}

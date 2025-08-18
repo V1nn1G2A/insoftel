@@ -1,40 +1,28 @@
 'use client'
 
-import type Lenis from '@studio-freight/lenis'
-import { RefObject } from 'react'
+import type Lenis from 'lenis'
+import type { RefObject } from 'react'
 
 export const smoothAutoScroll = (
-  requestId: RefObject<number | null>,
   lenis: Lenis,
-  target: number
+  target: RefObject<HTMLElement | null> | number
 ) => {
   if (!lenis) return
 
-  const STEP = 5
+  let scrollToPosition: number
 
-  const stopFunction = () => {
-    if (requestId.current) {
-      cancelAnimationFrame(requestId.current)
-      requestId.current = null
-    }
+  if (typeof target === 'number') {
+    scrollToPosition = target
+  } else if (target.current) {
+    const el = target.current
+    scrollToPosition = el.offsetTop + el.offsetHeight
+  } else {
+    return
   }
 
-  const scrollStep = () => {
-    if (lenis.scroll >= target) {
-      stopFunction()
-      return
-    }
-
-    lenis.scrollTo(lenis.scroll + STEP, { lerp: 1 })
-
-    requestId.current = requestAnimationFrame(scrollStep)
-  }
-
-  const setAnimation = () => {
-    requestId.current = requestAnimationFrame(scrollStep)
-  }
-
-  setAnimation()
-
-  window.addEventListener('click', stopFunction)
+  lenis.scrollTo(scrollToPosition, {
+    duration: 3,
+    easing: t => 1 - Math.pow(1 - t, 3),
+    immediate: false,
+  })
 }

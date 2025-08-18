@@ -1,6 +1,6 @@
 'use client'
 
-import Lenis from '@studio-freight/lenis'
+import Lenis from 'lenis'
 import { createContext } from 'react'
 import { ReactNode, useEffect, useRef, useState } from 'react'
 
@@ -21,6 +21,9 @@ export const LenisProvider = ({ children }: { children: ReactNode }) => {
       easing: t => Math.min(1, 1 - Math.pow(2, -8 * t)),
       smoothWheel: true,
       syncTouch: true,
+      // allowNestedScroll: true,
+      // overscroll: true,
+      // autoToggle: true, // эта штука заставляет при стопе лениса подниматься на верх страницу резко
     })
 
     setLenis(lenis)

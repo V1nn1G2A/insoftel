@@ -8,10 +8,16 @@ const cx = classNames.bind(styles)
 interface IContainer {
   children: React.ReactNode
   className?: string
+  style?: Record<string, string>
 }
 
-const Container: FC<IContainer> = ({ children, className }) => (
-  <div className={cx('container', className)}>{children}</div>
+const Container: FC<IContainer> = ({ children, className, style }) => (
+  <div
+    className={cx('container', className)}
+    style={style}
+  >
+    {children}
+  </div>
 )
 
 export default Container
