@@ -14,13 +14,7 @@ interface ISearch extends React.InputHTMLAttributes<HTMLInputElement> {
   isOpen?: boolean
 }
 
-const Search: FC<ISearch> = ({
-  theme,
-  onClear,
-  isInitFocused,
-  isOpen,
-  ...props
-}) => {
+const Search: FC<ISearch> = ({ theme, onClear, isInitFocused, ...props }) => {
   const [isFocused, setIsFocused] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
 

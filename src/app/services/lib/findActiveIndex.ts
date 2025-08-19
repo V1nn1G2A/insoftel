@@ -1,4 +1,4 @@
-import type Lenis from '@studio-freight/lenis/types'
+import type Lenis from 'lenis'
 
 import { IPosition } from '../model'
 
