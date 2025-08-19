@@ -12,9 +12,13 @@
   border-bottom: 1px solid rgba($color: #000, $alpha: 20%);
 
   @include media.screen('desktop') {
-    padding: 4.79vw 0;
+    padding: 92px 0;
     margin: 114px 0;
     letter-spacing: 0.2px;
+  }
+
+  @include media.screen('desktop-l') {
+    padding: 4.79vw 0;
   }
 
   div {

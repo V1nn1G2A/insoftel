@@ -46,8 +46,8 @@
   border-radius: 50%;
   border: 1px solid rgb(0 0 0 / 20%);
   background-color: transparent;
-  width: 3.13vw;
-  height: 3.13vw;
+  width: 60px;
+  height: 60px;
   backdrop-filter: blur(14.22px);
   transition: background-color 0.4s;
 
@@ -67,6 +67,8 @@
 
     @include media.screen('desktop-l') {
       margin-right: 20px;
+      width: 3.13vw;
+      height: 3.13vw;
 
       & svg {
         transform: scale(1.25);

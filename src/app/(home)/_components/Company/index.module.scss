@@ -19,6 +19,10 @@
   }
 
   @include media.screen('desktop') {
+    padding: 55px 0 82px;
+  }
+
+  @include media.screen('desktop-l') {
     padding: 2.86vw 0 4.27vw;
   }
 
@@ -30,41 +34,57 @@
     }
 
     &__wrapper {
-      max-width: 55.94vw;
+      @include media.screen('desktop-l') {
+        max-width: 55.94vw;
+      }
     }
 
     &__content {
-      font-size: 1.98vw;
-      line-height: 2.24vw;
+      @include media.screen('desktop-l') {
+        font-size: 1.98vw;
+        line-height: 2.24vw;
+      }
     }
 
     &__author {
-      font-size: 1.25vw;
-      line-height: 1.58vw;
+      @include media.screen('desktop-l') {
+        font-size: 1.25vw;
+        line-height: 1.58vw;
+      }
     }
   }
 }
 
 .company__container {
-  max-width: 90vw;
+  @include media.screen('desktop-l') {
+    max-width: 90vw;
+  }
 }
 
 .company__title {
-  margin: 38px 153px 48px 0;
+  margin: 38px 0 48px;
   max-width: fit-content;
 
   &__text {
-    font-size: 5.67vw;
-    line-height: 5.91vw;
+    @include media.screen('desktop-l') {
+      font-size: 5.67vw;
+      line-height: 5.91vw;
+    }
   }
 
   &__index {
-    font-size: 1.25vw;
-    line-height: 1.51vw;
+    @include media.screen('desktop-l') {
+      font-size: 1.25vw;
+      line-height: 1.51vw;
+    }
   }
 
   @include media.screen('desktop') {
     margin-top: 30px;
+  }
+
+  @include media.screen('desktop-l') {
+    margin: 38px 153px 48px 0;
   }
 }
 
@@ -96,6 +116,9 @@
     order: -1;
     margin-right: 134px;
     margin-top: 34px;
+  }
+
+  @include media.screen('desktop-l') {
     max-width: 36.48vw;
   }
 }
@@ -106,6 +129,10 @@
     line-height: 24px;
 
     @include media.screen('desktop') {
+      line-height: 30px;
+    }
+
+    @include media.screen('desktop-l') {
       line-height: 1.56vw;
     }
   }
@@ -120,6 +147,10 @@
 .company__statsContainer {
   @include media.screen('desktop') {
     width: 100%;
+    max-width: 662px;
+  }
+
+  @include media.screen('desktop-l') {
     max-width: 34.48vw;
   }
 }
@@ -134,17 +165,19 @@
   }
 
   @include media.screen('desktop') {
-    height: 19.90vw;
-    gap: 2.45vw;
+    height: 382px;
+    gap: 47px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
-    margin-top: 1.04vw;
+    margin-top: 20px;
   }
 
   @include media.screen('desktop-l') {
-    margin-top: 40px;
+    height: 19.90vw;
+    gap: 2.45vw;
+    margin-top: 1.04vw;
   }
 }
 

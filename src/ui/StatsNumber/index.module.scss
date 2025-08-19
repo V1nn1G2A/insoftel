@@ -10,12 +10,12 @@
   span {
     display: inline;
 
-    @include fonts.text(10vw, 7.4vw, 500);
+    @include fonts.text(120px, 120px, 500);
 
     color: var(--color-black);
 
     @include media.screen('desktop') {
-      @include fonts.text(10vw, 7.4vw, 500);
+      @include fonts.text(142px, 142px, 500);
     }
 
     @include media.screen('desktop-l') {
@@ -32,12 +32,12 @@
   width: 100%;
 
   @include media.screen('desktop') {
-    padding-bottom: 14px;
-    max-width: 34.48vw;
+    padding-bottom: 23px;
+    max-width: 662px;
   }
 
-  @include media.screen('desktop') {
-    padding-bottom: 23px;
+  @include media.screen('desktop-l') {
+    max-width: 34.48vw;
   }
 }
 
