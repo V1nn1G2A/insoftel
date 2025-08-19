@@ -15,7 +15,7 @@
     }
 
     @include media.screen('desktop-l') {
-      @include fonts.text(24px, 29.01px, 300);
+      @include fonts.text(1.25vw, 1.51vw, 300);
     }
   }
 
@@ -45,7 +45,7 @@
     }
 
     @include media.screen('desktop-l') {
-      @include fonts.text(24px, 30.31px, 400);
+      @include fonts.text(1.25vw, 1.58vw, 400);
     }
   }
 

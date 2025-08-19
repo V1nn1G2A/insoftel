@@ -11,4 +11,12 @@
       font-weight: 500;
     }
   }
+
+  &__wrapper {
+    max-width: 756px;
+
+    @include media.screen('desktop-l') {
+      max-width: 1075px;
+    }
+  }
 }

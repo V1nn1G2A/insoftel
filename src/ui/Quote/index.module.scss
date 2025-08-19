@@ -17,18 +17,13 @@
     letter-spacing: 0.2px;
   }
 
-  div {
-    max-width: 756px;
-    margin: 0 auto;
-
-    @include media.screen('desktop-l') {
-      max-width: 1075px;
-    }
+  @include media.screen('desktop-l') {
+    padding: 4.79vw 0;
   }
-}
 
-.wrapper {
-  max-width: 780px;
+  div {
+    margin: 0 auto;
+  }
 }
 
 .quote__content {

@@ -43,7 +43,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 60px;
+  border-radius: 50%;
   border: 1px solid rgb(0 0 0 / 20%);
   background-color: transparent;
   width: 60px;
@@ -67,6 +67,8 @@
 
     @include media.screen('desktop-l') {
       margin-right: 20px;
+      width: 3.13vw;
+      height: 3.13vw;
 
       & svg {
         transform: scale(1.25);
@@ -101,7 +103,7 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(28px, 35px, 500);
+    @include fonts.text(1.46vw, 1.82vw, 500);
   }
 }
 

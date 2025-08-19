@@ -19,7 +19,7 @@
     }
 
     @include media.screen('desktop-l') {
-      @include fonts.text(192px, 142px, 500);
+      @include fonts.text(10vw, 7.4vw, 500);
     }
   }
 }
@@ -32,12 +32,12 @@
   width: 100%;
 
   @include media.screen('desktop') {
-    padding-bottom: 14px;
+    padding-bottom: 23px;
     max-width: 662px;
   }
 
-  @include media.screen('desktop') {
-    padding-bottom: 23px;
+  @include media.screen('desktop-l') {
+    max-width: 34.48vw;
   }
 }
 
@@ -54,7 +54,7 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(28px, 35.31px, 'regular');
+    @include fonts.text(1.46vw, 35.31px, 'regular');
   }
 }
 
