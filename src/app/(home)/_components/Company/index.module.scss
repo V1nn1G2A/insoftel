@@ -19,7 +19,7 @@
   }
 
   @include media.screen('desktop') {
-    padding: 55px 0 82px;
+    padding: 2.86vw 0 4.27vw;
   }
 
   &__quote {
@@ -28,11 +28,40 @@
     @include media.screen('desktop') {
       margin: 114px 0 126px;
     }
+
+    &__wrapper {
+      max-width: 55.94vw;
+    }
+
+    &__content {
+      font-size: 1.98vw;
+      line-height: 2.24vw;
+    }
+
+    &__author {
+      font-size: 1.25vw;
+      line-height: 1.58vw;
+    }
   }
 }
 
+.company__container {
+  max-width: 90vw;
+}
+
 .company__title {
-  margin: 38px 0 48px;
+  margin: 38px 153px 48px 0;
+  max-width: fit-content;
+
+  &__text {
+    font-size: 5.67vw;
+    line-height: 5.91vw;
+  }
+
+  &__index {
+    font-size: 1.25vw;
+    line-height: 1.51vw;
+  }
 
   @include media.screen('desktop') {
     margin-top: 30px;
@@ -67,6 +96,7 @@
     order: -1;
     margin-right: 134px;
     margin-top: 34px;
+    max-width: 36.48vw;
   }
 }
 
@@ -76,7 +106,7 @@
     line-height: 24px;
 
     @include media.screen('desktop') {
-      line-height: 30px;
+      line-height: 1.56vw;
     }
   }
 
@@ -90,7 +120,7 @@
 .company__statsContainer {
   @include media.screen('desktop') {
     width: 100%;
-    max-width: 662px;
+    max-width: 34.48vw;
   }
 }
 
@@ -104,13 +134,13 @@
   }
 
   @include media.screen('desktop') {
-    height: 382px;
-    gap: 47px;
+    height: 19.90vw;
+    gap: 2.45vw;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 1.04vw;
   }
 
   @include media.screen('desktop-l') {

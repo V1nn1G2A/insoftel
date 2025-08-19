@@ -10,6 +10,7 @@ const QuoteSection: FC = ({}) => (
     <Quote
       author="Founder of Insoftel Technologies"
       className={styles.quote}
+      wrapperClassName={styles.quote__wrapper}
       id="AboutQuote"
     >
       At Insoftel Technologies, custom software is just the beginning. By

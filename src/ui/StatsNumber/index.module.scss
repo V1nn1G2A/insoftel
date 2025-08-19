@@ -10,16 +10,16 @@
   span {
     display: inline;
 
-    @include fonts.text(120px, 120px, 500);
+    @include fonts.text(10vw, 7.4vw, 500);
 
     color: var(--color-black);
 
     @include media.screen('desktop') {
-      @include fonts.text(142px, 142px, 500);
+      @include fonts.text(10vw, 7.4vw, 500);
     }
 
     @include media.screen('desktop-l') {
-      @include fonts.text(192px, 142px, 500);
+      @include fonts.text(10vw, 7.4vw, 500);
     }
   }
 }
@@ -33,7 +33,7 @@
 
   @include media.screen('desktop') {
     padding-bottom: 14px;
-    max-width: 662px;
+    max-width: 34.48vw;
   }
 
   @include media.screen('desktop') {
@@ -54,7 +54,7 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(28px, 35.31px, 'regular');
+    @include fonts.text(1.46vw, 35.31px, 'regular');
   }
 }
 

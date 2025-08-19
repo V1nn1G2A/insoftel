@@ -7,6 +7,8 @@ import { type FC, useEffect, useRef } from 'react'
 import styles from './index.module.scss'
 
 interface ISectionTitle {
+  textClassName?: string
+  indexClassName?: string
   className?: string
   children: string
   index: string
@@ -17,6 +19,8 @@ const cx = cn.bind(styles)
 
 const SectionTitle: FC<ISectionTitle> = ({
   className,
+  textClassName,
+  indexClassName,
   children,
   index,
   appereance = 'dark',
@@ -47,8 +51,8 @@ const SectionTitle: FC<ISectionTitle> = ({
       className={classNames}
       ref={divRef}
     >
-      <sup className={styles.index}>[ {index} ]</sup>
-      <h2 className={styles.text}>
+      <sup className={cx(styles.index, indexClassName)}>[ {index} ]</sup>
+      <h2 className={cx(styles.text, textClassName)}>
         {[...children].map((el, index) => (
           <span
             key={index}

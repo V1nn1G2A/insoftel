@@ -13,11 +13,13 @@ import styles from './index.module.scss'
 
 const Company = () => (
   <section className={styles.company}>
-    <Container>
+    <Container className={styles.company__container}>
       <div className={styles.company__header}>
         <SectionTitle
           index="03"
           className={styles.company__title}
+          textClassName={styles.company__title__text}
+          indexClassName={styles.company__title__index}
         >
           Company
         </SectionTitle>
@@ -26,6 +28,9 @@ const Company = () => (
       <Quote
         author="Founder of Insoftel Technologies"
         className={styles.company__quote}
+        wrapperClassName={styles.company__quote__wrapper}
+        contentClassName={styles.company__quote__content}
+        authorClassName={styles.company__quote__author}
       >
         At Insoftel Technologies, custom software is just the beginning. By
         combining deep software expertise with hardware integration, we create

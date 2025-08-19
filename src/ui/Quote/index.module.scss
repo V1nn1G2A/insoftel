@@ -12,23 +12,14 @@
   border-bottom: 1px solid rgba($color: #000, $alpha: 20%);
 
   @include media.screen('desktop') {
-    padding: 92px 0;
+    padding: 4.79vw 0;
     margin: 114px 0;
     letter-spacing: 0.2px;
   }
 
   div {
-    max-width: 756px;
     margin: 0 auto;
-
-    @include media.screen('desktop-l') {
-      max-width: 1075px;
-    }
   }
-}
-
-.wrapper {
-  max-width: 780px;
 }
 
 .quote__content {

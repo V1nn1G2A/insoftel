@@ -43,11 +43,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 60px;
+  border-radius: 50%;
   border: 1px solid rgb(0 0 0 / 20%);
   background-color: transparent;
-  width: 60px;
-  height: 60px;
+  width: 3.13vw;
+  height: 3.13vw;
   backdrop-filter: blur(14.22px);
   transition: background-color 0.4s;
 
@@ -101,7 +101,7 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(28px, 35px, 500);
+    @include fonts.text(1.46vw, 1.82vw, 500);
   }
 }
 

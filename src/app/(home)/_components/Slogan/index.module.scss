@@ -11,23 +11,22 @@
 
 .slogan {
   color: var(--color-black);
-  max-width: 662px;
+  max-width: 45vw;
   padding: 48px 0;
 
-  @include fonts.text(48px, 52px, 400);
+  @include fonts.text(clamp(10px, 5vw, 300px), 5.46vw, 400);
 
   @include media.screen('tablet') {
     margin: 0 auto;
   }
 
   @include media.screen('desktop') {
-    @include fonts.text(80px, 84px, 400);
+    @include fonts.text(clamp(10px, 5vw, 300px), 5.46vw, 400);
   }
 
   @include media.screen('desktop-l') {
-    max-width: 795px;
 
-    @include fonts.text(97px, 106.1px, 400);
+    @include fonts.text(clamp(10px, 5vw, 300px), 5.46vw, 400);
   }
 }
 
