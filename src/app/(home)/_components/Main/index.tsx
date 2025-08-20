@@ -4,15 +4,15 @@ import cn from 'classnames'
 import type { FC } from 'react'
 import { useRef } from 'react'
 
-import { useHeaderHeight } from '@/hooks'
-import { useAnimatedWords } from '@/hooks'
-import { useMediaQuery } from '@/hooks/useMediaQuery'
+import { useAnimatedWords, useMediaQuery } from '@/hooks'
 import { useLenis } from '@/providers'
-import { VideoBackground } from '@/ui'
-import { BigLetter } from '@/ui'
-import { ExploreButton } from '@/ui'
-import { Container } from '@/ui'
-import { ScrollColorController } from '@/ui'
+import {
+  BigLetter,
+  Container,
+  ExploreButton,
+  ScrollColorController,
+  VideoBackground,
+} from '@/ui'
 
 import { MainText } from '../'
 import { smoothAutoScroll } from '../../../../lib/smoothAutoScroll'
@@ -25,9 +25,7 @@ const cx = cn.bind(styles)
 const Main: FC = ({}) => {
   const isTablet = useMediaQuery('(max-width: 1439px)')
   const ref = useRef<HTMLDivElement>(null)
-  const requestId = useRef<number>(null)
   const lenis = useLenis()
-  const header = useHeaderHeight()
 
   const { activeWord, shouldDisappear, shouldShowT, hideWord } =
     useAnimatedWords(strings)
@@ -126,11 +124,7 @@ const Main: FC = ({}) => {
                 classNames={['', '', styles.exploreButton]}
                 onClick={(e: React.MouseEvent) => {
                   e.stopPropagation()
-                  smoothAutoScroll(
-                    requestId,
-                    lenis,
-                    (ref.current?.scrollHeight ?? 0) - header
-                  )
+                  smoothAutoScroll(lenis, ref)
                 }}
               />
             </div>

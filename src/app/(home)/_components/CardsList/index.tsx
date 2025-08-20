@@ -15,6 +15,7 @@ import styles from './index.module.scss'
 
 const CardsList: FC = ({}) => {
   const swiperRef = useRef<SwiperCore | null>(null)
+  const draggingRef = useRef(false)
 
   return (
     <AnimationBlock
@@ -23,12 +24,33 @@ const CardsList: FC = ({}) => {
     >
       <Swiper
         onSwiper={swiper => (swiperRef.current = swiper)}
+        onTouchStart={() => (draggingRef.current = false)}
+        onTouchMove={() => (draggingRef.current = true)}
         keyboard={{ enabled: true }}
         modules={[Keyboard]}
         slidesPerView={'auto'}
         slidesPerGroup={1}
         className={styles.swiper}
-        speed={1400}
+        speed={800}
+        freeMode={{
+          enabled: true,
+          momentum: true,
+          sticky: false,
+          momentumRatio: 0.7,
+          momentumVelocityRatio: 0.8,
+        }}
+        resistance={true}
+        resistanceRatio={0.5}
+        onTouchEnd={swiper => {
+          draggingRef.current = false
+          if (swiper.isEnd) {
+            const slidesPerView = Number(swiper?.params?.slidesPerView ?? 1)
+            swiper.slideTo(swiper.slides.length - slidesPerView)
+          }
+          if (swiper.isBeginning) {
+            swiper.slideTo(0)
+          }
+        }}
       >
         {cards.map(card => (
           <SwiperSlide
@@ -39,6 +61,7 @@ const CardsList: FC = ({}) => {
               title={card.title}
               text={card.content}
               picture={card.picture}
+              draggingRef={draggingRef}
             />
           </SwiperSlide>
         ))}

@@ -2,7 +2,7 @@
 
 import cn from 'classnames/bind'
 import Image from 'next/image'
-import type { FC } from 'react'
+import type { FC, RefObject } from 'react'
 import { useState } from 'react'
 
 import PlusIcon from '@assets/icons/plus.svg'
@@ -14,11 +14,12 @@ interface ICard {
   title: string
   text: string
   picture: string
+  draggingRef: RefObject<boolean>
 }
 
 const cx = cn.bind(styles)
 
-const Card: FC<ICard> = ({ picture, title, text, className }) => {
+const Card: FC<ICard> = ({ picture, title, text, className, draggingRef }) => {
   const [isActive, setIsActive] = useState(false)
 
   const classNames = cx(styles.card, className, {
@@ -26,6 +27,7 @@ const Card: FC<ICard> = ({ picture, title, text, className }) => {
   })
 
   const handleOpen = (e: React.MouseEvent) => {
+    if (draggingRef.current) return
     e.stopPropagation()
     setIsActive(prev => !prev)
   }
@@ -39,13 +41,15 @@ const Card: FC<ICard> = ({ picture, title, text, className }) => {
       className={classNames}
       onClick={handleClose}
     >
-      <Image
-        src={picture}
-        width={435}
-        height={434}
-        alt={title}
-        onClick={handleOpen}
-      />
+      <div className={styles.imageWrapper}>
+        <Image
+          src={picture}
+          width={435}
+          height={434}
+          alt={title}
+          onClick={handleOpen}
+        />
+      </div>
       <div className={styles.card__content}>
         <div className={styles.card__title}>
           <p>{title}</p>

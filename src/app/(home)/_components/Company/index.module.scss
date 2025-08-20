@@ -104,6 +104,8 @@
 }
 
 .company__stats {
+  overflow: hidden;
+
   & p {
     letter-spacing: 0.5px;
     line-height: 24px;
