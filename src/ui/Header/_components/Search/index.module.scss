@@ -19,6 +19,10 @@
     top: 50%;
     left: 12px;
     transform: translate(0, -50%);
+
+    @include media.screen('desktop-l') {
+      left: 0.83vw;
+    }
   }
 
   transition: width 0.3s ease;
@@ -30,6 +34,15 @@
 
   @include media.screen('mobile') {
     width: 100%;
+  }
+
+  @include media.screen('desktop-l') {
+    width: 17.5vw;
+
+    &--active {
+      width: 100%;
+      align-self: start;
+    }
   }
 }
 
@@ -51,6 +64,15 @@
     @include fonts.text(16px, 20px, 400);
   }
 
+  @include media.screen('desktop-l') {
+    padding: 0.97vw 3.96vw 0.9vw 3.05vw;
+    @include fonts.text(1.11vw, 1.39vw, 400);
+
+    &::placeholder {
+      @include fonts.text(1.11vw, 1.39vw, 400);
+    }
+  }
+
   &--dark {
     background-color: #ffffff1a;
     border-color: transparent;
@@ -58,10 +80,24 @@
     & + svg {
       color: rgba($color: #fff, $alpha: 30%);
       transition: color 0.2s;
+      width: 20px;
+      height: 20px;
+
+      @include media.screen('desktop-l') {
+        width: 1.39vw;
+        height: 1.39vw;
+      }
     }
 
     & + .iconActive {
       color: var(--color-white);
+      width: 20px;
+      height: 20px;
+
+      @include media.screen('desktop-l') {
+        width: 1.39vw;
+        height: 1.39vw;
+      }
     }
 
     &:hover,
@@ -77,10 +113,24 @@
     & + svg {
       color: rgba($color: #000, $alpha: 50%);
       transition: color 0.2s;
+      width: 20px;
+      height: 20px;
+
+      @include media.screen('desktop-l') {
+        width: 1.39vw;
+        height: 1.39vw;
+      }
     }
 
     & + .iconActive {
       color: var(--color-black);
+      width: 20px;
+      height: 20px;
+
+      @include media.screen('desktop-l') {
+        width: 1.39vw;
+        height: 1.39vw;
+      }
     }
 
     &:hover,

@@ -55,36 +55,16 @@
   }
 }
 
-.company__container {
-  @include media.screen('desktop-l') {
-    max-width: 90vw;
-  }
-}
-
 .company__title {
   margin: 38px 0 48px;
   max-width: fit-content;
-
-  &__text {
-    @include media.screen('desktop-l') {
-      font-size: 5.67vw;
-      line-height: 5.91vw;
-    }
-  }
-
-  &__index {
-    @include media.screen('desktop-l') {
-      font-size: 1.25vw;
-      line-height: 1.51vw;
-    }
-  }
 
   @include media.screen('desktop') {
     margin-top: 30px;
   }
 
   @include media.screen('desktop-l') {
-    margin: 38px 153px 48px 0;
+    margin: 38px 0 48px;
   }
 }
 
@@ -204,5 +184,10 @@
   @include media.screen('desktop') {
     display: flex;
     margin: 20px auto 0 0;
+  }
+
+  @include media.screen('desktop') {
+    display: flex;
+    margin: 1.39vw auto 0 0;
   }
 }

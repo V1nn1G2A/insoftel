@@ -13,7 +13,7 @@ import styles from './index.module.scss'
 
 const Company = () => (
   <section className={styles.company}>
-    <Container className={styles.company__container}>
+    <Container>
       <div className={styles.company__header}>
         <SectionTitle
           index="03"

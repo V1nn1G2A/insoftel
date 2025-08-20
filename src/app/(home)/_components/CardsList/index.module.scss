@@ -7,6 +7,10 @@
   @include media.screen('desktop') {
     margin-top: 56px;
   }
+
+  @include media.screen('desktop-l') {
+    margin-top: 3.89vw;
+  }
 }
 
 .slide:not(:first-child) {
@@ -14,6 +18,10 @@
 
   @include media.screen('desktop') {
     margin-left: 20px;
+  }
+
+  @include media.screen('desktop') {
+    margin-left: 1.39vw;
   }
 }
 
@@ -24,6 +32,10 @@
     display: flex;
     justify-content: space-between;
     padding: 62px 0 78px;
+  }
+
+  @include media.screen('desktop-l') {
+    padding: 4.3vw 0 5.42vw;
   }
 }
 
@@ -36,6 +48,10 @@
   @include media.screen('desktop') {
     max-width: 148px;
     margin-bottom: 0;
+  }
+
+  @include media.screen('desktop') {
+    max-width: 10.28vw;
   }
 }
 
@@ -58,6 +74,15 @@
       font-size: 23px;
       letter-spacing: 0.7px; //не исправлять на 1px! потому что иначе в firefox становится в 2 линии
       margin-left: 10px;
+    }
+  }
+
+  @include media.screen('desktop-l') {
+    max-width: 22.5vw;
+
+    p {
+      font-size: 1.6vw;
+      margin-left: 0.69vw;
     }
   }
 }

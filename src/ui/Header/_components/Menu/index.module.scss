@@ -12,6 +12,10 @@
   @include media.screen('mobile') {
     margin: 0;
   }
+
+  @include media.screen('desktop-l') {
+    gap: 2.78vw;
+  }
 }
 
 .button {
@@ -30,6 +34,10 @@
   // Жирность должна быть 300
   @include fonts.text(16px, 20px, 400);
 
+  @include media.screen('desktop-l') {
+    @include fonts.text(1.11vw, 1.39vw, 400);
+  }
+
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       border-color: inherit;
@@ -39,6 +47,14 @@
   &--active {
     margin-left: 20px;
     border-color: transparent;
+    width: 20px;
+    height: 20px;
+
+    @include media.screen('desktop-l') {
+      margin-left: 1.39vw;
+      width: 1.39vw;
+      height: 1.39vw;
+    }
 
     &:hover {
       border-color: transparent;

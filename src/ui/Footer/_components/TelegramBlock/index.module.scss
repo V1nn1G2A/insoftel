@@ -105,9 +105,13 @@
   &__arrow {
     color: var(--color-white);
     transition: all 0.3s ease;
+    width: 26px;
+    height: 26px;
 
     @include media.screen('desktop-l') {
       transform: scale(1.2);
+      width: 1.8vw;
+      height: 1.8vw;
     }
   }
 

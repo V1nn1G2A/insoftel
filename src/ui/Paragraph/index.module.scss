@@ -43,7 +43,7 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(24px, 29.01px, 300);
+    @include fonts.text(1.39vw, 1.66vw, 300);
   }
 }
 
@@ -55,6 +55,7 @@
 .pagination-block:not(:last-child) {
   margin-bottom: 24px;
 }
+
 
 .paginated-title {
   letter-spacing: 0.1px;

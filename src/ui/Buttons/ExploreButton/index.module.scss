@@ -1,4 +1,5 @@
 @use 'mixins/fonts';
+@use 'mixins/media';
 
 .button {
   display: flex;
@@ -56,7 +57,12 @@
   justify-content: center;
   width: 60px;
   height: 60px;
-  border-radius: 60px;
+  border-radius: 50%;
+
+  @include media.screen('desktop-l') {
+    width: 4.16vw;
+    height: 4.16vw;
+  }
 
   &.dark {
     background-color: var(--color-black);
@@ -69,6 +75,13 @@
 
 .arrow {
   transition: transform 0.4s ease;
+  width: 26px;
+  height: 26px;
+
+  @include media.screen('desktop') {
+    width: 1.8vw;
+    height: 1.8vw;
+  }
 
   &.dark {
     color: var(--color-white);

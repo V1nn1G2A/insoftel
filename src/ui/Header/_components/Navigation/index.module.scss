@@ -3,7 +3,7 @@
 
 .wrapper {
   position: absolute;
-  top: 83px;
+  top: 85px;
   left: 0;
   width: 100%;
   z-index: 100;
@@ -28,11 +28,11 @@
   }
 
   &--active {
-    min-height: calc(100vh - 83px);
+    min-height: calc(100vh - 85px);
     overflow-y: scroll;
 
     @include media.screen('desktop-l') {
-      min-height: calc(100vh - 89px);
+      min-height: calc(100vh - 5.8vw);
       overflow-y: scroll;
     }
 
@@ -57,7 +57,7 @@
   }
 
   @include media.screen('desktop-l') {
-    top: 89px;
+    top: 5.8vw;
   }
 }
 

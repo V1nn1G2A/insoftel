@@ -7,6 +7,11 @@
     height: 668px;
     margin-bottom: 55px;
   }
+
+  @include media.screen('desktop-l') {
+    height: 46.38vw;
+    margin-bottom: 3.82vw;
+  }
 }
 
 .accordion {
@@ -17,6 +22,6 @@
   }
 
   @include media.screen('desktop-l') {
-    max-width: 798px;
+    max-width: 45.97vw;
   }
 }
