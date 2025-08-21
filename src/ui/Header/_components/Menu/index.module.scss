@@ -14,7 +14,7 @@
   }
 
   @include media.screen('desktop-l') {
-    gap: calc(var(--vw) * 2.78);
+    gap: 40px;
   }
 }
 
@@ -34,9 +34,6 @@
   // Жирность должна быть 300
   @include fonts.text(16px, 20px, 400);
 
-  @include media.screen('desktop-l') {
-    @include fonts.text(calc(var(--vw) * 1.11), calc(var(--vw) * 1.39), 400);
-  }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
@@ -49,12 +46,6 @@
     border-color: transparent;
     width: 20px;
     height: 20px;
-
-    @include media.screen('desktop-l') {
-      margin-left: calc(var(--vw) * 1.39);
-      width: calc(var(--vw) * 1.39);
-      height: calc(var(--vw) * 1.39);
-    }
 
     &:hover {
       border-color: transparent;

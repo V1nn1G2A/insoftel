@@ -19,10 +19,6 @@
     top: 50%;
     left: 12px;
     transform: translate(0, -50%);
-
-    @include media.screen('desktop-l') {
-      left: calc(var(--vw) * 0.83);
-    }
   }
 
   transition: width 0.3s ease;
@@ -37,8 +33,6 @@
   }
 
   @include media.screen('desktop-l') {
-    width: calc(var(--vw) * 17.5);
-
     &--active {
       width: 100%;
       align-self: start;
@@ -64,16 +58,6 @@
     @include fonts.text(16px, 20px, 400);
   }
 
-  @include media.screen('desktop-l') {
-    padding: calc(var(--vw) * 0.97) calc(var(--vw) * 3.96) calc(var(--vw) * 0.9)
-      calc(var(--vw) * 3.05);
-    @include fonts.text(calc(var(--vw) * 1.11), calc(var(--vw) * 1.39), 400);
-
-    &::placeholder {
-      @include fonts.text(calc(var(--vw) * 1.11), calc(var(--vw) * 1.39), 400);
-    }
-  }
-
   &--dark {
     background-color: #ffffff1a;
     border-color: transparent;
@@ -83,22 +67,12 @@
       transition: color 0.2s;
       width: 20px;
       height: 20px;
-
-      @include media.screen('desktop-l') {
-        width: calc(var(--vw) * 1.39);
-        height: calc(var(--vw) * 1.39);
-      }
     }
 
     & + .iconActive {
       color: var(--color-white);
       width: 20px;
       height: 20px;
-
-      @include media.screen('desktop-l') {
-        width: calc(var(--vw) * 1.39);
-        height: calc(var(--vw) * 1.39);
-      }
     }
 
     &:hover,
@@ -116,22 +90,12 @@
       transition: color 0.2s;
       width: 20px;
       height: 20px;
-
-      @include media.screen('desktop-l') {
-        width: calc(var(--vw) * 1.39);
-        height: calc(var(--vw) * 1.39);
-      }
     }
 
     & + .iconActive {
       color: var(--color-black);
       width: 20px;
       height: 20px;
-
-      @include media.screen('desktop-l') {
-        width: calc(var(--vw) * 1.39);
-        height: calc(var(--vw) * 1.39);
-      }
     }
 
     &:hover,

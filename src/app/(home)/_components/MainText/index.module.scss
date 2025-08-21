@@ -12,7 +12,7 @@
   text-transform: uppercase;
   user-select: none;
 
-  @include media.screen('desktop-l') {
+  @media (width >= 1440px) {
     @include fonts.text(calc(var(--vw) * 7.85), 100%, 500);
   }
 }

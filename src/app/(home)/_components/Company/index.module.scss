@@ -34,7 +34,7 @@
     }
 
     &__wrapper {
-      @include media.screen('desktop-l') {
+      @include media.screen('desktop') {
         max-width: calc(var(--vw) * 55.94);
       }
     }
