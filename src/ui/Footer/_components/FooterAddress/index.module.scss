@@ -13,7 +13,7 @@
   }
 
   @include media.screen('desktop-l') {
-    max-width: 19.03vw;
+    max-width: calc(var(--vw) * 19.03);
   }
 
   &__list {
@@ -23,7 +23,7 @@
     list-style: none;
 
     @include media.screen('desktop-l') {
-      gap: 2.22vw;
+      gap: calc(var(--vw) * 2.22);
     }
   }
 
@@ -37,9 +37,9 @@
     gap: 8px;
 
     @include media.screen('desktop-l') {
-      gap: 0.55vw;
+      gap: calc(var(--vw) * 0.55);
 
-      @include fonts.text(1.11vw, 1.39vw, 400);
+      @include fonts.text(calc(var(--vw) * 1.11), calc(var(--vw) * 1.39), 400);
     }
   }
 
@@ -67,6 +67,6 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(1.11vw, 1.39vw, 400);
+    @include fonts.text(calc(var(--vw) * 1.11), calc(var(--vw) * 1.39), 400);
   }
 }

@@ -23,8 +23,8 @@
 
   @include media.screen('desktop-l') {
     grid-template-columns: 0.68fr 1fr 1fr;
-    grid-gap: 8.33vw 0;
-    padding-bottom: 2.78vw;
+    grid-gap: calc(var(--vw) * 8.33) 0;
+    padding-bottom: calc(var(--vw) * 2.78);
   }
 
   &__button {
@@ -46,7 +46,7 @@
     }
 
     @include media.screen('desktop-l') {
-      padding-bottom: 0.69vw;
+      padding-bottom: calc(var(--vw) * 0.69);
     }
 
     & p {
@@ -64,8 +64,8 @@
     }
 
     @include media.screen('desktop-l') {
-      width: 14.375vw;
-      height: 14.375vw;
+      width: calc(var(--vw) * 14.375);
+      height: calc(var(--vw) * 14.375);
     }
   }
 
@@ -92,16 +92,20 @@
   }
 
   @include media.screen('desktop-l') {
-    padding: 0.55vw 0.69vw 0.55vw 2.08vw;
+    padding: calc(var(--vw) * 0.55) calc(var(--vw) * 0.69)
+      calc(var(--vw) * 0.55) calc(var(--vw) * 2.08);
 
     & p {
-      @include fonts.text(1.11vw, 1.69vw 'regular');
-      margin-right: 0.97vw;
+      @include fonts.text(
+        calc(var(--vw) * 1.11),
+        calc(var(--vw) * 1.69) 'regular'
+      );
+      margin-right: calc(var(--vw) * 0.97);
     }
 
     & div {
-      width: 4.16vw;
-      height: 4.16vw;
+      width: calc(var(--vw) * 4.16);
+      height: calc(var(--vw) * 4.16);
     }
   }
 }

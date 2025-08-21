@@ -13,18 +13,18 @@
     list-style: none;
 
     @include media.screen('desktop-l') {
-      gap: 1.11vw;
+      gap: calc(var(--vw) * 1.11);
     }
   }
 
   &__item {
     transition: color 0.5s;
     color: var(--color-white);
-    
+
     @include fonts.text(16px, 20px, 400);
-    
+
     @include media.screen('desktop-l') {
-      @include fonts.text(1.11vw, 1.39vw, 400);
+      @include fonts.text(calc(var(--vw) * 1.11), calc(var(--vw) * 1.39), 400);
     }
 
     span {

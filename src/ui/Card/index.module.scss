@@ -13,8 +13,8 @@
   }
 
   @include media.screen('desktop-l') {
-    width: 26.37vw;
-    height: 26.31vw;
+    width: calc(var(--vw) * 26.37);
+    height: calc(var(--vw) * 26.31);
   }
 }
 
@@ -74,8 +74,8 @@
   }
 
   @include media.screen('desktop-l') {
-    height: 26.33vw;
-    max-width: 26.37vw;
+    height: calc(var(--vw) * 26.33);
+    max-width: calc(var(--vw) * 26.37);
   }
 }
 
@@ -122,18 +122,23 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(1.66vw, 1.94vw, 'regular');
+    @include fonts.text(
+      calc(var(--vw) * 1.66),
+      calc(var(--vw) * 1.94),
+      'regular'
+    );
 
-    height: 5.9vw;
-    padding: 1.39vw 1.875vw 1.39vw 1.39vw;
+    height: calc(var(--vw) * 5.9);
+    padding: calc(var(--vw) * 1.39) calc(var(--vw) * 1.875)
+      calc(var(--vw) * 1.39) calc(var(--vw) * 1.39);
 
     button {
-      width: 1.94vw;
-      height: 1.94vw;
+      width: calc(var(--vw) * 1.94);
+      height: calc(var(--vw) * 1.94);
     }
 
     p {
-      margin: 0 2.91vw 0 0;
+      margin: 0 calc(var(--vw) * 2.91) 0 0;
     }
   }
 }
@@ -166,12 +171,12 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(1.25vw, 1.39vw, 300);
+    @include fonts.text(calc(var(--vw) * 1.25), calc(var(--vw) * 1.39), 300);
 
-    padding: 0.69vw 1.39vw;
+    padding: calc(var(--vw) * 0.69) calc(var(--vw) * 1.39);
 
     p {
-      height: 26.33vw;
+      height: calc(var(--vw) * 26.33);
     }
   }
 }
@@ -215,8 +220,8 @@
   }
 
   @include media.screen('desktop-l') {
-    width: 26.83vw;
-    height: 32.24vw;
+    width: calc(var(--vw) * 26.83);
+    height: calc(var(--vw) * 32.24);
   }
 }
 
