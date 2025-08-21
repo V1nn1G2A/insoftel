@@ -23,8 +23,8 @@
 
   @include media.screen('desktop-l') {
     grid-template-columns: 0.68fr 1fr 1fr;
-    grid-gap: 256px 0;
-    padding-bottom: 48px;
+    grid-gap: 8.33vw 0;
+    padding-bottom: 2.78vw;
   }
 
   &__button {
@@ -46,7 +46,7 @@
     }
 
     @include media.screen('desktop-l') {
-      padding-bottom: 16px;
+      padding-bottom: 0.69vw;
     }
 
     & p {
@@ -64,8 +64,8 @@
     }
 
     @include media.screen('desktop-l') {
-      width: 261px;
-      height: 261px;
+      width: 14.375vw;
+      height: 14.375vw;
     }
   }
 
@@ -92,19 +92,16 @@
   }
 
   @include media.screen('desktop-l') {
-    gap: 12px;
+    padding: 0.55vw 0.69vw 0.55vw 2.08vw;
 
     & p {
-      @include fonts.text(20px, 25.26px, 'regular');
+      @include fonts.text(1.11vw, 1.69vw 'regular');
+      margin-right: 0.97vw;
     }
 
     & div {
-      width: 75px;
-      height: 75px;
-
-      & svg {
-        transform: scale(1.38);
-      }
+      width: 4.16vw;
+      height: 4.16vw;
     }
   }
 }
