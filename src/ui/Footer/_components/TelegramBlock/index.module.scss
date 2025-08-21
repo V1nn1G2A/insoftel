@@ -72,8 +72,8 @@
 
     @include media.screen('desktop-l') {
       @include fonts.text(calc(var(--vw) * 2.5), calc(var(--vw) * 2.78), 400);
-      padding: calc(var(--vw) * 0.14) 0 0 calc(var(--vw) * 0.28);
 
+      padding: calc(var(--vw) * 0.14) 0 0 calc(var(--vw) * 0.28);
       letter-spacing: 0;
     }
   }
@@ -110,7 +110,7 @@
 
   &__arrow {
     color: var(--color-white);
-    transition: all 0.3s ease;
+    transition: all 0.7s ease;
     width: 26px;
     height: 26px;
 

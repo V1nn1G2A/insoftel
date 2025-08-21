@@ -1,28 +1,25 @@
 @use 'mixins/fonts';
 @use 'mixins/media';
 
+.wrapper {
+  position: relative;
+  padding: 48px 0;
+  overflow-y: hidden;
+
+  @include media.screen('desktop-l') {
+    padding: calc(var(--vw) * 4.79) 0;
+  }
+}
+
 .quote {
   @include fonts.text(16px, 20px, 400);
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 48px 0;
-  border-top: 1px solid rgba($color: #000, $alpha: 20%);
-  border-bottom: 1px solid rgba($color: #000, $alpha: 20%);
 
   @include media.screen('desktop') {
-    padding: 92px 0;
-    margin: 114px 0;
     letter-spacing: 0.2px;
-  }
-
-  @include media.screen('desktop-l') {
-    padding: calc(var(--vw) * 4.79) 0;
-  }
-
-  div {
-    margin: 0 auto;
   }
 }
 
@@ -60,4 +57,11 @@
   @include media.screen('desktop-l') {
     @include fonts.text(24px, 30.31px, 500);
   }
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba($color: #000, $alpha: 20%);
 }
