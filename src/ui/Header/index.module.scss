@@ -27,10 +27,6 @@
   @include media.screen('tablet') {
     padding: 18px 0;
   }
-
-  @include media.screen('desktop-l') {
-    padding: calc(var(--vw) * 1.25) 0;
-  }
 }
 
 .header--active {
@@ -56,13 +52,6 @@
   @include media.screen('mobile') {
     & svg {
       transform: none;
-    }
-  }
-
-  @include media.screen('desktop-l') {
-    & svg {
-      transform: none;
-      width: calc(var(--vw) * 12.43);
     }
   }
 }

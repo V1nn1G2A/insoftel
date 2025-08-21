@@ -10,8 +10,8 @@
     height: 76px;
 
     @include media.screen('desktop-l') {
-      width: 11.74vw;
-      height: 5.28vw;
+      width: calc(var(--vw) * 11.74);
+      height: calc(var(--vw) * 5.28);
     }
   }
 }
@@ -39,7 +39,7 @@
   transform: translate(-50%, -90%);
 
   @include media.screen('desktop-l') {
-    height: 4.93vw;
+    height: calc(var(--vw) * 4.93);
   }
 }
 
@@ -55,7 +55,7 @@
   @include fonts.text(20px, 24px, 300);
 
   @include media.screen('desktop-l') {
-    @include fonts.text(1.39vw, 1.66vw, 300);
+    @include fonts.text(calc(var(--vw) * 1.39), calc(var(--vw) * 1.66), 300);
   }
 }
 
@@ -90,8 +90,8 @@
   align-items: center;
 
   @include media.screen('desktop-l') {
-    left: 2.85vw;
-    right: 1.39vw;
+    left: calc(var(--vw) * 2.85);
+    right: calc(var(--vw) * 1.39);
   }
 }
 
@@ -103,7 +103,7 @@
   }
 
   @include media.screen('desktop-l') {
-    top: 8.33vw;
+    top: calc(var(--vw) * 8.33);
   }
 }
 
@@ -112,8 +112,8 @@
   left: 20px;
 
   @include media.screen('desktop-l') {
-    bottom: 1.53vw;
-    left: 1.39vw;
+    bottom: calc(var(--vw) * 1.53);
+    left: calc(var(--vw) * 1.39);
   }
 }
 
@@ -129,7 +129,7 @@
     animation: letter-appear 0.8s ease-out both;
     animation-delay: 0.2s;
 
-    @include fonts.text(7.85vw, 100%, 500);
+    @include fonts.text(calc(var(--vw) * 7.85), 100%, 500);
   }
 }
 
@@ -155,8 +155,8 @@
   }
 
   @include media.screen('desktop-l') {
-    gap: 1.04vw;
-    padding: 0.55vw 0.28vw 0.55vw 2.08vw;
+    gap: calc(var(--vw) * 1.04);
+    padding: calc(var(--vw) * 0.55) calc(var(--vw) * 0.28) calc(var(--vw) * 0.55) calc(var(--vw) * 2.08);
   }
 
   & p {
@@ -167,7 +167,7 @@
     font-family: var(--font-neue-haas);
 
     @include media.screen('desktop-l') {
-      font-size: 1.11vw;
+      font-size: calc(var(--vw) * 1.11);
     }
   }
 }

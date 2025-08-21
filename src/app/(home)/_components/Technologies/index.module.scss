@@ -12,8 +12,8 @@
   }
 
   @include media.screen('desktop-l') {
-    margin: 5.55vw 0 -2px;
-    gap: 4.86vw;
+    margin: calc(var(--vw) * 5.55) 0 -2px;
+    gap: calc(var(--vw) * 4.86)
   }
 }
 
@@ -33,7 +33,7 @@
   }
 
   @include media.screen('desktop-l') {
-    margin: 0.34vw 0 1.66vw
+    margin: calc(var(--vw) * 0.34) 0 calc(var(--vw) * 1.66);
   }
 }
 
@@ -44,7 +44,7 @@
   }
 
   @include media.screen('desktop-l') {
-    max-width: 55.4vw;
+    max-width: calc(var(--vw) * 55.4);
     width: 100%;
   }
 }
@@ -66,8 +66,8 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(2.55vw, 2.77vw, 200);
-    margin-bottom: 4.44vw;
+    @include fonts.text(calc(var(--vw) * 2.55), calc(var(--vw) * 2.77), 200);
+    margin-bottom: calc(var(--vw) * 4.44);
   }
 }
 
@@ -99,10 +99,10 @@
   }
 
   @include media.screen('desktop-l') {
-    margin-bottom: 5.7vw;
+    margin-bottom: calc(var(--vw) * 5.7);
 
     p {
-      font-size: 1.53vw;
+      font-size: calc(var(--vw) * 1.53);
       line-height: 1.94px;
     }
   }

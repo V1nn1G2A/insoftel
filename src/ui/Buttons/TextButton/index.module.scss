@@ -18,7 +18,7 @@
     @include media.screen('desktop-l') {
       @include fonts.text(28px, 35px, 500);
 
-      padding: 0.69vw 0 1.39vw;
+      padding: calc(var(--vw) * 0.69) 0 calc(var(--vw) * 1.39);
     }
 
     &.dark {
@@ -52,8 +52,8 @@
   transition: background-color 0.4s;
 
   @include media.screen('desktop-l') {
-    width: 4.16vw;
-    height: 4.16vw;
+    width: calc(var(--vw) * 4.16);
+    height: calc(var(--vw) * 4.16);
   }
 
   &.dark {
@@ -106,7 +106,7 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(1.46vw, 1.82vw, 500);
+    @include fonts.text(calc(var(--vw) * 1.46), calc(var(--vw) * 1.82), 500);
   }
 }
 
@@ -116,8 +116,8 @@
   height: 26px;
 
   @include media.screen('desktop') {
-    width: 1.8vw;
-    height: 1.8vw;
+    width: calc(var(--vw) * 1.8);
+    height: calc(var(--vw) * 1.8);
   }
 
   &.long {

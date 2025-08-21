@@ -9,8 +9,8 @@
   }
 
   @include media.screen('desktop-l') {
-    height: 46.38vw;
-    margin-bottom: 3.82vw;
+    height: calc(var(--vw) * 46.38);
+    margin-bottom: calc(var(--vw) * 3.82);
   }
 }
 
@@ -22,6 +22,6 @@
   }
 
   @include media.screen('desktop-l') {
-    max-width: 45.97vw;
+    max-width: calc(var(--vw) * 45.97);
   }
 }

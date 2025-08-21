@@ -25,8 +25,8 @@
   }
 
   @include media.screen('desktop-l') {
-    max-width: 45vw;
-    @include fonts.text(clamp(10px, 5vw, 300px), 5.46vw, 400);
+    max-width: calc(var(--vw) * 45);
+    @include fonts.text(clamp(10px, calc(var(--vw) * 5), 300px), calc(var(--vw) * 5.46), 400);
   }
 }
 

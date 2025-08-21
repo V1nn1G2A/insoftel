@@ -35,7 +35,7 @@
   }
 
   @include media.screen('desktop-l') {
-    padding: 0.55vw 0.69vw 0.55vw 2.08vw;
+    padding: calc(var(--vw) * 0.55) calc(var(--vw) * 0.69) calc(var(--vw) * 0.55) calc(var(--vw) * 2.08);
   }
 }
 
@@ -64,8 +64,8 @@
   border-radius: 50%;
 
   @include media.screen('desktop-l') {
-    width: 4.16vw;
-    height: 4.16vw;
+    width: calc(var(--vw) * 4.16);
+    height: calc(var(--vw) * 4.16);
   }
 
   &.dark {
@@ -83,8 +83,8 @@
   height: 26px;
 
   @include media.screen('desktop') {
-    width: 1.8vw;
-    height: 1.8vw;
+    width: calc(var(--vw) * 1.8);
+    height: calc(var(--vw) * 1.8);
   }
 
   &.dark {

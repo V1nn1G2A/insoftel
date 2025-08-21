@@ -31,11 +31,6 @@
     min-height: calc(100vh - 85px);
     overflow-y: scroll;
 
-    @include media.screen('desktop-l') {
-      min-height: calc(100vh - calc(var(--vw) * 5.8));
-      overflow-y: scroll;
-    }
-
     &.wrapper--dark {
       border-top: 1px solid #fff3;
       border-bottom: 1px solid #fff3;
@@ -54,10 +49,6 @@
 
   @include media.screen('mobile') {
     top: 60px;
-  }
-
-  @include media.screen('desktop-l') {
-    top: calc(var(--vw) * 5.8);
   }
 }
 

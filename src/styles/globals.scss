@@ -28,6 +28,7 @@ $color-text-quaternary: #4e5256;
   --color-text-secondary: #{$color-text-secondary};
   --color-text-tertiary: #{$color-text-tertiary};
   --color-text-quaternary: #{$color-text-quaternary};
+  --vw: calc(min(1vw, 16.2px));
 }
 
 // @media (prefers-color-scheme: dark) {
