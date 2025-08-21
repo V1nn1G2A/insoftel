@@ -22,7 +22,7 @@
   @include fonts.text(20px, 24px, 'regular');
 
   @include media.screen('desktop-l') {
-    @include fonts.text(1.39vw, 1.66vw, 'regular');
+    @include fonts.text(calc(var(--vw) * 1.39), calc(var(--vw) * 1.66), 'regular');
   }
 }
 
@@ -37,7 +37,7 @@
   color: var(--color-white);
 
   @include media.screen('desktop-l') {
-    padding: 0 0 1.11vw;
+    padding: 0 0 calc(var(--vw) * 1.11);
   }
 
   p {
@@ -66,7 +66,7 @@
   padding: 15px 0 0;
 
   @include media.screen('desktop-l') {
-    padding: 1.04vw 0 0;
+    padding: calc(var(--vw) * 1.04) 0 0;
   }
 
   p {
@@ -82,7 +82,7 @@
     }
 
     @include media.screen('desktop-l') {
-      @include fonts.text(1.66vw, 1.94vw, 300);
+      @include fonts.text(calc(var(--vw) * 1.66), calc(var(--vw) * 1.94), 300);
     }
   }
 
@@ -114,12 +114,12 @@
   }
 
   @include media.screen('desktop-l') {
-    width: 3.33vw;
-    height: 3.33vw;
+    width: calc(var(--vw) * 3.33);
+    height: calc(var(--vw) * 3.33);
 
     svg {
-      width: 1.8vw;
-      height: 1.8vw;
+      width: calc(var(--vw) * 1.8);
+      height: calc(var(--vw) * 1.8);
     }
   }
 }

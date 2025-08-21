@@ -15,7 +15,7 @@
     }
 
     @include media.screen('desktop-l') {
-      @include fonts.text(1.25vw, 1.51vw, 300);
+      @include fonts.text(calc(var(--vw) * 1.25), calc(var(--vw) * 1.51), 300);
     }
   }
 
@@ -45,7 +45,7 @@
     }
 
     @include media.screen('desktop-l') {
-      @include fonts.text(1.25vw, 1.58vw, 400);
+      @include fonts.text(calc(var(--vw) * 1.25), calc(var(--vw) * 1.58), 400);
     }
   }
 

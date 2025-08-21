@@ -23,7 +23,7 @@
   }
 
   @include media.screen('desktop-l') {
-    padding: 2.86vw 0 4.27vw;
+    padding: calc(var(--vw) * 2.86) 0 calc(var(--vw) * 4.27);
   }
 
   &__quote {
@@ -35,21 +35,21 @@
 
     &__wrapper {
       @include media.screen('desktop-l') {
-        max-width: 55.94vw;
+        max-width: calc(var(--vw) * 55.94);
       }
     }
 
     &__content {
       @include media.screen('desktop-l') {
-        font-size: 1.98vw;
-        line-height: 2.24vw;
+        font-size: calc(var(--vw) * 1.98);
+        line-height: calc(var(--vw) * 2.24);
       }
     }
 
     &__author {
       @include media.screen('desktop-l') {
-        font-size: 1.25vw;
-        line-height: 1.58vw;
+        font-size: calc(var(--vw) * 1.25);
+        line-height: calc(var(--vw) * 1.58);
       }
     }
   }
@@ -99,7 +99,7 @@
   }
 
   @include media.screen('desktop-l') {
-    max-width: 36.48vw;
+    max-width: calc(var(--vw) * 36.48);
   }
 }
 
@@ -115,7 +115,7 @@
     }
 
     @include media.screen('desktop-l') {
-      line-height: 1.56vw;
+      line-height: calc(var(--vw) * 1.56);
     }
   }
 
@@ -133,7 +133,7 @@
   }
 
   @include media.screen('desktop-l') {
-    max-width: 34.48vw;
+    max-width: calc(var(--vw) * 34.48);
   }
 }
 
@@ -157,9 +157,9 @@
   }
 
   @include media.screen('desktop-l') {
-    height: 19.90vw;
-    gap: 2.45vw;
-    margin-top: 1.04vw;
+    height: calc(var(--vw) * 19.90);
+    gap: calc(var(--vw) * 2.45);
+    margin-top: calc(var(--vw) * 1.04);
   }
 }
 
@@ -190,6 +190,6 @@
 
   @include media.screen('desktop') {
     display: flex;
-    margin: 1.39vw auto 0 0;
+    margin: calc(var(--vw) * 1.39) auto 0 0;
   }
 }

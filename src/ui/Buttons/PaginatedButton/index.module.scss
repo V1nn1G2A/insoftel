@@ -41,12 +41,12 @@
   }
 
   @include media.screen('desktop-l') {
-    width: 4.16vw;
-    height: 4.16vw;
+    width: calc(var(--vw) * 4.16);
+    height: calc(var(--vw) * 4.16);
 
     svg {
-      width: 1.96vw;
-      height: 1.96vw;
+      width: calc(var(--vw) * 1.96);
+      height: calc(var(--vw) * 1.96);
     }
   }
 }

@@ -9,7 +9,7 @@
   }
 
   @include media.screen('desktop-l') {
-    margin-top: 3.89vw;
+    margin-top: calc(var(--vw) * 3.89);
   }
 }
 
@@ -21,7 +21,7 @@
   }
 
   @include media.screen('desktop') {
-    margin-left: 1.39vw;
+    margin-left: calc(var(--vw) * 1.39);
   }
 }
 
@@ -35,7 +35,7 @@
   }
 
   @include media.screen('desktop-l') {
-    padding: 4.3vw 0 5.42vw;
+    padding: calc(var(--vw) * 4.3) 0 calc(var(--vw) * 5.42);
   }
 }
 
@@ -51,7 +51,7 @@
   }
 
   @include media.screen('desktop') {
-    max-width: 10.28vw;
+    max-width: calc(var(--vw) * 10.28);
   }
 }
 
@@ -78,11 +78,11 @@
   }
 
   @include media.screen('desktop-l') {
-    max-width: 22.5vw;
+    max-width: calc(var(--vw) * 22.5);
 
     p {
-      font-size: 1.6vw;
-      margin-left: 0.69vw;
+      font-size: calc(var(--vw) * 1.6);
+      margin-left: calc(var(--vw) * 0.69);
     }
   }
 }

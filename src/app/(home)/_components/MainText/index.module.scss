@@ -13,7 +13,7 @@
   user-select: none;
 
   @include media.screen('desktop-l') {
-    @include fonts.text(7.85vw, 100%, 500);
+    @include fonts.text(calc(var(--vw) * 7.85), 100%, 500);
   }
 }
 
@@ -35,7 +35,7 @@
   @include fonts.text(31px, 100%, 600);
 
   @include media.screen('desktop-l') {
-    @include fonts.text(7.85vw, 100%, 500);
+    @include fonts.text(calc(var(--vw) * 7.85), 100%, 500);
   }
 }
 
