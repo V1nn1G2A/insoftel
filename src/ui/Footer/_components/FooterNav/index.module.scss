@@ -13,20 +13,19 @@
     list-style: none;
 
     @include media.screen('desktop-l') {
-      gap: 20.21px;
+      gap: 1.11vw;
     }
   }
 
   &__item {
     transition: color 0.5s;
-
-    @include media.screen('desktop-l') {
-      @include fonts.text(20px, 25.26px, 400);
-    }
-
-    @include fonts.text(16px, 20px, 400);
-
     color: var(--color-white);
+    
+    @include fonts.text(16px, 20px, 400);
+    
+    @include media.screen('desktop-l') {
+      @include fonts.text(1.11vw, 1.39vw, 400);
+    }
 
     span {
       letter-spacing: 0.3px;

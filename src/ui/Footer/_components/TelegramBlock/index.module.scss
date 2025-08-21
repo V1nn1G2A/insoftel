@@ -14,8 +14,8 @@
   }
 
   @include media.screen('desktop-l') {
-    gap: 30px;
-    max-width: 432px;
+    gap: 1.53vw;
+    max-width: 25.49vw;
   }
 }
 
@@ -32,10 +32,11 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(20px, 25.26px, 400);
+    @include fonts.text(1.11vw, 1.39vw, 400);
 
     letter-spacing: 0.2px;
-    max-width: 402px;
+    max-width: 22.22vw;
+    padding-left: 0.28vw;
   }
 }
 
@@ -47,6 +48,10 @@
   border: none;
   text-align: start;
   cursor: pointer;
+
+  @include media.screen('desktop-l') {
+    gap: 1.39vw;
+  }
 
   &__text {
     overflow: hidden;
@@ -66,7 +71,8 @@
     }
 
     @include media.screen('desktop-l') {
-      @include fonts.text(44px, 48.34px, 400);
+      @include fonts.text(2.5vw, 2.78vw, 400);
+      padding: 0.14vw 0 0 0.28vw;
 
       letter-spacing: 0;
     }
@@ -80,8 +86,8 @@
     cursor: pointer;
 
     @include media.screen('desktop-l') {
-      width: 100px;
-      height: 100px;
+      width: 5.55vw;
+      height: 5.55vw;
     }
   }
 
@@ -97,17 +103,21 @@
     transition: all 0.7s ease;
 
     @include media.screen('desktop-l') {
-      width: 100px;
-      height: 100px;
+      width: 5.55vw;
+      height: 5.55vw;
     }
   }
 
   &__arrow {
     color: var(--color-white);
-    transition: all 0.7s ease;
+    transition: all 0.3s ease;
+    width: 26px;
+    height: 26px;
 
     @include media.screen('desktop-l') {
       transform: scale(1.2);
+      width: 1.8vw;
+      height: 1.8vw;
     }
   }
 

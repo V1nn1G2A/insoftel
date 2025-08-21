@@ -1,6 +1,15 @@
+@use 'mixins/media';
+
 .arrow {
   color: var(--color-black);
   transition: color 0.5s;
+  width: 21px;
+  height: 21px;
+
+  @include media.screen('desktop') {
+    width: 1.46vw;
+    height: 1.46vw;
+  }
 
   &.left {
     transform: rotate(135deg);
@@ -17,7 +26,7 @@
   justify-content: center;
   background-color: transparent;
   border: 1px solid rgba($color: #000, $alpha: 20%);
-  border-radius: 60px;
+  border-radius: 50%;
   width: 60px;
   height: 60px;
   cursor: pointer;
@@ -29,5 +38,15 @@
 
   &:hover .arrow {
     color: var(--color-white);
+  }
+
+  @include media.screen('desktop-l') {
+    width: 4.16vw;
+    height: 4.16vw;
+
+    svg {
+      width: 1.96vw;
+      height: 1.96vw;
+    }
   }
 }

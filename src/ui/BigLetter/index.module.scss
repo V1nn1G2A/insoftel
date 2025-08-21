@@ -9,4 +9,8 @@
   text-transform: uppercase;
   color: var(--color-light-gray);
   user-select: none;
+
+  @include media.screen('desktop-l') {
+    @include fonts.text(7.85vw, 100%, 500);
+  }
 }

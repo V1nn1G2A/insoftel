@@ -18,7 +18,7 @@
     @include media.screen('desktop-l') {
       @include fonts.text(28px, 35px, 500);
 
-      padding: 0 0 22px;
+      padding: 0.69vw 0 1.39vw;
     }
 
     &.dark {
@@ -51,6 +51,11 @@
   backdrop-filter: blur(14.22px);
   transition: background-color 0.4s;
 
+  @include media.screen('desktop-l') {
+    width: 4.16vw;
+    height: 4.16vw;
+  }
+
   &.dark {
     border: 1px solid rgb(0 0 0 / 20%);
   }
@@ -67,8 +72,6 @@
 
     @include media.screen('desktop-l') {
       margin-right: 20px;
-      width: 3.13vw;
-      height: 3.13vw;
 
       & svg {
         transform: scale(1.25);
@@ -109,6 +112,13 @@
 
 .arrow {
   transition: transform 0.4s ease;
+  width: 26px;
+  height: 26px;
+
+  @include media.screen('desktop') {
+    width: 1.8vw;
+    height: 1.8vw;
+  }
 
   &.long {
     &.dark {

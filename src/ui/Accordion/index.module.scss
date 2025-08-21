@@ -20,6 +20,10 @@
   transition: opacity 0.7s;
 
   @include fonts.text(20px, 24px, 'regular');
+
+  @include media.screen('desktop-l') {
+    @include fonts.text(1.39vw, 1.66vw, 'regular');
+  }
 }
 
 .accordion__content {
@@ -31,6 +35,10 @@
   padding: 0 0 16px;
   word-spacing: 2%;
   color: var(--color-white);
+
+  @include media.screen('desktop-l') {
+    padding: 0 0 1.11vw;
+  }
 
   p {
     margin-top: 16px;
@@ -57,6 +65,10 @@
   justify-content: space-between;
   padding: 15px 0 0;
 
+  @include media.screen('desktop-l') {
+    padding: 1.04vw 0 0;
+  }
+
   p {
     position: relative;
     color: rgb(255 255 255 / 50%);
@@ -70,7 +82,7 @@
     }
 
     @include media.screen('desktop-l') {
-      @include fonts.text(28px, 35.37px, 300);
+      @include fonts.text(1.66vw, 1.94vw, 300);
     }
   }
 
@@ -95,6 +107,21 @@
   align-items: center;
   background-color: transparent;
   transition: background-color 0.7s;
+
+  svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  @include media.screen('desktop-l') {
+    width: 3.33vw;
+    height: 3.33vw;
+
+    svg {
+      width: 1.8vw;
+      height: 1.8vw;
+    }
+  }
 }
 
 /* stylelint-disable-next-line no-descending-specificity */

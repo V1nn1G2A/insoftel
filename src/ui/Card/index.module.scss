@@ -13,8 +13,8 @@
   }
 
   @include media.screen('desktop-l') {
-    width: 524.5px;
-    height: 523.3px;
+    width: 26.37vw;
+    height: 26.31vw;
   }
 }
 
@@ -55,6 +55,11 @@
     width: 28px;
     height: 28px;
   }
+
+  @include media.screen('desktop') {
+    width: 1.94vw;
+    height: 1.94vw;
+  }
 }
 
 .card__content {
@@ -69,7 +74,8 @@
   }
 
   @include media.screen('desktop-l') {
-    height: calc(638.4px - 114px);
+    height: 26.33vw;
+    max-width: 26.37vw
   }
 }
 
@@ -116,10 +122,19 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(29px, 33px, 'regular');
+    @include fonts.text(1.66vw, 1.94vw, 'regular');
 
-    height: 116px;
-    padding: 24px 20px 24px 24px;
+    height: 5.9vw;
+    padding: 1.39vw 1.875vw 1.39vw 1.39vw;
+
+    button {
+      width: 1.94vw;
+      height: 1.94vw;
+    }
+
+    p {
+      margin: 0 2.91vw 0 0;
+    }
   }
 }
 
@@ -151,10 +166,12 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(24px, 29px, 300);
+    @include fonts.text(1.25vw, 1.39vw, 300);
+
+    padding: 0.69vw 1.39vw;
 
     p {
-      height: calc(638.4px - 116px);
+      height: 26.33vw;
     }
   }
 }
@@ -198,8 +215,8 @@
   }
 
   @include media.screen('desktop-l') {
-    width: 524px;
-    height: 638.4px;
+    width: 26.83vw;
+    height: 32.24vw;
   }
 }
 
