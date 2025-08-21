@@ -14,7 +14,7 @@
   }
 
   @include media.screen('desktop-l') {
-    gap: 2.78vw;
+    gap: calc(var(--vw) * 2.78);
   }
 }
 
@@ -35,7 +35,7 @@
   @include fonts.text(16px, 20px, 400);
 
   @include media.screen('desktop-l') {
-    @include fonts.text(1.11vw, 1.39vw, 400);
+    @include fonts.text(calc(var(--vw) * 1.11), calc(var(--vw) * 1.39), 400);
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -51,9 +51,9 @@
     height: 20px;
 
     @include media.screen('desktop-l') {
-      margin-left: 1.39vw;
-      width: 1.39vw;
-      height: 1.39vw;
+      margin-left: calc(var(--vw) * 1.39);
+      width: calc(var(--vw) * 1.39);
+      height: calc(var(--vw) * 1.39);
     }
 
     &:hover {

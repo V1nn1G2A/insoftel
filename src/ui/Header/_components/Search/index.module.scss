@@ -21,7 +21,7 @@
     transform: translate(0, -50%);
 
     @include media.screen('desktop-l') {
-      left: 0.83vw;
+      left: calc(var(--vw) * 0.83);
     }
   }
 
@@ -37,7 +37,7 @@
   }
 
   @include media.screen('desktop-l') {
-    width: 17.5vw;
+    width: calc(var(--vw) * 17.5);
 
     &--active {
       width: 100%;
@@ -65,11 +65,12 @@
   }
 
   @include media.screen('desktop-l') {
-    padding: 0.97vw 3.96vw 0.9vw 3.05vw;
-    @include fonts.text(1.11vw, 1.39vw, 400);
+    padding: calc(var(--vw) * 0.97) calc(var(--vw) * 3.96) calc(var(--vw) * 0.9)
+      calc(var(--vw) * 3.05);
+    @include fonts.text(calc(var(--vw) * 1.11), calc(var(--vw) * 1.39), 400);
 
     &::placeholder {
-      @include fonts.text(1.11vw, 1.39vw, 400);
+      @include fonts.text(calc(var(--vw) * 1.11), calc(var(--vw) * 1.39), 400);
     }
   }
 
@@ -84,8 +85,8 @@
       height: 20px;
 
       @include media.screen('desktop-l') {
-        width: 1.39vw;
-        height: 1.39vw;
+        width: calc(var(--vw) * 1.39);
+        height: calc(var(--vw) * 1.39);
       }
     }
 
@@ -95,8 +96,8 @@
       height: 20px;
 
       @include media.screen('desktop-l') {
-        width: 1.39vw;
-        height: 1.39vw;
+        width: calc(var(--vw) * 1.39);
+        height: calc(var(--vw) * 1.39);
       }
     }
 
@@ -117,8 +118,8 @@
       height: 20px;
 
       @include media.screen('desktop-l') {
-        width: 1.39vw;
-        height: 1.39vw;
+        width: calc(var(--vw) * 1.39);
+        height: calc(var(--vw) * 1.39);
       }
     }
 
@@ -128,8 +129,8 @@
       height: 20px;
 
       @include media.screen('desktop-l') {
-        width: 1.39vw;
-        height: 1.39vw;
+        width: calc(var(--vw) * 1.39);
+        height: calc(var(--vw) * 1.39);
       }
     }
 
