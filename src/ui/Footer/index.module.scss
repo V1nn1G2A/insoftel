@@ -15,6 +15,6 @@
   }
 
   @include media.screen('desktop-l') {
-    padding: 4.38vw 0;
+    padding: calc(var(--vw) * 4.38) 0;
   }
 }

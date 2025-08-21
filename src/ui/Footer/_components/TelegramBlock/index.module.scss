@@ -14,8 +14,8 @@
   }
 
   @include media.screen('desktop-l') {
-    gap: 1.53vw;
-    max-width: 25.49vw;
+    gap: calc(var(--vw) * 1.53);
+    max-width: calc(var(--vw) * 25.49);
   }
 }
 
@@ -32,11 +32,11 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(1.11vw, 1.39vw, 400);
+    @include fonts.text(calc(var(--vw) * 1.11), calc(var(--vw) * 1.39), 400);
 
     letter-spacing: 0.2px;
-    max-width: 22.22vw;
-    padding-left: 0.28vw;
+    max-width: calc(var(--vw) * 22.22);
+    padding-left: calc(var(--vw) * 0.28);
   }
 }
 
@@ -50,7 +50,7 @@
   cursor: pointer;
 
   @include media.screen('desktop-l') {
-    gap: 1.39vw;
+    gap: calc(var(--vw) * 1.39);
   }
 
   &__text {
@@ -71,8 +71,8 @@
     }
 
     @include media.screen('desktop-l') {
-      @include fonts.text(2.5vw, 2.78vw, 400);
-      padding: 0.14vw 0 0 0.28vw;
+      @include fonts.text(calc(var(--vw) * 2.5), calc(var(--vw) * 2.78), 400);
+      padding: calc(var(--vw) * 0.14) 0 0 calc(var(--vw) * 0.28);
 
       letter-spacing: 0;
     }
@@ -86,8 +86,8 @@
     cursor: pointer;
 
     @include media.screen('desktop-l') {
-      width: 5.55vw;
-      height: 5.55vw;
+      width: calc(var(--vw) * 5.55);
+      height: calc(var(--vw) * 5.55);
     }
   }
 
@@ -103,8 +103,8 @@
     transition: all 0.7s ease;
 
     @include media.screen('desktop-l') {
-      width: 5.55vw;
-      height: 5.55vw;
+      width: calc(var(--vw) * 5.55);
+      height: calc(var(--vw) * 5.55);
     }
   }
 
@@ -116,8 +116,8 @@
 
     @include media.screen('desktop-l') {
       transform: scale(1.2);
-      width: 1.8vw;
-      height: 1.8vw;
+      width: calc(var(--vw) * 1.8);
+      height: calc(var(--vw) * 1.8);
     }
   }
 

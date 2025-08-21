@@ -19,7 +19,7 @@
     }
 
     @include media.screen('desktop-l') {
-      @include fonts.text(10vw, 7.4vw, 500);
+      @include fonts.text(calc(var(--vw) * 10), calc(var(--vw) * 7.4), 500);
     }
   }
 }
@@ -37,7 +37,7 @@
   }
 
   @include media.screen('desktop-l') {
-    max-width: 34.48vw;
+    max-width: calc(var(--vw) * 34.48);
   }
 }
 
@@ -54,7 +54,7 @@
   }
 
   @include media.screen('desktop-l') {
-    @include fonts.text(1.46vw, 35.31px, 'regular');
+    @include fonts.text(calc(var(--vw) * 1.46), 35.31px, 'regular');
   }
 }
 

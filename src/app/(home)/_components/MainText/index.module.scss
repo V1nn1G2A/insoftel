@@ -34,8 +34,8 @@
 
   @include fonts.text(31px, 100%, 600);
 
-  @include media.screen('desktop-l') {
-    @include fonts.text(calc(var(--vw) * 7.85), 100%, 500);
+  @include media.screen('desktop') {
+    @include fonts.text(calc(var(--vw) 7.85), 100%, 500);
   }
 }
 

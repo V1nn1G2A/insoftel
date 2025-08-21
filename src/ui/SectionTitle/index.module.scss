@@ -37,8 +37,8 @@
   }
 
   @include media.screen('desktop-l') {
-    font-size: 1.39vw;
-    line-height: 1.66vw;
+    font-size: calc(var(--vw) * 1.39);
+    line-height: calc(var(--vw) * 1.66);
   }
 }
 
@@ -62,8 +62,8 @@
 
   @include media.screen('desktop-l') {
     @include fonts.text(109px, 113.61px, 400);
-    font-size: 6.25vw;
-    line-height: 6.53vw;
+    font-size: calc(var(--vw) * 6.25);
+    line-height: calc(var(--vw) * 6.53);
   }
 }
 

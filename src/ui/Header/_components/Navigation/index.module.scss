@@ -32,7 +32,7 @@
     overflow-y: scroll;
 
     @include media.screen('desktop-l') {
-      min-height: calc(100vh - 5.8vw);
+      min-height: calc(100vh - calc(var(--vw) * 5.8));
       overflow-y: scroll;
     }
 
@@ -57,7 +57,7 @@
   }
 
   @include media.screen('desktop-l') {
-    top: 5.8vw;
+    top: calc(var(--vw) * 5.8);
   }
 }
 
@@ -87,13 +87,13 @@
   }
 
   @include media.screen('desktop-m') {
-      bottom: 48px;
-      right: 48px;
+    bottom: 48px;
+    right: 48px;
 
-      &--active {
-        height: 166px;
-        width: 166px;
-      }
+    &--active {
+      height: 166px;
+      width: 166px;
+    }
   }
 
   @include media.screen('mobile') {

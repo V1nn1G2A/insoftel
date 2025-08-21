@@ -29,7 +29,7 @@
   }
 
   @include media.screen('desktop-l') {
-    padding: 1.25vw 0;
+    padding: calc(var(--vw) * 1.25) 0;
   }
 }
 
@@ -62,7 +62,7 @@
   @include media.screen('desktop-l') {
     & svg {
       transform: none;
-      width: 12.43vw;
+      width: calc(var(--vw) * 12.43);
     }
   }
 }
