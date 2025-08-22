@@ -18,8 +18,8 @@
       @include fonts.text(142px, 142px, 500);
     }
 
-    @include media.screen('desktop-l') {
-      @include fonts.text(calc(var(--vw) * 10), calc(var(--vw) * 7.4), 500);
+    @include media.screen('desktop') {
+      @include fonts.text(flex(10), flex(7.4), 500);
     }
   }
 }
@@ -36,8 +36,8 @@
     max-width: 662px;
   }
 
-  @include media.screen('desktop-l') {
-    max-width: calc(var(--vw) * 34.48);
+  @include media.screen('desktop') {
+    max-width: flex(34.48);
   }
 }
 
@@ -53,8 +53,8 @@
     @include fonts.text(21px, 25px, 'regular');
   }
 
-  @include media.screen('desktop-l') {
-    @include fonts.text(calc(var(--vw) * 1.46), 35.31px, 'regular');
+  @include media.screen('desktop') {
+    @include fonts.text(flex(1.46), 35.31px, 'regular');
   }
 }
 

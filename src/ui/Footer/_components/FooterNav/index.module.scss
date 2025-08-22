@@ -12,8 +12,8 @@
     gap: 16px;
     list-style: none;
 
-    @include media.screen('desktop-l') {
-      gap: calc(var(--vw) * 1.11);
+    @include media.screen('desktop') {
+      gap: flex(1.11);
     }
   }
 
@@ -23,8 +23,8 @@
 
     @include fonts.text(16px, 20px, 400);
 
-    @include media.screen('desktop-l') {
-      @include fonts.text(calc(var(--vw) * 1.11), calc(var(--vw) * 1.39), 400);
+    @include media.screen('desktop') {
+      @include fonts.text(flex(1.11), flex(1.39), 400);
     }
 
     span {

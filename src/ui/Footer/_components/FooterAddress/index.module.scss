@@ -12,8 +12,8 @@
     order: 3;
   }
 
-  @include media.screen('desktop-l') {
-    max-width: calc(var(--vw) * 19.03);
+  @include media.screen('desktop') {
+    max-width: flex(19.03);
   }
 
   &__list {
@@ -22,8 +22,8 @@
     gap: 32px;
     list-style: none;
 
-    @include media.screen('desktop-l') {
-      gap: calc(var(--vw) * 2.22);
+    @include media.screen('desktop') {
+      gap: flex(2.22);
     }
   }
 
@@ -36,10 +36,10 @@
     color: var(--color-white);
     gap: 8px;
 
-    @include media.screen('desktop-l') {
-      gap: calc(var(--vw) * 0.55);
+    @include media.screen('desktop') {
+      gap: flex(0.55);
 
-      @include fonts.text(calc(var(--vw) * 1.11), calc(var(--vw) * 1.39), 400);
+      @include fonts.text(flex(1.11), flex(1.39), 400);
     }
   }
 
@@ -66,7 +66,7 @@
     color: var(--color-text-secondary);
   }
 
-  @include media.screen('desktop-l') {
-    @include fonts.text(calc(var(--vw) * 1.11), calc(var(--vw) * 1.39), 400);
+  @include media.screen('desktop') {
+    @include fonts.text(flex(1.11), flex(1.39), 400);
   }
 }

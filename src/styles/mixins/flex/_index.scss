@@ -1,0 +1,7 @@
+@function flex($multiplier) {
+  $step1: $multiplier * 14.4;
+  $step2: round($step1);
+  $step3: $step2 / 12.8;
+  $rounded: round($step3 * 100) / 100;
+  @return calc(var(--vw) * (#{$rounded} * 1));
+}

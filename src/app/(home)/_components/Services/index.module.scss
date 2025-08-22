@@ -24,8 +24,8 @@
     }
   }
 
-  @include media.screen('desktop-l') {
-    padding: calc(var(--vw) * 5.55) 0 calc(var(--vw) * 5.28);
+  @include media.screen('desktop') {
+    padding: flex(5.55) 0 flex(5.28);
   }
 }
 
@@ -75,7 +75,7 @@
     max-width: 662px;
   }
 
-  @include media.screen('desktop-l') {
+  @include media.screen('desktop') {
     max-width: none;
   }
 }
@@ -97,12 +97,12 @@
     margin: 0 0 85px;
   }
 
-  @include media.screen('desktop-l') {
-    @include fonts.text(calc(var(--vw) * 2.6), calc(var(--vw) * 2.77), 300);
+  @include media.screen('desktop') {
+    @include fonts.text(flex(2.6), flex(2.77), 300);
 
     letter-spacing: 0;
-    text-indent: calc(var(--vw) * 2.97);
-    margin: 0 0 calc(var(--vw) * 5.9);
+    text-indent: flex(2.97);
+    margin: 0 0 flex(5.9);
   }
 }
 
@@ -122,10 +122,10 @@
     margin-bottom: 57px;
   }
 
-  @include media.screen('desktop-l') {
-    gap: calc(var(--vw) * 1.53);
-    row-gap: calc(var(--vw) * 2.5);
-    margin-bottom: calc(var(--vw) * 3.96);
+  @include media.screen('desktop') {
+    gap: flex(1.53);
+    row-gap: flex(2.5);
+    margin-bottom: flex(3.96);
   }
 }
 
@@ -144,14 +144,14 @@
       margin-bottom: 16px;
     }
 
-    @include media.screen('desktop-l') {
-      @include fonts.text(calc(var(--vw) * 2.43), calc(var(--vw) * 2.43), 400);
+    @include media.screen('desktop') {
+      @include fonts.text(flex(2.43), flex(2.43), 400);
 
-      margin-bottom: calc(var(--vw) * 1.11);
+      margin-bottom: flex(1.11);
     }
   }
 
-  @include media.screen('desktop-l') {
+  @include media.screen('desktop') {
     letter-spacing: 1px;
   }
 }
@@ -161,8 +161,8 @@
     margin-bottom: 9px;
   }
 
-  @include media.screen('desktop-l') {
-    margin-bottom: calc(var(--vw) * 0.625);
+  @include media.screen('desktop') {
+    margin-bottom: flex(0.625);
   }
 }
 
@@ -193,22 +193,22 @@
   width: 435px;
   height: 435px;
 
-  @include media.screen('desktop-l') {
-    width: calc(var(--vw) * 30.2);
-    height: calc(var(--vw) * 30.2);
+  @include media.screen('desktop') {
+    width: flex(30.2);
+    height: flex(30.2);
     display: flex;
     flex: 1;
   }
 
-  @include media.screen('desktop-l') {
-    width: calc(var(--vw) * 30.2);
-    height: calc(var(--vw) * 30.2);
+  @include media.screen('desktop') {
+    width: flex(30.2);
+    height: flex(30.2);
   }
 }
 
 .buttonText {
-  @include media.screen('desktop-l') {
-    @include fonts.text(calc(var(--vw) * 1.66), calc(var(--vw) * 1.94), 500);
+  @include media.screen('desktop') {
+    @include fonts.text(flex(1.66), flex(1.94), 500);
     width: auto;
     height: auto;
   }
@@ -216,17 +216,17 @@
 
 .title {
   & h2 {
-    @include media.screen('desktop-l') {
-      @include fonts.text(calc(var(--vw) * 6.25), calc(var(--vw) * 6.53), 400);
+    @include media.screen('desktop') {
+      @include fonts.text(flex(6.25), flex(6.53), 400);
 
-      margin: 0 0 0 calc(var(--vw) * 0.35);
+      margin: 0 0 0 flex(0.35);
     }
   }
 
   & sup {
-    @include media.screen('desktop-l') {
-      @include fonts.text(calc(var(--vw) * 1.39), calc(var(--vw) * 1.66), 400);
-      margin-right: calc(var(--vw) * 2.22);
+    @include media.screen('desktop') {
+      @include fonts.text(flex(1.39), flex(1.66), 400);
+      margin-right: flex(2.22);
     }
   }
 }
