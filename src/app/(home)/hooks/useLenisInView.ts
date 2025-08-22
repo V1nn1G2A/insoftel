@@ -33,15 +33,11 @@ export function useLenisInView({ ref, buffer = 0 }: UseLenisInViewOptions) {
 
     const checkInView = (scroll: number) => {
       const start = getDocumentOffsetTop(el) - headerHeight
-      const end = start + el.offsetHeight
-
       const lenisBuffer = 25
 
       if (direction === 'down') {
         setIsInView(scroll + buffer >= start && scroll <= start + lenisBuffer)
       } else if (direction === 'up') {
-        console.log(end, scroll)
-
         setIsInView(scroll + buffer >= start && scroll <= start + lenisBuffer)
       }
     }

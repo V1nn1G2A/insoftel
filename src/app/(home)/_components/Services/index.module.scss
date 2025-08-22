@@ -201,15 +201,10 @@
   height: 435px;
 
   @include media.screen('desktop') {
-    width: flex(30.2);
-    height: flex(30.2);
+    width: 40vh;
+    height: 40vh;
     display: flex;
     flex: 1;
-  }
-
-  @include media.screen('desktop') {
-    width: flex(30.2);
-    height: flex(30.2);
   }
 }
 

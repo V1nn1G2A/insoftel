@@ -48,8 +48,10 @@ export function useInnerScrollLock({
 
     const handleLenisScroll = (e: { deltaY: number }) => {
       const { scrollTop, scrollHeight, clientHeight } = element
-      const atBottom = scrollTop + clientHeight >= scrollHeight
+      const atBottom = Math.abs(scrollTop + clientHeight - scrollHeight) <= 1
       const atTop = scrollTop <= 0
+
+      console.log(scrollTop + clientHeight, scrollHeight)
 
       if ((e.deltaY > 0 && !atBottom) || (e.deltaY < 0 && !atTop)) {
         smoothScroll(element, e.deltaY, scrollDuration)
