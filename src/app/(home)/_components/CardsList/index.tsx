@@ -31,7 +31,7 @@ const CardsList: FC = ({}) => {
         slidesPerView={'auto'}
         slidesPerGroup={1}
         className={styles.swiper}
-        speed={800}
+        speed={1000}
         freeMode={{
           enabled: true,
           momentum: true,

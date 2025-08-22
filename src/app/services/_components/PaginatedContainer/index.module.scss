@@ -50,14 +50,14 @@
 }
 
 .content:nth-child(3) {
-  .paginationContent {
-    @include media.screen('desktop') {
-      div:first-of-type {
-        max-width: 588px;
-        margin-right: 76px;
-      }
-    }
-  }
+  // .paginationContent {
+  //   @include media.screen('desktop') {
+  //     div:first-of-type {
+  //       max-width: 588px;
+  //       margin-right: 76px;
+  //     }
+  //   }
+  // }
 
   .paginationButton {
     div {
@@ -72,13 +72,13 @@
       padding-bottom: 70px;
     }
 
-    .paginationContent {
-      > div {
-        max-width: 518px;
-        margin-right: 144px;
-        margin-top: 25px;
-      }
-    }
+    // .paginationContent {
+    //   > div {
+    //     max-width: 518px;
+    //     margin-right: 144px;
+    //     margin-top: 25px;
+    //   }
+    // }
 
     .paginationButtonWrapper {
       margin-right: 0;
@@ -99,13 +99,13 @@
       padding-bottom: 72px;
     }
 
-    .paginationContent {
-      > div {
-        margin-top: 26px;
-        width: 490px;
-        margin-right: 170px;
-      }
-    }
+    // .paginationContent {
+    //   > div {
+    //     margin-top: 26px;
+    //     width: 490px;
+    //     margin-right: 170px;
+    //   }
+    // }
 
     .paginationButtonWrapper {
       margin-right: 0;

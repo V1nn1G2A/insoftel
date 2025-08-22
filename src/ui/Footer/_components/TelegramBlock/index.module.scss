@@ -72,8 +72,8 @@
 
     @include media.screen('desktop') {
       @include fonts.text(flex(2.5), flex(2.78), 400);
-      padding: flex(0.14) 0 0 flex(0.28);
 
+      padding: flex(0.14) 0 0 flex(0.28);
       letter-spacing: 0;
     }
   }
@@ -110,7 +110,7 @@
 
   &__arrow {
     color: var(--color-white);
-    transition: all 0.3s ease;
+    transition: all 0.7s ease;
     width: 26px;
     height: 26px;
 

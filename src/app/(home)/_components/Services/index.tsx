@@ -30,8 +30,6 @@ const Services = () => {
   const infoRef = useRef<HTMLDivElement>(null)
   const isInView = useLenisInView({ ref: sectionRef })
 
-  console.log(isInView)
-
   useInnerScrollLock({
     ref: infoRef,
     isInView,

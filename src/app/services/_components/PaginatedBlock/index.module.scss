@@ -27,15 +27,17 @@
   @include media.screen('desktop') {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    gap: 400px;
   }
 }
 
 .content {
   @include media.screen('desktop') {
-    height: 624px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    height: 624px;
   }
 }
 
@@ -51,6 +53,7 @@
     font-size: 250px;
     line-height: 200px;
     margin-bottom: -20px;
+    width: 700px;
   }
 }
 
@@ -58,7 +61,9 @@
   display: none;
 
   @include media.screen('desktop') {
-    display: block;
+    display: flex;
+    width: 100%;
+    gap: 40px;
   }
 }
 

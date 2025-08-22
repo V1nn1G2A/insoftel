@@ -1,7 +1,10 @@
-import classNames from 'classnames'
+'use client'
+
+import classNames from 'classnames/bind'
+import { useRef } from 'react'
 import type { FC } from 'react'
 
-import { AnimationBlock } from '../'
+import { AnimatedLine, AnimationBlock } from '@/ui'
 
 import styles from './index.module.scss'
 
@@ -25,26 +28,42 @@ const Quote: FC<IQuote> = ({
   authorClassName,
   children,
   id,
-}) => (
-  <div
-    className={`${styles.quote} ${className}`}
-    id={id}
-  >
-    <div className={cx(styles.wrapper, wrapperClassName)}>
-      <AnimationBlock
-        className={cx(styles.quote__content, contentClassName)}
-        type="p"
+}) => {
+  const ref = useRef(null)
+
+  return (
+    <div className={cx('wrapper', className)}>
+      <AnimatedLine
+        targetRef={ref}
+        className={cx('line')}
+        x={-2000}
+      />
+      <div
+        className={cx('quote')}
+        id={id}
+        ref={ref}
       >
-        &quot; {children} &quot;
-      </AnimationBlock>
-      <AnimationBlock
-        type="p"
-        className={cx(styles.quote__author, authorClassName)}
-      >
-        {author}
-      </AnimationBlock>
+        <div className={cx('wrapper', wrapperClassName)}>
+          <AnimationBlock
+            className={cx('quote__content', contentClassName)}
+            type="p"
+          >
+            &quot; {children} &quot;
+          </AnimationBlock>
+          <AnimationBlock
+            type="p"
+            className={cx('quote__author', authorClassName)}
+          >
+            {author}
+          </AnimationBlock>
+        </div>
+      </div>
+      <AnimatedLine
+        targetRef={ref}
+        className={cx('line')}
+      />
     </div>
-  </div>
-)
+  )
+}
 
 export default Quote
