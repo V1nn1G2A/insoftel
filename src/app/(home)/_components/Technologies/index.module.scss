@@ -11,9 +11,9 @@
     gap: 70px;
   }
 
-  @include media.screen('desktop-l') {
-    margin: calc(var(--vw) * 5.55) 0 -2px;
-    gap: calc(var(--vw) * 4.86)
+  @include media.screen('desktop') {
+    margin: flex(5.55) 0 -2px;
+    gap: flex(4.86)
   }
 }
 
@@ -32,8 +32,8 @@
     margin-top: 5px;
   }
 
-  @include media.screen('desktop-l') {
-    margin: calc(var(--vw) * 0.34) 0 calc(var(--vw) * 1.66);
+  @include media.screen('desktop') {
+    margin: flex(0.34) 0 flex(1.66);
   }
 }
 
@@ -43,8 +43,8 @@
     width: 100%;
   }
 
-  @include media.screen('desktop-l') {
-    max-width: calc(var(--vw) * 55.4);
+  @include media.screen('desktop') {
+    max-width: flex(55.4);
     width: 100%;
   }
 }
@@ -65,9 +65,9 @@
     letter-spacing: 1.1px;
   }
 
-  @include media.screen('desktop-l') {
-    @include fonts.text(calc(var(--vw) * 2.55), calc(var(--vw) * 2.77), 200);
-    margin-bottom: calc(var(--vw) * 4.44);
+  @include media.screen('desktop') {
+    @include fonts.text(flex(2.55), flex(2.77), 200);
+    margin-bottom: flex(4.44);
   }
 }
 
@@ -98,11 +98,11 @@
     }
   }
 
-  @include media.screen('desktop-l') {
-    margin-bottom: calc(var(--vw) * 5.7);
+  @include media.screen('desktop') {
+    margin-bottom: flex(5.7);
 
     p {
-      font-size: calc(var(--vw) * 1.53);
+      font-size: flex(1.53);
       line-height: 1.94px;
     }
   }

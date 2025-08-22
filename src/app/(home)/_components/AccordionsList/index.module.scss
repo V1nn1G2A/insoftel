@@ -8,9 +8,9 @@
     margin-bottom: 55px;
   }
 
-  @include media.screen('desktop-l') {
-    height: calc(var(--vw) * 46.38);
-    margin-bottom: calc(var(--vw) * 3.82);
+  @include media.screen('desktop') {
+    height: flex(46.38);
+    margin-bottom: flex(3.82);
   }
 }
 
@@ -21,7 +21,7 @@
     max-width: 660px;
   }
 
-  @include media.screen('desktop-l') {
-    max-width: calc(var(--vw) * 45.97);
+  @include media.screen('desktop') {
+    max-width: flex(45.97);
   }
 }

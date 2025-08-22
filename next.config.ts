@@ -6,6 +6,7 @@ import type { RuleSetRule } from 'webpack'
 const nextConfig: NextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/styles')],
+    additionalData: `@use "mixins/flex" as *;`,
   },
 
   webpack(config) {

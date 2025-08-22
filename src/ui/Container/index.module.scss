@@ -10,8 +10,8 @@
 
 @media (width > 1440px) {
   .container {
-    max-width: 1708px;
+    max-width: 1722px;
     margin: 0 auto;
-    padding: 0 calc(var(--vw) * 3.33);
+    padding: 0 flex(3.33);
   }
 }
