@@ -35,18 +35,18 @@ const SearchResult: FC<ISearchResultProps> = ({
   }, [results])
 
   const highlightQuery = (text: string, query: string) => {
-    const regex = new RegExp(`(${query})`, 'gi')
+    if (!query) return text
 
-    return text.split(regex).map((part, index) =>
-      regex.test(part) ? (
+    return text.split(/\b/).map((word, index) =>
+      word.toLowerCase().includes(query.toLowerCase()) ? (
         <strong
           className={styles.highlight}
           key={index}
         >
-          {part}
+          {word}
         </strong>
       ) : (
-        part
+        word
       )
     )
   }
