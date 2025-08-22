@@ -145,7 +145,7 @@ export const PaginatedContainer: FC<IPaginatedContainer> = ({ className }) => {
       const height =
         (containerRef.current?.offsetHeight ?? 0) -
         (refs.current[activeMatchIndex]?.offsetWidth ?? 0)
-      return `${Math.abs(height / 8)}px 0 0`
+      return `${Math.abs(height / 4)}px 0 0`
     }
     return 0
   }
@@ -165,7 +165,7 @@ export const PaginatedContainer: FC<IPaginatedContainer> = ({ className }) => {
           height: getContainerHeight(),
           position: `${mobileMatch || deskMatch ? 'sticky' : 'static'}`,
           top: 0,
-          margin: getContainerMargins(),
+          // margin: getContainerMargins(),
         }}
       >
         {servicesPagination.map((page, index) => (
