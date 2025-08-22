@@ -7,7 +7,7 @@ $weightMap: (
 
 @mixin display($size, $weight: 'medium') {
   font-size: $size;
-  line-height: $line-heigth;
+  line-height: $lineht;
   font-weight: if(
     type-of($weight) == 'string',
     map-get($weightMap, $weight),
@@ -15,9 +15,9 @@ $weightMap: (
   );
 }
 
-@mixin text($size, $line-heigth, $weight: 'regular') {
+@mixin text($size, $line-height, $weight: 'regular') {
   font-size: $size;
-  line-height: $line-heigth;
+  line-height: $line-height;
   font-weight: if(
     type-of($weight) == 'string',
     map-get($weightMap, $weight),

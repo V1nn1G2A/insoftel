@@ -6,7 +6,7 @@
   flex-direction: column;
   max-width: 320px;
 
-  @include media.screen('desktop-l') {
+  @include media.screen('desktop') {
     max-width: none;
   }
 }
@@ -42,8 +42,8 @@
     @include fonts.text(20px, 24px, 300);
   }
 
-  @include media.screen('desktop-l') {
-    @include fonts.text(calc(var(--vw) * 1.39), calc(var(--vw) * 1.66), 300);
+  @include media.screen('desktop') {
+    @include fonts.text(flex(1.39), flex(1.66), 300);
   }
 }
 

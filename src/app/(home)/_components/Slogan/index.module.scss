@@ -24,9 +24,9 @@
     @include fonts.text(80px, 84px, 400);
   }
 
-  @include media.screen('desktop-l') {
-    max-width: calc(var(--vw) * 45);
-    @include fonts.text(clamp(10px, calc(var(--vw) * 5), 300px), calc(var(--vw) * 5.46), 400);
+  @include media.screen('desktop') {
+    max-width: flex(45);
+    @include fonts.text(clamp(10px, flex(5), 300px), flex(5.46), 400);
   }
 }
 

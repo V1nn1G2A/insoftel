@@ -14,8 +14,8 @@
       @include fonts.text(18px, 21px, 300);
     }
 
-    @include media.screen('desktop-l') {
-      @include fonts.text(calc(var(--vw) * 1.25), calc(var(--vw) * 1.51), 300);
+    @include media.screen('desktop') {
+      @include fonts.text(flex(1.25), flex(1.51), 300);
     }
   }
 
@@ -44,8 +44,8 @@
       @include fonts.text(17px, 21.34px, 400);
     }
 
-    @include media.screen('desktop-l') {
-      @include fonts.text(calc(var(--vw) * 1.25), calc(var(--vw) * 1.58), 400);
+    @include media.screen('desktop') {
+      @include fonts.text(flex(1.25), flex(1.58), 400);
     }
   }
 
@@ -53,7 +53,7 @@
     margin-top: 200px;
   }
 
-  @include media.screen('desktop-l') {
+  @include media.screen('desktop') {
     margin-top: 140px;
   }
 }

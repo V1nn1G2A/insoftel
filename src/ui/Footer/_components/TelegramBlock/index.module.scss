@@ -13,9 +13,9 @@
     order: 0;
   }
 
-  @include media.screen('desktop-l') {
-    gap: calc(var(--vw) * 1.53);
-    max-width: calc(var(--vw) * 25.49);
+  @include media.screen('desktop') {
+    gap: flex(1.53);
+    max-width: flex(25.49);
   }
 }
 
@@ -31,12 +31,12 @@
     letter-spacing: 0.05px;
   }
 
-  @include media.screen('desktop-l') {
-    @include fonts.text(calc(var(--vw) * 1.11), calc(var(--vw) * 1.39), 400);
+  @include media.screen('desktop') {
+    @include fonts.text(flex(1.11), flex(1.39), 400);
 
     letter-spacing: 0.2px;
-    max-width: calc(var(--vw) * 22.22);
-    padding-left: calc(var(--vw) * 0.28);
+    max-width: flex(22.22);
+    padding-left: flex(0.28);
   }
 }
 
@@ -49,8 +49,8 @@
   text-align: start;
   cursor: pointer;
 
-  @include media.screen('desktop-l') {
-    gap: calc(var(--vw) * 1.39);
+  @include media.screen('desktop') {
+    gap: flex(1.39);
   }
 
   &__text {
@@ -70,10 +70,10 @@
       padding: 4px 0 0;
     }
 
-    @include media.screen('desktop-l') {
-      @include fonts.text(calc(var(--vw) * 2.5), calc(var(--vw) * 2.78), 400);
+    @include media.screen('desktop') {
+      @include fonts.text(flex(2.5), flex(2.78), 400);
 
-      padding: calc(var(--vw) * 0.14) 0 0 calc(var(--vw) * 0.28);
+      padding: flex(0.14) 0 0 flex(0.28);
       letter-spacing: 0;
     }
   }
@@ -85,9 +85,9 @@
     background-color: var(--color-black);
     cursor: pointer;
 
-    @include media.screen('desktop-l') {
-      width: calc(var(--vw) * 5.55);
-      height: calc(var(--vw) * 5.55);
+    @include media.screen('desktop') {
+      width: flex(5.55);
+      height: flex(5.55);
     }
   }
 
@@ -102,9 +102,9 @@
     justify-content: center;
     transition: all 0.7s ease;
 
-    @include media.screen('desktop-l') {
-      width: calc(var(--vw) * 5.55);
-      height: calc(var(--vw) * 5.55);
+    @include media.screen('desktop') {
+      width: flex(5.55);
+      height: flex(5.55);
     }
   }
 
@@ -114,10 +114,10 @@
     width: 26px;
     height: 26px;
 
-    @include media.screen('desktop-l') {
+    @include media.screen('desktop') {
       transform: scale(1.2);
-      width: calc(var(--vw) * 1.8);
-      height: calc(var(--vw) * 1.8);
+      width: flex(1.8);
+      height: flex(1.8);
     }
   }
 

@@ -3,7 +3,7 @@
 
 .wrapper {
   position: absolute;
-  top: 85px;
+  top: 84px;
   left: 0;
   width: 100%;
   z-index: 100;
@@ -28,7 +28,7 @@
   }
 
   &--active {
-    min-height: calc(100vh - 85px);
+    min-height: calc(100vh - 83px);
     overflow-y: scroll;
 
     &.wrapper--dark {

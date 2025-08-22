@@ -36,9 +36,9 @@
     @include fonts.text(20px, 24px, 400);
   }
 
-  @include media.screen('desktop-l') {
-    font-size: calc(var(--vw) * 1.39);
-    line-height: calc(var(--vw) * 1.66);
+  @include media.screen('desktop') {
+    font-size: flex(1.39);
+    line-height: flex(1.66);
   }
 }
 
@@ -60,10 +60,10 @@
     @include fonts.text(90px, 94px, 400);
   }
 
-  @include media.screen('desktop-l') {
+  @include media.screen('desktop') {
     @include fonts.text(109px, 113.61px, 400);
-    font-size: calc(var(--vw) * 6.25);
-    line-height: calc(var(--vw) * 6.53);
+    font-size: flex(6.25);
+    line-height: flex(6.53);
   }
 }
 

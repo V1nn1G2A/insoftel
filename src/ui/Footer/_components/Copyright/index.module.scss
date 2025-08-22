@@ -14,15 +14,15 @@
     padding-top: 48px;
   }
 
-  @include media.screen('desktop-l') {
-    padding-top: calc(var(--vw) * 2.09);
+  @include media.screen('desktop') {
+    padding-top: flex(2.09);
   }
 
   &__text {
     @include fonts.text(14px, 18px, 400);
 
-    @include media.screen('desktop-l') {
-      @include fonts.text(calc(var(--vw) * 0.97), calc(var(--vw) * 1.25), 400);
+    @include media.screen('desktop') {
+      @include fonts.text(flex(0.97), flex(1.25), 400);
     }
 
     letter-spacing: 0.1px;

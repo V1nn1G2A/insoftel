@@ -22,8 +22,8 @@
     padding: 55px 0 82px;
   }
 
-  @include media.screen('desktop-l') {
-    padding: calc(var(--vw) * 2.86) 0 calc(var(--vw) * 4.27);
+  @include media.screen('desktop') {
+    padding: flex(2.86) 0 flex(4.27);
   }
 
   &__quote {
@@ -35,21 +35,21 @@
 
     &__wrapper {
       @include media.screen('desktop') {
-        max-width: calc(var(--vw) * 55.94);
+        max-width: flex(55.94);
       }
     }
 
     &__content {
-      @include media.screen('desktop-l') {
-        font-size: calc(var(--vw) * 1.98);
-        line-height: calc(var(--vw) * 2.24);
+      @include media.screen('desktop') {
+        font-size: flex(1.98);
+        line-height: flex(2.24);
       }
     }
 
     &__author {
-      @include media.screen('desktop-l') {
-        font-size: calc(var(--vw) * 1.25);
-        line-height: calc(var(--vw) * 1.58);
+      @include media.screen('desktop') {
+        font-size: flex(1.25);
+        line-height: flex(1.58);
       }
     }
   }
@@ -98,8 +98,8 @@
     margin-top: 34px;
   }
 
-  @include media.screen('desktop-l') {
-    max-width: calc(var(--vw) * 36.48);
+  @include media.screen('desktop') {
+    max-width: flex(36.48);
   }
 }
 
@@ -114,8 +114,8 @@
       line-height: 30px;
     }
 
-    @include media.screen('desktop-l') {
-      line-height: calc(var(--vw) * 1.56);
+    @include media.screen('desktop') {
+      line-height: flex(1.56);
     }
   }
 
@@ -132,8 +132,8 @@
     max-width: 662px;
   }
 
-  @include media.screen('desktop-l') {
-    max-width: calc(var(--vw) * 34.48);
+  @include media.screen('desktop') {
+    max-width: flex(34.48);
   }
 }
 
@@ -156,10 +156,10 @@
     margin-top: 20px;
   }
 
-  @include media.screen('desktop-l') {
-    height: calc(var(--vw) * 19.90);
-    gap: calc(var(--vw) * 2.45);
-    margin-top: calc(var(--vw) * 1.04);
+  @include media.screen('desktop') {
+    height: flex(19.90);
+    gap: flex(2.45);
+    margin-top: flex(1.04);
   }
 }
 
@@ -190,6 +190,6 @@
 
   @include media.screen('desktop') {
     display: flex;
-    margin: calc(var(--vw) * 1.39) auto 0 0;
+    margin: flex(1.39) auto 0 0;
   }
 }
