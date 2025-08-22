@@ -13,7 +13,7 @@
     margin: 0;
   }
 
-  @include media.screen('desktop-l') {
+  @include media.screen('desktop') {
     gap: 40px;
   }
 }

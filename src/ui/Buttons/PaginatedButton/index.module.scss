@@ -40,13 +40,13 @@
     color: var(--color-white);
   }
 
-  @include media.screen('desktop-l') {
-    width: calc(var(--vw) * 4.16);
-    height: calc(var(--vw) * 4.16);
+  @include media.screen('desktop') {
+    width: flex(4.16);
+    height: flex(4.16);
 
     svg {
-      width: calc(var(--vw) * 1.96);
-      height: calc(var(--vw) * 1.96);
+      width: flex(1.96);
+      height: flex(1.96);
     }
   }
 }

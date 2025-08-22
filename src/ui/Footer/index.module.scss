@@ -14,7 +14,7 @@
     padding: 63px 0;
   }
 
-  @include media.screen('desktop-l') {
-    padding: calc(var(--vw) * 4.38) 0;
+  @include media.screen('desktop') {
+    padding: flex(4.38) 0;
   }
 }

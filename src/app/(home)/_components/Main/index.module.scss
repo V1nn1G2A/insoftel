@@ -9,9 +9,9 @@
     width: 169px;
     height: 76px;
 
-    @include media.screen('desktop-l') {
-      width: calc(var(--vw) * 11.74);
-      height: calc(var(--vw) * 5.28);
+    @include media.screen('desktop') {
+      width: flex(11.74);
+      height: flex(5.28);
     }
   }
 }
@@ -38,8 +38,8 @@
   left: 50%;
   transform: translate(-50%, -90%);
 
-  @include media.screen('desktop-l') {
-    height: calc(var(--vw) * 4.93);
+  @include media.screen('desktop') {
+    height: flex(4.93);
   }
 }
 
@@ -54,8 +54,8 @@
 
   @include fonts.text(20px, 24px, 300);
 
-  @include media.screen('desktop-l') {
-    @include fonts.text(calc(var(--vw) * 1.39), calc(var(--vw) * 1.66), 300);
+  @include media.screen('desktop') {
+    @include fonts.text(flex(1.39), flex(1.66), 300);
   }
 }
 
@@ -89,9 +89,9 @@
   justify-content: space-between;
   align-items: center;
 
-  @include media.screen('desktop-l') {
-    left: calc(var(--vw) * 2.85);
-    right: calc(var(--vw) * 1.39);
+  @include media.screen('desktop') {
+    left: flex(2.85);
+    right: flex(1.39);
   }
 }
 
@@ -102,8 +102,8 @@
     top: 76px;
   }
 
-  @include media.screen('desktop-l') {
-    top: calc(var(--vw) * 8.33);
+  @include media.screen('desktop') {
+    top: flex(8.33);
   }
 }
 
@@ -111,9 +111,9 @@
   bottom: 22px;
   left: 20px;
 
-  @include media.screen('desktop-l') {
-    bottom: calc(var(--vw) * 1.53);
-    left: calc(var(--vw) * 1.39);
+  @include media.screen('desktop') {
+    bottom: flex(1.53);
+    left: flex(1.39);
   }
 }
 
@@ -122,19 +122,19 @@
   opacity: 0.4;
   transition: opacity 0.3s;
 
-  @include media.screen('desktop-l') {
+  @include media.screen('desktop') {
     letter-spacing: 0;
     opacity: 0;
     color: var(--color-white) !important;
     animation: letter-appear 0.8s ease-out both;
     animation-delay: 0.2s;
 
-    @include fonts.text(calc(var(--vw) * 7.85), 100%, 500);
+    @include fonts.text(flex(7.85), 100%, 500);
   }
 }
 
 .letterDissapear {
-  @include media.screen('desktop-l') {
+  @include media.screen('desktop') {
     animation: letter-disappear calc((var(--count) - 3) * 0.5s / 3) ease both;
     animation-delay: 1.4s;
   }
@@ -154,9 +154,9 @@
     padding: 8px 4px 8px 30px;
   }
 
-  @include media.screen('desktop-l') {
-    gap: calc(var(--vw) * 1.04);
-    padding: calc(var(--vw) * 0.55) calc(var(--vw) * 0.28) calc(var(--vw) * 0.55) calc(var(--vw) * 2.08);
+  @include media.screen('desktop') {
+    gap: flex(1.04);
+    padding: flex(0.55) flex(0.28) flex(0.55) flex(2.08);
   }
 
   & p {
@@ -166,8 +166,8 @@
     margin: 0;
     font-family: var(--font-neue-haas);
 
-    @include media.screen('desktop-l') {
-      font-size: calc(var(--vw) * 1.11);
+    @include media.screen('desktop') {
+      font-size: flex(1.11);
     }
   }
 }

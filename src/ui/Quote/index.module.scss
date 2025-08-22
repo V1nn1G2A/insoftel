@@ -17,8 +17,8 @@
     letter-spacing: 0.2px;
   }
 
-  @include media.screen('desktop-l') {
-    padding: calc(var(--vw) * 4.79) 0;
+  @include media.screen('desktop') {
+    padding: flex(4.79) 0;
   }
 
   div {
@@ -39,7 +39,7 @@
     @include fonts.text(26px, 30px, 300);
   }
 
-  @include media.screen('desktop-l') {
+  @include media.screen('desktop') {
     @include fonts.text(38px, 42.95px, 300);
   }
 }
@@ -57,7 +57,7 @@
     letter-spacing: 0.4px;
   }
 
-  @include media.screen('desktop-l') {
+  @include media.screen('desktop') {
     @include fonts.text(24px, 30.31px, 500);
   }
 }
