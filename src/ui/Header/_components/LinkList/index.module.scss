@@ -32,7 +32,7 @@
   }
 
   @include media.screen('desktop') {
-    padding: 64px;
+    padding: 48px 64px;
   }
 }
 
@@ -104,7 +104,7 @@
       gap: 19px;
     }
 
-    @include media.screen('desktop') {
+    @include media.screen('desktop-l') {
       @include fonts.text(40px, 45.34px, 400);
     }
   }
@@ -124,7 +124,7 @@
       margin: -0 -14px 0 0;
     }
 
-    @include media.screen('desktop') {
+    @include media.screen('desktop-l') {
       @include fonts.text(20px, 26.67px, 400);
     }
   }
