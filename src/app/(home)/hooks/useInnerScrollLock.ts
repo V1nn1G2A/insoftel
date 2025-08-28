@@ -9,6 +9,12 @@ interface UseInnerScrollLockOptions {
   scrollDuration?: number
 }
 
+const isSafari = (ua = navigator.userAgent) => {
+  return (
+    /safari/i.test(ua) && !/chrome|chromium|crios|edg|opr|yabrowser/i.test(ua)
+  )
+}
+
 export function useInnerScrollLock({
   ref,
   isInView,
@@ -36,7 +42,10 @@ export function useInnerScrollLock({
       const animate = (time: number) => {
         const elapsed = time - startTime
         const progress = Math.min(1, elapsed / duration)
-        target.scrollTop = start + (end - start) * ease(progress)
+
+        if (isSafari()) {
+          target.scrollTop = start + (end - start)
+        } else target.scrollTop = start + (end - start) * ease(progress)
 
         if (progress < 1) {
           requestAnimationFrame(animate)

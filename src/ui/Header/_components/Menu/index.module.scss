@@ -34,7 +34,6 @@
   // Жирность должна быть 300
   @include fonts.text(16px, 20px, 400);
 
-
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       border-color: inherit;
@@ -50,6 +49,10 @@
     &:hover {
       border-color: transparent;
     }
+  }
+
+  & svg {
+    width: 14px;
   }
 }
 

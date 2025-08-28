@@ -116,6 +116,11 @@
   height: 26px;
 
   @include media.screen('desktop') {
+    width: flex(1.2);
+    height: flex(1.2);
+  }
+
+  @include media.screen('desktop-l') {
     width: flex(1.8);
     height: flex(1.8);
   }
