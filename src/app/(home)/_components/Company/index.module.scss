@@ -4,191 +4,151 @@
   position: relative;
   background-color: var(--color-white-secondary);
 
-  sup {
-    @include media.screen('desktop') {
-      top: -3px;
+  &__quote {
+    margin: 0 0 35px;
+  }
+
+  &__title {
+    margin: 38px 0 48px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    button.company__btn {
+      display: none;
     }
   }
 
-  .company__header {
-    @include media.screen('desktop') {
+  &__office {
+    order: 1;
+  }
+
+  &__stats {
+    overflow: hidden;
+
+    & p {
+      letter-spacing: 0.5px;
+      line-height: 24px;
+    }
+  }
+
+  &__statsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+
+    @include media.screen('tablet') {
+      align-items: center;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 42px;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 7px;
+    max-width: 350px;
+
+    p {
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &__deskBtn {
+    display: none;
+  }
+}
+
+@include media.screen('desktop') {
+  .company {
+    padding: flex(2.86) 0 flex(4.27);
+
+    sup {
+      top: -3px;
+    }
+
+    &__header {
       display: flex;
       justify-content: space-between;
       gap: 50px;
     }
-  }
 
-  @include media.screen('desktop') {
-    padding: 55px 0 82px;
-  }
-
-  @include media.screen('desktop') {
-    padding: flex(2.86) 0 flex(4.27);
-  }
-
-  &__quote {
-    margin: 0 0 35px;
-
-    @include media.screen('desktop') {
+    &__quote {
       margin: 114px 0 126px;
-    }
 
-    &__wrapper {
-      @include media.screen('desktop') {
+      &__wrapper {
         max-width: flex(55.94);
       }
-    }
 
-    &__content {
-      @include media.screen('desktop') {
+      &__content {
         font-size: flex(1.98);
         line-height: flex(2.24);
       }
-    }
 
-    &__author {
-      @include media.screen('desktop') {
+      &__author {
         font-size: flex(1.25);
         line-height: flex(1.58);
       }
     }
-  }
-}
 
-.company__title {
-  margin: 38px 0 48px;
+    &__info {
+      button.company__btn {
+        margin: 48px 0 0;
+        display: flex;
+        justify-content: flex-start;
+      }
+      justify-content: space-between;
+      flex-direction: row;
+    }
 
-  @include media.screen('desktop') {
-    margin-top: 30px;
-  }
+    &__office {
+      letter-spacing: 0.4px;
+      order: -1;
+      margin-right: 134px;
+      margin-top: 34px;
+      max-width: flex(36.48);
+    }
 
-  @include media.screen('desktop-l') {
-    margin: 38px 0 48px;
-  }
-}
+    &__stats {
+      & p {
+        line-height: flex(1.56);
+      }
 
-.company__info {
-  display: flex;
-  flex-direction: column;
+      & p + span {
+        bottom: 24px !important;
+      }
+    }
 
-  button.company__btn {
-    display: none;
+    &__statsContainer {
+      width: 100%;
+      max-width: 662px;
 
-    @include media.screen('desktop') {
-      margin: 48px 0 0;
+      max-width: flex(34.48);
+    }
+
+    &__statsContent {
+      height: 382px;
+      gap: 47px;
       display: flex;
-      justify-content: flex-start;
-    }
-  }
-
-  @include media.screen('desktop') {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-}
-
-.company__office {
-  order: 1;
-
-  @include media.screen('desktop') {
-    letter-spacing: 0.4px;
-    order: -1;
-    margin-right: 134px;
-    margin-top: 34px;
-  }
-
-  @include media.screen('desktop') {
-    max-width: flex(36.48);
-  }
-}
-
-.company__stats {
-  overflow: hidden;
-
-  & p {
-    letter-spacing: 0.5px;
-    line-height: 24px;
-
-    @include media.screen('desktop') {
-      line-height: 30px;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      margin-top: 20px;
+      height: flex(19.9);
+      gap: flex(2.45);
+      margin-top: flex(1.04);
     }
 
-    @include media.screen('desktop') {
-      line-height: flex(1.56);
+    &__btn {
+      display: none;
     }
-  }
 
-  & p + span {
-    @include media.screen('desktop') {
-      bottom: 24px !important;
+    &__deskBtn {
+      display: flex;
+      margin: flex(1.39) auto 0 0;
     }
-  }
-}
-
-.company__statsContainer {
-  @include media.screen('desktop') {
-    width: 100%;
-    max-width: 662px;
-  }
-
-  @include media.screen('desktop') {
-    max-width: flex(34.48);
-  }
-}
-
-.company__statsContent {
-  display: flex;
-  flex-direction: column;
-  gap: 23px;
-
-  @include media.screen('tablet') {
-    align-items: center;
-  }
-
-  @include media.screen('desktop') {
-    height: 382px;
-    gap: 47px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  @include media.screen('desktop') {
-    height: flex(19.9);
-    gap: flex(2.45);
-    margin-top: flex(1.04);
-  }
-}
-
-.company__btn {
-  margin-bottom: 42px;
-  width: 100%;
-  justify-content: space-between;
-  margin-top: 7px;
-  max-width: 350px;
-
-  p {
-    font-weight: 500;
-    letter-spacing: 0.5px;
-  }
-
-  @include media.screen('desktop') {
-    display: none;
-  }
-}
-
-.company__deskBtn {
-  display: none;
-
-  @include media.screen('desktop') {
-    display: flex;
-    margin: 20px auto 0 0;
-  }
-
-  @include media.screen('desktop') {
-    display: flex;
-    margin: flex(1.39) auto 0 0;
   }
 }

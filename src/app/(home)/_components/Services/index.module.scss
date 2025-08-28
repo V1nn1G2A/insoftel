@@ -12,78 +12,21 @@
   .logoContainer {
     display: none;
   }
-
-  @include media.screen('desktop') {
-    padding: 80px 0 76px;
-    display: flex;
-    justify-content: space-between;
-
-    .logoContainer {
-      flex: 2;
-      display: block;
-    }
-  }
-
-  @include media.screen('desktop') {
-    padding: flex(5.55) 0 flex(5.28);
-  }
-}
-
-.title-block {
-  @include media.screen('desktop') {
-    width: 51.5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 100px;
-  }
-}
-
-.title-top {
-  @include media.screen('desktop') {
-    display: flex;
-  }
 }
 
 .title {
   @include fonts.text(48px, 52px, 400);
 
   color: var(--color-text-tertiary);
-
-  @include media.screen('desktop') {
-    @include fonts.text(90px, 94px, 400);
-
-    min-height: max-content;
-    letter-spacing: 1px;
-  }
 }
 
 .number {
   color: var(--color-text-tertiary);
-
-  @include media.screen('desktop') {
-    @include fonts.text(20px, 24px, 400);
-
-    letter-spacing: 1px;
-    margin-right: 32px;
-  }
 }
 
 .info-block {
-  @include media.screen('desktop') {
-    width: 50%;
-    max-width: 662px;
-    overscroll-behavior: none;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
   &::-webkit-scrollbar {
     display: none;
-  }
-
-  @include media.screen('desktop') {
-    max-width: none;
   }
 }
 
@@ -93,24 +36,6 @@
   text-indent: 26px;
   margin: 24px 0 48px;
   color: var(--color-text-quaternary);
-
-  @include media.screen('desktop') {
-    text-indent: 0;
-
-    @include fonts.text(36px, 40px, 300);
-
-    text-indent: 43px;
-    letter-spacing: 0.69px;
-    margin: 0 0 85px;
-  }
-
-  @include media.screen('desktop') {
-    @include fonts.text(flex(2.6), flex(2.77), 300);
-
-    letter-spacing: 0;
-    text-indent: flex(2.97);
-    margin: 0 0 flex(5.9);
-  }
 }
 
 .grid {
@@ -119,20 +44,6 @@
 
   @include media.screen('tablet') {
     grid-template-columns: 1fr 1fr;
-  }
-
-  @include media.screen('desktop') {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
-    row-gap: 36px;
-    margin-bottom: 57px;
-  }
-
-  @include media.screen('desktop') {
-    gap: flex(1.53);
-    row-gap: flex(2.5);
-    margin-bottom: flex(3.96);
   }
 }
 
@@ -143,33 +54,6 @@
     @include fonts.text(30px, 34px, 400);
 
     margin-bottom: 8px;
-
-    @include media.screen('desktop') {
-      @include fonts.text(35px, 35px, 400);
-
-      letter-spacing: 1px;
-      margin-bottom: 16px;
-    }
-
-    @include media.screen('desktop') {
-      @include fonts.text(flex(2.43), flex(2.43), 400);
-
-      margin-bottom: flex(1.11);
-    }
-  }
-
-  @include media.screen('desktop') {
-    letter-spacing: 1px;
-  }
-}
-
-.paragraph:not(:last-child) {
-  @include media.screen('desktop') {
-    margin-bottom: 9px;
-  }
-
-  @include media.screen('desktop') {
-    margin-bottom: flex(0.625);
   }
 }
 
@@ -185,8 +69,105 @@
 
 .services button {
   margin-top: 25px;
+}
 
-  @include media.screen('desktop') {
+.logo {
+  width: 435px;
+  height: 435px;
+}
+
+@include media.screen('desktop') {
+  .services {
+    padding: flex(5.55) 0 flex(5.28);
+    display: flex;
+    justify-content: space-between;
+
+    .logoContainer {
+      flex: 2;
+      display: block;
+    }
+  }
+
+  .title-block {
+    width: 51.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+  }
+
+  .title-top {
+    display: flex;
+  }
+
+  .title {
+    @include fonts.text(90px, 94px, 400);
+
+    min-height: max-content;
+    letter-spacing: 1px;
+  }
+
+  .number {
+    @include fonts.text(20px, 24px, 400);
+
+    letter-spacing: 1px;
+    margin-right: 32px;
+  }
+
+  .info-block {
+    width: 50%;
+    overscroll-behavior: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    max-width: none;
+  }
+
+  .text-top {
+    @include fonts.text(flex(2.6), flex(2.77), 300);
+
+    letter-spacing: 0;
+    text-indent: flex(2.97);
+    margin: 0 0 flex(5.9);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: flex(1.53);
+    row-gap: flex(2.5);
+    margin-bottom: flex(3.96);
+  }
+
+  .paragraph {
+    & h3 {
+      @include fonts.text(flex(2.43), flex(2.43), 400);
+
+      margin-bottom: flex(1.11);
+      letter-spacing: 1px;
+    }
+
+    &:not(:last-child) {
+      @include media.screen('desktop') {
+        margin-bottom: flex(0.625);
+      }
+    }
+  }
+
+  .logo {
+    width: 40vh;
+    height: 40vh;
+    display: flex;
+    flex: 1;
+  }
+
+  .buttonText {
+    @include fonts.text(flex(1.66), flex(1.94), 500);
+
+    width: auto;
+    height: auto;
+  }
+
+  .services button {
     margin-top: 0;
 
     p {
@@ -194,40 +175,15 @@
       font-weight: 500;
     }
   }
-}
 
-.logo {
-  width: 435px;
-  height: 435px;
-
-  @include media.screen('desktop') {
-    width: 40vh;
-    height: 40vh;
-    display: flex;
-    flex: 1;
-  }
-}
-
-.buttonText {
-  @include media.screen('desktop') {
-    @include fonts.text(flex(1.66), flex(1.94), 500);
-
-    width: auto;
-    height: auto;
-  }
-}
-
-.title {
-  & h2 {
-    @include media.screen('desktop') {
+  .title {
+    & h2 {
       @include fonts.text(flex(6.25), flex(6.53), 400);
 
       margin: 0 0 0 flex(0.35);
     }
-  }
 
-  & sup {
-    @include media.screen('desktop') {
+    & sup {
       @include fonts.text(flex(1.39), flex(1.66), 400);
 
       margin-right: flex(2.22);

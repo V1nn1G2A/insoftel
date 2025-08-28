@@ -6,6 +6,6 @@
   overflow-x: hidden;
 
   @include media.screen('desktop') {
-    padding-top: 2.64vw;
+    padding-top: flex(2.64);
   }
 }
