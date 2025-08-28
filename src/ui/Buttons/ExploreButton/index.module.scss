@@ -81,8 +81,15 @@
   transition: transform 0.4s ease;
   width: 26px;
   height: 26px;
+  min-width: 20px;
+  min-height: 20px;
 
   @include media.screen('desktop') {
+    width: flex(1.2);
+    height: flex(1.2);
+  }
+
+  @include media.screen('desktop-l') {
     width: flex(1.8);
     height: flex(1.8);
   }

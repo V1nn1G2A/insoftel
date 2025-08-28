@@ -2,7 +2,7 @@
 @use 'mixins/fonts';
 
 .header {
-  padding: 18px 0;
+  padding: 20px 0;
   background-color: transparent;
   position: absolute;
   top: 0;
@@ -22,10 +22,6 @@
   &--light {
     background-color: var(--color-white-secondary);
     color: var(--color-black);
-  }
-
-  @include media.screen('tablet') {
-    padding: 18px 0;
   }
 }
 

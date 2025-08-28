@@ -57,7 +57,6 @@
 
 .company__title {
   margin: 38px 0 48px;
-  max-width: fit-content;
 
   @include media.screen('desktop') {
     margin-top: 30px;
@@ -157,7 +156,7 @@
   }
 
   @include media.screen('desktop') {
-    height: flex(19.90);
+    height: flex(19.9);
     gap: flex(2.45);
     margin-top: flex(1.04);
   }
