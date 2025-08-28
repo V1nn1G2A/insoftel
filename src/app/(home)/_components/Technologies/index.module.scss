@@ -2,108 +2,88 @@
 @use 'mixins/media';
 
 .technologies {
-  margin-bottom: 40px;
+  padding: 40px 0;
+  background-color: var(--color-black);
+}
 
-  @include media.screen('desktop') {
+.technologies__content {
+  &__title {
+    margin: 40px 0 24px;
+
+    & h2 {
+      letter-spacing: 1px;
+    }
+  }
+
+  &__text {
+    @include fonts.text(24px, 28px, 200);
+
+    margin: 0 0 33px;
+    text-indent: 28px;
+    letter-spacing: 0.8px;
+    color: var(--color-white);
+  }
+
+  &__button {
+    margin-top: 32px;
+
+    & p {
+      font-size: 22px;
+      line-height: 28px;
+      font-weight: 500;
+      margin-right: 12px;
+      letter-spacing: 1.1px;
+    }
+  }
+}
+
+
+@include media.screen('desktop') {
+  .technologies {
+    padding: 71px 0;
+  }
+
+  .technologies__content {
     display: flex;
     justify-content: space-between;
-    margin: 80px 0 -2px;
-    gap: 70px;
-  }
-
-  @include media.screen('desktop') {
     margin: flex(5.55) 0 -2px;
-    gap: flex(4.86)
-  }
-}
+    gap: flex(4.86);
 
-.technologies__title {
-  margin: 40px 0 24px;
+    &__title {
+      margin: flex(0.34) 0 flex(1.66);
 
-  & h2 {
-    letter-spacing: 1px;
-
-    @include media.screen('desktop') {
-      letter-spacing: 2px;
+      & h2 {
+        letter-spacing: 2px;
+      }
     }
-  }
 
-  @include media.screen('desktop') {
-    margin-top: 5px;
-  }
-
-  @include media.screen('desktop') {
-    margin: flex(0.34) 0 flex(1.66);
-  }
-}
-
-.technologies__text-container {
-  @include media.screen('desktop') {
-    max-width: 662px;
-    width: 100%;
-  }
-
-  @include media.screen('desktop') {
-    max-width: flex(55.4);
-    width: 100%;
-  }
-}
-
-.technologies__text {
-  margin: 0 0 33px;
-  text-indent: 28px;
-  letter-spacing: 0.8px;
-  color: var(--color-white);
-
-  @include fonts.text(24px, 28px, 200);
-
-  @include media.screen('desktop') {
-    @include fonts.text(36px, 40px, 200);
-
-    text-indent: 43px;
-    margin-bottom: 64px;
-    letter-spacing: 1.1px;
-  }
-
-  @include media.screen('desktop') {
-    @include fonts.text(flex(2.55), flex(2.77), 200);
-    margin-bottom: flex(4.44);
-  }
-}
-
-.technologies__accordion {
-  @include media.screen('desktop') {
-    margin: 0 0 85px;
-  }
-}
-
-.technologies__button {
-  margin-top: 32px;
-
-  p {
-    font-size: 22px;
-    line-height: 28px;
-    font-weight: 500;
-    margin-right: 12px;
-    letter-spacing: 1.1px;
-  }
-
-  @include media.screen('desktop') {
-    margin-top: 0;
-    margin-bottom: 82px;
-
-    p {
-      margin-right: 20px;
-      letter-spacing: 1.4px;
+    &__textContainer {
+      max-width: flex(55.4);
+      width: 100%;
     }
-  }
 
-  @include media.screen('desktop') {
-    margin-bottom: flex(5.7);
+    &__text {
+      @include fonts.text(flex(2.55), flex(2.77), 200);
 
-    p {
-      font-size: flex(1.53);
-      line-height: 1.94px;
+      text-indent: 43px;
+      margin-bottom: flex(4.44);
+      letter-spacing: 1.1px;
+    }
+
+    &__accordion {
+      margin: 0 0 85px;
+    }
+
+    &__button {
+      margin-top: 0;
+      margin-bottom: flex(5.7);
+
+      & p {
+        font-size: flex(1.53);
+        line-height: 1.94px;
+        letter-spacing: 1.4px;
+        margin-right: 20px;
+      }
     }
   }
 }
