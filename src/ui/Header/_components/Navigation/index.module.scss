@@ -48,7 +48,11 @@
   }
 
   @include media.screen('mobile') {
-    top: 60px;
+    top: 56px;
+  }
+
+  @include media.screen('desktop') {
+    top: 64px;
   }
 }
 
