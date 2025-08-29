@@ -1,11 +1,20 @@
 @use 'mixins/media';
+@use 'mixins/fonts';
 
 .products {
   padding-top: 38px;
   background-color: var(--color-middle-gray);
   overflow-x: hidden;
+}
 
-  @include media.screen('desktop') {
-    padding-top: flex(2.64);
+@include media.screen('desktop') {
+  .products {
+    padding-top: flex(4.93);
+
+    &__title {
+      & h2 {
+        @include fonts.text(flex(5.55), flex(5.85), 400);
+      }
+    }
   }
 }

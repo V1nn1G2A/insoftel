@@ -10,7 +10,12 @@ import styles from './index.module.scss'
 const Products: FC = ({}) => (
   <section className={styles.products}>
     <Container>
-      <SectionTitle index="04">Products</SectionTitle>
+      <SectionTitle
+        className={styles.products__title}
+        index="04"
+      >
+        Products
+      </SectionTitle>
       <CardsList />
     </Container>
   </section>

@@ -170,7 +170,8 @@
       margin-right: 20px;
 
       & svg {
-        transform: scale(1.25);
+        width: flex(1.38);
+        height: flex(1.38);
       }
     }
   }
@@ -180,8 +181,8 @@
   }
 
   .arrow {
-    width: flex(1.2);
-    height: flex(1.2);
+    width: flex(1.38);
+    height: flex(1.38);
   }
 }
 

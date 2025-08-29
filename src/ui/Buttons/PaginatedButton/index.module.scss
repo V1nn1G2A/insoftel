@@ -3,12 +3,12 @@
 .arrow {
   color: var(--color-black);
   transition: color 0.5s;
-  width: 21px;
-  height: 21px;
+  width: 20px;
+  height: 20px;
 
   @include media.screen('desktop') {
-    width: 1.46vw;
-    height: 1.46vw;
+    width: 1.38vw;
+    height: 1.38vw;
   }
 
   &.left {
@@ -45,8 +45,8 @@
     height: flex(4.16);
 
     svg {
-      width: flex(1.96);
-      height: flex(1.96);
+      width: flex(1.38);
+      height: flex(1.38);
     }
   }
 }

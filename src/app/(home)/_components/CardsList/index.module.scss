@@ -3,40 +3,14 @@
 
 .cards {
   margin-top: 49px;
-
-  @include media.screen('desktop') {
-    margin-top: 56px;
-  }
-
-  @include media.screen('desktop') {
-    margin-top: flex(3.89);
-  }
 }
 
 .slide:not(:first-child) {
   margin-left: 16px;
-
-  @include media.screen('desktop') {
-    margin-left: 20px;
-  }
-
-  @include media.screen('desktop') {
-    margin-left: flex(1.39);
-  }
 }
 
 .cards__btns {
   padding: 48px 0 40px;
-
-  @include media.screen('desktop') {
-    display: flex;
-    justify-content: space-between;
-    padding: 62px 0 78px;
-  }
-
-  @include media.screen('desktop') {
-    padding: flex(4.3) 0 flex(5.42);
-  }
 }
 
 .cards__pagination {
@@ -44,15 +18,6 @@
   width: 100%;
   justify-content: space-between;
   margin-bottom: 50px;
-
-  @include media.screen('desktop') {
-    max-width: 148px;
-    margin-bottom: 0;
-  }
-
-  @include media.screen('desktop') {
-    max-width: flex(10.28);
-  }
 }
 
 .cards__explore {
@@ -66,21 +31,33 @@
     font-weight: 500;
     letter-spacing: 0.5px;
   }
+}
 
-  @include media.screen('desktop') {
-    max-width: 324px;
-
-    p {
-      font-size: 23px;
-      letter-spacing: 0.7px; //не исправлять на 1px! потому что иначе в firefox становится в 2 линии
-      margin-left: 10px;
-    }
+@include media.screen('desktop') {
+  .cards {
+    margin-top: flex(3.89);
   }
 
-  @include media.screen('desktop') {
+  .slide:not(:first-child) {
+    margin-left: flex(1.39);
+  }
+
+  .cards__btns {
+    display: flex;
+    justify-content: space-between;
+    padding: flex(4.3) 0 flex(4.93);
+  }
+
+  .cards__pagination {
+    margin-bottom: 0;
+    max-width: flex(10.28);
+  }
+
+  .cards__explore {
     max-width: flex(22.5);
 
-    p {
+    & p {
+      letter-spacing: 0.7px;
       font-size: flex(1.6);
       margin-left: flex(0.69);
     }
