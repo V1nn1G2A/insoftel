@@ -3,29 +3,12 @@
 
 .office {
   margin-top: 38px;
+  margin-bottom: 48px;
   letter-spacing: 0.239px;
 
   p {
-    color: var(--color-text-quaternary);
-
     @include fonts.text(16px, 20px, 300);
-
-    @include media.screen('desktop') {
-      @include fonts.text(18px, 21px, 300);
-    }
-
-    @include media.screen('desktop') {
-      @include fonts.text(flex(1.25), flex(1.51), 300);
-    }
-  }
-
-  @include media.screen('tablet') {
-    margin: 36px auto 0;
-  }
-
-  @include media.screen('desktop') {
-    max-width: 548px;
-    margin-top: 23px;
+    color: var(--color-text-quaternary);
   }
 }
 
@@ -39,30 +22,41 @@
     color: var(--color-text-tertiary);
 
     @include fonts.text(20px, 24px, 400);
-
-    @include media.screen('desktop') {
-      @include fonts.text(17px, 21.34px, 400);
-    }
-
-    @include media.screen('desktop') {
-      @include fonts.text(flex(1.25), flex(1.58), 400);
-    }
-  }
-
-  @include media.screen('desktop') {
-    margin-top: 200px;
-  }
-
-  @include media.screen('desktop') {
-    margin-top: 140px;
   }
 }
 
 .office p:first-of-type {
-  margin-bottom: 20px;
   letter-spacing: 0.4px;
 }
 
 .office p:last-of-type {
   letter-spacing: 0.25px;
+}
+
+@include media.screen('desktop') {
+  .office {
+    max-width: 548px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    & p {
+      @include fonts.text(flex(1.25), flex(1.51), 300);
+    }
+  }
+
+  .office p:first-of-type {
+    margin-bottom: 0;
+  }
+
+  .office > p:first-child {
+    margin-bottom: flex(1.18);
+  }
+
+  .office__contacts {
+    margin-top: flex(8.88);
+
+    & p {
+      @include fonts.text(flex(1.25), flex(1.58), 400);
+    }
+  }
 }

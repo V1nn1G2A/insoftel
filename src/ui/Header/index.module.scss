@@ -64,15 +64,13 @@
 }
 
 .container {
-  padding: 0 48px;
+  padding: 0 20px;
+
+  @include media.screen('tablet') {
+    padding: 0 48px;
+  }
 
   @include media.screen('desktop') {
-    padding: 0 flex(2.85);
-  }
-}
-
-@media (width <= 600px) {
-  .container {
-    padding: 0 20px;
+    padding: 0 flex(1.39) 0 flex(1.39);
   }
 }
