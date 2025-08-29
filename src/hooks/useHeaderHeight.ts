@@ -1,11 +1,10 @@
-import { useMediaQuery } from './useMediaQuery'
+// import { useMediaQuery } from './useMediaQuery'
 
 export const useHeaderHeight = (): number => {
-  const isSmall = useMediaQuery('(max-width: 768px)')
-  const isLarge = useMediaQuery('(min-width: 769px)')
+  // const isSmall = useMediaQuery('(max-width: 768px)')
+  // const isMedium = useMediaQuery('(min-width: 769px)')
+  // const isLarge = useMediaQuery('(min-width: 1600px)')
 
-  if (isSmall) return 63
-  if (isLarge) return 85
-
-  return 85
+  // if (isSmall) return 63
+  return 64
 }

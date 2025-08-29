@@ -23,6 +23,10 @@
     background-color: var(--color-white-secondary);
     color: var(--color-black);
   }
+
+  @include media.screen('desktop') {
+    padding: 14px 0;
+  }
 }
 
 .header--active {
