@@ -1,4 +1,5 @@
 @use 'mixins/media';
+@use 'mixins/fonts';
 
 .company {
   position: relative;
@@ -23,6 +24,7 @@
 
   &__office {
     order: 1;
+    max-width: calc(100% - 10px);
   }
 
   &__stats {
@@ -49,7 +51,6 @@
     width: 100%;
     justify-content: space-between;
     margin-top: 7px;
-    max-width: 350px;
 
     p {
       font-weight: 500;
@@ -64,20 +65,29 @@
 
 @include media.screen('desktop') {
   .company {
-    padding: flex(2.86) 0 flex(4.27);
+    padding: flex(4.86) 0;
 
     sup {
       top: -3px;
+    }
+
+    &__title {
+
+      & h2 {
+        @include fonts.text(flex(5.55), flex(5.85), 400);
+      }
+      margin: 0;
     }
 
     &__header {
       display: flex;
       justify-content: space-between;
       gap: 50px;
+      padding-bottom: flex(5.35);
     }
 
     &__quote {
-      margin: 114px 0 126px;
+      margin: flex(4.93) 0;
 
       &__wrapper {
         max-width: flex(55.94);
@@ -95,21 +105,21 @@
     }
 
     &__info {
+      justify-content: space-between;
+      flex-direction: row;
+      padding-top: flex(4.86);
+
       button.company__btn {
         margin: 48px 0 0;
         display: flex;
         justify-content: flex-start;
       }
-      justify-content: space-between;
-      flex-direction: row;
     }
 
     &__office {
       letter-spacing: 0.4px;
       order: -1;
-      margin-right: 134px;
-      margin-top: 34px;
-      max-width: flex(36.48);
+      max-width: flex(31.25);
     }
 
     &__stats {
@@ -124,31 +134,26 @@
 
     &__statsContainer {
       width: 100%;
-      max-width: 662px;
-
-      max-width: flex(34.48);
+      max-width: flex(40.42);
     }
 
     &__statsContent {
-      height: 382px;
       gap: 47px;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       width: 100%;
-      margin-top: 20px;
-      height: flex(19.9);
-      gap: flex(2.45);
-      margin-top: flex(1.04);
+      gap: flex(5.2);
     }
 
     &__btn {
       display: none;
+      max-width: 0;
     }
 
     &__deskBtn {
       display: flex;
-      margin: flex(1.39) auto 0 0;
+      margin: flex(2.92) auto 0 0;
     }
   }
 }

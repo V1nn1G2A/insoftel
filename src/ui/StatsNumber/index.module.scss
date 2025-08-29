@@ -9,18 +9,9 @@
 
   span {
     display: inline;
-
-    @include fonts.text(120px, 120px, 500);
-
     color: var(--color-black);
 
-    @include media.screen('desktop') {
-      @include fonts.text(142px, 142px, 500);
-    }
-
-    @include media.screen('desktop') {
-      @include fonts.text(flex(10), flex(7.4), 500);
-    }
+    @include fonts.text(120px, 74%, 500);
   }
 }
 
@@ -30,32 +21,14 @@
   align-items: flex-end;
   flex-grow: 1;
   width: 100%;
-
-  @include media.screen('desktop') {
-    padding-bottom: 23px;
-    max-width: 662px;
-  }
-
-  @include media.screen('desktop') {
-    max-width: flex(34.48);
-  }
 }
 
 .children {
   text-align: right;
-
-  @include fonts.text(20px, 24px, 'regular');
-
   letter-spacing: 0.4px;
   color: var(--color-text-secondary);
 
-  @include media.screen('desktop') {
-    @include fonts.text(21px, 25px, 'regular');
-  }
-
-  @include media.screen('desktop') {
-    @include fonts.text(flex(1.46), 35.31px, 'regular');
-  }
+  @include fonts.text(20px, 24px, 'regular');
 }
 
 .stats .line {
@@ -84,5 +57,18 @@
 
   to {
     top: 0;
+  }
+}
+
+@include media.screen('desktop') {
+  .stats {
+    padding-bottom: flex(1.25);
+    span {
+      @include fonts.text(flex(9.86), 74%, 500);
+    }
+  }
+
+  .children {
+    @include fonts.text(flex(1.46), 35.31px, 'regular');
   }
 }

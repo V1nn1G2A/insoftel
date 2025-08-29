@@ -43,7 +43,7 @@ const Quote: FC<IQuote> = ({
         id={id}
         ref={ref}
       >
-        <div className={cx('wrapper', wrapperClassName)}>
+        <div className={cx('wrapperContent', wrapperClassName)}>
           <AnimationBlock
             className={cx('quote__content', contentClassName)}
             type="p"
