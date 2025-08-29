@@ -33,6 +33,8 @@
   }
 
   @include media.screen('desktop') {
+    width: 38.3%;
+
     &--active {
       width: 100%;
       align-self: start;
@@ -102,6 +104,10 @@
     &:focus-within {
       border-color: #151719;
     }
+  }
+
+  @include media.screen('desktop') {
+    height: 36px;
   }
 }
 
