@@ -15,12 +15,6 @@
     justify-content: space-between;
     min-width: 100%;
 
-    @include media.screen('desktop') {
-      @include fonts.text(28px, 35px, 500);
-
-      padding: flex(0.69) 0 flex(1.39);
-    }
-
     &.dark {
       border-bottom: 1px solid rgb(0 0 0 / 20%);
 
@@ -37,45 +31,32 @@
       }
     }
   }
-}
 
-.round {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid rgb(0 0 0 / 20%);
-  background-color: transparent;
-  width: 60px;
-  height: 60px;
-  backdrop-filter: blur(14.22px);
-  transition: background-color 0.4s;
-
-  @include media.screen('desktop') {
-    width: flex(4.16);
-    height: flex(4.16);
-  }
-
-  &.dark {
+  .round {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
     border: 1px solid rgb(0 0 0 / 20%);
-  }
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    backdrop-filter: blur(14.22px);
+    transition: background-color 0.4s;
 
-  &.light {
-    border: 1px solid rgb(255 255 255 / 20%);
-  }
+    &.dark {
+      border: 1px solid rgb(0 0 0 / 20%);
+    }
 
-  &.long {
-    margin-right: 15px;
-    border: none;
-    width: auto;
-    height: auto;
+    &.light {
+      border: 1px solid rgb(255 255 255 / 20%);
+    }
 
-    @include media.screen('desktop') {
-      margin-right: 20px;
-
-      & svg {
-        transform: scale(1.25);
-      }
+    &.long {
+      margin-right: 15px;
+      border: none;
+      width: auto;
+      height: auto;
     }
   }
 }
@@ -104,26 +85,12 @@
   &.light {
     color: var(--color-white);
   }
-
-  @include media.screen('desktop') {
-    @include fonts.text(flex(1.46), flex(1.82), 500);
-  }
 }
 
 .arrow {
   transition: transform 0.4s ease;
-  width: 26px;
-  height: 26px;
-
-  @include media.screen('desktop') {
-    width: flex(1.2);
-    height: flex(1.2);
-  }
-
-  @include media.screen('desktop-l') {
-    width: flex(1.8);
-    height: flex(1.8);
-  }
+  width: 17px;
+  height: 17px;
 
   &.long {
     &.dark {
@@ -185,6 +152,37 @@
       background-color: var(--color-white);
       border: none;
     }
+  }
+}
+
+@include media.screen('desktop') {
+  .button {
+    &.long {
+      @include fonts.text(28px, 35px, 500);
+      padding: flex(0.69) 0 flex(1.39);
+    }
+  }
+
+  .round {
+    width: flex(4.16);
+    height: flex(4.16);
+
+    &.long {
+      margin-right: 20px;
+    
+      & svg {
+        transform: scale(1.25);
+      }
+    }
+  }
+
+  .text {
+    @include fonts.text(flex(1.46), flex(1.82), 500);
+  }
+
+  .arrow {
+    width: flex(1.2);
+    height: flex(1.2);
   }
 }
 

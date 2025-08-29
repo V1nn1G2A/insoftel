@@ -25,14 +25,11 @@ const SectionTitle: FC<ISectionTitle> = ({
   index,
   appereance = 'dark',
 }) => {
-  const classNames = cx(
-    styles.header,
-    styles[`header--${appereance}`],
-    className
-  )
   const divRef = useRef<HTMLDivElement>(null)
   const lettersRef = useRef<Record<number, HTMLSpanElement>>({})
   const isInView = useInView(divRef, { once: true })
+
+  const classNames = cx(styles.title, styles[`title--${appereance}`], className)
 
   const setLetterRef = (node: HTMLSpanElement | null, index: number) => {
     if (!node) return

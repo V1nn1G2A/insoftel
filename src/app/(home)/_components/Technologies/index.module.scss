@@ -9,10 +9,6 @@
 .technologies__content {
   &__title {
     margin: 40px 0 24px;
-
-    & h2 {
-      letter-spacing: 1px;
-    }
   }
 
   &__text {
@@ -40,49 +36,38 @@
 
 @include media.screen('desktop') {
   .technologies {
-    padding: 71px 0;
+    padding: flex(4.93) 0;
   }
 
   .technologies__content {
     display: flex;
     justify-content: space-between;
-    margin: flex(5.55) 0 -2px;
-    gap: flex(4.86);
+    gap: flex(6.25);
 
     &__title {
       margin: flex(0.34) 0 flex(1.66);
-
-      & h2 {
-        letter-spacing: 2px;
-      }
-    }
-
-    &__textContainer {
-      max-width: flex(55.4);
-      width: 100%;
     }
 
     &__text {
-      @include fonts.text(flex(2.55), flex(2.77), 200);
+      @include fonts.text(flex(2.08), flex(2.43), 200);
 
-      text-indent: 43px;
-      margin-bottom: flex(4.44);
+      text-indent: flex(2.98);
+      margin-bottom: flex(4.93);
       letter-spacing: 1.1px;
     }
 
     &__accordion {
-      margin: 0 0 85px;
+      height: flex(49.51);
     }
 
     &__button {
       margin-top: 0;
-      margin-bottom: flex(5.7);
 
       & p {
         font-size: flex(1.53);
-        line-height: 1.94px;
+        line-height: flex(1.94);
         letter-spacing: 1.4px;
-        margin-right: 20px;
+        margin-right: flex(1.24);
       }
     }
   }
