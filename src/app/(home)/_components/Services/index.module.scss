@@ -71,20 +71,16 @@
   margin-top: 25px;
 }
 
-.logo {
-  width: 435px;
-  height: 435px;
-}
-
 @include media.screen('desktop') {
   .services {
-    padding: flex(5.55) 0 flex(5.28);
+    padding: flex(4.9) 0 flex(4.85);
     display: flex;
     justify-content: space-between;
 
     .logoContainer {
-      flex: 2;
       display: block;
+      height: max-content;
+      width: max-content;
     }
   }
 
@@ -154,10 +150,10 @@
   }
 
   .logo {
-    width: 40vh;
-    height: 40vh;
-    display: flex;
-    flex: 1;
+    width: 40.5vh;
+    height: 40.5vh;
+    max-width: 435px;
+    max-height: 435px;
   }
 
   .buttonText {
