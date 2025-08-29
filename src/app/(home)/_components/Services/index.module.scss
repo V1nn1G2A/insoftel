@@ -166,6 +166,8 @@
   }
 
   .title {
+    flex: 1;
+
     & h2 {
       @include fonts.text(flex(5.6), flex(5.7), 400);
 
