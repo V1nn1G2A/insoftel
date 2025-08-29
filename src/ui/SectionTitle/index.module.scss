@@ -73,6 +73,7 @@
   .title {
     @include fonts.text(20px, 24px, 400);
 
+    flex: 0;
     order: -1;
     justify-content: flex-start;
   }

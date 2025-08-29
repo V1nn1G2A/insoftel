@@ -61,9 +61,6 @@ const SearchResult: FC<ISearchResultProps> = ({
     )
   }
 
-  console.log('top:' + canScrollTop)
-  console.log('bottom:' + canScrollBottom)
-
   return (
     <>
       <ul

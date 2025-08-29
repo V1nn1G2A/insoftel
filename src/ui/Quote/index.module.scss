@@ -1,14 +1,10 @@
 @use 'mixins/fonts';
 @use 'mixins/media';
 
-.wrapper {
+.wrapperContent {
   position: relative;
   padding: 48px 0;
   overflow-y: hidden;
-
-  @include media.screen('desktop-l') {
-    padding: calc(var(--vw) * 4.79) 0;
-  }
 }
 
 .quote {
@@ -17,14 +13,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @include media.screen('desktop') {
-    letter-spacing: 0.2px;
-  }
-
-  @include media.screen('desktop') {
-    padding: flex(4.79) 0;
-  }
 
   div {
     margin: 0 auto;
@@ -35,18 +23,6 @@
   color: var(--color-text-quaternary);
   text-indent: 18px;
   letter-spacing: 0.3px;
-
-  @include media.screen('desktop') {
-    text-indent: 30px;
-    letter-spacing: 0.6px;
-    word-spacing: -6%;
-
-    @include fonts.text(26px, 30px, 300);
-  }
-
-  @include media.screen('desktop') {
-    @include fonts.text(38px, 42.95px, 300);
-  }
 }
 
 .quote__author {
@@ -55,16 +31,6 @@
   margin: 23px 0 0 auto;
   letter-spacing: 0.3px;
   color: var(--color-text-tertiary);
-
-  @include media.screen('desktop') {
-    @include fonts.text(18px, 21px, 500);
-
-    letter-spacing: 0.4px;
-  }
-
-  @include media.screen('desktop') {
-    @include fonts.text(24px, 30.31px, 500);
-  }
 }
 
 .line {
@@ -72,4 +38,28 @@
   width: 100%;
   height: 1px;
   background-color: rgba($color: #000, $alpha: 20%);
+}
+
+@include media.screen('desktop') {
+  .wrapperContent {
+    padding: flex(5.69) 0;
+  }
+
+  .quote {
+    letter-spacing: 0.2px;
+  }
+
+  .quote__content {
+    @include fonts.text(38px, 42.95px, 300);
+
+    text-indent: 30px;
+    letter-spacing: 0.6px;
+    word-spacing: -6%;
+  }
+
+  .quote__author {
+    @include fonts.text(24px, 30.31px, 500);
+    letter-spacing: 0.4px;
+    margin: flex(1.6) 0 0 auto;
+  }
 }
