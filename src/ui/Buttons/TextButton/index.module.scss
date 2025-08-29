@@ -39,8 +39,6 @@
     border-radius: 50%;
     border: 1px solid rgb(0 0 0 / 20%);
     background-color: transparent;
-    width: 60px;
-    height: 60px;
     backdrop-filter: blur(14.22px);
     transition: background-color 0.4s;
 
@@ -159,17 +157,18 @@
   .button {
     &.long {
       @include fonts.text(28px, 35px, 500);
+
       padding: flex(0.69) 0 flex(1.39);
     }
   }
 
   .round {
-    width: flex(4.16);
-    height: flex(4.16);
+    width: flex(3.58);
+    height: flex(3.58);
 
     &.long {
       margin-right: 20px;
-    
+
       & svg {
         transform: scale(1.25);
       }

@@ -96,13 +96,6 @@
     display: flex;
   }
 
-  .title {
-    @include fonts.text(90px, 94px, 400);
-
-    min-height: max-content;
-    letter-spacing: 1px;
-  }
-
   .number {
     @include fonts.text(20px, 24px, 400);
 
@@ -119,7 +112,7 @@
   }
 
   .text-top {
-    @include fonts.text(flex(2.6), flex(2.77), 300);
+    @include fonts.text(flex(2.1), flex(2.4), 300);
 
     letter-spacing: 0;
     text-indent: flex(2.97);
@@ -136,7 +129,7 @@
 
   .paragraph {
     & h3 {
-      @include fonts.text(flex(2.43), flex(2.43), 400);
+      @include fonts.text(flex(2.1), flex(2.4), 400);
 
       margin-bottom: flex(1.11);
       letter-spacing: 1px;
@@ -152,8 +145,8 @@
   .logo {
     width: 40.5vh;
     height: 40.5vh;
-    max-width: 435px;
-    max-height: 435px;
+    max-width: 530px;
+    max-height: 530px;
   }
 
   .buttonText {
@@ -173,8 +166,10 @@
   }
 
   .title {
+    flex: 1;
+
     & h2 {
-      @include fonts.text(flex(6.25), flex(6.53), 400);
+      @include fonts.text(flex(5.6), flex(5.7), 400);
 
       margin: 0 0 0 flex(0.35);
     }
