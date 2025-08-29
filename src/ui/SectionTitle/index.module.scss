@@ -1,7 +1,7 @@
 @use 'mixins/fonts';
 @use 'mixins/media';
 
-.header {
+.title {
   flex: 1;
   position: relative;
   min-width: max-content;
@@ -11,63 +11,9 @@
   height: max-content;
 
   --height: 56px;
-
-  @include media.screen('desktop') {
-    order: -1;
-    justify-content: flex-start;
-
-    @include fonts.text(20px, 24px, 400);
-  }
 }
 
-.index {
-  @include fonts.text(16px, 20px, 400);
-
-  letter-spacing: 0.5px;
-  position: relative;
-  order: 1;
-
-  @include media.screen('desktop') {
-    order: -1;
-    top: -5px;
-    margin-right: 32px;
-    margin-top: 5px;
-
-    @include fonts.text(20px, 24px, 400);
-  }
-
-  @include media.screen('desktop') {
-    font-size: flex(1.39);
-    line-height: flex(1.66);
-  }
-}
-
-.text {
-  letter-spacing: 1px;
-  overflow: hidden;
-  height: max-content;
-
-  @include fonts.text(48px, 52px, 400);
-
-  span {
-    transform: translateY(20px);
-  }
-
-  @include media.screen('desktop') {
-    margin: 0 0 0 5px;
-    letter-spacing: 2px;
-
-    @include fonts.text(90px, 94px, 400);
-  }
-
-  @include media.screen('desktop') {
-    @include fonts.text(109px, 113.61px, 400);
-    font-size: flex(6.25);
-    line-height: flex(6.53);
-  }
-}
-
-.header--dark {
+.title--dark {
   .text {
     color: var(--color-text-tertiary);
   }
@@ -77,13 +23,33 @@
   }
 }
 
-.header--light {
+.title--light {
   .text {
     color: var(--color-white);
   }
 
   .index {
     color: var(--color-white);
+  }
+}
+
+.index {
+  @include fonts.text(16px, 20px, 400);
+  
+  letter-spacing: 0.5px;
+  position: relative;
+  order: 1;
+}
+
+.text {
+  @include fonts.text(48px, 52px, 400);
+
+  letter-spacing: 1px;
+  overflow: hidden;
+  height: max-content;
+
+  & span {
+    transform: translateY(20px);
   }
 }
 
@@ -104,6 +70,29 @@
 }
 
 @include media.screen('desktop') {
+  .title {
+    @include fonts.text(20px, 24px, 400);
+
+    order: -1;
+    justify-content: flex-start;
+  }
+
+  .index {
+    @include fonts.text(flex(1.25), flex(1.48), 300);
+
+    order: -1;
+    top: -5px;
+    margin-right: flex(1.8);
+    margin-top: flex(0.35);
+  }
+
+  .text {
+    @include fonts.text(flex(5.55), flex(5.85), 300);
+
+    margin: 0 0 0 5px;
+    letter-spacing: 1.36px;
+  }
+
   @keyframes up {
     from {
       top: calc(var(--height) * 2);

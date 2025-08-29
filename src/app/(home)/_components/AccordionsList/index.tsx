@@ -24,7 +24,7 @@ const AccordionsList: FC<IAccordionList> = ({ className }) => {
   }
 
   return (
-    <div className={`${styles[`accordion-wrapper`]}`}>
+    <div className={styles.accordionWrapper}>
       <div className={`${styles.accordion} ${className}`}>
         {accordionArray.map(([title, content], index) => (
           <Accordion

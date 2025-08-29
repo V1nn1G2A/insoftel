@@ -20,10 +20,6 @@
   transition: opacity 0.7s;
 
   @include fonts.text(20px, 24px, 'regular');
-
-  @include media.screen('desktop') {
-    @include fonts.text(flex(1.39), flex(1.66), 'regular');
-  }
 }
 
 .accordion__content {
@@ -36,18 +32,10 @@
   word-spacing: 2%;
   color: var(--color-white);
 
-  @include media.screen('desktop') {
-    padding: 0 0 flex(1.11);
-  }
-
-  p {
+  & p {
     margin-top: 16px;
 
     @include fonts.text(18px, 22px, 300);
-
-    @include media.screen('desktop') {
-      @include fonts.text(22px, 29px, 300);
-    }
   }
 
   > div {
@@ -65,10 +53,6 @@
   justify-content: space-between;
   padding: 15px 0 0;
 
-  @include media.screen('desktop') {
-    padding: flex(1.04) 0 0;
-  }
-
   p {
     position: relative;
     color: rgb(255 255 255 / 50%);
@@ -76,14 +60,6 @@
     letter-spacing: 1px;
 
     @include fonts.text(24px, 28px, 300);
-
-    @include media.screen('desktop') {
-      letter-spacing: 0.8px;
-    }
-
-    @include media.screen('desktop') {
-      @include fonts.text(flex(1.66), flex(1.94), 300);
-    }
   }
 
   svg {
@@ -91,7 +67,7 @@
     transition: transform 0.7s;
   }
 
-  &:hover + .accordion__content {
+  &:hover+.accordion__content {
     @include media.screen('desktop') {
       grid-template-rows: 1fr;
     }
@@ -109,18 +85,8 @@
   transition: background-color 0.7s;
 
   svg {
-    width: 26px;
-    height: 26px;
-  }
-
-  @include media.screen('desktop') {
-    width: flex(3.33);
-    height: flex(3.33);
-
-    svg {
-      width: flex(1.8);
-      height: flex(1.8);
-    }
+    width: 17px;
+    height: 17px;
   }
 }
 
@@ -155,23 +121,54 @@
   background-color: rgb(255 255 255 / 20%);
 }
 
-.accordion__title:hover {
-  @include media.screen('desktop') {
-    p {
-      color: var(--color-white);
+@include media.screen('desktop') {
+  .card__content-counter {
+    @include fonts.text(flex(1.39), flex(1.66), 'regular');
+  }
+
+  .accordion__content {
+    padding: 0 0 flex(1.11);
+
+    & p {
+      @include fonts.text(flex(1.53), flex(2.02), 300);
+    }
+  }
+
+  .accordion__title {
+    padding: flex(1.04) 0 0;
+
+    & p {
+      @include fonts.text(flex(1.46), flex(1.73), 300);
+      letter-spacing: 0.8px;
     }
 
-    svg {
-      transform: rotate(45deg);
-      color: var(--color-black);
+    &:hover {
+      p {
+        color: var(--color-white);
+      }
+    
+      svg {
+        transform: rotate(45deg);
+        color: var(--color-black);
+      }
+    
+      .accordion__btn {
+        background-color: var(--color-white);
+      }
+    
+      .card__content-counter {
+        opacity: 1;
+      }
     }
+  }
 
-    .accordion__btn {
-      background-color: var(--color-white);
-    }
-
-    .card__content-counter {
-      opacity: 1;
+  .accordion__btn {
+    width: flex(3.33);
+    height: flex(3.33);
+  
+    & svg {
+      width: flex(1.2);
+      height: flex(1.2);
     }
   }
 }

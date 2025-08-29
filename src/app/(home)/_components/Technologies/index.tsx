@@ -14,33 +14,35 @@ import AccordionsList from '../AccordionsList'
 import styles from './index.module.scss'
 
 const Technologies: FC = ({}) => (
-  <section>
+  <section className={styles.technologies}>
     <VideoBackground src={'/video/background'}>
       <Container>
-        <div className={styles.technologies}>
+        <div className={styles.technologies__content}>
           <SectionTitle
             index="02"
             appereance="light"
-            className={styles.technologies__title}
+            className={styles.technologies__content__title}
           >
             Technologies
           </SectionTitle>
-          <div className={styles['technologies__text-container']}>
+          <div className={styles.technologies__content__textContainer}>
             <AnimationBlock
               type="p"
-              className={styles.technologies__text}
+              className={styles.technologies__content__text}
             >
               We leverage the latest technological advancements to ensure our
               clients receive highly efficient, custom software solutions
               tailored to their needs
             </AnimationBlock>
-            <AccordionsList className={styles.technologies__accordion} />
+            <AccordionsList
+              className={styles.technologies__content__accordion}
+            />
             <AnimationBlock>
               <Link href={'/technologies'}>
                 <TextButton
                   text="Explore Our Technologies"
                   variant="short"
-                  classNames={[styles.technologies__button]}
+                  classNames={[styles.technologies__content__button]}
                 />
               </Link>
             </AnimationBlock>
