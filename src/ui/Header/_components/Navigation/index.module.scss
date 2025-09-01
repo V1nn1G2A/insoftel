@@ -28,7 +28,7 @@
   }
 
   &--active {
-    min-height: calc(100vh - 83px);
+    min-height: calc(100vh - 84px);
     overflow-y: scroll;
 
     &.wrapper--dark {
@@ -42,8 +42,12 @@
     }
 
     @include media.screen('mobile') {
-      min-height: calc(100vh - 60px);
+      min-height: calc(100vh - 56px);
       overflow-y: scroll;
+    }
+
+    @include media.screen('desktop') {
+      min-height: calc(100vh - 64px);
     }
   }
 

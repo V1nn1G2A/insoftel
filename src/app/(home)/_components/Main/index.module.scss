@@ -8,11 +8,6 @@
   button {
     width: 169px;
     height: 76px;
-
-    @include media.screen('desktop') {
-      width: flex(11.74);
-      height: flex(5.28);
-    }
   }
 }
 
@@ -21,12 +16,6 @@
 
   video {
     transform: translate(-40%, -55%);
-  }
-
-  @include media.screen('desktop') {
-    video {
-      transform: translate(-50%, -55%);
-    }
   }
 }
 
@@ -37,13 +26,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -90%);
-
-  @include media.screen('desktop') {
-    height: flex(4.93);
-  }
 }
 
 .text {
+  @include fonts.text(20px, 24px, 300);
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -51,12 +37,6 @@
   color: var(--color-white);
   letter-spacing: 0.85px;
   width: max-content;
-
-  @include fonts.text(20px, 24px, 300);
-
-  @include media.screen('desktop') {
-    @include fonts.text(flex(1.39), flex(1.66), 300);
-  }
 }
 
 .typed {
@@ -70,7 +50,7 @@
   white-space: nowrap;
   user-select: none;
 
-  span + span {
+  span+span {
     position: relative;
     display: inline-block;
     user-select: none;
@@ -88,56 +68,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @include media.screen('desktop') {
-    left: flex(2.85);
-    right: flex(1.39);
-  }
 }
 
 .top {
-  top: 120px;
-
-  @include media.screen('mobile') {
-    top: 76px;
-  }
-
-  @include media.screen('desktop') {
-    top: flex(8.33);
-  }
+  top: 106px;
 }
 
 .bottom {
   bottom: 22px;
   left: 20px;
-
-  @include media.screen('desktop') {
-    bottom: flex(1.53);
-    left: flex(1.39);
-  }
 }
 
 .letter {
   color: var(--color-white);
   opacity: 0.4;
   transition: opacity 0.3s;
-
-  @include media.screen('desktop') {
-    letter-spacing: 0;
-    opacity: 0;
-    color: var(--color-white) !important;
-    animation: letter-appear 0.8s ease-out both;
-    animation-delay: 0.2s;
-
-    @include fonts.text(flex(7.5), 100%, 500);
-  }
-}
-
-.letterDissapear {
-  @include media.screen('desktop') {
-    animation: letter-disappear calc((var(--count) - 3) * 0.5s / 3) ease both;
-    animation-delay: 1.4s;
-  }
 }
 
 .letterActive {
@@ -147,17 +92,7 @@
 .exploreButton {
   display: flex;
   align-items: center;
-  gap: 14px;
-
-  @include media.screen('desktop') {
-    gap: 15px;
-    padding: 8px 4px 8px 30px;
-  }
-
-  @include media.screen('desktop') {
-    gap: flex(1.04);
-    padding: flex(0.55) flex(0.28) flex(0.55) flex(2.08);
-  }
+  justify-content: space-between;
 
   & p {
     font-size: 16px;
@@ -165,10 +100,6 @@
     letter-spacing: 0.7px;
     margin: 0;
     font-family: var(--font-neue-haas);
-
-    @include media.screen('desktop') {
-      font-size: flex(1.11);
-    }
   }
 }
 
@@ -193,5 +124,70 @@
   100% {
     opacity: 0;
     transform: translateY(-20px);
+  }
+}
+
+@include media.screen('mobile') {
+  .top {
+    top: 76px;
+  }
+}
+
+@include media.screen('desktop') {
+  .main {
+    & button {
+      width: flex(10.41);
+      height: flex(4.69);
+    }
+  }
+
+  .video {
+    & video {
+      transform: translate(-50%, -55%);
+    }
+  }
+
+  .center {
+    height: flex(4.93);
+  }
+
+  .text {
+    @include fonts.text(flex(1.39), flex(1.66), 300);
+  }
+
+  .top,
+  .bottom {
+    left: calc(flex(3.33) - 8px);
+    right: flex(3.33);
+  }
+
+  .top {
+    top: flex(5.97);
+  }
+
+  .bottom {
+    bottom: flex(1.53);
+  }
+
+  .letter {
+    letter-spacing: 0;
+    opacity: 0;
+    color: var(--color-white) !important;
+    animation: letter-appear 0.8s ease-out both;
+    animation-delay: 0.2s;
+
+    @include fonts.text(flex(7.5), 100%, 500);
+  }
+
+  .letterDissapear {
+    animation: letter-disappear calc((var(--count) - 3) * 0.5s / 3) ease both;
+    animation-delay: 1.4s;
+  }
+
+  .exploreButton {
+    padding: flex(0.48) flex(0.625) flex(0.48) flex(1.8);
+    & p {
+      font-size: flex(0.97);
+    }
   }
 }

@@ -36,5 +36,6 @@
     @include fonts.text(flex(4.86), flex(5.2), 400);
     max-width: flex(40.28);
     padding: flex(1.11) 0 0 0;
+    margin-right: flex(0.5);
   }
 }
