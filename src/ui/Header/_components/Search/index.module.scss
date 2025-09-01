@@ -106,6 +106,10 @@
     }
   }
 
+  @include media.screen('tablet') {
+    height: 36px;
+  }
+
   @include media.screen('desktop') {
     height: 36px;
   }
