@@ -1,8 +1,9 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import type { FC } from 'react'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import type SwiperCore from 'swiper'
 import { Keyboard } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -16,6 +17,14 @@ import styles from './index.module.scss'
 const CardsList: FC = ({}) => {
   const swiperRef = useRef<SwiperCore | null>(null)
   const draggingRef = useRef(false)
+  const pathname = usePathname()
+
+  useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.update()
+      swiperRef.current.slideTo(0)
+    }
+  }, [pathname])
 
   return (
     <AnimationBlock

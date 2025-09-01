@@ -9,8 +9,8 @@ import { PopupProvider } from '@/ui/Popup/PopupContext'
 import '../styles/globals.scss'
 
 export const metadata: Metadata = {
-  title: 'Insoftel Technologies',
-  description: 'Insoftel Technologies',
+  title: 'Insoftel Technologies - Custom Software Development',
+  description: 'Insoftel Technologies - Custom Software Development',
   icons: {
     icon: './assets/favicon.ico',
   },
