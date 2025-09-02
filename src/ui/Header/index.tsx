@@ -3,7 +3,7 @@
 import cx from 'classnames'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { useScrollLock } from '@/hooks/useScrollLock'
 
@@ -14,6 +14,9 @@ import Menu from './_components/Menu'
 import styles from './index.module.scss'
 
 const Header = () => {
+  const headerRef = useRef<HTMLElement>(null)
+  const [activeSectionClass, setActiveSectionClass] = useState<string>('')
+
   const path = usePathname()
 
   const allPaths = [
@@ -40,15 +43,36 @@ const Header = () => {
 
   useEffect(() => {
     setIsOpen(false)
-
     window.scrollTo(0, 0)
   }, [path])
 
+  useEffect(() => {
+    const handler = (e: CustomEvent) => {
+      const id = e.detail
+      if (id && styles[`header--${id}`]) {
+        setActiveSectionClass(styles[`header--${id}`])
+      } else {
+        setActiveSectionClass('')
+      }
+    }
+
+    document.addEventListener('activeSectionChange', handler as EventListener)
+    return () =>
+      document.removeEventListener(
+        'activeSectionChange',
+        handler as EventListener
+      )
+  }, [])
+
   return (
     <header
-      className={cx(styles.header, styles[`header--${theme}`], {
-        [styles['header--active']]: isOpen,
-      })}
+      ref={headerRef}
+      className={cx(
+        styles.header,
+        styles[`header--${theme}`],
+        activeSectionClass,
+        { [styles['header--active']]: isOpen }
+      )}
     >
       <div className={styles.container}>
         <div className={styles.wrapper}>
