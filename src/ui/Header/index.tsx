@@ -3,7 +3,7 @@
 import cx from 'classnames'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 import useRedirectEffect from '@/hooks/useRedirectEffect'
 import { useScrollLock } from '@/hooks/useScrollLock'
@@ -15,6 +15,9 @@ import Menu from './_components/Menu'
 import styles from './index.module.scss'
 
 const Header = () => {
+  const headerRef = useRef<HTMLElement>(null)
+  const [activeSection, setActiveSection] = useState<string | null>(null)
+
   const path = usePathname()
 
   const allPaths = [
@@ -37,6 +40,18 @@ const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false)
 
+  // вычисляем тему по секции, поверх базовой темы
+  const sectionThemes: Record<string, 'dark' | 'light'> = {
+    services: 'light',
+    technologies: 'dark',
+    company: 'light',
+    products: 'light',
+  }
+  const computedTheme =
+    activeSection && activeSection !== 'main'
+      ? sectionThemes[activeSection] || theme
+      : theme
+
   useScrollLock(isOpen)
 
   useRedirectEffect(
@@ -47,9 +62,24 @@ const Header = () => {
     }, [])
   )
 
+  useEffect(() => {
+    const handler = (e: CustomEvent) => {
+      const id = e.detail
+      setActiveSection(id || null)
+    }
+
+    document.addEventListener('activeSectionChange', handler as EventListener)
+    return () =>
+      document.removeEventListener(
+        'activeSectionChange',
+        handler as EventListener
+      )
+  }, [])
+
   return (
     <header
-      className={cx(styles.header, styles[`header--${theme}`], {
+      ref={headerRef}
+      className={cx(styles.header, styles[`header--${computedTheme}`], {
         [styles['header--active']]: isOpen,
       })}
     >
@@ -62,7 +92,7 @@ const Header = () => {
             <LogoIcon />
           </Link>
           <Menu
-            theme={theme}
+            theme={computedTheme}
             isOpen={isOpen}
             setIsOpen={setIsOpen}
           />
