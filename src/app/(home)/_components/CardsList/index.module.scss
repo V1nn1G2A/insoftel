@@ -5,6 +5,14 @@
   margin-top: 49px;
 }
 
+.swiper {
+  overflow: visible !important;
+}
+
+.slide {
+  width: fit-content !important;
+}
+
 .slide:not(:first-child) {
   margin-left: 16px;
 }

@@ -3,8 +3,9 @@
 import cx from 'classnames'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useCallback, useState } from 'react'
 
+import useRedirectEffect from '@/hooks/useRedirectEffect'
 import { useScrollLock } from '@/hooks/useScrollLock'
 
 import LogoIcon from '@assets/icons/logo.svg'
@@ -38,11 +39,13 @@ const Header = () => {
 
   useScrollLock(isOpen)
 
-  useEffect(() => {
-    setIsOpen(false)
+  useRedirectEffect(
+    useCallback(() => {
+      setIsOpen(false)
 
-    window.scrollTo(0, 0)
-  }, [path])
+      window.scrollTo(0, 0)
+    }, [])
+  )
 
   return (
     <header

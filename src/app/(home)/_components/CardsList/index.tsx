@@ -1,13 +1,13 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import type { FC } from 'react'
-import { useEffect, useRef } from 'react'
+import { useCallback, useRef } from 'react'
 import type SwiperCore from 'swiper'
 import { Keyboard } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
+import useRedirectEffect from '@/hooks/useRedirectEffect'
 import { AnimationBlock, Card, PaginatedButton, TextButton } from '@/ui'
 
 import cards from '../../_constants/CARD'
@@ -17,14 +17,15 @@ import styles from './index.module.scss'
 const CardsList: FC = ({}) => {
   const swiperRef = useRef<SwiperCore | null>(null)
   const draggingRef = useRef(false)
-  const pathname = usePathname()
 
-  useEffect(() => {
-    if (swiperRef.current) {
-      swiperRef.current.update()
-      swiperRef.current.slideTo(0)
-    }
-  }, [pathname])
+  useRedirectEffect(
+    useCallback(() => {
+      if (swiperRef.current) {
+        swiperRef.current.update()
+        swiperRef.current.slideTo(0)
+      }
+    }, [])
+  )
 
   return (
     <AnimationBlock
@@ -33,8 +34,6 @@ const CardsList: FC = ({}) => {
     >
       <Swiper
         onSwiper={swiper => (swiperRef.current = swiper)}
-        onTouchStart={() => (draggingRef.current = false)}
-        onTouchMove={() => (draggingRef.current = true)}
         keyboard={{ enabled: true }}
         modules={[Keyboard]}
         slidesPerView={'auto'}
@@ -50,16 +49,6 @@ const CardsList: FC = ({}) => {
         }}
         resistance={true}
         resistanceRatio={0.5}
-        onTouchEnd={swiper => {
-          draggingRef.current = false
-          if (swiper.isEnd) {
-            const slidesPerView = Number(swiper?.params?.slidesPerView ?? 1)
-            swiper.slideTo(swiper.slides.length - slidesPerView)
-          }
-          if (swiper.isBeginning) {
-            swiper.slideTo(0)
-          }
-        }}
       >
         {cards.map(card => (
           <SwiperSlide
