@@ -15,7 +15,7 @@ import styles from './index.module.scss'
 
 const Header = () => {
   const headerRef = useRef<HTMLElement>(null)
-  const [activeSectionClass, setActiveSectionClass] = useState<string>('')
+  const [activeSection, setActiveSection] = useState<string | null>(null)
 
   const path = usePathname()
 
@@ -39,6 +39,18 @@ const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false)
 
+  // вычисляем тему по секции, поверх базовой темы
+  const sectionThemes: Record<string, 'dark' | 'light'> = {
+    services: 'light',
+    technologies: 'dark',
+    company: 'light',
+    products: 'light',
+  }
+  const computedTheme =
+    activeSection && activeSection !== 'main'
+      ? sectionThemes[activeSection] || theme
+      : theme
+
   useScrollLock(isOpen)
 
   useEffect(() => {
@@ -49,11 +61,7 @@ const Header = () => {
   useEffect(() => {
     const handler = (e: CustomEvent) => {
       const id = e.detail
-      if (id && styles[`header--${id}`]) {
-        setActiveSectionClass(styles[`header--${id}`])
-      } else {
-        setActiveSectionClass('')
-      }
+      setActiveSection(id || null)
     }
 
     document.addEventListener('activeSectionChange', handler as EventListener)
@@ -67,12 +75,9 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className={cx(
-        styles.header,
-        styles[`header--${theme}`],
-        activeSectionClass,
-        { [styles['header--active']]: isOpen }
-      )}
+      className={cx(styles.header, styles[`header--${computedTheme}`], {
+        [styles['header--active']]: isOpen,
+      })}
     >
       <div className={styles.container}>
         <div className={styles.wrapper}>
@@ -83,7 +88,7 @@ const Header = () => {
             <LogoIcon />
           </Link>
           <Menu
-            theme={theme}
+            theme={computedTheme}
             isOpen={isOpen}
             setIsOpen={setIsOpen}
           />
