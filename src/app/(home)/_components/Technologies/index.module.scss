@@ -33,6 +33,9 @@
   }
 }
 
+.willChange {
+  will-change: opacity;
+}
 
 @include media.screen('desktop') {
   .technologies {

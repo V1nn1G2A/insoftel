@@ -10,6 +10,8 @@
   justify-content: space-between;
   height: max-content;
 
+  will-change: opacity;
+
   --height: 56px;
 }
 
@@ -35,7 +37,7 @@
 
 .index {
   @include fonts.text(16px, 20px, 400);
-  
+
   letter-spacing: 0.5px;
   position: relative;
   order: 1;

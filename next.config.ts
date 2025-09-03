@@ -4,6 +4,8 @@ import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import type { RuleSetRule } from 'webpack'
 
 const nextConfig: NextConfig = {
+  output: 'export',
+
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/styles')],
     additionalData: `@use "mixins/flex" as *;`,

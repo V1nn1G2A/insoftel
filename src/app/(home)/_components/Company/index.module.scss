@@ -16,6 +16,7 @@
   &__info {
     display: flex;
     flex-direction: column;
+    overflow: visible;
 
     button.company__btn {
       display: none;
@@ -28,8 +29,6 @@
   }
 
   &__stats {
-    overflow: hidden;
-
     & p {
       letter-spacing: 0.5px;
       line-height: 24px;
@@ -40,6 +39,7 @@
     display: flex;
     flex-direction: column;
     gap: 23px;
+    overflow: visible;
 
     @include media.screen('tablet') {
       align-items: center;
@@ -72,7 +72,6 @@
     }
 
     &__title {
-
       & h2 {
         @include fonts.text(flex(5.55), flex(5.85), 400);
       }
@@ -135,6 +134,7 @@
     &__statsContainer {
       width: 100%;
       max-width: flex(40.42);
+      overflow: visible;
     }
 
     &__statsContent {
