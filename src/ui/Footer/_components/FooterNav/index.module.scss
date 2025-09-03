@@ -6,6 +6,10 @@
     order: 1;
   }
 
+  @include media.screen('desktop') {
+    max-width: flex(5.76);
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -24,7 +28,7 @@
     @include fonts.text(16px, 20px, 400);
 
     @include media.screen('desktop') {
-      @include fonts.text(flex(1.11), flex(1.39), 400);
+      @include fonts.text(flex(0.97), flex(1.25), 400);
     }
 
     span {

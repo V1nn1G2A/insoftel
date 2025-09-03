@@ -24,13 +24,17 @@
   width: 100%;
   display: flex;
   margin-top: -2px;
-  justify-content: space-between;
   color: var(--color-black);
 
   p {
     font-weight: 500;
     letter-spacing: 0.5px;
   }
+}
+
+.linkButton {
+  display: block;
+  width: fit-content;
 }
 
 @include media.screen('desktop') {
@@ -50,7 +54,7 @@
 
   .cards__pagination {
     margin-bottom: 0;
-    max-width: flex(10.83);
+    max-width: flex(9.86);
   }
 
   .cards__explore {

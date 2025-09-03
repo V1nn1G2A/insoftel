@@ -77,7 +77,10 @@ const CardsList: FC = ({}) => {
             onClick={() => swiperRef.current?.slideNext()}
           />
         </div>
-        <Link href="/products">
+        <Link
+          href="/products"
+          className={styles.linkButton}
+        >
           <TextButton
             text="Explore Our Products"
             variant="short"

@@ -41,12 +41,12 @@
   }
 
   @include media.screen('desktop') {
-    width: flex(4.16);
-    height: flex(4.16);
+    width: flex(3.68);
+    height: flex(3.68);
 
     svg {
-      width: flex(1.38);
-      height: flex(1.38);
+      width: flex(1.25);
+      height: flex(1.25);
     }
   }
 }

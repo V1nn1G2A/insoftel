@@ -13,7 +13,7 @@
   }
 
   @include media.screen('desktop') {
-    max-width: flex(19.03);
+    max-width: flex(16.94);
   }
 
   &__list {
@@ -39,7 +39,7 @@
     @include media.screen('desktop') {
       gap: flex(0.55);
 
-      @include fonts.text(flex(1.11), flex(1.39), 400);
+      @include fonts.text(flex(0.97), flex(1.25), 400);
     }
   }
 
@@ -67,6 +67,6 @@
   }
 
   @include media.screen('desktop') {
-    @include fonts.text(flex(1.11), flex(1.39), 400);
+    @include fonts.text(flex(0.97), flex(1.25), 400);
   }
 }

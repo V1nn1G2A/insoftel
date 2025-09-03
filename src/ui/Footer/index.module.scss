@@ -11,10 +11,6 @@
   }
 
   @include media.screen('desktop') {
-    padding: 63px 0;
-  }
-
-  @include media.screen('desktop') {
-    padding: flex(4.38) 0;
+    padding: flex(3.05) 0;
   }
 }
