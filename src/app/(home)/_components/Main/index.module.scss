@@ -176,7 +176,7 @@
     animation: letter-appear 0.8s ease-out both;
     animation-delay: 0.2s;
 
-    @include fonts.text(flex(7.5), 100%, 500);
+    @include fonts.text(flex(6.5), 100%, 500);
   }
 
   .letterDissapear {

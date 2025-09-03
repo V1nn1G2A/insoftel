@@ -59,13 +59,8 @@
     height: 115px;
 
     @include media.screen('desktop') {
-      width: 207px;
-      height: 207px;
-    }
-
-    @include media.screen('desktop') {
-      width: flex(14.375);
-      height: flex(14.375);
+      width: flex(12.77);
+      height: flex(12.77);
     }
   }
 
@@ -92,20 +87,16 @@
   }
 
   @include media.screen('desktop') {
-    padding: flex(0.55) flex(0.69)
-      flex(0.55) flex(2.08);
+    padding: flex(0.41) flex(0.625) flex(0.41) flex(1.87) !important;
 
     & p {
-      @include fonts.text(
-        flex(1.11),
-        flex(1.69) 'regular'
-      );
-      margin-right: flex(0.97);
+      @include fonts.text(flex(0.97), flex(1.25), 'regular');
+      margin-right: flex(0.87);
     }
 
     & div {
-      width: flex(4.16);
-      height: flex(4.16);
+      width: flex(3.68);
+      height: flex(3.68);
     }
   }
 }

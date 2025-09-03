@@ -67,7 +67,10 @@ const Company = () => (
           </Link>
         </div>
       </div>
-      <Link href="/about">
+      <Link
+        href="/about"
+        className={styles.linkButton}
+      >
         <TextButton
           text="More About Us"
           variant="short"
