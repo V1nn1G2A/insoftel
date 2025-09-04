@@ -82,6 +82,7 @@ const Header = () => {
       className={cx(styles.header, styles[`header--${computedTheme}`], {
         [styles['header--active']]: isOpen,
       })}
+      id="header"
     >
       <div className={styles.container}>
         <div className={styles.wrapper}>
