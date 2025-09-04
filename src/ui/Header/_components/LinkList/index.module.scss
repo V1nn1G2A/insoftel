@@ -79,16 +79,16 @@
   }
 
   &--light {
-    color: var(--color-text-secondary);
+    color: var(--color-text-tertiary);
 
     &:hover,
     &.link--active {
       color: var(--color-black);
     }
 
-    @include media.screen('mobile') {
-      color: var(--color-text-tertiary);
-    }
+    // @include media.screen('mobile') {
+    //   color: var(--color-text-tertiary);
+    // }
   }
 
   &__title {

@@ -2,7 +2,7 @@
 @use 'mixins/fonts';
 
 .header {
-  padding: 20px 0;
+  padding: 21px 0;
   background-color: transparent;
   position: absolute;
   top: 0;
@@ -21,6 +21,11 @@
 
   &--light {
     background-color: var(--color-white-secondary);
+    color: var(--color-black);
+  }
+
+  &--grey {
+    background-color: #E4E4E4;
     color: var(--color-black);
   }
 
@@ -77,24 +82,4 @@
   @include media.screen('desktop') {
     padding: 0 flex(3.33) 0 flex(3.33);
   }
-}
-
-.header--services {
-  background-color: #000;
-  color: #fff;
-}
-
-.header--technologies {
-  background-color: #f0f0f0;
-  color: #111;
-}
-
-.header--company {
-  background-color: #222;
-  color: #eee;
-}
-
-.header--products {
-  background-color: #444;
-  color: #fff;
 }
