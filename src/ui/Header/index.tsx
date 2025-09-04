@@ -40,12 +40,14 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   // вычисляем тему по секции, поверх базовой темы
-  const sectionThemes: Record<string, 'dark' | 'light'> = {
+  const sectionThemes: Record<string, 'dark' | 'light' | 'grey'> = {
     services: 'light',
     technologies: 'dark',
     company: 'light',
-    products: 'light',
+    products: 'grey',
+    footer: 'dark',
   }
+
   const computedTheme =
     activeSection && activeSection !== 'main'
       ? sectionThemes[activeSection] || theme

@@ -73,7 +73,9 @@ export default function RootLayout({
           <ClientProviders>
             <>
               {children}
-              <Footer />
+              <div data-section="footer">
+                <Footer />
+              </div>
             </>
           </ClientProviders>
           <Popup />

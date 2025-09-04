@@ -12,8 +12,8 @@
   text-transform: uppercase;
   user-select: none;
 
-  @media (width >= 1440px) {
-    @include fonts.text(flex(6.5), 100%, 500);
+  @media (width >= 1280px) {
+    @include fonts.text(flex(7), 100%, 500);
   }
 }
 

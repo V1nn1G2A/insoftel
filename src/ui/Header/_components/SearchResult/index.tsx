@@ -24,16 +24,16 @@ const SearchResult: FC<ISearchResultProps> = ({
   setHoverLink,
 }) => {
   const [visibleResults, setVisibleResults] = useState<ISearchResult[]>(results)
-  const [canScrollTop, setCanScrollTop] = useState(false)
-  const [canScrollBottom, setCanScrollBottom] = useState(false)
+  // const [canScrollTop, setCanScrollTop] = useState(false)
+  // const [canScrollBottom, setCanScrollBottom] = useState(false)
 
-  const handleScroll = (e: React.UIEvent<HTMLUListElement>) => {
-    const target = e.currentTarget
-    setCanScrollTop(target.scrollTop > 0)
-    setCanScrollBottom(
-      target.scrollHeight > target.scrollTop + target.clientHeight
-    )
-  }
+  // const handleScroll = (e: React.UIEvent<HTMLUListElement>) => {
+  //   const target = e.currentTarget
+  //   setCanScrollTop(target.scrollTop > 0)
+  //   setCanScrollBottom(
+  //     target.scrollHeight > target.scrollTop + target.clientHeight
+  //   )
+  // }
 
   useEffect(() => {
     if (results.length > 0) {
@@ -68,55 +68,55 @@ const SearchResult: FC<ISearchResultProps> = ({
           [styles[`list--active`]]: results.length > 0,
         })}
         tabIndex={0}
-        onScroll={handleScroll}
+        // onScroll={handleScroll}
       >
-        <div className={styles.shadow}>
-          <div
-            className={cx(styles.shadow__top, {
-              [styles.notVisible]: !canScrollTop,
+        {/* <div className={styles.shadow}>
+        <div
+          className={cx(styles.shadow__top, {
+            [styles.notVisible]: !canScrollTop,
+          })}
+        />
+        <div
+          className={cx(styles.shadow__bottom, {
+            [styles.notVisible]: !canScrollBottom,
+          })}
+        />
+        </div> */}
+        {/* <div className={styles.resultsWrapper}> */}
+        {visibleResults.map(({ title, path, text }, index) => (
+          <li
+            key={text + index}
+            className={cx(styles.item, {
+              [styles['item--dark']]: theme === 'dark',
+              [styles['item--light']]: theme === 'light',
             })}
-          />
-          <div
-            className={cx(styles.shadow__bottom, {
-              [styles.notVisible]: !canScrollBottom,
-            })}
-          />
-        </div>
-        <div className={styles.resultsWrapper}>
-          {visibleResults.map(({ title, path, text }, index) => (
-            <li
-              key={text + index}
-              className={cx(styles.item, {
-                [styles['item--dark']]: theme === 'dark',
-                [styles['item--light']]: theme === 'light',
-              })}
-              onMouseEnter={() => setHoverLink(path)}
-              onMouseLeave={() => setHoverLink('')}
+            onMouseEnter={() => setHoverLink(path)}
+            onMouseLeave={() => setHoverLink('')}
+          >
+            <Link
+              href={path}
+              className={styles.link}
             >
-              <Link
-                href={path}
-                className={styles.link}
+              <h2
+                className={cx(
+                  styles.link__title,
+                  styles[`link__title--${theme}`]
+                )}
               >
-                <h2
-                  className={cx(
-                    styles.link__title,
-                    styles[`link__title--${theme}`]
-                  )}
-                >
-                  {title}
-                </h2>
-                <p
-                  className={cx(
-                    styles.link__text,
-                    styles[`link__text--${theme}`]
-                  )}
-                >
-                  {query ? highlightQuery(text, query) : text}
-                </p>
-              </Link>
-            </li>
-          ))}
-        </div>
+                {title}
+              </h2>
+              <p
+                className={cx(
+                  styles.link__text,
+                  styles[`link__text--${theme}`]
+                )}
+              >
+                {query ? highlightQuery(text, query) : text}
+              </p>
+            </Link>
+          </li>
+        ))}
+        {/* </div> */}
       </ul>
     </>
   )
