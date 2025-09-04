@@ -14,7 +14,7 @@ import styles from './index.module.scss'
 
 interface NavigationProps {
   isOpen: boolean
-  theme: 'dark' | 'light'
+  theme: 'dark' | 'light' | 'grey'
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   value: string
   results?: ISearchResult[]
@@ -40,11 +40,12 @@ const Navigation: FC<NavigationProps> = ({
         [styles['wrapper--active']]: isOpen,
         [styles['wrapper--dark']]: theme === 'dark',
         [styles['wrapper--light']]: theme === 'light',
+        [styles['wrapper--grey']]: theme === 'grey',
       })}
     >
       <div className={styles.mobileSearch}>
         <Search
-          theme={theme}
+          theme={theme !== 'grey' ? theme : 'light'}
           onChange={onChange}
           value={value}
           onClear={onClear}
@@ -52,13 +53,13 @@ const Navigation: FC<NavigationProps> = ({
       </div>
       <SearchResult
         results={results}
-        theme={theme}
+        theme={theme !== 'grey' ? theme : 'light'}
         query={query}
         setHoverLink={setHoverLink}
       />
       <LinkList
         isOpen={isOpen}
-        theme={theme}
+        theme={theme !== 'grey' ? theme : 'light'}
         hasQuery={isQueryValid}
         hoverLink={hoverLink}
       />

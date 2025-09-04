@@ -73,8 +73,6 @@ export const SectionsProvider = ({ children }: SectionsProviderProps) => {
 
     sections.forEach(s => observer.observe(s.element))
 
-    console.log(sections)
-
     return () => observer.disconnect()
   }, [sections])
 

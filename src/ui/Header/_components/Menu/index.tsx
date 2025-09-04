@@ -13,7 +13,7 @@ import { searchContent } from './searchContent'
 import styles from './index.module.scss'
 
 interface IMenu {
-  theme: 'dark' | 'light'
+  theme: 'dark' | 'light' | 'grey'
   isOpen: boolean
   setIsOpen: (state: boolean) => void
 }
@@ -47,7 +47,7 @@ const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
     >
       <div className={styles.desktopSearch}>
         <Search
-          theme={theme}
+          theme={theme !== 'grey' ? theme : 'light'}
           onChange={handleSearch}
           value={query}
           isInitFocused={isOpen}
