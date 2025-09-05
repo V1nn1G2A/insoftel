@@ -3,16 +3,15 @@
 .footer {
   width: 100%;
   background-color: var(--color-black);
-  padding: 50px 0 calc(50px + env(safe-area-inset-bottom, 20px));
+  padding: 50px 0 calc(50px + env(safe-area-inset-bottom, 30px));
   word-spacing: 2px;
-  margin-bottom: env(safe-area-inset-bottom, 20px);
 
   @include media.screen('tablet') {
-    padding: 48px 0 calc(48px + env(safe-area-inset-bottom, 20px));
+    padding: 48px 0 calc(48px + env(safe-area-inset-bottom, 30px));
     min-height: none;
   }
 
   @include media.screen('desktop') {
-    padding: flex(3.05) 0 calc(flex(3.05) + env(safe-area-inset-bottom, 20px));
+    padding: flex(3.05) 0 calc(flex(3.05) + env(safe-area-inset-bottom, 30px));
   }
 }
