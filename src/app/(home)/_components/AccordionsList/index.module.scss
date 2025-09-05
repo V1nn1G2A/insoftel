@@ -8,6 +8,10 @@
   width: 100%;
 }
 
+.willChange {
+  will-change: opacity;
+}
+
 @include media.screen('desktop') {
   .accordion {
     max-width: flex(45.97);

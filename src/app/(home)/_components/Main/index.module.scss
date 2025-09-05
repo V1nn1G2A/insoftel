@@ -2,7 +2,7 @@
 @use 'mixins/media';
 
 .main {
-  height: 100vh;
+  height: 100dvh;
   position: relative;
 
   button {
@@ -50,7 +50,7 @@
   white-space: nowrap;
   user-select: none;
 
-  span+span {
+  span + span {
     position: relative;
     display: inline-block;
     user-select: none;
