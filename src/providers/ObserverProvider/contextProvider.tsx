@@ -74,7 +74,7 @@ export const SectionsProvider = ({ children }: SectionsProviderProps) => {
       },
       {
         root: null,
-        rootMargin: `-${headerHeight}px 0px -${vpHeight}px 0px`,
+        rootMargin: `-${headerHeight}px 0px -${vpHeight - headerHeight}px 0px`,
         threshold: [0, 0.25, 0.5, 0.75, 1],
       }
     )

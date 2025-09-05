@@ -19,7 +19,7 @@ export const smoothAutoScroll = (
 
     const header: HTMLElement | null = document.querySelector('#header')
 
-    scrollToPosition = el.offsetTop + el.offsetHeight - header!.offsetHeight
+    scrollToPosition = el.offsetTop + el.offsetHeight - header!.offsetHeight + 2
   } else {
     return
   }
