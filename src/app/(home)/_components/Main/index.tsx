@@ -36,7 +36,7 @@ const Main: FC = ({}) => {
   }
 
   const isActiveLetter = (word: string, letter: string): boolean => {
-    return word.toLowerCase() === letter
+    return word?.toLowerCase() === letter
   }
 
   return (
@@ -47,7 +47,7 @@ const Main: FC = ({}) => {
         ref={ref}
         style={
           {
-            '--count': activeWord.length,
+            '--count': activeWord?.length || 1,
           } as React.CSSProperties
         }
       >
@@ -61,7 +61,7 @@ const Main: FC = ({}) => {
                 <BigLetter
                   isAnimated={false}
                   className={cx(styles.letter, {
-                    [styles.letterActive]: isActiveLetter(activeWord[0], 'i'),
+                    [styles.letterActive]: isActiveLetter(activeWord?.[0], 'i'),
                   })}
                 >
                   I
@@ -76,7 +76,7 @@ const Main: FC = ({}) => {
                     isAnimated={false}
                     className={cx(styles.letter, {
                       [styles.letterActive]:
-                        isActiveLetter(activeWord[0], 't') || shouldShowT,
+                        isActiveLetter(activeWord?.[0], 't') || shouldShowT,
                       [styles.letterDissapear]: shouldDisappear,
                     })}
                   >
@@ -111,7 +111,7 @@ const Main: FC = ({}) => {
                 <BigLetter
                   isAnimated={false}
                   className={cx(styles.letter, {
-                    [styles.letterActive]: isActiveLetter(activeWord[0], 's'),
+                    [styles.letterActive]: isActiveLetter(activeWord?.[0], 's'),
                   })}
                 >
                   S

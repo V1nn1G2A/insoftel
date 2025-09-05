@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 export function useAnimatedWords(words: string[]) {
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [activeIndex, setActiveIndex] = useState(-1)
   const [shouldDisappear, setShouldDisappear] = useState(false)
   const [shouldShowT, setShouldShowT] = useState(false)
   const [hideWord, setHideWord] = useState(false)
@@ -26,12 +26,17 @@ export function useAnimatedWords(words: string[]) {
       )
     }
 
-    if (activeWord === 'telecommunication' || activeWord === 'technologies')
-      setTimeout(addInterval, 800)
-    else addInterval()
+    let delayTimer: NodeJS.Timeout
+
+    if (activeIndex === -1) {
+      delayTimer = setTimeout(() => setActiveIndex(0), 2000)
+    } else {
+      addInterval()
+    }
 
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current)
+      clearTimeout(delayTimer)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeWord])
