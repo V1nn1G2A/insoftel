@@ -86,8 +86,8 @@
 
 .linkLogo {
   position: absolute;
-  bottom: 64px;
-  right: 64px;
+  bottom: 48px;
+  right: 48px;
   width: 312px;
   height: 312px;
   transition:
@@ -95,19 +95,19 @@
     height 0.6s ease;
 
   &--active {
-    height: 200px;
-    width: 200px;
+    height: 166px;
+    width: 166px;
   }
 
-  // @include media.screen('desktop-m') {
-  //   bottom: 48px;
-  //   right: 48px;
+  @include media.screen('desktop-l') {
+    bottom: 64px;
+    right: 64px;
 
-  //   &--active {
-  //     height: 166px;
-  //     width: 166px;
-  //   }
-  // }
+    &--active {
+      height: 200px;
+      width: 200px;
+    }
+  }
 
   @include media.screen('mobile') {
     bottom: 20px;
