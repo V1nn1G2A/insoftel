@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
 
+import { SectionsProvider } from '@/providers/ObserverProvider/contextProvider'
+
 import {
   AboutUs,
   ChooseUs,
@@ -16,13 +18,19 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <>
-      <Slogan />
-      <QuoteSection />
-      <AboutUs />
-      <Expertise />
-      <ChooseUs />
-      <Commitment />
-    </>
+    <SectionsProvider>
+      <div data-section="aboutContent">
+        <Slogan />
+        <QuoteSection />
+        <AboutUs />
+        <Expertise />
+      </div>
+      <div data-section="aboutWhy">
+        <ChooseUs />
+      </div>
+      <div data-section="aboutContent">
+        <Commitment />
+      </div>
+    </SectionsProvider>
   )
 }

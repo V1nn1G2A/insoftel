@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
 
+import { SectionsProvider } from '@/providers/ObserverProvider/contextProvider'
+
 import Header from './_components/Header'
 import ProductsList from './_components/ProductsList'
 
@@ -9,9 +11,11 @@ export const metadata: Metadata = {
 }
 export default function Products() {
   return (
-    <>
-      <Header />
-      <ProductsList />
-    </>
+    <SectionsProvider>
+      <div data-section="productsContent">
+        <Header />
+        <ProductsList />
+      </div>
+    </SectionsProvider>
   )
 }

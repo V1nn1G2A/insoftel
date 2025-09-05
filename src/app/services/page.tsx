@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind'
 import { Metadata } from 'next'
 
+import { SectionsProvider } from '@/providers/ObserverProvider/contextProvider'
 import { Container } from '@/ui'
 import SectionHeading from '@/ui/SectionHeading'
 
@@ -16,17 +17,21 @@ export const metadata: Metadata = {
 const cx = classNames.bind(styles)
 
 const Services = () => (
-  <>
-    <SectionHeading
-      title="Services"
-      letter="S"
-    />
+  <SectionsProvider>
+    <div data-section="servicesHeading">
+      <SectionHeading
+        title="Services"
+        letter="S"
+      />
+    </div>
     <Container className={cx('services-wrapper')}>
-      <section className={cx('services-content')}>
-        <PaginatedContainer />
-      </section>
+      <div data-section="servicesBlock">
+        <section className={cx('services-content')}>
+          <PaginatedContainer />
+        </section>
+      </div>
     </Container>
-  </>
+  </SectionsProvider>
 )
 
 export default Services

@@ -73,6 +73,10 @@
     margin-right: auto;
   }
 
+  @include media.screen('tablet') {
+    max-width: 169px;
+  }
+
   @include media.screen('desktop') {
     max-width: 169px;
 

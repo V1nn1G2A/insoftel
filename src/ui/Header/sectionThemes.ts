@@ -1,0 +1,18 @@
+export const sectionThemes: Record<string, 'dark' | 'light' | 'grey' | null> = {
+  homeMain: null,
+  homeServices: 'light',
+  homeTechnologies: 'dark',
+  homeCompany: 'light',
+  homeProducts: 'grey',
+  footer: 'dark',
+  servicesHeading: null,
+  servicesBlock: 'light',
+  technologiesHeading: null,
+  technologiesContent: 'light',
+  aboutWhy: 'grey',
+  aboutContent: 'light',
+  productsContent: 'light',
+  careersContent: 'light',
+  careersWhy: 'grey',
+  contactsContent: 'light',
+}

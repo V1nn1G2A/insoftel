@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 
+import { SectionsProvider } from '@/providers/ObserverProvider/contextProvider'
 import { Container } from '@/ui'
 
 import { Heading } from './_components'
@@ -14,13 +15,17 @@ export const metadata: Metadata = {
 }
 
 const Contacts = () => (
-  <Container>
-    <section className={styles.contacts}>
-      <Heading />
-      <Enquiries />
-      <ContactsBlock />
-    </section>
-  </Container>
+  <SectionsProvider>
+    <div data-section="contactsContent">
+      <Container>
+        <section className={styles.contacts}>
+          <Heading />
+          <Enquiries />
+          <ContactsBlock />
+        </section>
+      </Container>
+    </div>
+  </SectionsProvider>
 )
 
 export default Contacts
