@@ -24,12 +24,6 @@
   color: var(--color-text-tertiary);
 }
 
-.info-block {
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
 .text-top {
   @include fonts.text(24px, 28px, 400);
 
