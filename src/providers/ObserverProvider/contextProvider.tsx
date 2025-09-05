@@ -8,6 +8,8 @@ import {
   useState,
 } from 'react'
 
+import { useViewportHeight } from '@/hooks/useViewportHeight'
+
 type SectionItem = {
   id: string
   element: HTMLElement
@@ -32,6 +34,7 @@ type SectionsProviderProps = {
 export const SectionsProvider = ({ children }: SectionsProviderProps) => {
   const [sections, setSections] = useState<SectionItem[]>([])
   const [activeSection, setActiveSection] = useState<string | null>(null)
+  const vpHeight = useViewportHeight()
 
   // собираем секции после монтирования
   useEffect(() => {
@@ -71,7 +74,7 @@ export const SectionsProvider = ({ children }: SectionsProviderProps) => {
       },
       {
         root: null,
-        rootMargin: `-${headerHeight}px 0px 0px 0px`,
+        rootMargin: `-${headerHeight}px 0px -${vpHeight}px 0px`,
         threshold: [0, 0.25, 0.5, 0.75, 1],
       }
     )
@@ -79,7 +82,7 @@ export const SectionsProvider = ({ children }: SectionsProviderProps) => {
     sections.forEach(s => observer.observe(s.element))
 
     return () => observer.disconnect()
-  }, [sections])
+  }, [sections, vpHeight])
 
   useEffect(() => {
     if (!activeSection) return

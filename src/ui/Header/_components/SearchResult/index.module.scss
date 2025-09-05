@@ -12,6 +12,16 @@
   &--active {
     height: 51%;
   }
+
+  @include media.screen('mobile') {
+    transition: none;
+    max-height: none;
+    overflow-y: auto;
+
+    &--active {
+      height: fit-content;
+    }
+  }
 }
 
 .shadow {
@@ -63,6 +73,10 @@
 
   &.notVisible {
     height: 0;
+  }
+
+  @include media.screen('mobile') {
+    display: none;
   }
 }
 
