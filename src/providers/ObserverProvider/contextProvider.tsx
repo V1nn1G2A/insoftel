@@ -39,6 +39,8 @@ export const SectionsProvider = ({ children }: SectionsProviderProps) => {
       document.querySelectorAll<HTMLElement>('[data-section]')
     )
 
+    console.log(sectionElements)
+
     const sectionItems = sectionElements.map(el => ({
       id: el.dataset.section || '',
       element: el,
@@ -50,6 +52,9 @@ export const SectionsProvider = ({ children }: SectionsProviderProps) => {
   // подключаем IntersectionObserver
   useEffect(() => {
     if (sections.length === 0) return
+
+    const header: HTMLElement | null = document.querySelector('#header')
+    const headerHeight = header ? header.offsetHeight : 0
 
     const observer = new IntersectionObserver(
       entries => {
@@ -66,8 +71,8 @@ export const SectionsProvider = ({ children }: SectionsProviderProps) => {
       },
       {
         root: null,
-        rootMargin: '-64px 0px -100% 0px',
-        threshold: 0,
+        rootMargin: `-${headerHeight}px 0px 0px 0px`,
+        threshold: [0, 0.25, 0.5, 0.75, 1],
       }
     )
 

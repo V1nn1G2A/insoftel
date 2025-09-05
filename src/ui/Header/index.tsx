@@ -83,6 +83,7 @@ const Header = () => {
           <Link
             href="/"
             className={styles.logo}
+            onClick={() => setIsOpen(false)}
           >
             <LogoIcon />
           </Link>
