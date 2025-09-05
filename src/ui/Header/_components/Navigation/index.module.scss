@@ -34,7 +34,7 @@
   }
 
   &--active {
-    min-height: calc(100vh - 62px);
+    min-height: calc(100vh - 61px);
     overflow-y: scroll;
 
     &.wrapper--dark {
@@ -64,7 +64,7 @@
   .wrapper {
     top: 64px;
     &--active {
-      min-height: calc(100vh - 64px);
+      min-height: calc(100vh - 63px);
     }
   }
 }
@@ -73,7 +73,7 @@
   .wrapper {
     top: 64px;
     &--active {
-      min-height: calc(100vh - 64px);
+      min-height: calc(100vh - 63px);
     }
   }
 }
@@ -110,10 +110,12 @@
   }
 
   @include media.screen('mobile') {
-    bottom: 20px;
-    right: 20px;
+    position: initial;
     width: 166px;
     height: 166px;
+    margin-left: calc(100% - 186px);
+    margin-top: 100px;
+    margin-bottom: 15px;
 
     &--active {
       height: 166px;
