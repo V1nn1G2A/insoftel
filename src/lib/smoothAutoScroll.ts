@@ -26,7 +26,7 @@ export const smoothAutoScroll = (
 
   lenis.scrollTo(scrollToPosition, {
     duration: 3,
-    easing: t => 1 - Math.pow(1 - t, 3),
+    easing: t => 1 - Math.pow(1 - t, 5),
     immediate: false,
   })
 }
