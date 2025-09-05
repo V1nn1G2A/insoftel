@@ -10,15 +10,10 @@
 
   &--active {
     margin-top: 78px;
-    height: 328px;
+    height: 262px;
     position: absolute;
     bottom: 0;
     left: 0;
-
-    @include media.screen('desktop-m') {
-      margin-top: 147px;
-      height: 262px;
-    }
   }
 
   @include media.screen('mobile') {
@@ -31,8 +26,12 @@
     }
   }
 
-  @include media.screen('desktop') {
-    padding: 48px 64px;
+  @include media.screen('desktop-l') {
+    padding: 64px 64px;
+
+    &--active {
+      height: 328px;
+    }
   }
 }
 
@@ -85,10 +84,6 @@
     &.link--active {
       color: var(--color-black);
     }
-
-    // @include media.screen('mobile') {
-    //   color: var(--color-text-tertiary);
-    // }
   }
 
   &__title {

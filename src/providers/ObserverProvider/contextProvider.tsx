@@ -66,7 +66,7 @@ export const SectionsProvider = ({ children }: SectionsProviderProps) => {
       },
       {
         root: null,
-        rootMargin: '0px 0px -100% 0px',
+        rootMargin: '-64px 0px -100% 0px',
         threshold: 0,
       }
     )

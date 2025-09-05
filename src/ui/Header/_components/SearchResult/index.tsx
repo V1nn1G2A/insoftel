@@ -24,16 +24,18 @@ const SearchResult: FC<ISearchResultProps> = ({
   setHoverLink,
 }) => {
   const [visibleResults, setVisibleResults] = useState<ISearchResult[]>(results)
-  // const [canScrollTop, setCanScrollTop] = useState(false)
-  // const [canScrollBottom, setCanScrollBottom] = useState(false)
+  const [canScrollTop, setCanScrollTop] = useState(false)
+  const [canScrollBottom, setCanScrollBottom] = useState(false)
+  // const [shadowTop, setShadowTop] = useState(0)
 
-  // const handleScroll = (e: React.UIEvent<HTMLUListElement>) => {
-  //   const target = e.currentTarget
-  //   setCanScrollTop(target.scrollTop > 0)
-  //   setCanScrollBottom(
-  //     target.scrollHeight > target.scrollTop + target.clientHeight
-  //   )
-  // }
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const target = e.currentTarget
+    setCanScrollTop(target.scrollTop > 0)
+    setCanScrollBottom(
+      target.scrollHeight > target.scrollTop + target.clientHeight + 1
+    )
+    // setShadowTop(target.scrollHeight)
+  }
 
   useEffect(() => {
     if (results.length > 0) {
@@ -62,27 +64,32 @@ const SearchResult: FC<ISearchResultProps> = ({
   }
 
   return (
-    <>
+    <div
+      className={cx(styles.searchResultWrapper, {
+        [styles[`searchResultWrapper--active`]]: results.length > 0,
+      })}
+      onScroll={handleScroll}
+    >
       <ul
-        className={cx(styles.list, styles[`list--${theme}`], {
-          [styles[`list--active`]]: results.length > 0,
-        })}
+        className={cx(styles.list, styles[`list--${theme}`])}
         tabIndex={0}
-        // onScroll={handleScroll}
       >
-        {/* <div className={styles.shadow}>
-        <div
-          className={cx(styles.shadow__top, {
-            [styles.notVisible]: !canScrollTop,
-          })}
-        />
-        <div
-          className={cx(styles.shadow__bottom, {
-            [styles.notVisible]: !canScrollBottom,
-          })}
-        />
-        </div> */}
-        {/* <div className={styles.resultsWrapper}> */}
+        <div className={styles.shadow}>
+          <div
+            className={cx(styles.shadow__top, styles[`shadow__top--${theme}`], {
+              [styles.notVisible]: !canScrollTop,
+            })}
+          />
+          <div
+            className={cx(
+              styles.shadow__bottom,
+              styles[`shadow__bottom--${theme}`],
+              {
+                [styles.notVisible]: !canScrollBottom,
+              }
+            )}
+          />
+        </div>
         {visibleResults.map(({ title, path, text }, index) => (
           <li
             key={text + index}
@@ -116,9 +123,8 @@ const SearchResult: FC<ISearchResultProps> = ({
             </Link>
           </li>
         ))}
-        {/* </div> */}
       </ul>
-    </>
+    </div>
   )
 }
 
