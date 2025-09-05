@@ -10,7 +10,8 @@
   }
 
   &__title {
-    margin: 38px 0 48px;
+    padding-top: 38px;
+    margin: 0 0 48px;
   }
 
   &__info {
@@ -76,11 +77,12 @@
     }
 
     &__title {
+      margin: 0;
+      padding-top: 0;
 
       & h2 {
         @include fonts.text(flex(5.55), flex(5.85), 400);
       }
-      margin: 0;
     }
 
     &__header {
