@@ -9,10 +9,13 @@ interface UseInnerScrollLockOptions {
   scrollDuration?: number
 }
 
-const isSafari = (ua = navigator.userAgent) => {
-  return (
+const isMacOS = (ua = navigator.userAgent) => {
+  const isMac = /Macintosh|MacIntel|MacPPC|Mac68K/i.test(ua)
+  const isSafari =
     /safari/i.test(ua) && !/chrome|chromium|crios|edg|opr|yabrowser/i.test(ua)
-  )
+  const isChrome =
+    /chrome|chromium|crios/i.test(ua) && !/edg|opr|yabrowser/i.test(ua)
+  return isMac && (isSafari || isChrome)
 }
 
 export function useInnerScrollLock({
@@ -43,7 +46,7 @@ export function useInnerScrollLock({
         const elapsed = time - startTime
         const progress = Math.min(1, elapsed / duration)
 
-        if (isSafari()) {
+        if (isMacOS()) {
           target.scrollTop = start + (end - start)
         } else target.scrollTop = start + (end - start) * ease(progress)
 

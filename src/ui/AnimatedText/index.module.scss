@@ -2,6 +2,8 @@
 
 .text {
   overflow: hidden;
+
+  will-change: opacity;
 }
 
 .animate {

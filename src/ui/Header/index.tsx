@@ -3,8 +3,9 @@
 import cx from 'classnames'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
+import useRedirectEffect from '@/hooks/useRedirectEffect'
 import { useScrollLock } from '@/hooks/useScrollLock'
 
 import LogoIcon from '@assets/icons/logo.svg'
@@ -55,10 +56,13 @@ const Header = () => {
 
   useScrollLock(isOpen)
 
-  useEffect(() => {
-    setIsOpen(false)
-    window.scrollTo(0, 0)
-  }, [path])
+  useRedirectEffect(
+    useCallback(() => {
+      setIsOpen(false)
+
+      window.scrollTo(0, 0)
+    }, [])
+  )
 
   useEffect(() => {
     const handler = (e: CustomEvent) => {
@@ -80,6 +84,7 @@ const Header = () => {
       className={cx(styles.header, styles[`header--${computedTheme}`], {
         [styles['header--active']]: isOpen,
       })}
+      id="header"
     >
       <div className={styles.container}>
         <div className={styles.wrapper}>

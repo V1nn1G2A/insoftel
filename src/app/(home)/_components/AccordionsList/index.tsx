@@ -36,6 +36,7 @@ const AccordionsList: FC<IAccordionList> = ({ className }) => {
             onClick={() => {
               handleClick(index)
             }}
+            className={styles.willChange}
           />
         ))}
       </div>

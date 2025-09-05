@@ -1,3 +1,4 @@
+import cx from 'classnames'
 import Link from 'next/link'
 import type { FC } from 'react'
 
@@ -28,7 +29,10 @@ const Technologies: FC = ({}) => (
           <div className={styles.technologies__content__textContainer}>
             <AnimationBlock
               type="p"
-              className={styles.technologies__content__text}
+              className={cx(
+                styles.technologies__content__text,
+                styles.willChange
+              )}
             >
               We leverage the latest technological advancements to ensure our
               clients receive highly efficient, custom software solutions
@@ -37,7 +41,7 @@ const Technologies: FC = ({}) => (
             <AccordionsList
               className={styles.technologies__content__accordion}
             />
-            <AnimationBlock>
+            <AnimationBlock className={styles.willChange}>
               <Link href={'/technologies'}>
                 <TextButton
                   text="Explore Our Technologies"

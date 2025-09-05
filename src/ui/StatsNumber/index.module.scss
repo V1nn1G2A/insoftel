@@ -4,7 +4,7 @@
 .stats {
   position: relative;
   padding-bottom: 20px;
-  overflow-x: hidden;
+  overflow: visible;
   width: 100%;
 
   span {
@@ -21,6 +21,7 @@
   align-items: flex-end;
   flex-grow: 1;
   width: 100%;
+  overflow: visible;
 }
 
 .children {
@@ -40,7 +41,7 @@
 }
 
 .text {
-  overflow: hidden;
+  overflow: visible;
   display: flex;
 }
 

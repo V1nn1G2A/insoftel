@@ -5,6 +5,8 @@ import Image from 'next/image'
 import type { FC, RefObject } from 'react'
 import { useState } from 'react'
 
+import { useOutsideClickRef } from '@/hooks/useOutsideClick'
+
 import PlusIcon from '@assets/icons/plus.svg'
 
 import styles from './index.module.scss'
@@ -26,6 +28,8 @@ const Card: FC<ICard> = ({ picture, title, text, className, draggingRef }) => {
     [styles['card--active']]: isActive,
   })
 
+  const cardRef = useOutsideClickRef<HTMLDivElement>(() => setIsActive(false))
+
   const handleOpen = (e: React.MouseEvent) => {
     if (draggingRef.current) return
     e.stopPropagation()
@@ -40,6 +44,7 @@ const Card: FC<ICard> = ({ picture, title, text, className, draggingRef }) => {
     <div
       className={classNames}
       onClick={handleClose}
+      ref={cardRef}
     >
       <div className={styles.imageWrapper}>
         <Image

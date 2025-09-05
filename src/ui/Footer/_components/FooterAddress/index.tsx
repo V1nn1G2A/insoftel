@@ -15,7 +15,7 @@ const FooterAddress = () => (
           [ Office ]
         </AnimationBlock>
         <AnimationBlock type="p">
-          The Binary Tower, 32 Marasi Drive St., Business Bay, Dubai, UAE
+          Empire Heights A, Business Bay, Dubai, UAE
         </AnimationBlock>
       </li>
       <li className={styles.footerAddress__item}>
