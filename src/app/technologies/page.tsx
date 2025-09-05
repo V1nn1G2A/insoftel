@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 
+import { SectionsProvider } from '@/providers/ObserverProvider/contextProvider'
 import { Container } from '@/ui'
 import SectionHeading from '@/ui/SectionHeading'
 
@@ -15,23 +16,29 @@ export const metadata: Metadata = {
 
 export default function Technologies() {
   return (
-    <main className="Technologies">
-      <SectionHeading
-        title="Technologies"
-        letter="T"
-      />
-      <Container>
-        <div className={styles.content}>
-          {technologiesContetnt.map((item, index) => (
-            <TechSection
-              key={index}
-              {...item}
-              isLast={index === technologiesContetnt.length - 1}
-              className={styles.techSection}
-            />
-          ))}
+    <SectionsProvider>
+      <main className="Technologies">
+        <div data-section="technologiesHeading">
+          <SectionHeading
+            title="Technologies"
+            letter="T"
+          />
         </div>
-      </Container>
-    </main>
+        <div data-section="technologiesContent">
+          <Container>
+            <div className={styles.content}>
+              {technologiesContetnt.map((item, index) => (
+                <TechSection
+                  key={index}
+                  {...item}
+                  isLast={index === technologiesContetnt.length - 1}
+                  className={styles.techSection}
+                />
+              ))}
+            </div>
+          </Container>
+        </div>
+      </main>
+    </SectionsProvider>
   )
 }

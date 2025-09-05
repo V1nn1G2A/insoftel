@@ -11,6 +11,7 @@ import { useScrollLock } from '@/hooks/useScrollLock'
 import LogoIcon from '@assets/icons/logo.svg'
 
 import Menu from './_components/Menu'
+import { sectionThemes } from './sectionThemes'
 
 import styles from './index.module.scss'
 
@@ -40,17 +41,8 @@ const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false)
 
-  // вычисляем тему по секции, поверх базовой темы
-  const sectionThemes: Record<string, 'dark' | 'light' | 'grey'> = {
-    services: 'light',
-    technologies: 'dark',
-    company: 'light',
-    products: 'grey',
-    footer: 'dark',
-  }
-
   const computedTheme =
-    activeSection && activeSection !== 'main'
+    activeSection && activeSection !== null
       ? sectionThemes[activeSection] || theme
       : theme
 

@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
 
+import { SectionsProvider } from '@/providers/ObserverProvider/contextProvider'
+
 import { Header, Openings, Why } from './_components'
 
 export const metadata: Metadata = {
@@ -9,10 +11,14 @@ export const metadata: Metadata = {
 
 export default function Careers() {
   return (
-    <>
-      <Header />
-      <Openings />
-      <Why />
-    </>
+    <SectionsProvider>
+      <div data-section="careersContent">
+        <Header />
+        <Openings />
+      </div>
+      <div data-section="careersWhy">
+        <Why />
+      </div>
+    </SectionsProvider>
   )
 }

@@ -5,19 +5,19 @@ import { Company, Main, Products, Services, Technologies } from './_components'
 export default function Home() {
   return (
     <SectionsProvider>
-      <div data-section="main">
+      <div data-section="homeMain">
         <Main />
       </div>
-      <div data-section="services">
+      <div data-section="homeServices">
         <Services />
       </div>
-      <div data-section="technologies">
+      <div data-section="homeTechnologies">
         <Technologies />
       </div>
-      <div data-section="company">
+      <div data-section="homeCompany">
         <Company />
       </div>
-      <div data-section="products">
+      <div data-section="homeProducts">
         <Products />
       </div>
     </SectionsProvider>

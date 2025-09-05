@@ -30,7 +30,6 @@
   height: max-content;
   overflow: hidden;
   min-height: 844px;
-  // overflow-y: scroll;
 
   @include media.screen('desktop') {
     min-height: 1024px;
@@ -50,15 +49,6 @@
 }
 
 .content:nth-child(3) {
-  // .paginationContent {
-  //   @include media.screen('desktop') {
-  //     div:first-of-type {
-  //       max-width: 588px;
-  //       margin-right: 76px;
-  //     }
-  //   }
-  // }
-
   .paginationButton {
     div {
       margin-right: 14px !important;
@@ -71,14 +61,6 @@
     .sectionHeader {
       padding-bottom: 70px;
     }
-
-    // .paginationContent {
-    //   > div {
-    //     max-width: 518px;
-    //     margin-right: 144px;
-    //     margin-top: 25px;
-    //   }
-    // }
 
     .paginationButtonWrapper {
       margin-right: 0;
@@ -98,14 +80,6 @@
     .sectionHeader {
       padding-bottom: 72px;
     }
-
-    // .paginationContent {
-    //   > div {
-    //     margin-top: 26px;
-    //     width: 490px;
-    //     margin-right: 170px;
-    //   }
-    // }
 
     .paginationButtonWrapper {
       margin-right: 0;
