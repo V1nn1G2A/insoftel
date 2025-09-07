@@ -3,24 +3,24 @@
 @use 'mixins/media';
 
 .paginated-block {
-  padding: 67.5px 0 120px;
+  padding: 67.5px 20px;
   width: 100%;
   height: max-content;
   overflow-y: scroll;
 
   @include media.screen('desktop') {
-    padding: 112px 0 200px;
+    padding: flex(6.91) 48px;
   }
 
-  @media (height >= 715px) and (width <= 1279px) {
-    overflow: hidden;
-    padding: 67.5px 0 !important;
+  @include media.screen('desktop-l') {
+    padding-left: flex(2.96);
+    padding-right: flex(2.96);
   }
+}
 
-  @media (height >= 848px) and (width >= 1279px) {
-    overflow: hidden;
-    padding: 0 !important;
-  }
+.center {
+  max-width: 1602px;
+  margin: 0 auto;
 }
 
 .contentWrapper {
@@ -28,7 +28,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    gap: 400px;
   }
 }
 
@@ -37,33 +36,33 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 624px;
+    width: flex(40.86);
+    min-height: 434px;
   }
 }
 
 .letter {
   font-size: 180px;
   display: block;
-  margin: 24px 0 16px;
 
   @include media.screen('desktop') {
     display: block;
     box-sizing: border-box;
-    margin: auto 0 0;
     font-size: 250px;
     line-height: 200px;
     margin-bottom: -20px;
-    width: 700px;
+    // width: 700px;
   }
 }
+
 
 .paragraphDesk {
   display: none;
 
   @include media.screen('desktop') {
     display: flex;
-    width: 100%;
-    gap: 40px;
+    flex-direction: column;
+    // width: 100%;
   }
 }
 
@@ -88,7 +87,7 @@
   margin-top: 48px;
 
   @include media.screen('desktop') {
-    margin-top: 32px;
+    margin-top: flex(3.2);
   }
 }
 

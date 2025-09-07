@@ -15,4 +15,9 @@ export const sectionThemes: Record<string, 'dark' | 'light' | 'grey' | null> = {
   careersContent: 'light',
   careersWhy: 'grey',
   contactsContent: 'light',
+  B: 'light',
+  W: 'grey',
+  U: 'light',
+  Q: 'grey',
+  A: 'light',
 }

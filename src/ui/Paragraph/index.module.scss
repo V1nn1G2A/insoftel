@@ -21,9 +21,9 @@
   letter-spacing: 0.7px;
 
   @include media.screen('desktop') {
-    @include fonts.text(20px, 24px, 500);
+    @include fonts.text(flex(1.48), flex(1.73), 400);
 
-    margin-bottom: 6px;
+    margin-bottom: flex(0.37);
     letter-spacing: 0.4px;
   }
 }
@@ -39,16 +39,16 @@
   @include media.screen('desktop') {
     letter-spacing: 0.8px;
 
-    @include fonts.text(20px, 24px, 300);
+    @include fonts.text(flex(1.23), flex(1.48), 300);
   }
 
-  @include media.screen('desktop') {
-    @include fonts.text(flex(1.39), flex(1.66), 300);
-  }
+  // @include media.screen('desktop') {
+  //   @include fonts.text(flex(1.39), flex(1.66), 300);
+  // }
 }
 
 .pagination-block {
-  max-width: 662px;
+  // max-width: 662px;
   letter-spacing: 1px;
 }
 
@@ -62,7 +62,7 @@
   @include media.screen('desktop') {
     @include fonts.text(20px, 24px, 400);
 
-    margin-bottom: 6px;
+    // margin-bottom: 6px;
   }
 }
 
@@ -83,7 +83,19 @@
 }
 
 .w540 {
-  max-width: 540px;
+  max-width: flex(33.33);
+}
+
+.w505 {
+  max-width: flex(31.8);
+}
+
+.w502 {
+  max-width: flex(31);
+}
+
+.w530 {
+  max-width: flex(32.71);
 }
 
 @media (width <= 1080px) {

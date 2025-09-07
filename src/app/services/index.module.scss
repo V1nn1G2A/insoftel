@@ -2,10 +2,5 @@
 @use 'mixins/media';
 
 .services-wrapper {
-  background-color: var(--color-white-secondary);
-}
-
-.services-content {
-  // overflow: hidden;
-  background-color: var(--color-white-secondary);
+  padding: 0;
 }

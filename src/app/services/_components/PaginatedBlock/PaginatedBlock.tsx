@@ -52,36 +52,38 @@ const PaginatedBlock: React.FC<IPaginatedBlock> = ({
       className={cx('paginated-block', className)}
       id={id}
     >
-      <Header
-        className={cx('heading', headerClassName)}
-        title={mainTitle}
-        text={headingText}
-      />
-      <div className={cx('contentWrapper')}>
-        <BigLetter
-          className={cx('letter', letterClassName)}
-          isAnimated={false}
-        >
-          {letter}
-        </BigLetter>
-        <div className={cx('content', contectClassName)}>
-          <ParagraphsList
-            paragraphs={paginatedInfo}
-            className={cx('paragraphDesk')}
-          />
-          <ScrolBlock
-            paragraphs={paginatedInfo}
-            className={cx('paragraphMobile', 'mySwiperWrapper')}
-            paragraphClassName={cx('paragraphContent')}
-          />
-          <div className={cx('button', buttonWrapperClassName)}>
-            <TextButton
-              onClick={handleOpenInfo}
-              text="Connect with Us"
-              variant="long"
-              colorVariant="dark"
-              classNames={[cx(buttonClassName)]}
+      <div className={cx('center')}>
+        <Header
+          className={cx('heading', headerClassName)}
+          title={mainTitle}
+          text={headingText}
+        />
+        <div className={cx('contentWrapper')}>
+          <BigLetter
+            className={cx('letter', letterClassName)}
+            isAnimated={false}
+          >
+            {letter}
+          </BigLetter>
+          <div className={cx('content', contectClassName)}>
+            <ParagraphsList
+              paragraphs={paginatedInfo}
+              className={cx('paragraphDesk')}
             />
+            <ScrolBlock
+              paragraphs={paginatedInfo}
+              className={cx('paragraphMobile', 'mySwiperWrapper')}
+              paragraphClassName={cx('paragraphContent')}
+            />
+            <div className={cx('button', buttonWrapperClassName)}>
+              <TextButton
+                onClick={handleOpenInfo}
+                text="Connect with Us"
+                variant="long"
+                colorVariant="dark"
+                classNames={[cx(buttonClassName)]}
+              />
+            </div>
           </div>
         </div>
       </div>
