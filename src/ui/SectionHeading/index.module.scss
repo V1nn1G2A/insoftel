@@ -4,6 +4,10 @@
 .heading {
   position: relative;
   height: 613px;
+
+  @include media.screen('desktop') {
+    height: flex(37.84);
+  }
 }
 
 .title {
@@ -14,6 +18,10 @@
   top: 33%;
   margin-top: -10px;
   overflow: hidden;
+
+  @include media.screen('desktop') {
+    @include fonts.text(flex(14.2), 107%, 400);
+  }
 }
 
 .miniTitle {
