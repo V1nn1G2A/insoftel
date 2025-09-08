@@ -6,7 +6,7 @@
   height: 100%;
   transition: all 0.6s ease;
 
-  padding: 48px calc(var(--vw) * 3.75 * 1);
+  padding: 48px 48px;
 
   &--active {
     margin-top: 78px;
@@ -28,7 +28,7 @@
   }
 
   @include media.screen('desktop-l') {
-    padding: 64px calc(var(--vw) * 3.75 * 1);
+    padding: 64px flex(3.33);
 
     &--active {
       height: 328px;

@@ -31,11 +31,12 @@ const AboutUs: FC = ({}) => (
             type="p"
             className={styles.about__text}
           >
-            Insoftel empowers businesses and government organisations with
-            bespoke software solutions crafted for the digital age. With over 15
-            years of experience and a team of 50+ expert developers, our company
-            brings your mission to life by blending innovation with precision,
-            helping you stand out in a complex world
+            Insoftel Technologies empowers businesses and government
+            organisations with bespoke software solutions crafted for the
+            digital age. With over 15 years of experience and a team of 50+
+            expert developers, our company brings your mission to life by
+            blending innovation with precision, helping you stand out in a
+            complex world
           </AnimationBlock>
           <StatsNumber
             title="50+"

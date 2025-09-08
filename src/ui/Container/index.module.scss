@@ -8,9 +8,9 @@
   }
 }
 
-@media (width >= 1279px) {
+@media (width > 1440px) {
   .container {
-    padding: 0 flex(3.33);
+    padding: 0 flex(2.96);
     max-width: 1722px;
     margin: 0 auto;
   }

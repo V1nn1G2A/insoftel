@@ -14,9 +14,8 @@ const FooterAddress = () => (
         >
           [ Office ]
         </AnimationBlock>
-        <AnimationBlock type="p">
-          Empire Heights A, Business Bay, Dubai, UAE
-        </AnimationBlock>
+        <AnimationBlock type="p">Empire Heights A,</AnimationBlock>
+        <AnimationBlock type="p">Business Bay, Dubai, UAE</AnimationBlock>
       </li>
       <li className={styles.footerAddress__item}>
         <AnimationBlock

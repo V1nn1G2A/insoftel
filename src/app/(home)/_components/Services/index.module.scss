@@ -79,7 +79,6 @@
   }
 
   .title-block {
-    width: 51.5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -97,7 +96,7 @@
   }
 
   .info-block {
-    width: 50%;
+    width: flex(40.86);
     overscroll-behavior: none;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -122,10 +121,10 @@
 
   .paragraph {
     & h3 {
-      @include fonts.text(flex(2.1), flex(2.4), 400);
+      @include fonts.text(flex(2.222), flex(2.47), 400);
 
       margin-bottom: flex(1.11);
-      letter-spacing: 1px;
+      letter-spacing: 0.02em;
     }
 
     &:not(:last-child) {
