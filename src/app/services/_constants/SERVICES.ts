@@ -36,18 +36,22 @@ export const servicesPagination = [
       {
         title: 'Web & Mobile App Development:',
         text: 'Custom applications built for functionality, scalability, and performance to meet the unique needs of your users.',
+        width: 'w505',
       },
       {
         title: 'Cross-Platform Applications:',
         text: 'Ensure consistent and high-quality experiences across devices, maximising your reach to diverse audiences.',
+        width: 'w505',
       },
       {
         title: 'Backend & Frontend Development:',
         text: 'Advanced software systems designed to support complex enterprise needs, fostering productivity and innovation.',
+        width: 'w505',
       },
       {
         title: 'Blockchain Applications:',
         text: 'Integrate blockchain for secure, transparent transactions, adding trust and integrity to your processes.',
+        width: 'w505',
       },
     ],
   },
@@ -61,18 +65,22 @@ export const servicesPagination = [
       {
         title: 'User-Centred UX & Product Design Strategy:',
         text: 'Focus on user needs and behaviours to create intuitive, impactful designs that improve usability and customer satisfaction.',
+        width: 'w530',
       },
       {
         title: 'App & Web Design:',
         text: 'Beautifully designed digital interfaces that are not only visually appealing but also functional, ensuring a seamless experience.',
+        width: 'w530',
       },
       {
         title: 'Motion & Communication Design:',
         text: 'Enhance engagement through interactive elements and compelling visuals that communicate your brand’s story effectively.',
+        width: 'w530',
       },
       {
         title: 'Prototyping and Testing:',
         text: 'Iterative testing ensures functionality and usability, refining designs to deliver a polished final product that meets your standards.',
+        width: 'w530',
       },
     ],
   },
@@ -86,10 +94,12 @@ export const servicesPagination = [
       {
         title: 'QA Testing:',
         text: 'Comprehensive quality checks throughout development ensure your software meets the highest standards, enhancing reliability and user satisfaction.',
+        width: 'w505',
       },
       {
         title: 'Branding & Communication Strategy:',
         text: 'Craft a cohesive brand narrative that differentiates you in the market, builds trust, and fosters loyalty among your customers.',
+        width: 'w505',
       },
     ],
   },
@@ -103,18 +113,22 @@ export const servicesPagination = [
       {
         title: 'Intelligent Automation:',
         text: 'Streamline repetitive tasks, reduce human error, and improve operational efficiency by automating workflows across your business.',
+        width: 'w505',
       },
       {
         title: 'Predictive Analytics:',
         text: 'Anticipate trends, understand customer behaviour, and make data-driven decisions that provide a competitive edge.',
+        width: 'w505',
       },
       {
         title: 'Custom AI Solutions:',
         text: 'Tailor-made AI applications designed specifically to address your business challenges and drive measurable outcomes.',
+        width: 'w505',
       },
       {
         title: 'AI-Powered Personalisation:',
         text: 'Create unique, personalised experiences for customers by harnessing AI to deliver the right message at the right time.',
+        width: 'w502',
       },
     ],
   },
