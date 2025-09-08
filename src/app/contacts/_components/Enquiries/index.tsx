@@ -40,7 +40,7 @@ const Enquiries = () => {
             <b className={styles.mail}> info@insofteltechnologies.com</b>
           </Link>
           <br />
-          <p> </p>
+          <span> </span>
           <br />
           We’ll respond promptly to assist with any queries.
         </AnimationBlock>

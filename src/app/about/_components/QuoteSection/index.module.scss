@@ -1,6 +1,7 @@
 @use 'mixins/media';
 
 .quote {
+  overflow: hidden;
   @include media.screen('desktop') {
     padding: flex(6.458) 0 flex(6.875) !important;
     margin: flex(7.63) 0 !important;

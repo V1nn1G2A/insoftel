@@ -20,11 +20,16 @@ const FooterInfo = () => (
       containerClassName={styles.footerInfo__logoContainer}
     />
     <AnimationBlock className={styles.footerInfo__button}>
-      <ExploreButton
-        text="Download Presentation"
-        colorVariant="light"
-        classNames={['', '', styles.button]}
-      />
+      <a
+        href="/files/InsoftelTechnologies.pdf"
+        download
+      >
+        <ExploreButton
+          text="Download Presentation"
+          colorVariant="light"
+          classNames={['', '', styles.button]}
+        />
+      </a>
     </AnimationBlock>
   </div>
 )
