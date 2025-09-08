@@ -43,7 +43,7 @@
 }
 
 .card--active img {
-  transform: none;
+  transform: scale(0.98);
 }
 
 .card svg {
@@ -122,15 +122,10 @@
   }
 
   @include media.screen('desktop') {
-    @include fonts.text(
-      flex(1.66),
-      flex(1.94),
-      'regular'
-    );
+    @include fonts.text(flex(1.66), flex(1.94), 'regular');
 
     height: flex(5.9);
-    padding: flex(1.39) flex(1.875)
-      flex(1.39) flex(1.39);
+    padding: flex(1.39) flex(1.875) flex(1.39) flex(1.39);
 
     button {
       width: flex(1.94);
@@ -247,4 +242,8 @@
   100% {
     opacity: 0;
   }
+}
+
+.active {
+  transform: scale(0.9999);
 }

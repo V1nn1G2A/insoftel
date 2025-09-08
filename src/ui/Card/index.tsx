@@ -53,6 +53,7 @@ const Card: FC<ICard> = ({ picture, title, text, className, draggingRef }) => {
           height={434}
           alt={title}
           onClick={handleOpen}
+          className={isActive ? styles.active : ''}
         />
       </div>
       <div className={styles.card__content}>

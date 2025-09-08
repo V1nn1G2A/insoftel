@@ -22,14 +22,14 @@ export function useAnimatedWords(words: string[]) {
       if (intervalRef.current) clearInterval(intervalRef.current)
       intervalRef.current = setInterval(
         setNextIndex,
-        (activeWord.length + 1) * 500
+        (activeWord.length + 1) * 600
       )
     }
 
     let delayTimer: NodeJS.Timeout
 
     if (activeIndex === -1) {
-      delayTimer = setTimeout(() => setActiveIndex(0), 2000)
+      delayTimer = setTimeout(() => setActiveIndex(0), 3000)
     } else {
       addInterval()
     }
