@@ -6,7 +6,7 @@
   background-color: var(--color-middle-gray);
 
   @include media.screen('desktop') {
-    padding: 123px 0 121px;
+    padding: flex(8.54) 0 flex(8.54);
   }
 }
 
@@ -19,7 +19,7 @@
     @include media.screen('desktop') {
       letter-spacing: 2px;
 
-      @include fonts.text(90px, 94px, 400);
+      @include fonts.text(flex(6.25), flex(6.52), 400);
     }
   }
 }
@@ -32,8 +32,8 @@
   gap: 20px;
 
   @include media.screen('desktop') {
-    margin-top: 76px;
-    gap: 20px;
+    margin-top: flex(5.27);
+    gap: flex(1.38);
   }
 }
 

@@ -31,7 +31,6 @@ const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
 
   const handleClear = () => {
     setQuery('')
-    setIsOpen(!isOpen)
   }
 
   useEffect(() => {

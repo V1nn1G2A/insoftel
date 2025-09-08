@@ -2,16 +2,16 @@
 @use 'mixins/fonts';
 
 .about {
-  padding: 80px 0 40px;
+  padding: flex(5.55) 0 flex(2.7);
 
   @include media.screen('desktop') {
     h2 {
       letter-spacing: 1px;
 
-      @include fonts.text(48px, 52px, 400);
+      @include fonts.text(flex(3.33), flex(3.61), 400);
     }
 
-    padding: 0 0 60px;
+    padding: 0 0 flex(4.16);
   }
 }
 
@@ -21,7 +21,7 @@
   @include media.screen('desktop') {
     display: flex;
     justify-content: space-between;
-    gap: 220px;
+    gap: flex(15.27);
   }
 }
 
@@ -42,7 +42,7 @@
 
 .about__content {
   @include media.screen('desktop') {
-    width: 776px;
+    width: flex(53.8);
   }
 }
 
@@ -55,10 +55,10 @@
   @include fonts.text(24px, 28px, 300);
 
   @include media.screen('desktop') {
-    margin: 0 0 94px;
+    margin: 0 0 flex(6.25);
     text-indent: 40px;
 
-    @include fonts.text(30px, 34px, 300);
+    @include fonts.text(flex(2.08), flex(2.36), 300);
   }
 }
 
@@ -67,11 +67,6 @@
     p {
       margin-bottom: 24px !important;
     }
-
-    /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
-    :global(.line) {
-      bottom: 22px !important;
-    }
   }
 }
 
@@ -79,7 +74,6 @@
   margin-top: -15px;
 
   @include media.screen('desktop') {
-    max-width: 100%;
     max-width: 762px;
     margin: -15px -5px 0 0;
   }
@@ -109,7 +103,7 @@
   height: 152px;
 
   @include media.screen('desktop') {
-    width: 348px;
-    height: 343px;
+    width: flex(24.16);
+    height: flex(23.81);
   }
 }

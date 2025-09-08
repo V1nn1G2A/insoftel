@@ -6,7 +6,7 @@
   padding: 102px 0 84px;
 
   h2 {
-    @include fonts.text(48px, 52px, 400);
+    @include fonts.text(flex(3.33), flex(3.61), 400);
 
     @include media.screen('desktop') {
       letter-spacing: 1px;
@@ -24,10 +24,10 @@
   width: 776px;
 
   p {
-    @include fonts.text(30px, 34px, 300);
+    @include fonts.text(flex(2.08), flex(2.36), 300);
 
     letter-spacing: -0.07px;
-    margin-bottom: 81px;
+    margin-bottom: flex(5.625);
     color: var(--color-text-tertiary);
   }
 
@@ -37,7 +37,7 @@
     width: 100%;
     letter-spacing: 0.5px;
 
-    @include fonts.text(24px, 28px, 500);
+    @include fonts.text(flex(1.38), flex(1.94), 500);
   }
 
   svg {
@@ -51,7 +51,7 @@
   & p {
     margin: 0;
 
-    @include fonts.text(24px, 28px, 500);
+    @include fonts.text(flex(1.66), flex(1.94), 500);
 
     letter-spacing: 0.4px;
   }
