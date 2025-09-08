@@ -11,6 +11,7 @@
 
   &--active {
     height: 51%;
+    border-bottom: 1px solid #00000033;
   }
 
   @include media.screen('mobile') {
@@ -46,7 +47,8 @@
   }
 
   &--light {
-    background: linear-gradient(#dbdedf, transparent);
+    background: linear-gradient(#EBEBEB, #EBEBEB4F);
+    height: 55.8px;
   }
 
   &.notVisible {
@@ -68,7 +70,9 @@
   }
 
   &--light {
-    background: linear-gradient(transparent, #dbdedf);
+    background: linear-gradient(#EBEBEB4F, #EBEBEB);
+    top: calc(100% - 55.8px);
+    height: 55.8px;
   }
 
   &.notVisible {
@@ -139,10 +143,14 @@
   }
 
   &--light {
-    background-color: #ffffff33;
+    background-color: #0000000D;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #D4D4D4;
+    }
 
     &:hover {
-      background-color: #0000001a;
+      background-color: #0000001A;
     }
   }
 }
