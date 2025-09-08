@@ -19,14 +19,14 @@ export const smoothAutoScroll = (
 
     const header: HTMLElement | null = document.querySelector('#header')
 
-    scrollToPosition = el.offsetTop + el.offsetHeight - header!.offsetHeight
+    scrollToPosition = el.offsetTop + el.offsetHeight - header!.offsetHeight + 2
   } else {
     return
   }
 
   lenis.scrollTo(scrollToPosition, {
     duration: 3,
-    easing: t => 1 - Math.pow(1 - t, 3),
+    easing: t => 1 - Math.pow(1 - t, 5),
     immediate: false,
   })
 }
