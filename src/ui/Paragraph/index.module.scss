@@ -29,7 +29,7 @@
 }
 
 .text {
-  letter-spacing: 0.3px;
+  letter-spacing: 0.04em;
   display: block;
 
   @include fonts.text(16px, 20px, 400);
@@ -37,8 +37,6 @@
   color: var(--color-text-quaternary);
 
   @include media.screen('desktop') {
-    letter-spacing: 0.8px;
-
     @include fonts.text(flex(1.23), flex(1.48), 300);
   }
 

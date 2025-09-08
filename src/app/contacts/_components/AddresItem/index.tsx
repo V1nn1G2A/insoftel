@@ -31,6 +31,12 @@ const AddressItem = ({
           >
             {address}
           </Link>
+        ) : title === '[ Office ]' ? (
+          <p className={styles.text}>
+            Empire Heights A,
+            <br />
+            Business Bay, Dubai, UAE
+          </p>
         ) : (
           <p className={styles.text}>{address}</p>
         )}
@@ -45,3 +51,5 @@ const AddressItem = ({
 }
 
 export default AddressItem
+
+//   <p className={styles.text}>{address}</p>

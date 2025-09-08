@@ -15,10 +15,10 @@ const Commitment: FC<ICommitment> = ({ className }) => (
       <SectionTitle index="04">Our Commitment</SectionTitle>
       <div className={styles.content}>
         <AnimationBlock type="p">
-          At Insoftel, we make it our mission to help you explore and learn the
-          best of digital transformation, whether it’s optimising operations,
-          engaging customers, or redefining your brand&apos;s impact. We&apos;re
-          here to turn your vision into reality
+          At Insoftel Technologies, we make it our mission to help you explore
+          and learn the best of digital transformation, whether it’s optimising
+          operations, engaging customers, or redefining your brand&apos;s
+          impact. We&apos;re here to turn your vision into reality
         </AnimationBlock>
         <AnimationBlock>
           <Link

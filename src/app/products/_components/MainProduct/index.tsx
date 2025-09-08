@@ -38,15 +38,13 @@ const MainProduct: FC<IMainProduct> = ({
 
   return (
     <section className={cx('product', className)}>
-      <AnimationBlock>
-        <Image
-          width={1344}
-          height={720}
-          src={img}
-          alt={title}
-          className={styles.product__img}
-        />
-      </AnimationBlock>
+      <Image
+        width={1344}
+        height={720}
+        src={img}
+        alt={title}
+        className={styles.product__img}
+      />
       <AnimationBlock
         type="h3"
         className={styles.product__title}

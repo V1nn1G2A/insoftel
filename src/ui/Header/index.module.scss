@@ -80,6 +80,10 @@
   }
 
   @include media.screen('desktop') {
+    padding: 0 48px;
+  }
+
+  @include media.screen('desktop-l') {
     padding: 0 flex(3.33) 0 flex(3.33);
   }
 }

@@ -7,6 +7,7 @@
 
   &__quote {
     margin: 0 0 35px;
+    overflow: hidden;
   }
 
   &__title {
@@ -40,7 +41,7 @@
     display: flex;
     flex-direction: column;
     gap: 23px;
-    overflow: visible;
+    overflow: hidden;
 
     @include media.screen('tablet') {
       align-items: center;
