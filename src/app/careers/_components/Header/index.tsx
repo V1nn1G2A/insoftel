@@ -12,9 +12,9 @@ const Header = () => (
         type="p"
         className={styles.content}
       >
-        At Insoftel, we’re seeking talented professionals to drive innovation
-        with us. If you’re passionate about technology and eager to work on
-        impactful projects, explore our open roles
+        At Insoftel Technologies, we’re seeking talented professionals to drive
+        innovation with us. If you’re passionate about technology and eager to
+        work on impactful projects, explore our open roles
       </AnimationBlock>
     </section>
   </Container>

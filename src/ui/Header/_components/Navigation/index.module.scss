@@ -34,7 +34,7 @@
   }
 
   &--active {
-    min-height: calc(100vh - 61px);
+    min-height: calc(100dvh - 62px);
     overflow-y: scroll;
 
     &.wrapper--dark {

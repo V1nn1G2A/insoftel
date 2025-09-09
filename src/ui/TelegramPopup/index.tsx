@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+
 import { TextButton } from '../Buttons'
 import { usePopupDispatch } from '../Popup/PopupContext'
 
@@ -21,12 +23,18 @@ const TelegramPopup = () => {
         >
           Cancel
         </button>
-        <TextButton
-          text="Confirm"
-          variant="short"
-          colorVariant="dark"
-          classNames={['', styles.popup__confirm, '']}
-        />
+        <Link
+          href="https://t.me/insofteltechnologies"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <TextButton
+            text="Confirm"
+            variant="short"
+            colorVariant="dark"
+            classNames={['', styles.popup__confirm, '']}
+          />
+        </Link>
       </div>
     </div>
   )

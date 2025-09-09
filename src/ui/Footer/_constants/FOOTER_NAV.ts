@@ -1,6 +1,7 @@
 const FOOTER_NAV = [
   'Services',
   'Technologies',
+  'About Us',
   'Products',
   'Careers',
   'Contacts',

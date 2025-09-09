@@ -1,5 +1,6 @@
 'use client'
 
+import clsx from 'classnames'
 import { useEffect, useRef } from 'react'
 import Typed from 'typed.js'
 
@@ -66,7 +67,12 @@ const SectionHeading = ({
           <Container>
             <div className={styles.heading}>
               <span className={styles.letter}>{letter}</span>
-              <h1 className={styles.title}>
+              <h1
+                className={clsx(
+                  styles.title,
+                  title === 'Services' ? styles.services : styles.technologies
+                )}
+              >
                 <AnimatedText height={230}>{title}</AnimatedText>
               </h1>
               <div

@@ -15,13 +15,20 @@
 
   color: var(--color-white);
   position: absolute;
-  top: 33%;
   margin-top: -10px;
   overflow: hidden;
 
   @include media.screen('desktop') {
     @include fonts.text(flex(14.2), 107%, 400);
   }
+}
+
+.services {
+  bottom: 0;
+}
+
+.technologies {
+  top: 33%;
 }
 
 .miniTitle {

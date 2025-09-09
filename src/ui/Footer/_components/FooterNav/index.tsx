@@ -15,7 +15,7 @@ const FooterNav = () => (
             className={styles.footerNav__item}
             key={el}
           >
-            <Link href={`/${el.toLowerCase()}`}>
+            <Link href={`/${el.toLowerCase().split(' ')[0]}`}>
               <AnimationBlock type="span">{el}</AnimationBlock>
             </Link>
           </li>
