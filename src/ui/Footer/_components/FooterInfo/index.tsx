@@ -22,7 +22,8 @@ const FooterInfo = () => (
     <AnimationBlock className={styles.footerInfo__button}>
       <a
         href="/files/InsoftelTechnologies.pdf"
-        download
+        download="InsoftelTechnologies.pdf"
+        className={styles.link}
       >
         <ExploreButton
           text="Download Presentation"

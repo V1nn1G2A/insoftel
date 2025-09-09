@@ -41,7 +41,7 @@
     display: flex;
     flex-direction: column;
     gap: 23px;
-    overflow: hidden;
+    overflow: visible;
 
     @include media.screen('tablet') {
       align-items: center;

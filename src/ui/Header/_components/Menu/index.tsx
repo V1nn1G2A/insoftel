@@ -69,6 +69,7 @@ const Menu: FC<IMenu> = ({ theme, isOpen, setIsOpen }) => {
         results={results}
         query={query}
         onClear={() => setQuery('')}
+        onClose={() => setIsOpen(false)}
       />
     </div>
   )

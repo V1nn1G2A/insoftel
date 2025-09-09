@@ -20,6 +20,7 @@ interface NavigationProps {
   results?: ISearchResult[]
   query: string
   onClear: () => void
+  onClose: () => void
 }
 
 const Navigation: FC<NavigationProps> = ({
@@ -30,6 +31,7 @@ const Navigation: FC<NavigationProps> = ({
   results = [],
   query,
   onClear,
+  onClose
 }) => {
   const [hoverLink, setHoverLink] = useState('')
   const isQueryValid = results?.length > 0
@@ -62,6 +64,7 @@ const Navigation: FC<NavigationProps> = ({
         theme={theme !== 'grey' ? theme : 'light'}
         hasQuery={isQueryValid}
         hoverLink={hoverLink}
+        onClose={onClose}
       />
       {theme === 'dark' ? (
         <LogoLight

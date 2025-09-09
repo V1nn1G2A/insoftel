@@ -1,5 +1,8 @@
+'use client'
+
 import cx from 'classnames'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { FC } from 'react'
 
 import { links } from './CONST'
@@ -11,6 +14,7 @@ interface LinkListProps {
   theme: 'dark' | 'light'
   hasQuery: boolean
   hoverLink: string
+  onClose: () => void
 }
 
 const LinkList: FC<LinkListProps> = ({
@@ -18,31 +22,37 @@ const LinkList: FC<LinkListProps> = ({
   theme,
   hasQuery,
   hoverLink,
-}) => (
-  <nav className={cx(styles.nav, { [styles['nav--active']]: hasQuery })}>
-    <ul
-      className={cx(styles.list, {
-        [styles['list--active']]: isOpen,
-        [styles['list--withQuery']]: hasQuery,
-      })}
-    >
-      {links.map(({ title, path, titleIndex }) => (
-        <li key={titleIndex}>
-          <Link
-            href={path}
-            className={cx(styles.link, [styles[`link--${theme}`]], {
-              [styles['link--active']]: hoverLink.includes(path),
-            })}
-          >
-            <h2 className={styles.link__title}>
-              <sup className={styles.link__titleIndex}>[ {titleIndex} ]</sup>{' '}
-              {title}
-            </h2>
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </nav>
-)
+  onClose,
+}) => {
+  const pathname = usePathname()
+
+  return (
+    <nav className={cx(styles.nav, { [styles['nav--active']]: hasQuery })}>
+      <ul
+        className={cx(styles.list, {
+          [styles['list--active']]: isOpen,
+          [styles['list--withQuery']]: hasQuery,
+        })}
+      >
+        {links.map(({ title, path, titleIndex }) => (
+          <li key={titleIndex}>
+            <Link
+              href={path}
+              className={cx(styles.link, [styles[`link--${theme}`]], {
+                [styles['link--active']]: hoverLink.includes(path),
+              })}
+              onClick={() => pathname === path && onClose()}
+            >
+              <h2 className={styles.link__title}>
+                <sup className={styles.link__titleIndex}>[ {titleIndex} ]</sup>{' '}
+                {title}
+              </h2>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
 
 export default LinkList
