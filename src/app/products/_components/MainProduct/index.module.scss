@@ -11,7 +11,7 @@
     height: 188px;
 
     @include media.screen('desktop') {
-      height: 720px;
+      height: flex(44.44);
     }
   }
 
@@ -19,17 +19,18 @@
     @include fonts.text(30px, 34px, 400);
 
     margin: 18px 0;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.02em;
     color: var(--color-black-secondary);
 
     @include media.screen('desktop') {
-      margin: 30px 0 18px;
+      @include fonts.text(flex(1.85), flex(2.09), 400);
+      margin: flex(1.97) 0 flex(1.23);
     }
   }
 
   &__textWrapper {
     @include media.screen('desktop') {
-      width: 100%;
+      width: flex(39.996);
     }
   }
 
@@ -41,8 +42,10 @@
     color: var(--color-text-quaternary);
 
     @include media.screen('desktop') {
-      max-width: 548px;
-      letter-spacing: 0.27px;
+      @include fonts.text(flex(0.99), flex(1.23), 300);
+      max-width: flex(33.7);
+      letter-spacing: 0.04em;
+      margin-bottom: flex(1.23);
     }
   }
 
@@ -56,16 +59,25 @@
     & p {
       font-weight: 500;
       letter-spacing: 0.3px;
+
+      @include media.screen('desktop') {
+        margin-right: flex(1.23);
+      }
+    }
+
+    & div {
+      width: flex(3.7) !important;
+      height: flex(3.7) !important;
     }
 
     @include media.screen('desktop') {
-      margin: -60px 0 0;
+      margin: calc(flex(3.7) * -1) 0 0;
     }
   }
 
   @include media.screen('desktop') {
     border-bottom: 1px solid rgb(0 0 0 / 20%);
-    padding: 46px 0 70px;
+    padding: 0 0 flex(4.32);
   }
 }
 
@@ -79,7 +91,7 @@
 
 .product__adventages {
   @include media.screen('desktop') {
-    width: 100%;
+    width: flex(39.996);
   }
 }
 

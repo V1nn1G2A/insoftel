@@ -4,8 +4,7 @@ import cn from 'classnames/bind'
 import Image from 'next/image'
 import type { FC } from 'react'
 
-import { AnimationBlock, TelegramPopup, TextButton } from '@/ui'
-import { usePopupDispatch } from '@/ui/Popup/PopupContext'
+import { AnimationBlock } from '@/ui'
 
 import Adventage from '../Adventage'
 
@@ -30,12 +29,6 @@ const Product: FC<IProduct> = ({
   advantages,
   isLine = true,
 }) => {
-  const { openPopup } = usePopupDispatch()
-
-  const handleOpenInfo = () => {
-    openPopup(<TelegramPopup />)
-  }
-
   return (
     <section className={cx('product', className)}>
       <AnimationBlock>
@@ -66,15 +59,6 @@ const Product: FC<IProduct> = ({
           className={styles.product__adventage}
         />
       ))}
-      <AnimationBlock>
-        <TextButton
-          onClick={handleOpenInfo}
-          text="Connect with Us"
-          variant="short"
-          classNames={['', styles.product__btnText, styles.product__btn]}
-          colorVariant="dark"
-        />
-      </AnimationBlock>
       {isLine && (
         <AnimationBlock
           type="span"

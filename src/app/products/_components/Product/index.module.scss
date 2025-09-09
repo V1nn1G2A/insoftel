@@ -25,7 +25,7 @@
     color: var(--color-black-secondary);
 
     @include media.screen('desktop') {
-      margin: 28px 0 18px;
+      margin: flex(1.98) 0 flex(1.23);
     }
   }
 
@@ -35,6 +35,10 @@
     margin-bottom: 20px;
     letter-spacing: 0.3px;
     color: var(--color-text-quaternary);
+
+    @include media.screen('desktop') {
+      margin-bottom: flex(1.23);
+    }
   }
 
   &__adventage + &__adventage {
@@ -64,6 +68,6 @@
   }
 
   @include media.screen('desktop') {
-    padding: 68px 0 72px;
+    padding: flex(4.32) 0;
   }
 }

@@ -14,7 +14,7 @@
   }
 
   @include media.screen('desktop') {
-    padding: 16px 0 64px;
+    padding: 0 0 64px;
   }
 }
 
@@ -31,6 +31,10 @@
   @include media.screen('desktop') {
     border-top: none;
 
+    h3 {
+      width: flex(36.4);
+    }
+
     div:nth-of-type(4) {
       margin-right: 70px;
     }
@@ -40,18 +44,14 @@
 .product:nth-child(2) {
   @include media.screen('desktop') {
     h3 {
-      width: 341px;
-
-      @media (width > 1640px) {
-        width: auto;
-      }
+      width: flex(21.05);
     }
   }
 }
 
 .product:nth-child(2n) {
   @include media.screen('desktop') {
-    padding-left: 10px;
+    padding-left: flex(1.48);
   }
 }
 
@@ -66,7 +66,7 @@
 
 .product:nth-child(odd) {
   @include media.screen('desktop') {
-    padding-right: 10px;
+    padding-right: flex(1.48);
   }
 }
 

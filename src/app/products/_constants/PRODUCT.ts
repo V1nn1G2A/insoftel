@@ -1,6 +1,6 @@
 const PRODUCT = [
   {
-    title: 'Industrial Automation and Monitoring System (Digital Twin)',
+    title: 'Industrial Automation and Monitoring System (Digital Twin)',
     img: '/img/products/first.png',
     mainContent:
       'Revolutionise your industrial operations with a robust automation and monitoring system designed to optimise processes, reduce downtime, and ensure safety. This comprehensive solution delivers unparalleled precision, scalability, and efficiency for managing complex workflows, making it an essential tool for modern industries striving to stay competitive.',
