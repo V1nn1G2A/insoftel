@@ -22,6 +22,25 @@
   }
 
   @include media.screen('desktop') {
-    margin-right: 34px;
+    margin-right: flex(2.1);
+
+    &__title {
+      @include fonts.text(flex(1.23), flex(1.48), 500);
+  
+      letter-spacing: 0.02em;
+      margin-bottom: flex(0.37);
+      color: var(--color-text-tertiary);
+    }
+
+    &__text {
+      @include fonts.text(flex(0.99), flex(1.23), 300);
+
+      letter-spacing: 0.04em;
+      color: var(--color-text-quaternary);
+    }
+
+    &__text+&__text {
+      margin-top: flex(1.23);
+    }
   }
 }
