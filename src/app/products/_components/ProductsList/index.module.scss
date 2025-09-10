@@ -31,20 +31,8 @@
   @include media.screen('desktop') {
     border-top: none;
 
-    h3 {
-      width: flex(36.4);
-    }
-
     div:nth-of-type(4) {
       margin-right: 70px;
-    }
-  }
-}
-
-.product:nth-child(2) {
-  @include media.screen('desktop') {
-    h3 {
-      width: flex(21.05);
     }
   }
 }

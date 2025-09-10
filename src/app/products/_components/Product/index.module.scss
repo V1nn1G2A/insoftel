@@ -8,7 +8,7 @@
 
   &__img {
     width: 100%;
-    height: 188px;
+    height: 100%;
 
     @include media.screen('desktop') {
       height: auto;
@@ -23,6 +23,7 @@
     margin: 16px 0 18px;
     letter-spacing: 0.6px;
     color: var(--color-black-secondary);
+    width: 100%;
 
     @include media.screen('desktop') {
       margin: flex(1.98) 0 flex(1.23);

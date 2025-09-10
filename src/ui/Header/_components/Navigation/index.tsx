@@ -31,7 +31,7 @@ const Navigation: FC<NavigationProps> = ({
   results = [],
   query,
   onClear,
-  onClose
+  onClose,
 }) => {
   const [hoverLink, setHoverLink] = useState('')
   const isQueryValid = results?.length > 0
@@ -68,6 +68,7 @@ const Navigation: FC<NavigationProps> = ({
       />
       {theme === 'dark' ? (
         <LogoLight
+          id="light"
           className={cx(styles.linkLogo, {
             [styles['linkLogo--active']]: isQueryValid,
           })}

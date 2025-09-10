@@ -2,7 +2,7 @@
 @use 'mixins/media';
 
 .letter {
-  overflow: hidden;
+  overflow: visible;
 
   @include fonts.text(113px, 100%, 500);
 

@@ -5,11 +5,12 @@
 .paginated-block {
   padding: 67.5px 20px;
   width: 100%;
-  height: max-content;
+  height: calc(100dvh - 64px);
   overflow-y: scroll;
 
   @include media.screen('desktop') {
     padding: flex(6.91) 48px;
+    height: max-content;
   }
 
   @include media.screen('desktop-l') {
@@ -54,7 +55,6 @@
     // width: 700px;
   }
 }
-
 
 .paragraphDesk {
   display: none;

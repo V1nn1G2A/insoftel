@@ -64,7 +64,7 @@ const SectionHeading = ({
       >
         <Image
           className={styles.image}
-          src="/img/services/logo.png"
+          src="/img/services/services.webp"
           alt="logo"
           width={1000}
           height={1000}
