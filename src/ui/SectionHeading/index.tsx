@@ -64,7 +64,11 @@ const SectionHeading = ({
       >
         <Image
           className={styles.image}
-          src="/img/services/services.webp"
+          src={
+            title === 'services'
+              ? '/img/services/services.webp'
+              : '/img/technologies/tech.webp'
+          }
           alt="logo"
           width={1000}
           priority

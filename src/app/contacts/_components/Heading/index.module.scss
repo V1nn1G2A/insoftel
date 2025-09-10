@@ -9,14 +9,14 @@
 }
 
 .content {
-  height: 348px;
+  height: flex(24.16);
   display: flex;
   justify-content: space-between;
   align-items: start;
 }
 
 .title {
-  @include fonts.text(90px, 97px, 400);
+  @include fonts.text(flex(6.25), flex(6.73), 400);
 
   .line {
     display: block;
@@ -24,17 +24,17 @@
   }
 
   color: var(--color-text-tertiary);
-  max-width: 650px;
+  max-width: flex(45.13);
   letter-spacing: 1.9px;
 }
 
 .text {
-  @include fonts.text(36px, 39px, 300);
+  @include fonts.text(flex(2.5), flex(2.7), 300);
 
   color: var(--color-text-quaternary);
   align-self: flex-end;
-  max-width: 661px;
-  margin-top: 40px;
+  max-width: flex(45.9);
+  margin-bottom: 40px;
   text-indent: 115px;
   letter-spacing: 0.7px;
 }
@@ -45,13 +45,13 @@
 }
 
 .s {
-  @include fonts.text(113px, 83%, 500);
+  @include fonts.text(flex(7.84), 83%, 500);
 
   color: rgb(0 0 0 / 10%);
 }
 
 .t {
-  @include fonts.text(113px, 83%, 500);
+  @include fonts.text(flex(7.84), 83%, 500);
 
   color: rgb(0 0 0 / 10%);
 }

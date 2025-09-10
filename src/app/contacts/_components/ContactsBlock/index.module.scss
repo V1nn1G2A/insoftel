@@ -7,13 +7,13 @@
 }
 
 .i {
-  @include fonts.text(113px, 80%, 500);
+  @include fonts.text(flex(7.84), 83%, 500);
   color: rgba(0, 0, 0, 0.1);
   margin-left: 23px;
 }
 
 .t {
-  @include fonts.text(113px, 80%, 500);
+  @include fonts.text(flex(7.84), 83%, 500);
   color: rgba(0, 0, 0, 0.1);
 }
 

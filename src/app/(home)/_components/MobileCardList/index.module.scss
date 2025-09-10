@@ -7,7 +7,7 @@
   gap: 16px;
   padding: 40px 0;
 
-  @include media.screen('tablet') {
+  @media (width >= 768px) {
     display: none;
   }
 }

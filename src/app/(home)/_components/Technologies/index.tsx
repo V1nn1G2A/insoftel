@@ -1,4 +1,5 @@
 import cx from 'classnames'
+import Image from 'next/image'
 import Link from 'next/link'
 import type { FC } from 'react'
 
@@ -10,6 +11,13 @@ import styles from './index.module.scss'
 
 const Technologies: FC = ({}) => (
   <section className={styles.technologies}>
+    <Image
+      src={'/img/technologies/tech_home.webp'}
+      alt="Technologies"
+      width={1920}
+      height={1080}
+      className={styles.technologies__image}
+    />
     {/* <VideoBackground src={'/video/background.mp4'}> */}
     <Container>
       <div className={styles.technologies__content}>
