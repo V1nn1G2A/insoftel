@@ -67,6 +67,7 @@ const SectionHeading = ({
           src="/img/services/services.webp"
           alt="logo"
           width={1000}
+          priority
           height={1000}
         />
         <Container>

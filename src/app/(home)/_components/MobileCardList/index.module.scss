@@ -1,0 +1,13 @@
+@use 'mixins/media';
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 0;
+
+  @include media.screen('tablet') {
+    display: none;
+  }
+}

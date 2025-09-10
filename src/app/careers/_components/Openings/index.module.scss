@@ -5,7 +5,7 @@
   padding: 40px 0 78px;
 
   @include media.screen('desktop') {
-    padding: 40px 0 120px;
+    padding: flex(2.7) 0 flex(8.33);
   }
 }
 
@@ -19,9 +19,9 @@
 
   @include media.screen('desktop') {
     letter-spacing: 1.8px;
-    margin-bottom: 57px;
+    margin-bottom: flex(3.95);
 
-    @include fonts.text(90px, 94px, 'regular');
+    @include fonts.text(flex(6.25), flex(6.52), 'regular');
   }
 }
 
@@ -33,11 +33,11 @@
   color: var(--color-text-quaternary);
 
   @include media.screen('desktop') {
-    @include fonts.text(30px, 34px, 300);
+    @include fonts.text(flex(2.08), flex(2.36), 300);
 
     text-indent: 46px;
     letter-spacing: 0.6px;
-    max-width: 662px;
+    max-width: flex(45.97);
     margin-left: auto;
   }
 }

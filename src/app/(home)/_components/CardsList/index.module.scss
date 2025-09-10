@@ -3,6 +3,11 @@
 
 .cards {
   margin-top: 49px;
+  display: none;
+
+  @include media.screen('tablet') {
+    display: block;
+  }
 }
 
 .swiper {

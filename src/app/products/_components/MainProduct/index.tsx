@@ -43,6 +43,7 @@ const MainProduct: FC<IMainProduct> = ({
         height={720}
         src={img}
         alt={title}
+        priority
         className={styles.product__img}
       />
       <AnimationBlock

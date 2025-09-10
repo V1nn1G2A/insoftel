@@ -19,7 +19,7 @@ const cx = cn.bind(styles)
 const MotionSvg: FC<Iindex> = ({ Svg, className, containerClassName }) => (
   <motion.div
     initial="hidden"
-    whileInView="visible"
+    animate="visible"
     viewport={{ once: true, amount: 0.2 }}
     variants={scale}
     className={cx(styles.container, containerClassName)}

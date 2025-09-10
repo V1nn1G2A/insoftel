@@ -4,6 +4,7 @@ import { Container } from '@/ui'
 import { SectionTitle } from '@/ui'
 
 import CardsList from '../CardsList'
+import MobileCardsList from '../MobileCardList'
 
 import styles from './index.module.scss'
 
@@ -17,6 +18,7 @@ const Products: FC = ({}) => (
         Products
       </SectionTitle>
       <CardsList />
+      <MobileCardsList />
     </Container>
   </section>
 )

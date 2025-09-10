@@ -52,6 +52,7 @@ const Card: FC<ICard> = ({ picture, title, text, className, draggingRef }) => {
           width={435}
           height={434}
           alt={title}
+          priority
           onClick={handleOpen}
         />
       </div>

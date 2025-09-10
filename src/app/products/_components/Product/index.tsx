@@ -37,6 +37,7 @@ const Product: FC<IProduct> = ({
           height={335}
           src={img}
           alt={title}
+          priority
           className={styles.product__img}
         />
       </AnimationBlock>
