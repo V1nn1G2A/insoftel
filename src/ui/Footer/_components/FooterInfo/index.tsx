@@ -1,6 +1,6 @@
 'use client'
 
-import Logo from '@/assets/icons/imageLight.svg'
+import Logo from '@/assets/icons/romashka.svg'
 import { AnimationBlock, ExploreButton, MotionSvg } from '@/ui'
 
 import FooterAddress from '../FooterAddress'

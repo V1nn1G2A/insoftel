@@ -3,7 +3,7 @@
 
 .heading {
   position: relative;
-  height: 613px;
+  height: 100dvh;
   overflow: hidden;
 
   @include media.screen('desktop') {
@@ -89,7 +89,7 @@
 
 @media (width <= 1280px) {
   .heading {
-    height: 747px;
+    height: 100dvh;
   }
 
   .title {
