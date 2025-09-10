@@ -4,10 +4,25 @@
 .heading {
   position: relative;
   height: 613px;
+  overflow: hidden;
 
   @include media.screen('desktop') {
     height: flex(37.84);
+    max-height: 526px;
   }
+}
+
+.wrapper {
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .title {
@@ -15,20 +30,13 @@
 
   color: var(--color-white);
   position: absolute;
+  bottom: 20px;
   margin-top: -10px;
   overflow: hidden;
 
   @include media.screen('desktop') {
-    @include fonts.text(flex(14.2), 107%, 400);
+    @include fonts.text(flex(11.1), 107%, 400);
   }
-}
-
-.services {
-  bottom: 0;
-}
-
-.technologies {
-  top: 33%;
 }
 
 .miniTitle {

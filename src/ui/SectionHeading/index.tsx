@@ -1,6 +1,6 @@
 'use client'
 
-import clsx from 'classnames'
+import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import Typed from 'typed.js'
 
@@ -11,7 +11,6 @@ import { AnimatedText, ScrollColorController } from '@/ui'
 
 import { ExploreButton } from '../Buttons'
 import Container from '../Container'
-import VideoBackground from '../VideoBackground'
 
 import styles from './index.module.scss'
 
@@ -59,59 +58,59 @@ const SectionHeading = ({
   return (
     <>
       <ScrollColorController sectionRef={sectionRef} />
-      <div ref={sectionRef}>
-        <VideoBackground
-          src={'/video/section-background.mp4'}
-          className="section"
-        >
-          <Container>
-            <div className={styles.heading}>
-              <span className={styles.letter}>{letter}</span>
-              <h1
-                className={clsx(
-                  styles.title,
-                  title === 'Services' ? styles.services : styles.technologies
-                )}
-              >
-                <AnimatedText height={230}>{title}</AnimatedText>
-              </h1>
-              <div
-                className={styles.miniTitle}
-                style={
-                  { '--width': width } as React.CSSProperties & {
-                    [key: string]: string
-                  }
+      <div
+        ref={sectionRef}
+        className={styles.wrapper}
+      >
+        <Image
+          className={styles.image}
+          src="/img/services/logo.png"
+          alt="logo"
+          width={1000}
+          height={1000}
+        />
+        <Container>
+          <div className={styles.heading}>
+            <span className={styles.letter}>{letter}</span>
+            <h1 className={styles.title}>
+              <AnimatedText height={230}>{title}</AnimatedText>
+            </h1>
+            <div
+              className={styles.miniTitle}
+              style={
+                { '--width': width } as React.CSSProperties & {
+                  [key: string]: string
                 }
-              >
-                <h1 ref={ref} />
-              </div>
-              <div className={styles.miniButton}>
-                <ExploreButton
-                  classNames={['mini-text', 'mini-round', 'mini-button']}
-                  onClick={(e: React.MouseEvent) => {
-                    e.stopPropagation()
-                    smoothAutoScroll(
-                      lenis,
-                      (sectionRef.current?.scrollHeight ?? 0) - height
-                    )
-                  }}
-                />
-              </div>
-              <div className={styles.button}>
-                <ExploreButton
-                  classNames={['mini-text']}
-                  onClick={(e: React.MouseEvent) => {
-                    e.stopPropagation()
-                    smoothAutoScroll(
-                      lenis,
-                      (sectionRef.current?.scrollHeight ?? 0) - height
-                    )
-                  }}
-                />
-              </div>
+              }
+            >
+              <h1 ref={ref} />
             </div>
-          </Container>
-        </VideoBackground>
+            <div className={styles.miniButton}>
+              <ExploreButton
+                classNames={['mini-text', 'mini-round', 'mini-button']}
+                onClick={(e: React.MouseEvent) => {
+                  e.stopPropagation()
+                  smoothAutoScroll(
+                    lenis,
+                    (sectionRef.current?.scrollHeight ?? 0) - height
+                  )
+                }}
+              />
+            </div>
+            <div className={styles.button}>
+              <ExploreButton
+                classNames={['mini-text']}
+                onClick={(e: React.MouseEvent) => {
+                  e.stopPropagation()
+                  smoothAutoScroll(
+                    lenis,
+                    (sectionRef.current?.scrollHeight ?? 0) - height
+                  )
+                }}
+              />
+            </div>
+          </div>
+        </Container>
       </div>
     </>
   )

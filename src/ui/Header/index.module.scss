@@ -53,6 +53,11 @@
   text-decoration: none;
   display: flex;
 
+  margin-top: 1px;
+  @include media.screen('tablet') {
+    margin-top: 0px;
+  }
+
   & svg {
     width: 179px;
     transform: scale(0.71) translateX(-36px);

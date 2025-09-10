@@ -12,7 +12,6 @@
 
   .letter {
     line-height: 130px;
-    margin-bottom: 42px;
   }
 
   @include media.screen('desktop') {
@@ -23,16 +22,16 @@
 }
 
 .content:nth-child(even) {
-  background-color: #E4E4E4;
+  background-color: #e4e4e4;
 
   .letter {
-    color: #D9D9D9C2;
+    color: #d9d9d9c2;
   }
 }
 
 .content:nth-child(odd) {
   .letter {
-    color: #DEDEDE91;
+    color: #dedede91;
   }
 }
 
