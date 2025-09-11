@@ -6,7 +6,7 @@
   height: 100dvh;
   overflow: hidden;
 
-  @include media.screen('desktop') {
+  @media (width >= 768px) {
     height: flex(37.84);
     max-height: 526px;
   }
@@ -34,7 +34,17 @@
   margin-top: -10px;
   overflow: hidden;
 
-  @include media.screen('desktop') {
+  @media (width >= 768px) {
+    @include fonts.text(flex(11.1), 107%, 400);
+  }
+}
+
+.technologies {
+  @media (width >= 768px) {
+    @include fonts.text(flex(9.1), 107%, 400);
+  }
+
+  @media (width >= 1050px) {
     @include fonts.text(flex(11.1), 107%, 400);
   }
 }
@@ -87,7 +97,7 @@
   }
 }
 
-@media (width <= 1280px) {
+@media (width <= 768px) {
   .heading {
     height: 100dvh;
   }
