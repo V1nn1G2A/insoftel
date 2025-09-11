@@ -1,4 +1,5 @@
 @use 'mixins/media';
+@use 'mixins/fonts';
 
 .quote {
   overflow: hidden;
@@ -18,6 +19,20 @@
 
     @include media.screen('desktop') {
       max-width: flex(74.65);
+    }
+  }
+
+  &__content {
+    @include media.screen('desktop') {
+      font-size: flex(1.98);
+      line-height: flex(2.24);
+    }
+  }
+
+  &__author {
+    @include media.screen('desktop') {
+      font-size: flex(1.25);
+      line-height: flex(1.58);
     }
   }
 }

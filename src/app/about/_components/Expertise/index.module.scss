@@ -7,7 +7,7 @@
 
   h2 {
     @include media.screen('desktop') {
-      @include fonts.text(flex(3.33), flex(3.61), 400);
+      @include fonts.text(flex(2.93), flex(3.61), 400);
 
       letter-spacing: 1px;
     }

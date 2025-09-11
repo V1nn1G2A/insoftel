@@ -5,7 +5,7 @@
 .paginated-block {
   padding: 67.5px 20px;
   width: 100%;
-  height: calc(100dvh - 64px);
+  height: fit-content;
   overflow-y: scroll;
 
   @include media.screen('desktop') {

@@ -8,7 +8,7 @@
     h2 {
       letter-spacing: 1px;
 
-      @include fonts.text(flex(3.33), flex(3.61), 400);
+      @include fonts.text(flex(2.93), flex(3.61), 400);
     }
 
     padding: 0 0 flex(4.16);
@@ -59,7 +59,7 @@
     margin: 0 0 flex(6.25);
     text-indent: 40px;
 
-    @include fonts.text(flex(2.08), flex(2.36), 300);
+    @include fonts.text(flex(1.88), flex(2.36), 300);
   }
 }
 
@@ -95,7 +95,7 @@
   @include media.screen('desktop') {
     position: absolute;
     left: 0;
-    bottom: 20px;
+    bottom: 0;
   }
 }
 
@@ -104,7 +104,7 @@
   height: 152px;
 
   @include media.screen('desktop') {
-    width: flex(24.16);
-    height: flex(23.81);
+    width: flex(20.46);
+    height: flex(20.46);
   }
 }

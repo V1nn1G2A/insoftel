@@ -2,7 +2,7 @@
 @use 'mixins/media';
 
 .slogan {
-  padding: flex(6.8) 0 flex(2.7);
+  padding: flex(14.4) 0 flex(2.7);
 
   .explore {
     display: flex;
@@ -36,7 +36,7 @@
     @include media.screen('desktop') {
       letter-spacing: 2px;
 
-      @include fonts.text(flex(6.25), flex(6.527), 400);
+      @include fonts.text(flex(5.55), flex(6.527), 400);
     }
   }
 
