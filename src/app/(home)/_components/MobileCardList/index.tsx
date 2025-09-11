@@ -16,7 +16,8 @@ const MobileCardsList: FC = ({}) => {
   return (
     <AnimationBlock
       className={styles.cards}
-      amount={0.3}
+      amount={0}
+      isOnce
     >
       <div className={styles.cards}>
         {cards.map(card => (

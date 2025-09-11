@@ -15,6 +15,7 @@ interface IAnimationBlock {
   className?: string
   isAnimated?: boolean
   isOnce?: boolean
+  margin?: string
 }
 
 const AnimationBlock: FC<IAnimationBlock> = ({
@@ -24,6 +25,7 @@ const AnimationBlock: FC<IAnimationBlock> = ({
   animation = disolve,
   className,
   isAnimated = true,
+  margin,
 }) => {
   const MotionElement = useMemo(() => motion(type), [type])
   const [hasAnimated, setHasAnimated] = useState(false)
@@ -38,7 +40,7 @@ const AnimationBlock: FC<IAnimationBlock> = ({
       animate={hasAnimated ? 'visible' : undefined}
       whileInView={!hasAnimated ? 'visible' : undefined}
       onViewportEnter={() => setHasAnimated(true)}
-      viewport={{ once: true, amount }}
+      viewport={{ once: true, amount, margin }}
       variants={animation}
       className={className}
     >

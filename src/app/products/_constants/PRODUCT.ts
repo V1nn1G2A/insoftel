@@ -3,53 +3,52 @@ const PRODUCT = [
     title: 'Large Capital Management Platform',
     img: '/img/products/second.png',
     mainContent:
-      'Dominate the fast-paced financial markets with a powerful platform that combines speed, precision, and data-driven decision-making. Designed for traders and investors, this platform offers advanced tools to predict market trends, manage risks, and automate strategies, empowering you to make smarter, faster moves in volatile markets.',
+      'Dominate the fast-paced financial markets with a powerful platform that combines speed, precision, and data-driven decision-making. Designed for traders and investors, it provides advanced tools to forecast market trends, manage risks, and automate strategies — empowering you to make smarter, faster moves in volatile markets.',
     advantages: [
       {
-        title: 'Predictive Analytics:',
+        title: 'Predictive Analytics',
         description: [
-          'Advanced modelling powered by C/C++, Python, R, and TensorFlow for accurate market forecasting.',
+          'Advanced modeling powered by C/C++, Python, R, and TensorFlow delivers accurate market forecasting.',
         ],
       },
       {
-        title: 'Live and Historical Data Insights:',
+        title: 'Live and Historical Data Insights',
         description: [
-          'Process data from CEX and DEX exchanges in real time using WebSockets, InfluxDB, and PostgreSQL.',
+          'Process real-time data from CEX and DEX exchanges using WebSockets, InfluxDB, and PostgreSQL.',
         ],
       },
       {
-        title: 'Smarter Strategies:',
+        title: 'Smarter Strategies',
         description: [
           'Algorithmic hedging models and automated portfolio management tools help you navigate market volatility with confidence.',
-          'Stay ahead of the curve with a platform tailored to meet the demands of high-frequency trading and strategic investment planning.',
+          'Stay ahead of the curve with a platform designed to meet the demands of high-frequency trading and strategic investment planning.',
         ],
       },
     ],
   },
-
   {
-    title: 'Industrial Automation and Monitoring System (Digital Twin)',
+    title: 'Industrial Automation and Monitoring System (Digital Twin)',
     img: '/img/products/first.png',
     mainContent:
-      'Revolutionise your industrial operations with a robust automation and monitoring system designed to optimise processes, reduce downtime, and ensure safety. This comprehensive solution delivers unparalleled precision, scalability, and efficiency for managing complex workflows, making it an essential tool for modern industries striving to stay competitive.',
+      'Revolutionise your industrial operations with a robust automation and monitoring solution designed to optimize processes, minimize downtime, and ensure safety. This comprehensive system delivers unparalleled precision, scalability, and efficiency in managing complex workflows, making it an essential tool for modern industries striving to stay competitive.',
     advantages: [
       {
-        title: 'Precision Monitoring:',
+        title: 'Precision Monitoring',
         description: [
-          'Sensors and machine vision provide real-time insights into pressure, temperature, and humidity fluctuations.',
+          'Sensors and machine vision deliver real-time insights into pressure, temperature, and humidity fluctuations.',
         ],
       },
       {
-        title: 'Seamless Hardware Integration:',
+        title: 'Seamless Hardware Integration',
         description: [
-          'Built with C/C++, Python, Java, and SCADA, handling everything from hardware selection to circuit board programming.',
+          'Built with C/C++, Python, Java, and SCADA, covering everything from hardware selection to circuit board programming.',
         ],
       },
       {
-        title: 'Centralised Control:',
+        title: 'Centralised Control',
         description: [
-          'Accessible through a Vue.js and Spring Boot interface on both web and mobile platforms.',
-          'With this system, you can reduce operational risks, enhance productivity, and drive innovation with ease.',
+          'Accessible via a Vue.js and Spring Boot interface on both web and mobile platforms.',
+          'With this system, you can minimize operational risks, boost productivity, and drive innovation with ease.',
         ],
       },
     ],
@@ -59,25 +58,25 @@ const PRODUCT = [
     title: 'Music Label & Content Distribution Platform',
     img: '/img/products/fourth.png',
     mainContent:
-      'Empower artists and redefine the music industry with a platform that merges cutting-edge technology and creative freedom. This all-in-one solution ensures secure distribution, innovative monetisation, and AI-powered collaboration, making it a game-changer for artists looking to expand their reach and connect with fans in a meaningful way.',
+      'Empower artists and redefine the music industry with a platform that combines cutting-edge technology with creative freedom. This all-in-one solution provides secure distribution, innovative monetization, and AI-powered collaboration — a true game-changer for artists aiming to expand their reach and connect with fans in meaningful ways. Supporting both B2B and B2C models, the platform helps artists grow their audience, foster fan loyalty, and increase profitability in the digital era.',
     advantages: [
       {
-        title: 'Content Protection:',
+        title: 'Content Protection',
         description: [
-          'Secure your work with IPFS and Smart Contract-based DRM.',
+          'Secure your work with IPFS and smart contract–based DRM.',
         ],
       },
       {
-        title: 'Monetisation Opportunities:',
+        title: 'Monetisation Opportunities',
         description: [
-          'Leverage NFTs and Web 3.0 token systems to create new revenue streams.',
+          'Leverage NFTs and Web 3.0 token systems to unlock new revenue streams.',
         ],
       },
       {
-        title: 'AI-Driven Creativity:',
+        title: 'AI-Driven Creativity',
         description: [
-          'Collaborate and innovate with OpenAI-powered tools tailored for artists.',
-          'Whether you’re an independent artist or a global label, this platform offers the tools and resources you need to thrive in the digital era.',
+          'Collaborate and innovate with AI-powered tools tailored for artists.',
+          'Whether you’re an independent artist or a global label, this platform provides the tools and resources you need to thrive in the digital landscape.',
         ],
       },
     ],
@@ -86,25 +85,24 @@ const PRODUCT = [
     title: 'Proprietary Data Transmission Protocol',
     img: '/img/products/third.png',
     mainContent:
-      'Empower artists and redefine the music industry with a platform that merges cutting-edge technology and creative freedom. This all-in-one solution ensures secure distribution, innovative monetisation, and AI-powered collaboration, making it a game-changer for artists looking to expand their reach and connect with fans in a meaningful way.',
+      'Our proprietary data transmission protocol, developed entirely in C without third-party libraries, incorporates custom routing and packet algorithms. Operating at a low level, it ensures low-latency, high-speed data transfer across the physical (L1), data link (L2), network (L3), and transport (L4) layers of the OSI model.',
     advantages: [
       {
-        title: 'Content Protection:',
+        title: 'Ultra-Low Latency',
         description: [
-          'Secure your work with IPFS and Smart Contract-based DRM.',
+          'Pure C implementation with optimized routing delivers lightning-fast performance for HFT and real-time systems.',
         ],
       },
       {
-        title: 'Monetisation Opportunities:',
+        title: 'Full-Stack OSI Layer Coverage (L1–L4)',
         description: [
-          'Leverage NFTs and Web 3.0 token systems to create new revenue streams.',
+          'Operating across the physical, data link, network, and transport layers enables flexible traffic management, low-level packet control, and optimized performance in complex network environments.',
         ],
       },
       {
-        title: 'AI-Driven Creativity:',
+        title: 'Custom & Secure',
         description: [
-          'Collaborate and innovate with OpenAI-powered tools tailored for artists.',
-          'Whether you’re an independent artist or a global label, this platform offers the tools and resources you need to thrive in the digital era.',
+          'Proprietary routing and packet-processing algorithms eliminate third-party vulnerabilities while providing full customization to meet the specific requirements of HPC, financial markets, and private networks.',
         ],
       },
     ],
