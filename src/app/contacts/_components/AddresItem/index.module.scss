@@ -9,7 +9,7 @@
 }
 
 .title {
-  @include fonts.text(flex(2.5), flex(2.7), 400);
+  @include fonts.text(flex(2.2), flex(2.7), 400);
 
   color: var(--color-text-tertiary);
   margin-bottom: 13px;
@@ -17,7 +17,7 @@
 }
 
 .text {
-  @include fonts.text(flex(1.38), flex(1.66), 300);
+  @include fonts.text(flex(1.24), flex(1.66), 300);
 
   color: var(--color-text-quaternary);
   max-width: flex(22.98);

@@ -36,3 +36,23 @@
     }
   }
 }
+
+@include media.screen('desktop') {
+  .quote {
+    margin: flex(4.93) 0;
+
+    &__wrapper {
+      max-width: flex(55.94);
+    }
+
+    &__content {
+      font-size: flex(1.98);
+      line-height: flex(2.24);
+    }
+
+    &__author {
+      font-size: flex(1.25);
+      line-height: flex(1.58);
+    }
+  }
+}

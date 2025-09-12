@@ -16,7 +16,7 @@
 }
 
 .title {
-  @include fonts.text(flex(6.25), flex(6.73), 400);
+  @include fonts.text(flex(5.55), flex(6.73), 400);
 
   .line {
     display: block;
@@ -29,7 +29,7 @@
 }
 
 .text {
-  @include fonts.text(flex(2.5), flex(2.7), 300);
+  @include fonts.text(flex(2.2), flex(2.7), 300);
 
   color: var(--color-text-quaternary);
   align-self: flex-end;
