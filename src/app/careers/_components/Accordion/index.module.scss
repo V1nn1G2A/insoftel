@@ -67,7 +67,7 @@
     @include media.screen('desktop') {
       letter-spacing: 0.7px;
 
-      @include fonts.text(36px, 40px, 400);
+      @include fonts.text(flex(2.2), 40px, 400);
     }
   }
 
@@ -117,6 +117,6 @@
 .triggerIconWrapper {
   & svg {
     width: 24px;
-  height: 24px;
+    height: 24px;
   }
 }

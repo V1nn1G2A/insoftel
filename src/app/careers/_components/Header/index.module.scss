@@ -21,7 +21,7 @@
     letter-spacing: 0;
     margin: 0 0 flex(3.81) flex(2.36);
 
-    @include fonts.text(flex(14.58), flex(15.2), 'regular');
+    @include fonts.text(flex(13), flex(15.2), 'regular');
   }
 }
 
@@ -33,7 +33,7 @@
   color: var(--color-text-quaternary);
 
   @include media.screen('desktop') {
-    @include fonts.text(flex(2.08), flex(2.36), 300);
+    @include fonts.text(flex(1.88), flex(2.36), 300);
 
     text-indent: 82px;
     letter-spacing: 0.6px;

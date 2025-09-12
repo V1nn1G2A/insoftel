@@ -66,8 +66,8 @@
     }
 
     & div {
-      width: flex(3.7) !important;
-      height: flex(3.7) !important;
+      width: flex(3.7);
+      height: flex(3.7);
     }
 
     @include media.screen('desktop') {

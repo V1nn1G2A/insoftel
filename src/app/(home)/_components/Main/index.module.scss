@@ -129,7 +129,11 @@
 
 @include media.screen('mobile') {
   .top {
-    top: 85px;
+    top: 105px;
+  }
+
+  .bottom {
+    bottom: 42px;
   }
 }
 

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { FC } from 'react'
 
 import { BigLetter } from '@/ui'
@@ -22,18 +23,28 @@ const Slogan: FC<ISlogan> = ({ className }) => {
             <AnimatedText height={92}>Your Vision, Our Code</AnimatedText>
           </p>
         </div>
-        <ExploreButton
-          colorVariant="dark"
-          text="Unpack the Solutions"
-          classNames={['', '', styles.explore]}
-        />
-        <div className={styles.slogan__back}>
-          <BigLetter>S</BigLetter>
+        <Link
+          href="/files/InsoftelTechnologies.pdf"
+          download
+        >
           <ExploreButton
             colorVariant="dark"
             text="Unpack the Solutions"
-            classNames={['', '', styles.explores]}
+            classNames={['', '', styles.explore]}
           />
+        </Link>
+        <div className={styles.slogan__back}>
+          <BigLetter>S</BigLetter>
+          <Link
+            href="/files/InsoftelTechnologies.pdf"
+            download
+          >
+            <ExploreButton
+              colorVariant="dark"
+              text="Unpack the Solutions"
+              classNames={['', '', styles.explores]}
+            />
+          </Link>
           <BigLetter>T</BigLetter>
         </div>
       </Container>

@@ -1,7 +1,7 @@
 @use 'mixins/media';
 
 .content {
-  padding-bottom: 5px;
+  padding-bottom: 20px;
 
   @include media.screen('mobile') {
     display: flex;

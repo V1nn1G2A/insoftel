@@ -19,7 +19,7 @@
   @include media.screen('desktop') {
     letter-spacing: 2px;
 
-    @include fonts.text(flex(6.25), flex(6.52), 400);
+    @include fonts.text(flex(5.5), flex(6.52), 400);
   }
 }
 
@@ -33,6 +33,7 @@
   @include media.screen('desktop') {
     margin-top: flex(5.27);
     gap: flex(1.38);
+    flex-wrap: nowrap;
   }
 }
 

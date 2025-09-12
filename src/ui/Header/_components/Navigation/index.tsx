@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { FC, useState } from 'react'
 
 import LogoDark from '@/assets/icons/imageDark.svg'
-import LogoLight from '@/assets/icons/imageLight.svg'
+import LogoLight from '@/assets/icons/logo_header.svg'
 
 import LinkList from '../LinkList'
 import Search from '../Search'

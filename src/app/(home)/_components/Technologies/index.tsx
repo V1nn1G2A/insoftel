@@ -16,6 +16,7 @@ const Technologies: FC = ({}) => (
       alt="Technologies"
       width={1920}
       height={1080}
+      priority
       className={styles.technologies__image}
     />
     {/* <VideoBackground src={'/video/background.mp4'}> */}
