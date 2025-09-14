@@ -20,11 +20,12 @@ interface IForm {
   className?: string
   id: string
   position: string
+  onClick: (e: React.MouseEvent) => void
 }
 
 const cx = cn.bind(styles)
 
-const Form: FC<IForm> = ({ id, className, position }) => {
+const Form: FC<IForm> = ({ id, className, position, onClick }) => {
   const {
     register,
     getValues,
@@ -115,7 +116,7 @@ const Form: FC<IForm> = ({ id, className, position }) => {
       )}
       <p className={styles.license}>
         By clicking the Submit button you agree to our
-        <a href="#"> Privacy Policy </a>
+        <a onClick={onClick}> Privacy Policy </a>
         terms
       </p>
       <TextButton

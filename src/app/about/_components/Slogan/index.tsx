@@ -1,7 +1,10 @@
-import Link from 'next/link'
-import type { FC } from 'react'
+'use client'
 
-import { BigLetter } from '@/ui'
+import { type FC, useRef } from 'react'
+
+import { smoothAutoScroll } from '@/lib/smoothAutoScroll'
+import { useLenis } from '@/providers'
+import { BigLetter, ScrollColorController } from '@/ui'
 import { Container } from '@/ui'
 import { AnimatedText, ExploreButton } from '@/ui'
 
@@ -12,43 +15,48 @@ interface ISlogan {
 }
 
 const Slogan: FC<ISlogan> = ({ className }) => {
+  const ref = useRef<HTMLDivElement>(null)
+  const lenis = useLenis()
+
   return (
-    <div className={`${styles.slogan} ${className}`}>
-      <Container>
-        <div className={styles.slogan__text}>
-          <p>
-            <AnimatedText height={92}>Insoftel Technologies –</AnimatedText>
-          </p>
-          <p>
-            <AnimatedText height={92}>Your Vision, Our Code</AnimatedText>
-          </p>
-        </div>
-        <Link
-          href="/files/InsoftelTechnologies.pdf"
-          download
-        >
+    <>
+      <ScrollColorController sectionRef={ref} />
+      <div
+        className={`${styles.slogan} ${className}`}
+        ref={ref}
+      >
+        <Container>
+          <div className={styles.slogan__text}>
+            <p>
+              <AnimatedText height={92}>Insoftel Technologies –</AnimatedText>
+            </p>
+            <p>
+              <AnimatedText height={92}>Your Vision, Our Code</AnimatedText>
+            </p>
+          </div>
           <ExploreButton
             colorVariant="dark"
             text="Unpack the Solutions"
             classNames={['', '', styles.explore]}
           />
-        </Link>
-        <div className={styles.slogan__back}>
-          <BigLetter>S</BigLetter>
-          <Link
-            href="/files/InsoftelTechnologies.pdf"
-            download
-          >
+          <div className={styles.slogan__back}>
+            <BigLetter>S</BigLetter>
+
             <ExploreButton
               colorVariant="dark"
               text="Unpack the Solutions"
               classNames={['', '', styles.explores]}
+              onClick={(e: React.MouseEvent) => {
+                e.stopPropagation()
+                smoothAutoScroll(lenis, ref)
+              }}
             />
-          </Link>
-          <BigLetter>T</BigLetter>
-        </div>
-      </Container>
-    </div>
+
+            <BigLetter>T</BigLetter>
+          </div>
+        </Container>
+      </div>
+    </>
   )
 }
 

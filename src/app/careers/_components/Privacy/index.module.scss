@@ -1,0 +1,90 @@
+@use 'mixins/media';
+@use 'mixins/fonts';
+
+.privacy {
+  max-width: 100vw;
+  height: 100dvh;
+  background-color: var(--color-bg-primary);
+  padding: 69px 21px;
+
+  @include media.screen('desktop') {
+    width: flex(75.5);
+    height: 70dvh;
+    padding: 43px 40px;
+  }
+}
+
+.cross {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 64px;
+  right: 28px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include media.screen('desktop') {
+    top: 18px;
+    right: 22px;
+  }
+}
+
+.title {
+  @include fonts.text(36px, 40px, 400);
+  margin-bottom: 28px;
+  color: var(--color-text-tertiary);
+
+  @include media.screen('desktop') {
+    @include fonts.text(flex(2.5), flex(2.7), 400);
+  }
+}
+
+.text {
+  @include fonts.text(20px, 24px, 300);
+  color: var(--color-text-quaternary);
+
+  margin-bottom: 32px;
+
+  @include media.screen('desktop') {
+    @include fonts.text(flex(1.4), flex(1.6), 300);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__title {
+    @include fonts.text(24px, 28px, 400);
+    color: var(--color-text-tertiary);
+  }
+
+  &__text {
+    @include fonts.text(20px, 24px, 300);
+    color: var(--color-text-quaternary);
+  }
+
+  @include media.screen('desktop') {
+    &__title {
+      @include fonts.text(flex(1.4), flex(1.6), 400);
+    }
+
+    &__text {
+      @include fonts.text(flex(1.2), flex(1.4), 300);
+    }
+  }
+}

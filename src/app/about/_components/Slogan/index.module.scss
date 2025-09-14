@@ -2,7 +2,11 @@
 @use 'mixins/media';
 
 .slogan {
-  padding: flex(14.4) 0 flex(2.7);
+  padding: 120px 0 80px;
+
+  @include media.screen('desktop') {
+    padding: flex(14.4) 0 flex(2.7);
+  }
 
   .explore {
     display: flex;
@@ -15,7 +19,7 @@
     }
 
     @include media.screen('tablet') {
-      max-width: flex(18.263);
+      max-width: 260px;
     }
 
     @include media.screen('desktop') {

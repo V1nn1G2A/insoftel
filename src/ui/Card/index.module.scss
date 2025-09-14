@@ -5,7 +5,8 @@
   display: block;
   overflow: overlay;
   width: 100%;
-  height: 334px;
+  height: auto;
+  aspect-ratio: 335 / 335;
 
   @include media.screen('desktop') {
     height: flex(26.31);
@@ -48,6 +49,7 @@
   transition: transform 0.7s;
   height: calc(410px - 75px);
   width: 100%;
+  height: 82%;
 
   @include media.screen('desktop') {
     height: calc(464.23px - 85px);
@@ -69,6 +71,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 21px 16px 16px;
+
+  height: auto;
+  aspect-ratio: 335 / 76;
 
   p {
     margin: 0 34px 0 0;
@@ -126,6 +131,9 @@
   margin: 0;
   width: 100%;
 
+  height: auto;
+  aspect-ratio: 335 / 410;
+
   p {
     height: calc(410px - 75px);
     overflow-y: auto;
@@ -180,6 +188,9 @@
   height: 410px;
   overflow: overlay;
   letter-spacing: 2%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 335 / 410;
 
   button {
     border: none;

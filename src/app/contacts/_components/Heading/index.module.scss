@@ -1,4 +1,5 @@
 @use 'mixins/fonts';
+@use 'mixins/media';
 
 .heading__wrapper {
   overflow-y: hidden;
@@ -24,8 +25,11 @@
   }
 
   color: var(--color-text-tertiary);
-  max-width: flex(45.13);
+
   letter-spacing: 1.9px;
+  @include media.screen('desktop') {
+    max-width: 50%;
+  }
 }
 
 .text {
@@ -33,10 +37,13 @@
 
   color: var(--color-text-quaternary);
   align-self: flex-end;
-  max-width: flex(45.9);
   margin-bottom: 40px;
   text-indent: 115px;
   letter-spacing: 0.7px;
+
+  @media (width >= 1200px) {
+    max-width: 50%;
+  }
 }
 
 .letters {

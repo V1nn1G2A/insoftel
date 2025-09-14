@@ -17,11 +17,14 @@
 
   color: var(--color-text-tertiary);
   letter-spacing: 2px;
-  max-width: flex(27.7);
 
   .line {
     display: block;
     overflow: hidden;
+  }
+
+  @include media.screen('desktop') {
+    max-width: 50%;
   }
 }
 
@@ -35,6 +38,11 @@
 
   @include media.screen('desktop') {
     letter-spacing: 0.7px;
+    max-width: 42%;
+  }
+
+  @media (width >= 768px) {
+    max-width: 42%;
   }
 }
 

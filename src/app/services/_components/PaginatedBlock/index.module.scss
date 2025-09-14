@@ -45,6 +45,7 @@
 .letter {
   font-size: 180px;
   display: block;
+  margin-bottom: 48px;
 
   @include media.screen('desktop') {
     display: block;

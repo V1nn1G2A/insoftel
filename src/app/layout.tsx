@@ -77,68 +77,68 @@ export default function RootLayout({
       <Head>
         <link
           rel="preload"
-          href="public\img\cards\fifth.png"
+          href="/img/cards/fifth.png"
           as="image"
         />
         <link
           rel="preload"
-          href="public\img\cards\first.png"
+          href="/img/cards/first.png"
           as="image"
         />
         <link
           rel="preload"
-          href="public\img\cards\fourth.png"
+          href="/img/cards/fourth.png"
           as="image"
         />
         <link
           rel="preload"
-          href="public\img\cards\second.png"
+          href="/img/cards/second.png"
           as="image"
         />
         <link
           rel="preload"
-          href="public\img\cards\third.png"
+          href="/img/cards/third.png"
           as="image"
         />
         <link
           rel="preload"
-          href="public\img\products\first.png"
+          href="/img/products/first.png"
           as="image"
         />
         <link
           rel="preload"
-          href="public\img\products\fourth.png"
+          href="/img/products/fourth.png"
           as="image"
         />
         <link
           rel="preload"
-          href="public\img\products\main.png"
+          href="/img/products/main.png"
           as="image"
         />
         <link
           rel="preload"
-          href="public\img\products\second.png"
+          href="/img/products/second.png"
           as="image"
         />
         <link
           rel="preload"
-          href="public\img\products\third.png"
+          href="/img/products/third.png"
           as="image"
         />
         <link
           rel="preload"
-          href="public\img\services\services.webp"
+          href="/img/services/services.webp"
           as="image"
         />
 
         <link
           rel="preload"
-          href="public\img\technologies\tech.webp"
+          href="/img/technologies/tech.webp"
           as="image"
         />
         <link
           rel="preload"
-          href="public\img\technologies\tech_home.webp"
+          href="/img/technologies/tech_home.webp"
           as="image"
         />
       </Head>

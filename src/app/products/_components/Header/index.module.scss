@@ -71,7 +71,8 @@
   width: 100%;
 
   p {
-    margin-right: auto;
+    margin-right: 13px;
+    margin-left: -5px;
   }
 
   @include media.screen('tablet') {

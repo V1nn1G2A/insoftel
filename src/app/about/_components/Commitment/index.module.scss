@@ -2,18 +2,16 @@
 @use 'mixins/fonts';
 
 .commitment {
-  display: none;
-  padding: 102px 0 84px;
+  padding: 36px 0 43px;
+  @media (width >= 768px) {
+    padding: 102px 0 84px;
 
-  h2 {
-    @include fonts.text(flex(3.33), flex(3.61), 400);
+    h2 {
+      @include fonts.text(flex(3.33), flex(3.61), 400);
 
-    @include media.screen('desktop') {
       letter-spacing: 1px;
     }
-  }
 
-  @media (width >= 768px) {
     display: flex;
     justify-content: space-between;
     gap: 100px;
@@ -21,42 +19,50 @@
 }
 
 .content {
-  width: 776px;
+  margin-top: 34px;
+  font-size: 24px;
 
-  p {
-    @include fonts.text(flex(2.08), flex(2.36), 300);
+  @media (width >= 768px) {
+    width: 776px;
 
-    letter-spacing: -0.07px;
-    margin-bottom: flex(5.625);
-    color: var(--color-text-tertiary);
-  }
+    p {
+      @include fonts.text(flex(2.08), flex(2.36), 300);
 
-  a {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    letter-spacing: 0.5px;
+      letter-spacing: -0.07px;
+      margin-bottom: flex(5.625);
+      color: var(--color-text-tertiary);
+    }
 
-    @include fonts.text(flex(1.38), flex(1.94), 500);
-  }
+    a {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      letter-spacing: 0.5px;
 
-  svg {
-    margin: 2px 15px 0 0;
+      @include fonts.text(flex(1.38), flex(1.94), 500);
+    }
+
+    svg {
+      margin: 2px 15px 0 0;
+    }
   }
 }
 
 .button {
-  margin-bottom: 12px;
+  margin-top: 34px;
+  @media (width >= 768px) {
+    margin-bottom: 12px;
 
-  & p {
-    margin: 0;
+    & p {
+      margin: 0;
 
-    @include fonts.text(flex(1.66), flex(1.94), 500);
+      @include fonts.text(flex(1.66), flex(1.94), 500);
 
-    letter-spacing: 0.4px;
-  }
+      letter-spacing: 0.4px;
+    }
 
-  & svg {
-    margin: 0;
+    & svg {
+      margin: 0;
+    }
   }
 }

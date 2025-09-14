@@ -3,6 +3,12 @@
 
 .popup {
   &__content {
+    width: 486px;
+
+    @include media.screen('mobile') {
+      width: 350px;
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
