@@ -2,10 +2,8 @@
 
 import clsx from 'classnames'
 import Image from 'next/image'
-import { useEffect, useRef } from 'react'
-import Typed from 'typed.js'
+import { useRef } from 'react'
 
-import { useHeaderHeight } from '@/hooks'
 import { smoothAutoScroll } from '@/lib/smoothAutoScroll'
 import { useLenis } from '@/providers'
 import { AnimatedText, ScrollColorController } from '@/ui'
@@ -22,11 +20,8 @@ const SectionHeading = ({
   title: string
   letter: string
 }) => {
-  const ref = useRef<HTMLHeadingElement>(null)
   const sectionRef = useRef<HTMLDivElement>(null)
-  const typedRef = useRef<Typed | null>(null)
   const lenis = useLenis()
-  const height = useHeaderHeight()
   let width
 
   switch (title) {
@@ -36,25 +31,6 @@ const SectionHeading = ({
     case 'Technologies':
       width = '117.68px'
   }
-
-  useEffect(() => {
-    if (!ref.current) return
-
-    typedRef.current = new Typed(ref.current, {
-      strings: [title || 'hello'],
-      typeSpeed: 70,
-      backSpeed: 30,
-      backDelay: 2000,
-      showCursor: true,
-      loop: true,
-      cursorChar: '|',
-      autoInsertCss: true,
-    })
-
-    return () => {
-      typedRef.current?.destroy()
-    }
-  }, [title])
 
   return (
     <>
@@ -93,18 +69,13 @@ const SectionHeading = ({
                   [key: string]: string
                 }
               }
-            >
-              <h1 ref={ref} />
-            </div>
+            ></div>
             <div className={styles.miniButton}>
               <ExploreButton
                 classNames={['mini-text', 'mini-round', 'mini-button']}
                 onClick={(e: React.MouseEvent) => {
                   e.stopPropagation()
-                  smoothAutoScroll(
-                    lenis,
-                    (sectionRef.current?.scrollHeight ?? 0) - height
-                  )
+                  smoothAutoScroll(lenis, sectionRef)
                 }}
               />
             </div>
@@ -113,10 +84,7 @@ const SectionHeading = ({
                 classNames={['mini-text']}
                 onClick={(e: React.MouseEvent) => {
                   e.stopPropagation()
-                  smoothAutoScroll(
-                    lenis,
-                    (sectionRef.current?.scrollHeight ?? 0) - height
-                  )
+                  smoothAutoScroll(lenis, sectionRef)
                 }}
               />
             </div>

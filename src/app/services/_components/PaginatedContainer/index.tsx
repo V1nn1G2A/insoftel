@@ -1,5 +1,3 @@
-'use client'
-
 import cn from 'classnames/bind'
 import { type FC } from 'react'
 

@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
-import Head from 'next/head'
 
 import { ClientProviders } from '@/providers'
 import { Footer, Header } from '@/ui'
@@ -74,74 +73,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <link
-          rel="preload"
-          href="/img/cards/fifth.png"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/img/cards/first.png"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/img/cards/fourth.png"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/img/cards/second.png"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/img/cards/third.png"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/img/products/first.png"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/img/products/fourth.png"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/img/products/main.png"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/img/products/second.png"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/img/products/third.png"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/img/services/services.webp"
-          as="image"
-        />
-
-        <link
-          rel="preload"
-          href="/img/technologies/tech.webp"
-          as="image"
-        />
-        <link
-          rel="preload"
-          href="/img/technologies/tech_home.webp"
-          as="image"
-        />
-      </Head>
       <body className={neueHaas.variable + ' ' + neueWeb.variable}>
         <PopupProvider>
           <Header />

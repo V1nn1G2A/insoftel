@@ -1,5 +1,3 @@
-'use client'
-
 import { AnimatedText, AnimationBlock, Container } from '@/ui'
 
 import AccordionsList from '../AccordionsList'
