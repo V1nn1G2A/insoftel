@@ -3,19 +3,14 @@
 @use 'mixins/media';
 
 .paginated-block {
-  padding: 67.5px 20px;
+  padding: 67.5px 0;
   width: 100%;
   height: fit-content;
   overflow-y: scroll;
 
   @include media.screen('desktop') {
-    padding: flex(6.91) 48px;
+    padding: flex(6.91) 0px;
     height: max-content;
-  }
-
-  @include media.screen('desktop-l') {
-    padding-left: flex(2.96);
-    padding-right: flex(2.96);
   }
 }
 

@@ -33,7 +33,6 @@
     justify-content: space-between;
     gap: 110px;
     padding: 96px 0 102px;
-
-    @include fonts.text(30px, 34px, 400);
+    @include fonts.text(flex(1.88), flex(2.36), 300);
   }
 }

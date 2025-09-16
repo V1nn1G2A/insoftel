@@ -4,6 +4,7 @@ import { SectionsProvider } from '@/providers/ObserverProvider/contextProvider'
 
 import { Header, Openings, Why } from './_components'
 
+export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Insoftel Technologies - Careers',
   description: 'Insoftel Technologies - Careers',

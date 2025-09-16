@@ -42,8 +42,6 @@ export const SectionsProvider = ({ children }: SectionsProviderProps) => {
       document.querySelectorAll<HTMLElement>('[data-section]')
     )
 
-    console.log(sectionElements)
-
     const sectionItems = sectionElements.map(el => ({
       id: el.dataset.section || '',
       element: el,

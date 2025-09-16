@@ -20,6 +20,10 @@
   max-width: 500px;
   letter-spacing: 0.6px;
 
+  @include media.screen('tablet-mobile') {
+    margin-bottom: 24px;
+  }
+
   @include media.screen('desktop') {
     @include fonts.text(flex(3.7), flex(3.95), 400);
     min-width: flex(30.55);

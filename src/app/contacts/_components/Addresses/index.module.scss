@@ -4,6 +4,11 @@
   display: flex;
   justify-content: end;
   padding-top: 42px;
+  margin-left: auto;
+
+  @media (width >= 1200px) {
+    max-width: 50%;
+  }
 }
 
 .addressesList {

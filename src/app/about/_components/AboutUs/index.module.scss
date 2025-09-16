@@ -2,9 +2,9 @@
 @use 'mixins/fonts';
 
 .about {
-  padding: flex(5.55) 0 flex(2.7);
-
+  padding: 80px 0 40px;
   @include media.screen('desktop') {
+    padding: flex(5.55) 0 flex(2.7);
     h2 {
       letter-spacing: 1px;
 
@@ -72,8 +72,6 @@
 }
 
 .about .company__stats {
-  margin-top: -15px;
-
   @include media.screen('desktop') {
     max-width: 762px;
     margin: -15px -5px 0 0;
@@ -81,7 +79,7 @@
 }
 
 .company__stats + .company__stats {
-  margin-top: 25px;
+  margin-top: 40px;
 
   @include media.screen('desktop') {
     margin-top: 58px;

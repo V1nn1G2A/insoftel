@@ -2,19 +2,31 @@
 @use 'mixins/fonts';
 
 .commitment {
-  padding: 36px 0 43px;
+  padding: 40px 0;
+  display: flex;
+  gap: 0px;
+  flex-direction: column;
   @media (width >= 768px) {
     padding: 102px 0 84px;
 
-    h2 {
-      @include fonts.text(flex(3.33), flex(3.61), 400);
-
-      letter-spacing: 1px;
-    }
-
-    display: flex;
     justify-content: space-between;
+  }
+
+  @include media.screen('desktop') {
     gap: 100px;
+    flex-direction: row;
+  }
+}
+
+.title {
+  @include fonts.text(36px, 40px, 400);
+
+  @media (width >= 768px) and (width < 1280px) {
+    @include fonts.text(48px, 52px, 400);
+  }
+
+  @include media.screen('desktop') {
+    @include fonts.text(flex(2.93), flex(3.61), 400);
   }
 }
 
@@ -22,15 +34,16 @@
   margin-top: 34px;
   font-size: 24px;
 
+  p {
+    letter-spacing: -0.07px;
+    color: var(--color-text-tertiary);
+  }
+
   @media (width >= 768px) {
-    width: 776px;
-
     p {
-      @include fonts.text(flex(2.08), flex(2.36), 300);
+      @include fonts.text(24px, 28px, 400);
 
-      letter-spacing: -0.07px;
       margin-bottom: flex(5.625);
-      color: var(--color-text-tertiary);
     }
 
     a {
@@ -44,6 +57,13 @@
 
     svg {
       margin: 2px 15px 0 0;
+    }
+  }
+
+  @include media.screen('desktop') {
+    width: 776px;
+    p {
+      @include fonts.text(flex(1.88), flex(2.36), 300);
     }
   }
 }

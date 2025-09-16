@@ -14,8 +14,6 @@ export const LenisProvider = ({ children }: { children: ReactNode }) => {
   const contentRef = useRef<HTMLDivElement>(null)
   const isMobile = useMediaQuery('(max-width: 768px)')
 
-  console.log(isMobile)
-
   useEffect(() => {
     if (!wrapperRef.current || !contentRef.current) return
 

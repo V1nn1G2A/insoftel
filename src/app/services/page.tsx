@@ -5,6 +5,7 @@ import SectionHeading from '@/ui/SectionHeading'
 
 import { PaginatedContainer } from './_components/PaginatedContainer'
 
+export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Insoftel Technologies - Services',
   description: 'Insoftel Technologies - Services',

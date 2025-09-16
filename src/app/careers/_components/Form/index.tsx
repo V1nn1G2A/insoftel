@@ -95,11 +95,11 @@ const Form: FC<IForm> = ({ id, className, position, onClick }) => {
       {inputs.map(el => (
         <Input
           key={el.id}
-          id={id + el.label}
+          id={id + el.id} // 👈 используем id, а не label
           label={el.label}
           {...register(el.id)}
           isFulled={!!watch(el.id)}
-          error={errors[el.id]?.message}
+          error={errors[el.id]?.message as string | undefined}
         />
       ))}
       <DragAndDrop

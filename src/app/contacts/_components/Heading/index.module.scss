@@ -17,8 +17,7 @@
 }
 
 .title {
-  @include fonts.text(flex(5.55), flex(6.73), 400);
-
+  @include fonts.text(55px, 64px, 400);
   .line {
     display: block;
     overflow: hidden;
@@ -28,21 +27,27 @@
 
   letter-spacing: 1.9px;
   @include media.screen('desktop') {
+    @include fonts.text(flex(5.55), flex(6.73), 400);
     max-width: 50%;
   }
 }
 
 .text {
-  @include fonts.text(flex(2.2), flex(2.7), 300);
-
+  @include fonts.text(24px, 28px, 300);
   color: var(--color-text-quaternary);
   align-self: flex-end;
   margin-bottom: 40px;
   text-indent: 115px;
   letter-spacing: 0.7px;
+  margin-top: 40px;
 
   @media (width >= 1200px) {
+    margin-top: 0;
     max-width: 50%;
+  }
+
+  @include media.screen('desktop') {
+    @include fonts.text(flex(2.2), flex(2.7), 300);
   }
 }
 
@@ -52,14 +57,20 @@
 }
 
 .s {
-  @include fonts.text(flex(7.84), 83%, 500);
+  @include fonts.text(113px, 83px, 500);
+  @include media.screen('desktop') {
+    @include fonts.text(flex(7.84), 83%, 500);
+  }
 
   color: rgb(0 0 0 / 10%);
 }
 
 .t {
-  @include fonts.text(flex(7.84), 83%, 500);
+  @include fonts.text(113px, 83px, 500);
 
+  @include media.screen('desktop') {
+    @include fonts.text(flex(7.84), 83%, 500);
+  }
   color: rgb(0 0 0 / 10%);
 }
 

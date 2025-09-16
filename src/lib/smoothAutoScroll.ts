@@ -15,7 +15,6 @@ export const smoothAutoScroll = (
     scrollToPosition = target
   } else if (target.current) {
     const el = target.current
-    console.log(el.offsetTop, el.offsetHeight)
 
     const header: HTMLElement | null = document.querySelector('#header')
 

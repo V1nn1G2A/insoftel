@@ -15,7 +15,7 @@
   &--dark {
     --color-black-rgb: 21, 23, 25;
 
-    background-color: rgb(var(--color-black-rgb), var(--header-bg-opacity));
+    background-color: rgb(var(--color-black-rgb), var(--header-bg-opacity, 1));
     color: var(--color-white);
   }
 
@@ -29,7 +29,7 @@
     color: var(--color-black);
   }
 
-  @include media.screen('tablet') {
+  @media (width > 768px) {
     padding: 14px 0;
   }
 

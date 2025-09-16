@@ -12,7 +12,12 @@ interface ICommitment {
 const Commitment: FC<ICommitment> = ({ className }) => (
   <Container>
     <section className={`${styles.commitment} ${className}`}>
-      <SectionTitle index="04">Our Commitment</SectionTitle>
+      <SectionTitle
+        index="04"
+        textClassName={styles.title}
+      >
+        Our Commitment
+      </SectionTitle>
       <div className={styles.content}>
         <AnimationBlock type="p">
           At Insoftel Technologies, we make it our mission to help you explore

@@ -2,7 +2,7 @@
 
 import classNames from 'classnames/bind'
 
-import { BigLetter, TelegramPopup, TextButton } from '@/ui'
+import { BigLetter, Container, TelegramPopup, TextButton } from '@/ui'
 import { usePopupDispatch } from '@/ui/Popup/PopupContext'
 
 import { IPaginatedInfo } from '../../model/IPagintedInfo'
@@ -48,46 +48,48 @@ const PaginatedBlock: React.FC<IPaginatedBlock> = ({
   }
 
   return (
-    <div
-      className={cx('paginated-block', className)}
-      id={id}
-    >
-      <div className={cx('center')}>
-        <Header
-          className={cx('heading', headerClassName)}
-          title={mainTitle}
-          text={headingText}
-        />
-        <div className={cx('contentWrapper')}>
-          <BigLetter
-            className={cx('letter', letterClassName)}
-            isAnimated={false}
-          >
-            {letter}
-          </BigLetter>
-          <div className={cx('content', contectClassName)}>
-            <ParagraphsList
-              paragraphs={paginatedInfo}
-              className={cx('paragraphDesk')}
-            />
-            <ScrolBlock
-              paragraphs={paginatedInfo}
-              className={cx('paragraphMobile', 'mySwiperWrapper')}
-              paragraphClassName={cx('paragraphContent')}
-            />
-            <div className={cx('button', buttonWrapperClassName)}>
-              <TextButton
-                onClick={handleOpenInfo}
-                text="Connect with Us"
-                variant="long"
-                colorVariant="dark"
-                classNames={[cx(buttonClassName)]}
+    <Container>
+      <div
+        className={cx('paginated-block', className)}
+        id={id}
+      >
+        <div className={cx('center')}>
+          <Header
+            className={cx('heading', headerClassName)}
+            title={mainTitle}
+            text={headingText}
+          />
+          <div className={cx('contentWrapper')}>
+            <BigLetter
+              className={cx('letter', letterClassName)}
+              isAnimated={false}
+            >
+              {letter}
+            </BigLetter>
+            <div className={cx('content', contectClassName)}>
+              <ParagraphsList
+                paragraphs={paginatedInfo}
+                className={cx('paragraphDesk')}
               />
+              <ScrolBlock
+                paragraphs={paginatedInfo}
+                className={cx('paragraphMobile', 'mySwiperWrapper')}
+                paragraphClassName={cx('paragraphContent')}
+              />
+              <div className={cx('button', buttonWrapperClassName)}>
+                <TextButton
+                  onClick={handleOpenInfo}
+                  text="Connect with Us"
+                  variant="long"
+                  colorVariant="dark"
+                  classNames={[cx(buttonClassName)]}
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
 

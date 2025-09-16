@@ -4,8 +4,6 @@ import cn from 'classnames/bind'
 import type { FC } from 'react'
 import { useState } from 'react'
 
-import ErrorIcon from '@/assets/icons/error.svg'
-
 import styles from './index.module.scss'
 
 interface IInput extends React.ComponentProps<'input'> {
@@ -58,7 +56,6 @@ const Input: FC<IInput> = ({
       />
       {error && (
         <div className={styles.error}>
-          <ErrorIcon className={styles.errorIcon} />
           <p className={styles.errorText}>{error}</p>
         </div>
       )}

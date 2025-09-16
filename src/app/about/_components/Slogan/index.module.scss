@@ -2,7 +2,7 @@
 @use 'mixins/media';
 
 .slogan {
-  padding: 120px 0 80px;
+  padding: 120px 0 60px;
 
   @include media.screen('desktop') {
     padding: flex(14.4) 0 flex(2.7);

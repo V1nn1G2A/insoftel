@@ -1,3 +1,5 @@
+'use client'
+
 import type { FC } from 'react'
 
 import Logo from '@/assets/icons/imageDark.svg'
