@@ -3,6 +3,7 @@
 
 .slogan {
   padding: 120px 0 60px;
+  height: 100dvh;
 
   @include media.screen('desktop') {
     padding: flex(14.4) 0 flex(2.7);
@@ -11,7 +12,7 @@
   .explore {
     display: flex;
     justify-content: space-between;
-    margin-top: flex(4.375);
+    margin-top: 80px;
     width: 100%;
 
     p {

@@ -100,6 +100,7 @@ const Form: FC<IForm> = ({ id, className, position, onClick }) => {
           {...register(el.id)}
           isFulled={!!watch(el.id)}
           error={errors[el.id]?.message as string | undefined}
+          className={errors[el.id] ? styles.inputError : ''}
         />
       ))}
       <DragAndDrop

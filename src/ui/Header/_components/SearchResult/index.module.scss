@@ -47,7 +47,12 @@
   }
 
   &--light {
-    background: linear-gradient(#ebebeb, #ebebeb4f);
+    background: linear-gradient(#ebebeb, rgba(255, 255, 255, 0));
+    height: 55.8px;
+  }
+
+  &--grey {
+    background: linear-gradient(#d8d8d8, rgba(255, 255, 255, 0));
     height: 55.8px;
   }
 
@@ -70,9 +75,11 @@
   }
 
   &--light {
-    background: linear-gradient(#ebebeb4f, #ebebeb);
-    top: calc(100% - 55.8px);
-    height: 55.8px;
+    background: linear-gradient(rgba(255, 255, 255, 0), #ebebeb);
+  }
+
+  &--grey {
+    background: linear-gradient(rgba(255, 255, 255, 0), #d8d8d8);
   }
 
   &.notVisible {

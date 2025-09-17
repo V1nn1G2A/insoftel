@@ -21,6 +21,8 @@ export default function About() {
     <SectionsProvider>
       <div data-section="aboutContent">
         <Slogan />
+      </div>
+      <div data-section="aboutContent">
         <QuoteSection />
         <AboutUs />
         <Expertise />

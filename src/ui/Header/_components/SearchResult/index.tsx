@@ -12,8 +12,9 @@ export interface ISearchResult {
 
 interface ISearchResultProps {
   results: ISearchResult[]
-  theme: 'dark' | 'light'
+  theme: 'dark' | 'light' | 'grey'
   query: string
+  isGreyShadow: boolean
   setHoverLink: (link: string) => void
 }
 
@@ -21,6 +22,7 @@ const SearchResult: FC<ISearchResultProps> = ({
   results,
   theme,
   query,
+  isGreyShadow,
   setHoverLink,
 }) => {
   const [visibleResults, setVisibleResults] = useState<ISearchResult[]>(results)
@@ -76,14 +78,18 @@ const SearchResult: FC<ISearchResultProps> = ({
       >
         <div className={styles.shadow}>
           <div
-            className={cx(styles.shadow__top, styles[`shadow__top--${theme}`], {
-              [styles.notVisible]: !canScrollTop,
-            })}
+            className={cx(
+              styles.shadow__top,
+              styles[`shadow__top--${isGreyShadow ? 'grey' : theme}`],
+              {
+                [styles.notVisible]: !canScrollTop,
+              }
+            )}
           />
           <div
             className={cx(
               styles.shadow__bottom,
-              styles[`shadow__bottom--${theme}`],
+              styles[`shadow__bottom--${isGreyShadow ? 'grey' : theme}`],
               {
                 [styles.notVisible]: !canScrollBottom,
               }

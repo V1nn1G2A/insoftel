@@ -38,6 +38,10 @@ const Slogan: FC<ISlogan> = ({ className }) => {
             colorVariant="dark"
             text="Unpack the Solutions"
             classNames={['', '', styles.explore]}
+            onClick={(e: React.MouseEvent) => {
+              e.stopPropagation()
+              smoothAutoScroll(lenis, ref)
+            }}
           />
           <div className={styles.slogan__back}>
             <BigLetter>S</BigLetter>

@@ -9,6 +9,10 @@
   p {
     @include fonts.text(16px, 20px, 300);
     color: var(--color-text-quaternary);
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -49,7 +53,9 @@
   }
 
   .office > p:first-child {
-    margin-bottom: flex(1.18);
+    @include media.screen('desktop') {
+      margin-bottom: flex(1.18);
+    }
   }
 
   .office__contacts {

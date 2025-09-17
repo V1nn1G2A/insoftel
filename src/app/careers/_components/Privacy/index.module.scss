@@ -11,8 +11,10 @@
   @include media.screen('desktop') {
     width: flex(75.5);
     height: 70dvh;
-    padding: 43px 40px;
+    padding: 43px 0px 43px 40px;
   }
+  padding-right: 0;
+  margin-right: -38px;
 }
 
 .cross {
@@ -62,7 +64,7 @@
   gap: 32px;
   overflow-y: scroll;
   height: 100%;
-  padding-right: 16px;
+  padding-right: 80px;
 
   &::-webkit-scrollbar-thumb {
     width: 4px;

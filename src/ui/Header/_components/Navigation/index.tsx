@@ -57,6 +57,7 @@ const Navigation: FC<NavigationProps> = ({
         results={results}
         theme={theme !== 'grey' ? theme : 'light'}
         query={query}
+        isGreyShadow={theme === 'grey'}
         setHoverLink={setHoverLink}
       />
       <LinkList

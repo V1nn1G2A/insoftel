@@ -8,7 +8,7 @@ import Typed from 'typed.js'
 import { useHeaderHeight } from '@/hooks'
 import { smoothAutoScroll } from '@/lib/smoothAutoScroll'
 import { useLenis } from '@/providers'
-import { AnimatedText, ScrollColorController } from '@/ui'
+import { AnimatedText, AnimationBlock, ScrollColorController } from '@/ui'
 
 import { ExploreButton } from '../Buttons'
 import Container from '../Container'
@@ -94,7 +94,7 @@ const SectionHeading = ({
                 }
               }
             >
-              <h1 ref={ref} />
+              <AnimationBlock type="span">{title}</AnimationBlock>
             </div>
             <div className={styles.miniButton}>
               <ExploreButton

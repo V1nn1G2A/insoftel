@@ -39,8 +39,8 @@ const MainProduct: FC<IMainProduct> = ({
   return (
     <section className={cx('product', className)}>
       <Image
-        width={1344}
-        height={720}
+        width={1619}
+        height={867}
         src={img}
         alt={title}
         priority
