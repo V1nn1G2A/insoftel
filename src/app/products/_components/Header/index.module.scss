@@ -55,9 +55,11 @@
     display: flex;
     justify-content: space-between;
 
+    padding-bottom: 82px;
+
     @include media.screen('desktop') {
       // margin: 10px 0 0;
-      margin-bottom: flex(3.7);
+      padding-bottom: flex(3.7);
     }
   }
 

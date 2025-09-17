@@ -2,7 +2,7 @@
 
 import cn from 'classnames/bind'
 import type { FC } from 'react'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import styles from './index.module.scss'
 
@@ -35,6 +35,30 @@ const Input: FC<IInput> = ({
   const handleBlur = () => {
     if (!isFulled) setIsFocused(false)
   }
+
+  const initialHeight = useRef(window.innerHeight)
+  useEffect(() => {
+    const header = document.getElementById('header')
+
+    const handleResize = () => {
+      const currentHeight = window.innerHeight
+      // если высота вернулась почти к изначальной — клавиатура скрыта
+      if (currentHeight >= initialHeight.current - 20 && header) {
+        header.style.top = '0'
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    // фокус снят — тоже вернуть
+    if (!isFocused && header) {
+      header.style.top = '0'
+    }
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [isFocused])
 
   return (
     <div
