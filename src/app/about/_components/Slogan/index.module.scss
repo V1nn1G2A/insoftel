@@ -4,6 +4,7 @@
 .slogan {
   padding: 120px 0 60px;
   height: 100dvh;
+  height: fit-content;
 
   @include media.screen('desktop') {
     padding: flex(14.4) 0 flex(2.7);
